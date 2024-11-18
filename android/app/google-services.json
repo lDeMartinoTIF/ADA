@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "804923700135",
+    "project_id": "adaptive-assistant-gy0yz9",
+    "storage_bucket": "adaptive-assistant-gy0yz9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804923700135:android:937b688aee8e3459c2fc82",
+        "android_client_info": {
+          "package_name": "com.tecnolife.ada"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804923700135-asbj4r1vuk8hb9u8c7dnioubicc5412l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tecnolife.ada",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "804923700135-o22l3dtr0gnn2oi8mo0vqi7ks694tmv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABB0AGdhROR58V-nJZCwRtCqAharY0rgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804923700135-o22l3dtr0gnn2oi8mo0vqi7ks694tmv5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "804923700135-24fuulqar42kqtr3q7aivktgij0mr3c8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tecnolife.ada"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
