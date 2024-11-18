@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/components/main_logo_small/main_logo_small_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -6,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -173,7 +175,27 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
           ),
         ],
       ),
-      'buttonOnPageLoadAnimation': AnimationInfo(
+      'buttonOnPageLoadAnimation1': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 300.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 300.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 300.0.ms,
+            duration: 600.0.ms,
+            begin: Offset(0.0, 80.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'buttonOnPageLoadAnimation2': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           VisibilityEffect(duration: 300.ms),
@@ -683,7 +705,7 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                               0.0, 24.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               FFButtonWidget(
                                 onPressed: () async {
@@ -713,11 +735,58 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                     return;
                                   }
 
-                                  context.goNamedAuth(
-                                      'Main_Home', context.mounted);
+                                  await UsersRecord.collection
+                                      .doc(user.uid)
+                                      .update(createUsersRecordData(
+                                        role: 'azienda',
+                                      ));
+
+                                  await Future.delayed(
+                                      const Duration(milliseconds: 500));
+
+                                  await currentUserReference!
+                                      .update(createUsersRecordData(
+                                    status: 'onboarding',
+                                    role: 'azienda',
+                                  ));
+                                  if ((valueOrDefault(currentUserDocument?.status, '') ==
+                                          'onboarding') &&
+                                      (valueOrDefault(currentUserDocument?.role, '') ==
+                                          'azienda')) {
+                                    context.pushNamedAuth(
+                                        'onboarding_azienda', context.mounted);
+                                  } else if ((valueOrDefault(
+                                                  currentUserDocument?.status,
+                                                  '') ==
+                                              null ||
+                                          valueOrDefault(currentUserDocument?.status, '') ==
+                                              '') &&
+                                      (valueOrDefault(currentUserDocument?.role, '') ==
+                                          'azienda')) {
+                                    context.pushNamedAuth(
+                                        'onboarding_azienda', context.mounted);
+                                  } else if ((valueOrDefault(
+                                              currentUserDocument?.status,
+                                              '') ==
+                                          'onboarding') &&
+                                      (valueOrDefault(currentUserDocument?.role, '') ==
+                                          'user')) {
+                                    context.pushNamedAuth(
+                                        'editProfile', context.mounted);
+                                  } else if ((valueOrDefault(
+                                                  currentUserDocument?.status, '') ==
+                                              null ||
+                                          valueOrDefault(currentUserDocument?.status, '') == '') &&
+                                      (valueOrDefault(currentUserDocument?.role, '') == 'user')) {
+                                    context.pushNamedAuth(
+                                        'editProfile', context.mounted);
+                                  } else {
+                                    context.pushNamedAuth(
+                                        'Main_Home', context.mounted);
+                                  }
                                 },
                                 text: FFLocalizations.of(context).getText(
-                                  '29ut49wi' /* Create Account */,
+                                  '29ut49wi' /* Account Azienda */,
                                 ),
                                 options: FFButtonOptions(
                                   height: 52.0,
@@ -749,7 +818,119 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                   hoverElevation: 0.0,
                                 ),
                               ).animateOnPageLoad(
-                                  animationsMap['buttonOnPageLoadAnimation']!),
+                                  animationsMap['buttonOnPageLoadAnimation1']!),
+                              FFButtonWidget(
+                                onPressed: () async {
+                                  logFirebaseEvent(
+                                      'AUTH_CREATE_PAGE_Button-Login_ON_TAP');
+                                  GoRouter.of(context).prepareAuthEvent();
+                                  if (_model.passwordTextController.text !=
+                                      _model
+                                          .passwordConfirmTextController.text) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'Passwords don\'t match!',
+                                        ),
+                                      ),
+                                    );
+                                    return;
+                                  }
+
+                                  final user =
+                                      await authManager.createAccountWithEmail(
+                                    context,
+                                    _model.emailAddressTextController.text,
+                                    _model.passwordTextController.text,
+                                  );
+                                  if (user == null) {
+                                    return;
+                                  }
+
+                                  await UsersRecord.collection
+                                      .doc(user.uid)
+                                      .update(createUsersRecordData(
+                                        role: 'azienda',
+                                      ));
+
+                                  await Future.delayed(
+                                      const Duration(milliseconds: 500));
+
+                                  await currentUserReference!
+                                      .update(createUsersRecordData(
+                                    status: 'onboarding',
+                                    role: 'user',
+                                  ));
+                                  if ((valueOrDefault(currentUserDocument?.status, '') ==
+                                          'onboarding') &&
+                                      (valueOrDefault(currentUserDocument?.role, '') ==
+                                          'azienda')) {
+                                    context.pushNamedAuth(
+                                        'onboarding_azienda', context.mounted);
+                                  } else if ((valueOrDefault(
+                                                  currentUserDocument?.status,
+                                                  '') ==
+                                              null ||
+                                          valueOrDefault(currentUserDocument?.status, '') ==
+                                              '') &&
+                                      (valueOrDefault(currentUserDocument?.role, '') ==
+                                          'azienda')) {
+                                    context.pushNamedAuth(
+                                        'onboarding_azienda', context.mounted);
+                                  } else if ((valueOrDefault(
+                                              currentUserDocument?.status,
+                                              '') ==
+                                          'onboarding') &&
+                                      (valueOrDefault(currentUserDocument?.role, '') ==
+                                          'user')) {
+                                    context.pushNamedAuth(
+                                        'editProfile', context.mounted);
+                                  } else if ((valueOrDefault(
+                                                  currentUserDocument?.status, '') ==
+                                              null ||
+                                          valueOrDefault(currentUserDocument?.status, '') == '') &&
+                                      (valueOrDefault(currentUserDocument?.role, '') == 'user')) {
+                                    context.pushNamedAuth(
+                                        'editProfile', context.mounted);
+                                  } else {
+                                    context.pushNamedAuth(
+                                        'Main_Home', context.mounted);
+                                  }
+                                },
+                                text: FFLocalizations.of(context).getText(
+                                  '8m9q66qo' /* Account Utente */,
+                                ),
+                                options: FFButtonOptions(
+                                  height: 52.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      44.0, 0.0, 44.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        letterSpacing: 0.0,
+                                      ),
+                                  elevation: 3.0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  hoverColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  hoverBorderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    width: 1.0,
+                                  ),
+                                  hoverTextColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  hoverElevation: 0.0,
+                                ),
+                              ).animateOnPageLoad(
+                                  animationsMap['buttonOnPageLoadAnimation2']!),
                             ],
                           ),
                         ),
@@ -798,9 +979,40 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                     if (user == null) {
                                       return;
                                     }
-
-                                    context.goNamedAuth(
-                                        'Main_Home', context.mounted);
+                                    if (valueOrDefault(
+                                                currentUserDocument?.status,
+                                                '') ==
+                                            null ||
+                                        valueOrDefault(
+                                                currentUserDocument?.status,
+                                                '') ==
+                                            '') {
+                                      await currentUserReference!
+                                          .update(createUsersRecordData(
+                                        status: 'onboarding',
+                                      ));
+                                    }
+                                    if (valueOrDefault(
+                                            currentUserDocument?.status, '') ==
+                                        'onboarding') {
+                                      context.pushNamedAuth(
+                                          'onboarding_azienda',
+                                          context.mounted);
+                                    } else if (valueOrDefault(
+                                                currentUserDocument?.status,
+                                                '') ==
+                                            null ||
+                                        valueOrDefault(
+                                                currentUserDocument?.status,
+                                                '') ==
+                                            '') {
+                                      context.pushNamedAuth(
+                                          'onboarding_azienda',
+                                          context.mounted);
+                                    } else {
+                                      context.pushNamedAuth(
+                                          'Main_Home', context.mounted);
+                                    }
                                   },
                                   child: Container(
                                     width: 50.0,

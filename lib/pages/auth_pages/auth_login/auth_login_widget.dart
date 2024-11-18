@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/components/main_logo_small/main_logo_small_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -6,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -324,8 +326,6 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -388,7 +388,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                             ),
                             Text(
                               FFLocalizations.of(context).getText(
-                                '3p97u62u' /* Welcome Back! */,
+                                '3p97u62u' /* Bentornato! */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .displaySmall
@@ -403,7 +403,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                   0.0, 4.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'xkz4xjo6' /* Use the form below to access y... */,
+                                  'xkz4xjo6' /* Utilizza il modulo sottostante... */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
@@ -679,11 +679,46 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                         return;
                                       }
 
-                                      if (FFAppState().showOnboard == true) {
-                                        context.pushNamedAuth(
-                                            'onboarding', context.mounted);
+                                      if ((valueOrDefault(
+                                                  currentUserDocument?.status,
+                                                  '') ==
+                                              'onboarding') &&
+                                          (valueOrDefault(currentUserDocument?.role, '') ==
+                                              'azienda')) {
+                                        context.goNamedAuth(
+                                            'onboarding_azienda',
+                                            context.mounted);
+                                      } else if ((valueOrDefault(currentUserDocument?.status, '') ==
+                                                  null ||
+                                              valueOrDefault(currentUserDocument?.status, '') ==
+                                                  '') &&
+                                          (valueOrDefault(currentUserDocument?.role, '') ==
+                                              'azienda')) {
+                                        context.goNamedAuth(
+                                            'onboarding_azienda',
+                                            context.mounted);
+                                      } else if ((valueOrDefault(
+                                                  currentUserDocument?.status,
+                                                  '') ==
+                                              'onboarding') &&
+                                          (valueOrDefault(currentUserDocument?.role, '') ==
+                                              'user')) {
+                                        context.goNamedAuth(
+                                            'editProfile', context.mounted);
+                                      } else if ((valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.status,
+                                                      '') ==
+                                                  null ||
+                                              valueOrDefault(currentUserDocument?.status, '') ==
+                                                  '') &&
+                                          (valueOrDefault(
+                                                  currentUserDocument?.role, '') ==
+                                              'user')) {
+                                        context.goNamedAuth(
+                                            'editProfile', context.mounted);
                                       } else {
-                                        context.pushNamedAuth(
+                                        context.goNamedAuth(
                                             'Main_Home', context.mounted);
                                       }
                                     },
@@ -774,9 +809,41 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                         if (user == null) {
                                           return;
                                         }
-
-                                        context.goNamedAuth(
-                                            'Main_Home', context.mounted);
+                                        if (valueOrDefault(
+                                                    currentUserDocument?.status,
+                                                    '') ==
+                                                null ||
+                                            valueOrDefault(
+                                                    currentUserDocument?.status,
+                                                    '') ==
+                                                '') {
+                                          await currentUserReference!
+                                              .update(createUsersRecordData(
+                                            status: 'onboarding',
+                                          ));
+                                        }
+                                        if (valueOrDefault(
+                                                currentUserDocument?.status,
+                                                '') ==
+                                            'onboarding') {
+                                          context.pushNamedAuth(
+                                              'onboarding_azienda',
+                                              context.mounted);
+                                        } else if (valueOrDefault(
+                                                    currentUserDocument?.status,
+                                                    '') ==
+                                                null ||
+                                            valueOrDefault(
+                                                    currentUserDocument?.status,
+                                                    '') ==
+                                                '') {
+                                          context.pushNamedAuth(
+                                              'onboarding_azienda',
+                                              context.mounted);
+                                        } else {
+                                          context.pushNamedAuth(
+                                              'Main_Home', context.mounted);
+                                        }
                                       },
                                       child: Container(
                                         width: 50.0,

@@ -1,15 +1,18 @@
+import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_autocomplete_options_list.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'onboarding_widget.dart' show OnboardingWidget;
+import 'onboarding_azienda_widget.dart' show OnboardingAziendaWidget;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class OnboardingModel extends FlutterFlowModel<OnboardingWidget> {
+class OnboardingAziendaModel extends FlutterFlowModel<OnboardingAziendaWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for TextField widget.
@@ -25,8 +28,10 @@ class OnboardingModel extends FlutterFlowModel<OnboardingWidget> {
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
   // State field(s) for TextField widget.
+  final textFieldKey3 = GlobalKey();
   FocusNode? textFieldFocusNode3;
   TextEditingController? textController3;
+  String? textFieldSelectedOption3;
   String? Function(BuildContext, String?)? textController3Validator;
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode4;
@@ -69,7 +74,6 @@ class OnboardingModel extends FlutterFlowModel<OnboardingWidget> {
     textController2?.dispose();
 
     textFieldFocusNode3?.dispose();
-    textController3?.dispose();
 
     textFieldFocusNode4?.dispose();
     textController4?.dispose();

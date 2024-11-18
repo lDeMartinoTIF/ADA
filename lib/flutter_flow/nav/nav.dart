@@ -173,14 +173,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => MessagesDetailsWidget(),
             ),
             FFRoute(
-              name: 'onboarding',
-              path: 'onboarding',
-              builder: (context, params) => OnboardingWidget(),
+              name: 'onboarding_azienda',
+              path: 'onboardingAzienda',
+              builder: (context, params) => OnboardingAziendaWidget(),
             ),
             FFRoute(
-              name: 'onboarding2',
-              path: 'onboarding2',
-              builder: (context, params) => Onboarding2Widget(),
+              name: 'onboarding2_azienda',
+              path: 'onboarding2Azienda',
+              builder: (context, params) => Onboarding2AziendaWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

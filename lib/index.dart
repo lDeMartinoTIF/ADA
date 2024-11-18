@@ -24,7 +24,7 @@ export '/pages/project_details/project_details_widget.dart'
 export '/pages/search_page/search_page_widget.dart' show SearchPageWidget;
 export '/pages/messages_details/messages_details_widget.dart'
     show MessagesDetailsWidget;
-export '/pages/onboarding_page/onboarding/onboarding_widget.dart'
-    show OnboardingWidget;
-export '/pages/onboarding_page/onboarding2/onboarding2_widget.dart'
-    show Onboarding2Widget;
+export '/pages/onboarding_page/onboarding_azienda/onboarding_azienda_widget.dart'
+    show OnboardingAziendaWidget;
+export '/pages/onboarding_page/onboarding2_azienda/onboarding2_azienda_widget.dart'
+    show Onboarding2AziendaWidget;

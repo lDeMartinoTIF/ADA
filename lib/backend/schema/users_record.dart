@@ -66,10 +66,10 @@ class UsersRecord extends FirestoreRecord {
   DateTime? get createdAt => _createdAt;
   bool hasCreatedAt() => _createdAt != null;
 
-  // "onboarding" field.
-  bool? _onboarding;
-  bool get onboarding => _onboarding ?? false;
-  bool hasOnboarding() => _onboarding != null;
+  // "role" field.
+  String? _role;
+  String get role => _role ?? '';
+  bool hasRole() => _role != null;
 
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
@@ -82,7 +82,7 @@ class UsersRecord extends FirestoreRecord {
     _status = snapshotData['status'] as String?;
     _bio = snapshotData['bio'] as String?;
     _createdAt = snapshotData['createdAt'] as DateTime?;
-    _onboarding = snapshotData['onboarding'] as bool?;
+    _role = snapshotData['role'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -129,7 +129,7 @@ Map<String, dynamic> createUsersRecordData({
   String? status,
   String? bio,
   DateTime? createdAt,
-  bool? onboarding,
+  String? role,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -143,7 +143,7 @@ Map<String, dynamic> createUsersRecordData({
       'status': status,
       'bio': bio,
       'createdAt': createdAt,
-      'onboarding': onboarding,
+      'role': role,
     }.withoutNulls,
   );
 
@@ -165,7 +165,7 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.status == e2?.status &&
         e1?.bio == e2?.bio &&
         e1?.createdAt == e2?.createdAt &&
-        e1?.onboarding == e2?.onboarding;
+        e1?.role == e2?.role;
   }
 
   @override
@@ -180,7 +180,7 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.status,
         e?.bio,
         e?.createdAt,
-        e?.onboarding
+        e?.role
       ]);
 
   @override

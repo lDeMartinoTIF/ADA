@@ -147,11 +147,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // auth_Login
   {
     '3p97u62u': {
-      'it': 'Welcome Back!',
+      'it': 'Bentornato!',
       'en': 'Welcome Back!',
     },
     'xkz4xjo6': {
-      'it': 'Use the form below to access your account.',
+      'it': 'Utilizza il modulo sottostante per accedere al tuo account.',
       'en': 'Use the form below to access your account.',
     },
     'k9u5spqi': {
@@ -275,7 +275,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Create your password...',
     },
     '29ut49wi': {
-      'it': 'Create Account',
+      'it': 'Account Azienda',
+      'en': 'Create Account',
+    },
+    '8m9q66qo': {
+      'it': 'Account Utente',
       'en': 'Create Account',
     },
     '07gxzzhq': {
@@ -990,20 +994,28 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Change Photo',
     },
     '4no7ue4a': {
-      'it': 'Your Name',
+      'it': 'Nome',
       'en': 'Your Name',
     },
-    '2rqce1pj': {
-      'it': 'The email associated with this account is:',
-      'en': 'The email associated with this account is:',
+    '1ecoibk0': {
+      'it': 'Cognome',
+      'en': 'Your Name',
+    },
+    '1e8re1qt': {
+      'it': 'Data di nascita',
+      'en': 'Date of birth',
+    },
+    'q8mrywjp': {
+      'it': 'Località',
+      'en': 'Your Name',
     },
     'rr8ksatz': {
       'it': 'Save Changes',
       'en': 'Save Changes',
     },
-    '20uycztj': {
+    'clcaiorg': {
       'it': 'Edit Profile',
-      'en': 'Edit Profile',
+      'en': '',
     },
   },
   // projectDetailsHealthAi
@@ -1160,15 +1172,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
-  // onboarding
+  // onboarding_azienda
   {
     '49oova8y': {
       'it': 'Anagrafica',
-      'en': 'Complete Your Profile',
+      'en': 'Personal data',
     },
     'fkzcin4j': {
       'it': 'Configura il tuo profilo',
-      'en': 'Help us personalize your experience',
+      'en': 'Set up your profile',
     },
     'goq7q8xo': {
       'it': 'Informazioni Personali',
@@ -1176,19 +1188,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2xoc3ky5': {
       'it': 'Nome',
-      'en': 'Full Name',
+      'en': 'Name',
     },
     'qj95fluw': {
       'it': 'Cognome',
-      'en': 'Full Name',
+      'en': 'Surname',
     },
     'vvls8z1d': {
       'it': 'Data di nascita',
-      'en': 'Date of Birth',
+      'en': 'Date of birth',
     },
     'mrwz7fpy': {
       'it': 'Sesso',
-      'en': 'gender',
+      'en': 'Sex',
     },
     'i0jvtqm3': {
       'it': '',
@@ -1204,35 +1216,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'flxf2ftr': {
       'it': '-',
-      'en': 'Select a value',
+      'en': '-',
     },
     'oqlh1qku': {
-      'it': 'Search...',
+      'it': 'Ricerca',
       'en': 'Search...',
     },
     'tqaq1dcy': {
       'it': 'Luogo di nascita',
-      'en': 'Phone Number',
+      'en': 'Place of birth',
     },
     'qh1fxgd3': {
-      'it': 'Telefono',
-      'en': 'Phone Number',
+      'it': 'Cellulare',
+      'en': 'Telephone',
     },
     'ro9yzrep': {
-      'it': 'Telefono Whatsapp',
-      'en': 'Phone Number',
+      'it': 'Numero  Whatsapp',
+      'en': 'Phone Whatsapp',
+    },
+    'bndhqr86': {
+      'it': 'Inserire numero mai attivato su Whatspp',
+      'en': '',
     },
     'iowwr8r7': {
       'it': 'Informazioni Aziendali',
-      'en': 'Location Details',
+      'en': 'Company Information',
     },
     '99ficoyx': {
       'it': 'Ragione sociale',
-      'en': 'Postal Code',
+      'en': 'Company name',
     },
     'jt4bn3la': {
       'it': 'Via',
-      'en': 'Street Address',
+      'en': 'Go',
     },
     '7boxsq2v': {
       'it': 'Città',
@@ -1240,18 +1256,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'vj21tcas': {
       'it': 'Provincia',
-      'en': 'State',
+      'en': 'Province',
     },
     '94c4i0ik': {
       'it': 'C. Fiscale/Partita Iva',
-      'en': 'Postal Code',
+      'en': 'Tax code/VAT number',
     },
     'y56s9cn2': {
       'it': 'Continua',
-      'en': 'Complete Profile',
+      'en': 'Continues',
     },
   },
-  // onboarding2
+  // onboarding2_azienda
   {
     'xt3isypt': {
       'it': 'Impostazioni',
@@ -1262,7 +1278,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Choose how you want to stay updated',
     },
     'b8q51z41': {
-      'it': 'Preferenze di comunicazione',
+      'it': 'Configurazione ADA',
       'en': 'Communication Preferences',
     },
     'xmo4v0i5': {
