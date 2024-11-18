@@ -1163,11 +1163,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // onboarding
   {
     '49oova8y': {
-      'it': 'Complete Your Profile',
+      'it': 'Anagrafica',
       'en': 'Complete Your Profile',
     },
     'fkzcin4j': {
-      'it': 'Help us personalize your experience',
+      'it': 'Configura il tuo profilo',
       'en': 'Help us personalize your experience',
     },
     'goq7q8xo': {
@@ -1183,7 +1183,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Full Name',
     },
     'vvls8z1d': {
-      'it': 'Date di nascita',
+      'it': 'Data di nascita',
       'en': 'Date of Birth',
     },
     'mrwz7fpy': {
@@ -1254,11 +1254,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // onboarding2
   {
     'xt3isypt': {
-      'it': 'Configure Notifications',
+      'it': 'Impostazioni',
       'en': 'Configure Notifications',
     },
     'dl9vmk4k': {
-      'it': 'Choose how you want to stay updated',
+      'it': 'Configura funzionalità AI',
       'en': 'Choose how you want to stay updated',
     },
     'b8q51z41': {
@@ -1434,10 +1434,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5s0d776i': {
       'it': 'Messages',
       'en': 'Messages',
-    },
-    '01nu9cy0': {
-      'it': 'Profile',
-      'en': 'Profile',
     },
   },
   // commandPalette

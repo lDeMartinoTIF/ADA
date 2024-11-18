@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/components/main_logo_small/main_logo_small_widget.dart';
 import '/components/modals/command_palette/command_palette_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -52,7 +53,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 1.0, 0.0),
       child: Container(
-        width: 270.0,
+        width: _model.compactView! ? 120.0 : 270.0,
         height: double.infinity,
         constraints: BoxConstraints(
           maxWidth: 300.0,
@@ -70,7 +71,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
           ],
         ),
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 16.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,76 +80,163 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     wrapWithModel(
                       model: _model.mainLogoSmallModel,
                       updateCallback: () => safeSetState(() {}),
                       child: MainLogoSmallWidget(),
                     ),
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        if (_model.compactView == false)
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              logFirebaseEvent(
+                                  'WEB_NAV_COMP_Container_8j672fc0_ON_TAP');
+                              _model.compactView = true;
+                              _model.updatePage(() {});
+                            },
+                            child: Container(
+                              width: 24.0,
+                              height: 48.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context).alternate,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(48.0),
+                                  bottomRight: Radius.circular(0.0),
+                                  topLeft: Radius.circular(48.0),
+                                  topRight: Radius.circular(0.0),
+                                ),
+                              ),
+                              child: FlutterFlowIconButton(
+                                borderRadius: 16.0,
+                                buttonSize: 40.0,
+                                icon: Icon(
+                                  Icons.arrow_back_ios_new,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 16.0,
+                                ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
+                              ),
+                            ),
+                          ),
+                        if (_model.compactView == true)
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              logFirebaseEvent(
+                                  'WEB_NAV_COMP_Container_pg12b1px_ON_TAP');
+                              _model.compactView = false;
+                              _model.updatePage(() {});
+                            },
+                            child: Container(
+                              width: 24.0,
+                              height: 48.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context).alternate,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(48.0),
+                                  bottomRight: Radius.circular(0.0),
+                                  topLeft: Radius.circular(48.0),
+                                  topRight: Radius.circular(0.0),
+                                ),
+                              ),
+                              child: FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 16.0,
+                                buttonSize: 40.0,
+                                icon: Icon(
+                                  Icons.arrow_forward_ios_sharp,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 16.0,
+                                ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
+                              ),
+                            ),
+                          ),
+                      ],
+                    ),
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
-                    await showModalBottomSheet(
-                      isScrollControlled: true,
-                      backgroundColor: Colors.transparent,
-                      barrierColor: Color(0x34000000),
-                      context: context,
-                      builder: (context) {
-                        return Padding(
-                          padding: MediaQuery.viewInsetsOf(context),
-                          child: CommandPaletteWidget(),
-                        );
-                      },
-                    ).then((value) => safeSetState(() {}));
-                  },
-                  child: Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.search_rounded,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 28.0,
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                'xai8ocja' /* Search */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    letterSpacing: 0.0,
-                                  ),
+              if (_model.compactView == false)
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
+                      await showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        barrierColor: Color(0x34000000),
+                        context: context,
+                        builder: (context) {
+                          return Padding(
+                            padding: MediaQuery.viewInsetsOf(context),
+                            child: CommandPaletteWidget(),
+                          );
+                        },
+                      ).then((value) => safeSetState(() {}));
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.search_rounded,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              size: 28.0,
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  12.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'xai8ocja' /* Search */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                 child: InkWell(
@@ -450,42 +538,6 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                           : FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.account_circle_rounded,
-                            color: widget!.selectedNav == 5
-                                ? FlutterFlowTheme.of(context).primary
-                                : FlutterFlowTheme.of(context).secondaryText,
-                            size: 28.0,
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                '01nu9cy0' /* Profile */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: widget!.selectedNav == 5
-                                        ? FlutterFlowTheme.of(context)
-                                            .primaryText
-                                        : FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                   ),
                 ),
               ),
@@ -496,34 +548,35 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: FlutterFlowLanguageSelector(
-                          width: double.infinity,
-                          height: 60.0,
-                          backgroundColor:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          borderColor: FlutterFlowTheme.of(context).alternate,
-                          dropdownColor:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          dropdownIconColor:
-                              FlutterFlowTheme.of(context).secondaryText,
-                          borderRadius: 12.0,
-                          textStyle:
-                              FlutterFlowTheme.of(context).bodyLarge.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    letterSpacing: 0.0,
-                                  ),
-                          hideFlags: false,
-                          flagSize: 24.0,
-                          flagTextGap: 8.0,
-                          currentLanguage:
-                              FFLocalizations.of(context).languageCode,
-                          languages: FFLocalizations.languages(),
-                          onChanged: (lang) => setAppLanguage(context, lang),
+                      if (_model.compactView == false)
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 16.0, 16.0),
+                          child: FlutterFlowLanguageSelector(
+                            width: double.infinity,
+                            height: 60.0,
+                            backgroundColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderColor: FlutterFlowTheme.of(context).alternate,
+                            dropdownColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            dropdownIconColor:
+                                FlutterFlowTheme.of(context).secondaryText,
+                            borderRadius: 12.0,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyLarge.override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      letterSpacing: 0.0,
+                                    ),
+                            hideFlags: false,
+                            flagSize: 24.0,
+                            flagTextGap: 8.0,
+                            currentLanguage:
+                                FFLocalizations.of(context).languageCode,
+                            languages: FFLocalizations.languages(),
+                            onChanged: (lang) => setAppLanguage(context, lang),
+                          ),
                         ),
-                      ),
                       Divider(
                         height: 12.0,
                         thickness: 2.0,
@@ -532,84 +585,101 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: 50.0,
-                              height: 50.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context).accent1,
-                                borderRadius: BorderRadius.circular(12.0),
-                                border: Border.all(
-                                  color: FlutterFlowTheme.of(context).primary,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            logFirebaseEvent(
+                                'WEB_NAV_COMP_Row_fqtl9ien_ON_TAP');
+
+                            context.pushNamed('Main_profilePage');
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Container(
+                                width: 50.0,
+                                height: 50.0,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context).accent1,
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  border: Border.all(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                  ),
                                 ),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.all(2.0),
-                                child: AuthUserStreamWidget(
-                                  builder: (context) => ClipRRect(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    child: CachedNetworkImage(
-                                      fadeInDuration:
-                                          Duration(milliseconds: 500),
-                                      fadeOutDuration:
-                                          Duration(milliseconds: 500),
-                                      imageUrl: valueOrDefault<String>(
-                                        currentUserPhoto,
-                                        'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+                                child: Padding(
+                                  padding: EdgeInsets.all(2.0),
+                                  child: AuthUserStreamWidget(
+                                    builder: (context) => ClipRRect(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      child: CachedNetworkImage(
+                                        fadeInDuration:
+                                            Duration(milliseconds: 500),
+                                        fadeOutDuration:
+                                            Duration(milliseconds: 500),
+                                        imageUrl: valueOrDefault<String>(
+                                          currentUserPhoto,
+                                          'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+                                        ),
+                                        width: 44.0,
+                                        height: 44.0,
+                                        fit: BoxFit.cover,
                                       ),
-                                      width: 44.0,
-                                      height: 44.0,
-                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    12.0, 0.0, 0.0, 0.0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    AuthUserStreamWidget(
-                                      builder: (context) => Text(
-                                        valueOrDefault<String>(
-                                          currentUserDisplayName,
-                                          'Andrew D.',
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyLarge
-                                            .override(
-                                              fontFamily: 'Plus Jakarta Sans',
-                                              letterSpacing: 0.0,
+                              if (_model.compactView == false)
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 0.0, 16.0, 0.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        AuthUserStreamWidget(
+                                          builder: (context) => Text(
+                                            valueOrDefault<String>(
+                                              currentUserDisplayName,
+                                              'Andrew D.',
                                             ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 4.0, 0.0, 0.0),
-                                      child: Text(
-                                        valueOrDefault<String>(
-                                          currentUserEmail,
-                                          'ghost@casperventures.com',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .labelSmall
-                                            .override(
-                                              fontFamily: 'Plus Jakarta Sans',
-                                              letterSpacing: 0.0,
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 4.0, 0.0, 0.0),
+                                          child: Text(
+                                            valueOrDefault<String>(
+                                              currentUserEmail,
+                                              'ghost@casperventures.com',
                                             ),
-                                      ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .labelSmall
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],

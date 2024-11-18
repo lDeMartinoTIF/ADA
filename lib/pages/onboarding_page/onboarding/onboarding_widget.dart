@@ -104,7 +104,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          '49oova8y' /* Complete Your Profile */,
+                          '49oova8y' /* Anagrafica */,
                         ),
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -117,7 +117,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'fkzcin4j' /* Help us personalize your exper... */,
+                          'fkzcin4j' /* Configura il tuo profilo */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'Plus Jakarta Sans',
@@ -185,11 +185,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                     Expanded(
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                           border: Border.all(
-                                            color: Color(0x00E0E0E0),
+                                            color: Colors.transparent,
                                             width: 1.0,
                                           ),
                                         ),
@@ -342,7 +341,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  12.0, 12.0, 12.0, 12.0),
+                                                  10.0, 12.0, 0.0, 12.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
@@ -478,11 +477,13 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                     Expanded(
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          color: Colors.white,
+                                          color: FlutterFlowTheme.of(context)
+                                              .accent4,
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                           border: Border.all(
-                                            color: Color(0xFFE0E0E0),
+                                            color: FlutterFlowTheme.of(context)
+                                                .alternate,
                                             width: 1.0,
                                           ),
                                         ),
@@ -493,27 +494,33 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
-                                              Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'vvls8z1d' /* Date di nascita */,
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 0.0, 0.0, 10.0),
+                                                child: Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'vvls8z1d' /* Data di nascita */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondaryText,
+                                                        letterSpacing: 0.0,
+                                                      ),
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        0.0, 10.0, 0.0, 0.0),
+                                                        0.0, 10.0, 0.0, 5.0),
                                                 child: InkWell(
                                                   splashColor:
                                                       Colors.transparent,
@@ -611,25 +618,25 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                                                 .primary,
                                                         size: 24.0,
                                                       ),
-                                                      Text(
-                                                        dateTimeFormat(
-                                                          "d/M/y",
-                                                          _model.datePicked,
-                                                          locale:
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .languageCode,
+                                                      Flexible(
+                                                        child: Text(
+                                                          dateTimeFormat(
+                                                            "d/M/y",
+                                                            _model.datePicked,
+                                                            locale: FFLocalizations
+                                                                    .of(context)
+                                                                .languageCode,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Plus Jakarta Sans',
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
                                                         ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
                                                       ),
                                                     ].divide(
                                                         SizedBox(width: 8.0)),
@@ -644,11 +651,13 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                     Expanded(
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          color: Colors.white,
+                                          color: FlutterFlowTheme.of(context)
+                                              .accent4,
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                           border: Border.all(
-                                            color: Color(0xFFE0E0E0),
+                                            color: FlutterFlowTheme.of(context)
+                                                .alternate,
                                             width: 1.0,
                                           ),
                                         ),
@@ -728,9 +737,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                                                 .secondaryText,
                                                         size: 24.0,
                                                       ),
-                                                      fillColor: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
+                                                      fillColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .accent4,
                                                       elevation: 2.0,
                                                       borderColor:
                                                           Colors.transparent,
@@ -782,34 +792,39 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFFE0E0E0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: Colors.white,
+                                    fillColor:
+                                        FlutterFlowTheme.of(context).accent4,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -846,34 +861,39 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFFE0E0E0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: Colors.white,
+                                    fillColor:
+                                        FlutterFlowTheme.of(context).accent4,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -910,34 +930,39 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFFE0E0E0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: Colors.white,
+                                    fillColor:
+                                        FlutterFlowTheme.of(context).accent4,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -1012,34 +1037,39 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFFE0E0E0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: Colors.white,
+                                    fillColor:
+                                        FlutterFlowTheme.of(context).accent4,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -1076,34 +1106,39 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFFE0E0E0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: Colors.white,
+                                    fillColor:
+                                        FlutterFlowTheme.of(context).accent4,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -1151,7 +1186,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                                     ),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0xFFE0E0E0),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .alternate,
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -1159,7 +1196,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             ),
                                             focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -1167,7 +1206,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             ),
                                             errorBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -1176,14 +1217,18 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
                                                 width: 1.0,
                                               ),
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
                                             ),
                                             filled: true,
-                                            fillColor: Colors.white,
+                                            fillColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .accent4,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
@@ -1229,7 +1274,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                                     ),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0xFFE0E0E0),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .alternate,
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -1237,7 +1284,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             ),
                                             focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -1245,7 +1294,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             ),
                                             errorBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -1254,14 +1305,18 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
                                                 width: 1.0,
                                               ),
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
                                             ),
                                             filled: true,
-                                            fillColor: Colors.white,
+                                            fillColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .accent4,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
@@ -1302,34 +1357,39 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFFE0E0E0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: Colors.white,
+                                    fillColor:
+                                        FlutterFlowTheme.of(context).accent4,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge

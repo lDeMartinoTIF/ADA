@@ -25,8 +25,8 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
     _model = createModel(context, () => Onboarding2Model());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'onboarding2'});
-    _model.switchValue1 = true;
-    _model.switchValue2 = true;
+    _model.switchValue1 = false;
+    _model.switchValue2 = false;
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -43,7 +43,7 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFF5FBFB),
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -72,7 +72,7 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'xt3isypt' /* Configure Notifications */,
+                          'xt3isypt' /* Impostazioni */,
                         ),
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -86,7 +86,7 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'dl9vmk4k' /* Choose how you want to stay up... */,
+                          'dl9vmk4k' /* Configura funzionalità AI */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'Inter',
@@ -102,7 +102,7 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
               Container(
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 decoration: BoxDecoration(
-                  color: Color(0xFFF5FBFB),
+                  color: FlutterFlowTheme.of(context).primaryBackground,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(0.0),
                     bottomRight: Radius.circular(0.0),
@@ -125,7 +125,8 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
@@ -142,7 +143,8 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF101518),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
@@ -151,8 +153,12 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFFF5FBFB),
+                                    color: FlutterFlowTheme.of(context).accent4,
                                     borderRadius: BorderRadius.circular(12.0),
+                                    border: Border.all(
+                                      color: FlutterFlowTheme.of(context)
+                                          .alternate,
+                                    ),
                                   ),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -178,8 +184,9 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                                                         .bodyLarge
                                                         .override(
                                                           fontFamily: 'Inter',
-                                                          color:
-                                                              Color(0xFF101518),
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -197,8 +204,9 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily: 'Inter',
-                                                          color:
-                                                              Color(0xFF57636C),
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -235,8 +243,12 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFFF5FBFB),
+                                    color: FlutterFlowTheme.of(context).accent4,
                                     borderRadius: BorderRadius.circular(12.0),
+                                    border: Border.all(
+                                      color: FlutterFlowTheme.of(context)
+                                          .alternate,
+                                    ),
                                   ),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -262,8 +274,9 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                                                         .bodyLarge
                                                         .override(
                                                           fontFamily: 'Inter',
-                                                          color:
-                                                              Color(0xFF101518),
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -280,8 +293,9 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily: 'Inter',
-                                                          color:
-                                                              Color(0xFF57636C),
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -323,6 +337,8 @@ class _Onboarding2WidgetState extends State<Onboarding2Widget> {
                         onPressed: () async {
                           logFirebaseEvent('ONBOARDING2_PAGE_SALVA_BTN_ON_TAP');
                           FFAppState().showOnboard = false;
+
+                          context.pushNamed('Main_Home');
                         },
                         text: FFLocalizations.of(context).getText(
                           'o0uubp2h' /* Salva */,

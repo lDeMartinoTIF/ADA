@@ -1179,7 +1179,7 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                           GoRouter.of(context)
                                               .clearRedirectLocation();
 
-                                          context.pushNamedAuth(
+                                          context.goNamedAuth(
                                               'auth_Login', context.mounted);
                                         },
                                         text:
