@@ -62,11 +62,13 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'clcaiorg' /* Edit Profile */,
+              'clcaiorg' /* Completa Profilo */,
             ),
             style: FlutterFlowTheme.of(context).titleLarge.override(
-                  fontFamily: 'Plus Jakarta Sans',
+                  fontFamily: FlutterFlowTheme.of(context).titleLargeFamily,
                   letterSpacing: 0.0,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).titleLargeFamily),
                 ),
           ),
           actions: [],
@@ -142,7 +144,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         FFButtonWidget(
                           onPressed: () async {
                             logFirebaseEvent(
-                                'EDIT_PROFILE_CHANGE_PHOTO_BTN_ON_TAP');
+                                'EDIT_PROFILE_CAMBIA_IMMAGINE_PROFILO_BTN');
                             await showModalBottomSheet(
                               isScrollControlled: true,
                               backgroundColor: Colors.transparent,
@@ -161,7 +163,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             ).then((value) => safeSetState(() {}));
                           },
                           text: FFLocalizations.of(context).getText(
-                            'mk8nnw94' /* Change Photo */,
+                            'mk8nnw94' /* Cambia Immagine Profilo */,
                           ),
                           options: FFButtonOptions(
                             height: 44.0,
@@ -174,8 +176,12 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
                                 ),
                             elevation: 0.0,
                             borderSide: BorderSide(
@@ -210,13 +216,21 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         ),
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -253,8 +267,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             20.0, 24.0, 20.0, 24.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
                             letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                       cursorColor: FlutterFlowTheme.of(context).primary,
                       validator: _model.yourNameTextController1Validator
@@ -275,13 +292,21 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         ),
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -318,8 +343,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             20.0, 24.0, 20.0, 24.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
                             letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                       cursorColor: FlutterFlowTheme.of(context).primary,
                       validator: _model.yourNameTextController2Validator
@@ -359,10 +387,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily),
                                           ),
                                     ),
                                   ),
@@ -397,11 +431,20 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .headlineLarge
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .headlineLargeFamily,
                                                         fontSize: 32.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .headlineLargeFamily),
                                                       ),
                                               pickerBackgroundColor:
                                                   FlutterFlowTheme.of(context)
@@ -456,8 +499,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMediumFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily),
                                                       ),
                                             ),
                                           ),
@@ -487,13 +538,21 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         ),
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -530,8 +589,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             20.0, 24.0, 20.0, 24.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
                             letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                       cursorColor: FlutterFlowTheme.of(context).primary,
                       validator: _model.yourNameTextController3Validator
@@ -546,7 +608,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       child: FFButtonWidget(
                         onPressed: () async {
                           logFirebaseEvent(
-                              'EDIT_PROFILE_SAVE_CHANGES_BTN_ON_TAP');
+                              'EDIT_PROFILE_SALVA_MODIFICHE_BTN_ON_TAP');
 
                           await currentUserReference!
                               .update(createUsersRecordData(
@@ -560,9 +622,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
                                       color: Colors.white,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily),
                                     ),
                               ),
                               duration: Duration(milliseconds: 4000),
@@ -574,7 +641,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           context.pushNamed('Main_Home');
                         },
                         text: FFLocalizations.of(context).getText(
-                          'rr8ksatz' /* Save Changes */,
+                          'rr8ksatz' /* Salva modifiche */,
                         ),
                         options: FFButtonOptions(
                           height: 52.0,
@@ -583,11 +650,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    letterSpacing: 0.0,
-                                  ),
+                          textStyle: FlutterFlowTheme.of(context)
+                              .titleMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .titleMediumFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .titleMediumFamily),
+                              ),
                           elevation: 3.0,
                           borderSide: BorderSide(
                             color: Colors.transparent,

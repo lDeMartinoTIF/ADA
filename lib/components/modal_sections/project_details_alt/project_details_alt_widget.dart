@@ -293,8 +293,13 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                    fontFamily: 'Outfit',
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .headlineSmallFamily,
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .headlineSmallFamily),
                                   ),
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation1']!),
@@ -308,8 +313,13 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelLargeFamily,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .labelLargeFamily),
                                     ),
                               ).animateOnPageLoad(
                                   animationsMap['textOnPageLoadAnimation2']!),
@@ -342,8 +352,11 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                       'gamp8n19' /* Assigned To */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Plus Jakarta Sans',
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
                           letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
                 ),
@@ -407,8 +420,14 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyLargeFamily,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLargeFamily),
                                         ),
                                   ),
                                 ),
@@ -422,8 +441,14 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -468,8 +493,11 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                         'x6aorxwd' /* Next Action */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
                             letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
                     Expanded(
@@ -480,12 +508,17 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                           FFLocalizations.of(context).getText(
                             '8sktau69' /* Tuesday, 10:00am */,
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    letterSpacing: 0.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                color: FlutterFlowTheme.of(context).primary,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
                         ),
                       ),
                     ),
@@ -507,11 +540,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                           FFLocalizations.of(context).getText(
                             'ck1j2u5s' /* In Progress */,
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    letterSpacing: 0.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
                         ),
                       ),
                     ),
@@ -530,9 +568,12 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                   useToggleButtonStyle: false,
                   isScrollable: true,
                   labelStyle: FlutterFlowTheme.of(context).bodyLarge.override(
-                        fontFamily: 'Plus Jakarta Sans',
+                        fontFamily:
+                            FlutterFlowTheme.of(context).bodyLargeFamily,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w600,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).bodyLargeFamily),
                       ),
                   unselectedLabelStyle: TextStyle(),
                   labelColor: FlutterFlowTheme.of(context).primaryText,
@@ -652,7 +693,9 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .bodyLarge
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -660,6 +703,12 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
                                                       ),
                                                 ),
                                                 TextSpan(
@@ -676,8 +725,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .bodyLarge
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
                                                       ),
                                             ),
                                           ),
@@ -715,7 +772,9 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .labelSmall
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmallFamily,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -723,6 +782,12 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelSmallFamily),
                                                       ),
                                                 ),
                                                 Padding(
@@ -739,8 +804,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         .bodyLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLargeFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLargeFamily),
                                                         ),
                                                   ),
                                                 ),
@@ -760,8 +833,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                 .labelMedium
                                                 .override(
                                                   fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily,
                                                   letterSpacing: 0.0,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .labelMediumFamily),
                                                 ),
                                           ),
                                         ),
@@ -843,7 +924,9 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .bodyLarge
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -851,6 +934,12 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
                                                       ),
                                                 ),
                                                 TextSpan(
@@ -867,8 +956,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .bodyLarge
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
                                                       ),
                                             ),
                                           ),
@@ -898,7 +995,9 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .labelSmall
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmallFamily,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -906,6 +1005,12 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelSmallFamily),
                                                       ),
                                                 ),
                                                 Padding(
@@ -922,8 +1027,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         .bodyLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLargeFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLargeFamily),
                                                         ),
                                                   ),
                                                 ),
@@ -941,8 +1054,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .labelMediumFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily),
                                                         ),
                                                   ),
                                                 ),
@@ -962,8 +1083,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                 .labelMedium
                                                 .override(
                                                   fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily,
                                                   letterSpacing: 0.0,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .labelMediumFamily),
                                                 ),
                                           ),
                                         ),
@@ -1045,7 +1174,9 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .bodyLarge
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1053,6 +1184,12 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
                                                       ),
                                                 ),
                                                 TextSpan(
@@ -1074,10 +1211,18 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .bodyLarge
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
                                                       ),
                                                 )
                                               ],
@@ -1086,8 +1231,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .bodyLarge
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
                                                       ),
                                             ),
                                           ),
@@ -1117,7 +1270,9 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .labelSmall
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelSmallFamily,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1125,6 +1280,12 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelSmallFamily),
                                                       ),
                                                 ),
                                                 Padding(
@@ -1141,8 +1302,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         .bodyLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLargeFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLargeFamily),
                                                         ),
                                                   ),
                                                 ),
@@ -1160,8 +1329,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .labelMediumFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily),
                                                         ),
                                                   ),
                                                 ),
@@ -1181,8 +1358,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                 .labelMedium
                                                 .override(
                                                   fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily,
                                                   letterSpacing: 0.0,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .labelMediumFamily),
                                                 ),
                                           ),
                                         ),
@@ -1254,8 +1439,14 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
-                                            fontFamily: 'Outfit',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .headlineSmallFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineSmallFamily),
                                           ),
                                     ).animateOnPageLoad(animationsMap[
                                         'textOnPageLoadAnimation3']!),
@@ -1270,8 +1461,14 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMediumFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMediumFamily),
                                           ),
                                     ),
                                   ),
@@ -1306,8 +1503,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .labelMedium
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMediumFamily),
                                                       ),
                                                 ),
                                               ),
@@ -1324,8 +1529,17 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                           context)
                                                       .headlineMedium
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .headlineMediumFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .headlineMediumFamily),
                                                       ),
                                                 ),
                                               ),
@@ -1355,12 +1569,20 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily:
-                                                          'Plus Jakarta Sans',
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMediumFamily,
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .info,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                          .containsKey(
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily),
                                                     ),
                                             elevation: 3.0,
                                             borderSide: BorderSide(
@@ -1515,8 +1737,14 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
-                                            fontFamily: 'Outfit',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .headlineSmallFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineSmallFamily),
                                           ),
                                     ).animateOnPageLoad(animationsMap[
                                         'textOnPageLoadAnimation4']!),
@@ -1531,8 +1759,14 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMediumFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMediumFamily),
                                           ),
                                     ),
                                   ),
@@ -1567,8 +1801,16 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                       .labelMedium
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMediumFamily),
                                                       ),
                                                 ),
                                               ),
@@ -1585,8 +1827,17 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                           context)
                                                       .headlineMedium
                                                       .override(
-                                                        fontFamily: 'Outfit',
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .headlineMediumFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .headlineMediumFamily),
                                                       ),
                                                 ),
                                               ),
@@ -1616,12 +1867,20 @@ class _ProjectDetailsAltWidgetState extends State<ProjectDetailsAltWidget>
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily:
-                                                          'Plus Jakarta Sans',
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMediumFamily,
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .info,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                          .containsKey(
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily),
                                                     ),
                                             elevation: 3.0,
                                             borderSide: BorderSide(

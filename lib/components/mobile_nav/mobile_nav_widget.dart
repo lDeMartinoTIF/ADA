@@ -107,9 +107,13 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                           'sy0pxvma' /* Dashboard */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 11.0,
                               letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
                             ),
                       ),
                     ),
@@ -150,9 +154,13 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                           't5c3aiuy' /* My Team */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 11.0,
                               letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
                             ),
                       ),
                     ),
@@ -193,9 +201,13 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                           'nkz3c58a' /* Customers */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 11.0,
                               letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
                             ),
                       ),
                     ),
@@ -236,9 +248,13 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                           '1mkyyjwj' /* Contracts */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 11.0,
                               letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
                             ),
                       ),
                     ),
@@ -279,9 +295,13 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                           'eg79coc6' /* Profile */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 11.0,
                               letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
                             ),
                       ),
                     ),

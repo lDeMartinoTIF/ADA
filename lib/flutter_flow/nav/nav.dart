@@ -104,7 +104,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
             FFRoute(
               name: 'Main_Home',
-              path: 'mainHome',
+              path: 'Main_Home',
+              requireAuth: true,
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_Home')
                   : MainHomeWidget(),
@@ -112,6 +113,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Main_customerList',
               path: 'mainCustomerList',
+              requireAuth: true,
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_customerList')
                   : MainCustomerListWidget(),
@@ -119,6 +121,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Main_Contracts',
               path: 'mainContracts',
+              requireAuth: true,
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_Contracts')
                   : MainContractsWidget(),
@@ -126,6 +129,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Main_messages',
               path: 'mainMessages',
+              requireAuth: true,
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_messages')
                   : MainMessagesWidget(),
@@ -133,6 +137,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Main_profilePage',
               path: 'mainProfilePage',
+              requireAuth: true,
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_profilePage')
                   : MainProfilePageWidget(),
@@ -173,14 +178,59 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => MessagesDetailsWidget(),
             ),
             FFRoute(
-              name: 'onboarding_azienda',
-              path: 'onboardingAzienda',
-              builder: (context, params) => OnboardingAziendaWidget(),
+              name: 'onboarding_aziendaCopy',
+              path: 'onboardingAziendaCopy',
+              requireAuth: true,
+              builder: (context, params) => OnboardingAziendaCopyWidget(),
             ),
             FFRoute(
-              name: 'onboarding2_azienda',
-              path: 'onboarding2Azienda',
-              builder: (context, params) => Onboarding2AziendaWidget(),
+              name: 'onboarding_dati_personali',
+              path: 'onboardingDatiPersonali',
+              requireAuth: true,
+              builder: (context, params) => OnboardingDatiPersonaliWidget(),
+            ),
+            FFRoute(
+              name: 'onboarding_configurazione_ADA',
+              path: 'onboardingConfigurazioneADA',
+              requireAuth: true,
+              builder: (context, params) => OnboardingConfigurazioneADAWidget(),
+            ),
+            FFRoute(
+              name: 'Main_contatti',
+              path: 'mainContatti',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_contatti')
+                  : MainContattiWidget(),
+            ),
+            FFRoute(
+              name: 'Main_prenotazioni',
+              path: 'mainPrenotazioni',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_prenotazioni')
+                  : MainPrenotazioniWidget(),
+            ),
+            FFRoute(
+              name: 'Main_Calendar',
+              path: 'mainCalendar',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_Calendar')
+                  : MainCalendarWidget(),
+            ),
+            FFRoute(
+              name: 'Main_Pagamenti',
+              path: 'mainPagamenti',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_Pagamenti')
+                  : MainPagamentiWidget(),
+            ),
+            FFRoute(
+              name: 'prova',
+              path: 'prova',
+              builder: (context, params) => ProvaWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

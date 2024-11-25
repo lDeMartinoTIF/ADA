@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/components/main_logo_small/main_logo_small_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -7,7 +6,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -393,8 +391,13 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                               style: FlutterFlowTheme.of(context)
                                   .displaySmall
                                   .override(
-                                    fontFamily: 'Outfit',
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .displaySmallFamily,
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .displaySmallFamily),
                                   ),
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation1']!),
@@ -408,8 +411,13 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelLargeFamily,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .labelLargeFamily),
                                     ),
                               ).animateOnPageLoad(
                                   animationsMap['textOnPageLoadAnimation2']!),
@@ -431,23 +439,39 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       decoration: InputDecoration(
                                         labelText:
                                             FFLocalizations.of(context).getText(
-                                          'k9u5spqi' /* Email Address */,
+                                          'k9u5spqi' /* Indirizzo Email */,
                                         ),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily),
                                             ),
                                         hintText:
                                             FFLocalizations.of(context).getText(
-                                          'f4xxyrqv' /* Enter your email here... */,
+                                          'f4xxyrqv' /* Inserisci qui la tua email... */,
                                         ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily),
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
@@ -495,9 +519,16 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily),
                                           ),
+                                      textAlign: TextAlign.start,
                                       cursorColor:
                                           FlutterFlowTheme.of(context).primary,
                                       validator: _model
@@ -531,18 +562,34 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily),
                                             ),
                                         hintText:
                                             FFLocalizations.of(context).getText(
-                                          'wt8sx5du' /* Enter your password here... */,
+                                          'wt8sx5du' /* Inserisci qui la tua password.... */,
                                         ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily),
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
@@ -606,8 +653,14 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily),
                                           ),
                                       cursorColor:
                                           FlutterFlowTheme.of(context).primary,
@@ -636,7 +689,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       context.pushNamed('forgotPassword');
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      's8bicxzh' /* Forgot Password? */,
+                                      's8bicxzh' /* Password dimenticata? */,
                                     ),
                                     options: FFButtonOptions(
                                       width: 170.0,
@@ -650,8 +703,14 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       textStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMediumFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMediumFamily),
                                           ),
                                       elevation: 0.0,
                                       borderSide: BorderSide(
@@ -679,46 +738,15 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                         return;
                                       }
 
-                                      if ((valueOrDefault(
-                                                  currentUserDocument?.status,
-                                                  '') ==
-                                              'onboarding') &&
-                                          (valueOrDefault(currentUserDocument?.role, '') ==
-                                              'azienda')) {
-                                        context.goNamedAuth(
-                                            'onboarding_azienda',
+                                      if (valueOrDefault(
+                                              currentUserDocument?.status,
+                                              '') ==
+                                          'onboarding') {
+                                        context.pushNamedAuth(
+                                            'onboarding_dati_personali',
                                             context.mounted);
-                                      } else if ((valueOrDefault(currentUserDocument?.status, '') ==
-                                                  null ||
-                                              valueOrDefault(currentUserDocument?.status, '') ==
-                                                  '') &&
-                                          (valueOrDefault(currentUserDocument?.role, '') ==
-                                              'azienda')) {
-                                        context.goNamedAuth(
-                                            'onboarding_azienda',
-                                            context.mounted);
-                                      } else if ((valueOrDefault(
-                                                  currentUserDocument?.status,
-                                                  '') ==
-                                              'onboarding') &&
-                                          (valueOrDefault(currentUserDocument?.role, '') ==
-                                              'user')) {
-                                        context.goNamedAuth(
-                                            'editProfile', context.mounted);
-                                      } else if ((valueOrDefault(
-                                                      currentUserDocument
-                                                          ?.status,
-                                                      '') ==
-                                                  null ||
-                                              valueOrDefault(currentUserDocument?.status, '') ==
-                                                  '') &&
-                                          (valueOrDefault(
-                                                  currentUserDocument?.role, '') ==
-                                              'user')) {
-                                        context.goNamedAuth(
-                                            'editProfile', context.mounted);
                                       } else {
-                                        context.goNamedAuth(
+                                        context.pushNamedAuth(
                                             'Main_Home', context.mounted);
                                       }
                                     },
@@ -737,8 +765,14 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleMediumFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily),
                                           ),
                                       elevation: 3.0,
                                       borderSide: BorderSide(
@@ -764,160 +798,137 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                               ).animateOnPageLoad(
                                   animationsMap['rowOnPageLoadAnimation2']!),
                             ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 24.0, 0.0, 0.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  AutoSizeText(
-                                    FFLocalizations.of(context).getText(
-                                      'zy328lg7' /* Use a social platform to conti... */,
+                            if (false)
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 24.0, 0.0, 0.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    AutoSizeText(
+                                      FFLocalizations.of(context).getText(
+                                        'zy328lg7' /* Use a social platform to conti... */,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                      style: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMediumFamily,
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMediumFamily),
+                                          ),
                                     ),
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Plus Jakarta Sans',
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                ],
-                              ).animateOnPageLoad(
-                                  animationsMap['rowOnPageLoadAnimation3']!),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
-                                      onTap: () async {
-                                        logFirebaseEvent(
-                                            'AUTH_LOGIN_Container_fxshfyvv_ON_TAP');
-                                        GoRouter.of(context).prepareAuthEvent();
-                                        final user = await authManager
-                                            .signInWithGoogle(context);
-                                        if (user == null) {
-                                          return;
-                                        }
-                                        if (valueOrDefault(
-                                                    currentUserDocument?.status,
-                                                    '') ==
-                                                null ||
-                                            valueOrDefault(
-                                                    currentUserDocument?.status,
-                                                    '') ==
-                                                '') {
-                                          await currentUserReference!
-                                              .update(createUsersRecordData(
-                                            status: 'onboarding',
-                                          ));
-                                        }
-                                        if (valueOrDefault(
-                                                currentUserDocument?.status,
-                                                '') ==
-                                            'onboarding') {
-                                          context.pushNamedAuth(
-                                              'onboarding_azienda',
-                                              context.mounted);
-                                        } else if (valueOrDefault(
-                                                    currentUserDocument?.status,
-                                                    '') ==
-                                                null ||
-                                            valueOrDefault(
-                                                    currentUserDocument?.status,
-                                                    '') ==
-                                                '') {
-                                          context.pushNamedAuth(
-                                              'onboarding_azienda',
-                                              context.mounted);
-                                        } else {
-                                          context.pushNamedAuth(
-                                              'Main_Home', context.mounted);
-                                        }
-                                      },
-                                      child: Container(
-                                        width: 50.0,
-                                        height: 50.0,
-                                        decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .accent1,
-                                          shape: BoxShape.circle,
-                                          border: Border.all(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            width: 2.0,
-                                          ),
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: FaIcon(
-                                          FontAwesomeIcons.google,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                          size: 24.0,
-                                        ),
-                                      ),
-                                    ).animateOnPageLoad(animationsMap[
-                                        'containerOnPageLoadAnimation1']!),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
-                                      onTap: () async {
-                                        logFirebaseEvent(
-                                            'AUTH_LOGIN_Container_peswewg7_ON_TAP');
-                                        GoRouter.of(context).prepareAuthEvent();
-                                        final user = await authManager
-                                            .signInWithApple(context);
-                                        if (user == null) {
-                                          return;
-                                        }
-
-                                        context.goNamedAuth(
-                                            'Main_Home', context.mounted);
-                                      },
-                                      child: Container(
-                                        width: 50.0,
-                                        height: 50.0,
-                                        decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .accent1,
-                                          shape: BoxShape.circle,
-                                          border: Border.all(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            width: 2.0,
-                                          ),
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: FaIcon(
-                                          FontAwesomeIcons.apple,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                          size: 24.0,
-                                        ),
-                                      ),
-                                    ).animateOnPageLoad(animationsMap[
-                                        'containerOnPageLoadAnimation2']!),
-                                  ),
-                                ],
+                                  ],
+                                ).animateOnPageLoad(
+                                    animationsMap['rowOnPageLoadAnimation3']!),
                               ),
-                            ),
+                            if (false)
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          logFirebaseEvent(
+                                              'AUTH_LOGIN_Container_fxshfyvv_ON_TAP');
+                                          GoRouter.of(context)
+                                              .prepareAuthEvent();
+                                          final user = await authManager
+                                              .signInWithGoogle(context);
+                                          if (user == null) {
+                                            return;
+                                          }
+                                        },
+                                        child: Container(
+                                          width: 50.0,
+                                          height: 50.0,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .accent1,
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              width: 2.0,
+                                            ),
+                                          ),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: FaIcon(
+                                            FontAwesomeIcons.google,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            size: 24.0,
+                                          ),
+                                        ),
+                                      ).animateOnPageLoad(animationsMap[
+                                          'containerOnPageLoadAnimation1']!),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          logFirebaseEvent(
+                                              'AUTH_LOGIN_Container_peswewg7_ON_TAP');
+                                          GoRouter.of(context)
+                                              .prepareAuthEvent();
+                                          final user = await authManager
+                                              .signInWithApple(context);
+                                          if (user == null) {
+                                            return;
+                                          }
+
+                                          context.goNamedAuth(
+                                              'Main_Home', context.mounted);
+                                        },
+                                        child: Container(
+                                          width: 50.0,
+                                          height: 50.0,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .accent1,
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              width: 2.0,
+                                            ),
+                                          ),
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: FaIcon(
+                                            FontAwesomeIcons.apple,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            size: 24.0,
+                                          ),
+                                        ),
+                                      ).animateOnPageLoad(animationsMap[
+                                          'containerOnPageLoadAnimation2']!),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 24.0, 0.0, 24.0),
@@ -927,19 +938,25 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                 children: [
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'tcu0c8bu' /* Don't have an account? */,
+                                      'tcu0c8bu' /* Non hai un account? */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily),
                                         ),
                                   ),
                                   FFButtonWidget(
                                     onPressed: () async {
                                       logFirebaseEvent(
-                                          'AUTH_LOGIN_CREATE_ACCOUNT_BTN_ON_TAP');
+                                          'AUTH_LOGIN_CREARE_UN_ACCOUNT_BTN_ON_TAP');
 
                                       context.pushNamed(
                                         'auth_Create',
@@ -954,7 +971,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'kk2rdqi2' /* Create Account */,
+                                      'kk2rdqi2' /* Creare un account */,
                                     ),
                                     options: FFButtonOptions(
                                       width: 130.0,
@@ -968,9 +985,15 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily),
                                           ),
                                       elevation: 0.0,
                                       borderSide: BorderSide(

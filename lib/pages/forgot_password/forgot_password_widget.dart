@@ -144,8 +144,10 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
             '3hcuc8v6' /* Forgot Password */,
           ),
           style: FlutterFlowTheme.of(context).titleLarge.override(
-                fontFamily: 'Plus Jakarta Sans',
+                fontFamily: FlutterFlowTheme.of(context).titleLargeFamily,
                 letterSpacing: 0.0,
+                useGoogleFonts: GoogleFonts.asMap()
+                    .containsKey(FlutterFlowTheme.of(context).titleLargeFamily),
               ),
         ),
         actions: [],
@@ -171,8 +173,11 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                     'sjjd1jb9' /* Don't remember your password? ... */,
                   ),
                   style: FlutterFlowTheme.of(context).labelMedium.override(
-                        fontFamily: 'Plus Jakarta Sans',
+                        fontFamily:
+                            FlutterFlowTheme.of(context).labelMediumFamily,
                         letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).labelMediumFamily),
                       ),
                 ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
               ),
@@ -187,19 +192,27 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                     labelText: FFLocalizations.of(context).getText(
                       'tzm5opaa' /* Email Address */,
                     ),
-                    labelStyle:
-                        FlutterFlowTheme.of(context).labelMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              letterSpacing: 0.0,
-                            ),
+                    labelStyle: FlutterFlowTheme.of(context)
+                        .labelMedium
+                        .override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).labelMediumFamily),
+                        ),
                     hintText: FFLocalizations.of(context).getText(
                       'uvsotzng' /* Please enter a valid email... */,
                     ),
-                    hintStyle:
-                        FlutterFlowTheme.of(context).labelMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              letterSpacing: 0.0,
-                            ),
+                    hintStyle: FlutterFlowTheme.of(context)
+                        .labelMedium
+                        .override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).labelMediumFamily),
+                        ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: FlutterFlowTheme.of(context).alternate,
@@ -234,8 +247,11 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                         EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Plus Jakarta Sans',
+                        fontFamily:
+                            FlutterFlowTheme.of(context).bodyMediumFamily,
                         letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).bodyMediumFamily),
                       ),
                   cursorColor: FlutterFlowTheme.of(context).primary,
                   validator: _model.emailAddressTextControllerValidator
@@ -275,9 +291,12 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Plus Jakarta Sans',
+                          fontFamily:
+                              FlutterFlowTheme.of(context).titleSmallFamily,
                           color: Colors.white,
                           letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
                     elevation: 3.0,
                     borderSide: BorderSide(

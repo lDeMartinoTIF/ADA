@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -34,6 +35,14 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
     _model = createModel(context, () => MainHomeModel());
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'Main_Home'});
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      logFirebaseEvent('MAIN_HOME_PAGE_Main_Home_ON_INIT_STATE');
+      if (valueOrDefault(currentUserDocument?.status, '') == 'onboarding') {
+        context.pushNamed('onboarding_dati_personali');
+      }
+    });
+
     animationsMap.addAll({
       'textOnPageLoadAnimation1': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
@@ -829,9 +838,12 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                     'y24lcr13' /* Dashboard */,
                   ),
                   style: FlutterFlowTheme.of(context).displaySmall.override(
-                        fontFamily: 'Outfit',
+                        fontFamily:
+                            FlutterFlowTheme.of(context).displaySmallFamily,
                         color: Colors.white,
                         letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).displaySmallFamily),
                       ),
                 ).animateOnPageLoad(
                     animationsMap['textOnPageLoadAnimation20']!),
@@ -909,8 +921,17 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
                                                 .override(
-                                                  fontFamily: 'Outfit',
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .displaySmallFamily,
                                                   letterSpacing: 0.0,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .displaySmallFamily),
                                                 ),
                                           ).animateOnPageLoad(animationsMap[
                                               'textOnPageLoadAnimation1']!),
@@ -928,8 +949,16 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                 .labelMedium
                                                 .override(
                                                   fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily,
                                                   letterSpacing: 0.0,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .labelMediumFamily),
                                                 ),
                                           ).animateOnPageLoad(animationsMap[
                                               'textOnPageLoadAnimation2']!),
@@ -1065,10 +1094,16 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                     .of(context)
                                                                 .labelMedium
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .labelMediumFamily),
                                                                 ),
                                                           ).animateOnPageLoad(
                                                               animationsMap[
@@ -1092,9 +1127,14 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                   .displaySmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Outfit',
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .displaySmallFamily,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts: GoogleFonts
+                                                                            .asMap()
+                                                                        .containsKey(
+                                                                            FlutterFlowTheme.of(context).displaySmallFamily),
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -1216,10 +1256,16 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                     .of(context)
                                                                 .labelMedium
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .labelMediumFamily),
                                                                 ),
                                                           ).animateOnPageLoad(
                                                               animationsMap[
@@ -1243,9 +1289,14 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                   .displaySmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Outfit',
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .displaySmallFamily,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts: GoogleFonts
+                                                                            .asMap()
+                                                                        .containsKey(
+                                                                            FlutterFlowTheme.of(context).displaySmallFamily),
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -1367,10 +1418,16 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                     .of(context)
                                                                 .labelMedium
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .labelMediumFamily),
                                                                 ),
                                                           ).animateOnPageLoad(
                                                               animationsMap[
@@ -1394,9 +1451,14 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                   .displaySmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Outfit',
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .displaySmallFamily,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts: GoogleFonts
+                                                                            .asMap()
+                                                                        .containsKey(
+                                                                            FlutterFlowTheme.of(context).displaySmallFamily),
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -1430,8 +1492,13 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                               style: FlutterFlowTheme.of(context)
                                   .labelLarge
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .labelLargeFamily,
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .labelLargeFamily),
                                   ),
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation9']!),
@@ -1518,10 +1585,17 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium
                                             .override(
-                                              fontFamily: 'Outfit',
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .headlineMediumFamily,
                                               color: Colors.white,
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(FlutterFlowTheme
+                                                          .of(context)
+                                                      .headlineMediumFamily),
                                             ),
                                       ).animateOnPageLoad(animationsMap[
                                           'textOnPageLoadAnimation10']!),
@@ -1533,9 +1607,15 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily,
                                             color: Color(0x9AFFFFFF),
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmallFamily),
                                           ),
                                     ).animateOnPageLoad(animationsMap[
                                         'textOnPageLoadAnimation11']!),
@@ -1636,10 +1716,16 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                     .of(context)
                                                                 .titleLarge
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .titleLargeFamily),
                                                                 ),
                                                           ).animateOnPageLoad(
                                                               animationsMap[
@@ -1663,9 +1749,14 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .labelMediumFamily,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts: GoogleFonts
+                                                                            .asMap()
+                                                                        .containsKey(
+                                                                            FlutterFlowTheme.of(context).labelMediumFamily),
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -1866,10 +1957,16 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                     .of(context)
                                                                 .titleLarge
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .titleLargeFamily),
                                                                 ),
                                                           ).animateOnPageLoad(
                                                               animationsMap[
@@ -1893,9 +1990,14 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .labelMediumFamily,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts: GoogleFonts
+                                                                            .asMap()
+                                                                        .containsKey(
+                                                                            FlutterFlowTheme.of(context).labelMediumFamily),
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -2088,8 +2190,16 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                         .titleLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleLargeFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily),
                                                         ),
                                                   ).animateOnPageLoad(animationsMap[
                                                       'textOnPageLoadAnimation16']!),
@@ -2104,14 +2214,22 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                           .getText(
                                                         'hkk2zmjw' /* Below is an a summary of activ... */,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .labelMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMediumFamily,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .labelMediumFamily),
+                                                              ),
                                                     ).animateOnPageLoad(
                                                         animationsMap[
                                                             'textOnPageLoadAnimation17']!),
@@ -2282,8 +2400,16 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                         .titleLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleLargeFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily),
                                                         ),
                                                   ).animateOnPageLoad(animationsMap[
                                                       'textOnPageLoadAnimation18']!),
@@ -2298,14 +2424,22 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                           .getText(
                                                         'g4os7kcp' /* Below is an a summary of activ... */,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .labelMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMediumFamily,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .labelMediumFamily),
+                                                              ),
                                                     ).animateOnPageLoad(
                                                         animationsMap[
                                                             'textOnPageLoadAnimation19']!),

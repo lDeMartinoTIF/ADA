@@ -96,8 +96,11 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                   'ao46xsuv' /* Add Members */,
                 ),
                 style: FlutterFlowTheme.of(context).headlineSmall.override(
-                      fontFamily: 'Outfit',
+                      fontFamily:
+                          FlutterFlowTheme.of(context).headlineSmallFamily,
                       letterSpacing: 0.0,
+                      useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).headlineSmallFamily),
                     ),
               ),
               actions: [],
@@ -171,8 +174,14 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily),
                                         ),
                                     textHighlightStyle: TextStyle(),
                                     elevation: 4.0,
@@ -244,8 +253,14 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelLarge
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelLargeFamily),
                                             lineHeight: 0.5,
                                           ),
                                       enabledBorder: UnderlineInputBorder(
@@ -294,8 +309,14 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyLargeFamily,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLargeFamily),
                                         ),
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
@@ -315,11 +336,16 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                           FFLocalizations.of(context).getText(
                             '5x8u4g0u' /* All Members */,
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    letterSpacing: 0.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelMediumFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .labelMediumFamily),
+                              ),
                         ),
                       ),
                       Padding(
@@ -422,10 +448,16 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                     context)
                                                                 .bodyLarge
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLargeFamily,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .bodyLargeFamily),
                                                                 ),
                                                       ),
                                                       Padding(
@@ -443,10 +475,16 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                   .of(context)
                                                               .labelMedium
                                                               .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMediumFamily,
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .labelMediumFamily),
                                                               ),
                                                         ),
                                                       ),
@@ -486,6 +524,10 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts:
+                                                            GoogleFonts.asMap()
+                                                                .containsKey(
+                                                                    'Outfit'),
                                                       ),
                                                   elevation: 2.0,
                                                   borderSide: BorderSide(

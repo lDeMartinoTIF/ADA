@@ -185,8 +185,16 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                         style: FlutterFlowTheme.of(context)
                                             .displaySmall
                                             .override(
-                                              fontFamily: 'Outfit',
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .displaySmallFamily,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .displaySmallFamily),
                                             ),
                                       ).animateOnPageLoad(animationsMap[
                                           'textOnPageLoadAnimation']!),
@@ -315,8 +323,17 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .headlineSmall
                                                         .override(
-                                                          fontFamily: 'Outfit',
+                                                          fontFamily:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .headlineSmallFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .headlineSmallFamily),
                                                         ),
                                               ),
                                             ),
@@ -340,6 +357,10 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts:
+                                                            GoogleFonts.asMap()
+                                                                .containsKey(
+                                                                    'Outfit'),
                                                       ),
                                             ),
                                           ),
@@ -364,8 +385,14 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -434,8 +461,16 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                         .labelLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .labelLargeFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelLargeFamily),
                                                         ),
                                               ),
                                             ),
@@ -543,8 +578,16 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                       .labelLarge
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelLargeFamily,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelLargeFamily),
                                                       ),
                                                 ),
                                               ),
@@ -586,8 +629,14 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                     textStyle: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyLargeFamily,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLargeFamily),
                                         ),
                                     hideFlags: false,
                                     flagSize: 24.0,
@@ -660,8 +709,16 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                         .titleLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleLargeFamily,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily),
                                                         ),
                                                   ),
                                                   Padding(
@@ -675,14 +732,22 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                           .getText(
                                                         'dujofvd2' /* Update the theme of your appli... */,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Plus Jakarta Sans',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .labelMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMediumFamily,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .labelMediumFamily),
+                                                              ),
                                                     ),
                                                   ),
                                                 ],
@@ -822,9 +887,10 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                                                     'zohqypc2' /* Dark Mode */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleLarge.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: FlutterFlowTheme.of(context).titleLargeFamily,
                                                                                         color: FlutterFlowTheme.of(context).info,
                                                                                         letterSpacing: 0.0,
+                                                                                        useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).titleLargeFamily),
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -1044,9 +1110,10 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                                                     't3a5lo8r' /* Light Mode */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleLarge.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: FlutterFlowTheme.of(context).titleLargeFamily,
                                                                                         color: Color(0xFF1B1D27),
                                                                                         letterSpacing: 0.0,
+                                                                                        useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).titleLargeFamily),
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -1196,14 +1263,21 @@ class _MainProfilePageWidgetState extends State<MainProfilePageWidget>
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryBackground,
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
-                                                    letterSpacing: 0.0,
-                                                  ),
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily,
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
+                                              ),
                                           elevation: 0.0,
                                           borderSide: BorderSide(
                                             color: FlutterFlowTheme.of(context)

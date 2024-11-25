@@ -155,11 +155,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Use the form below to access your account.',
     },
     'k9u5spqi': {
-      'it': 'Email Address',
+      'it': 'Indirizzo Email',
       'en': 'Email Address',
     },
     'f4xxyrqv': {
-      'it': 'Enter your email here...',
+      'it': 'Inserisci qui la tua email...',
       'en': 'Enter your email here...',
     },
     'lfzvgi5q': {
@@ -167,11 +167,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Password',
     },
     'wt8sx5du': {
-      'it': 'Enter your password here...',
+      'it': 'Inserisci qui la tua password...',
       'en': 'Enter your password here...',
     },
     's8bicxzh': {
-      'it': 'Forgot Password?',
+      'it': 'Password dimenticata?',
       'en': 'Forgot Password?',
     },
     'm9klj9ah': {
@@ -183,11 +183,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Use a social platform to continue',
     },
     'tcu0c8bu': {
-      'it': 'Don\'t have an account?',
+      'it': 'Non hai un account?',
       'en': 'Don\'t have an account?',
     },
     'kk2rdqi2': {
-      'it': 'Create Account',
+      'it': 'Creare un account',
       'en': 'Create Account',
     },
     'kfm1khsu': {
@@ -243,19 +243,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // auth_Create
   {
     'l2xxy1gf': {
-      'it': 'Get Started',
-      'en': 'Get Started',
+      'it': 'Iniziamo',
+      'en': 'Let\'s get started',
     },
     '59g0bt96': {
-      'it': 'Use the form below to get started.',
+      'it': 'Utilizza il modulo sottostante per iniziare.',
       'en': 'Use the form below to get started.',
     },
     'seheok8a': {
-      'it': 'Email Address',
-      'en': 'Email Address',
+      'it': 'Indirizzo Email',
+      'en': 'E-mail address',
     },
     '0uknk55c': {
-      'it': 'Enter your email here...',
+      'it': 'Inserisci qui la tua email...',
       'en': 'Enter your email here...',
     },
     'wwxuev1r': {
@@ -263,31 +263,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Password',
     },
     'eextb60x': {
-      'it': 'Create your password...',
+      'it': 'Crea la tua password...',
       'en': 'Create your password...',
     },
     'kx2trk1o': {
-      'it': 'Confirm Password',
-      'en': 'Confirm Password',
+      'it': 'Conferma password',
+      'en': 'Confirm password',
     },
     'k8c3y3u7': {
-      'it': 'Create your password...',
+      'it': 'Crea la tua password...',
       'en': 'Create your password...',
     },
     '29ut49wi': {
       'it': 'Account Azienda',
-      'en': 'Create Account',
+      'en': 'Company Account',
     },
     '8m9q66qo': {
       'it': 'Account Utente',
-      'en': 'Create Account',
+      'en': 'User Account',
     },
     '07gxzzhq': {
       'it': 'Use a social platform to continue',
       'en': 'Use a social platform to continue',
     },
     'ysqhbhpe': {
-      'it': 'Already have an account?',
+      'it': 'Hai già un account?',
       'en': 'Already have an account?',
     },
     'ud92zl8z': {
@@ -990,16 +990,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // editProfile
   {
     'mk8nnw94': {
-      'it': 'Change Photo',
-      'en': 'Change Photo',
+      'it': 'Cambia Immagine Profilo',
+      'en': 'Change Profile Picture',
     },
     '4no7ue4a': {
       'it': 'Nome',
-      'en': 'Your Name',
+      'en': 'Name',
     },
     '1ecoibk0': {
       'it': 'Cognome',
-      'en': 'Your Name',
+      'en': 'Surname',
     },
     '1e8re1qt': {
       'it': 'Data di nascita',
@@ -1007,15 +1007,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'q8mrywjp': {
       'it': 'Località',
-      'en': 'Your Name',
+      'en': 'Location',
     },
     'rr8ksatz': {
-      'it': 'Save Changes',
-      'en': 'Save Changes',
+      'it': 'Salva modifiche',
+      'en': 'Save changes',
     },
     'clcaiorg': {
-      'it': 'Edit Profile',
-      'en': '',
+      'it': 'Completa Profilo',
+      'en': 'Complete Profile',
     },
   },
   // projectDetailsHealthAi
@@ -1172,138 +1172,911 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
-  // onboarding_azienda
+  // Main_contatti
   {
-    '49oova8y': {
-      'it': 'Anagrafica',
-      'en': 'Personal data',
+    'g1f3nuqy': {
+      'it': 'Customers',
+      'en': 'Customers',
     },
-    'fkzcin4j': {
-      'it': 'Configura il tuo profilo',
-      'en': 'Set up your profile',
+    '5yb352tf': {
+      'it': 'Invite Users',
+      'en': 'Invite Users',
     },
-    'goq7q8xo': {
-      'it': 'Informazioni Personali',
-      'en': 'Personal Information',
+    '9lww6o18': {
+      'it': 'All',
+      'en': 'All',
     },
-    '2xoc3ky5': {
-      'it': 'Nome',
+    'rc21yuwg': {
+      'it': 'Name',
       'en': 'Name',
     },
-    'qj95fluw': {
-      'it': 'Cognome',
-      'en': 'Surname',
+    'f4n7uag7': {
+      'it': 'Title',
+      'en': 'Title',
     },
-    'vvls8z1d': {
-      'it': 'Data di nascita',
-      'en': 'Date of birth',
+    'yr8hamzo': {
+      'it': 'Company',
+      'en': 'Company',
     },
-    'mrwz7fpy': {
-      'it': 'Sesso',
-      'en': 'Sex',
+    'c6dhfrer': {
+      'it': 'Company',
+      'en': 'Company',
     },
-    'i0jvtqm3': {
-      'it': '',
-      'en': '',
+    'c422glkf': {
+      'it': 'Status',
+      'en': 'Status',
     },
-    '381ytvr2': {
-      'it': 'Maschio',
-      'en': 'Male',
+    '5s8ffnhn': {
+      'it': 'Randy Alcorn',
+      'en': 'Randy Alcorn',
     },
-    'm65f5lcw': {
-      'it': 'Femmina',
-      'en': 'Female',
+    'z2gysaux': {
+      'it': 'Head of Procurement',
+      'en': 'Head of Procurement',
     },
-    'flxf2ftr': {
-      'it': '-',
-      'en': '-',
+    'jznktonw': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
     },
-    'oqlh1qku': {
-      'it': 'Ricerca',
-      'en': 'Search...',
+    'i0fti69b': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
     },
-    'tqaq1dcy': {
-      'it': 'Luogo di nascita',
-      'en': 'Place of birth',
+    'wk7qhxet': {
+      'it': 'New',
+      'en': 'New',
     },
-    'qh1fxgd3': {
-      'it': 'Cellulare',
-      'en': 'Telephone',
+    'mukeu7x5': {
+      'it': 'James Wiseman',
+      'en': 'James Wiseman',
     },
-    'ro9yzrep': {
-      'it': 'Numero  Whatsapp',
-      'en': 'Phone Whatsapp',
+    'y5o7xsbq': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
     },
-    'bndhqr86': {
-      'it': 'Inserire numero mai attivato su Whatspp',
-      'en': '',
+    'wj7u3vk2': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
     },
-    'iowwr8r7': {
-      'it': 'Informazioni Aziendali',
-      'en': 'Company Information',
+    'e0mv9cgr': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
     },
-    '99ficoyx': {
-      'it': 'Ragione sociale',
-      'en': 'Company name',
+    '7iakn9k2': {
+      'it': 'Contacted',
+      'en': 'Contacted',
     },
-    'jt4bn3la': {
-      'it': 'Via',
-      'en': 'Go',
+    'yhked7sn': {
+      'it': 'Ignacious Rodriguez',
+      'en': 'Ignacious Rodriguez',
     },
-    '7boxsq2v': {
-      'it': 'Città',
-      'en': 'City',
+    'hzeo8j4e': {
+      'it': 'Sales Manager',
+      'en': 'Sales Manager',
     },
-    'vj21tcas': {
-      'it': 'Provincia',
-      'en': 'Province',
+    '6u0ndluw': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
     },
-    '94c4i0ik': {
-      'it': 'C. Fiscale/Partita Iva',
-      'en': 'Tax code/VAT number',
+    'h8xu4f5l': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
     },
-    'y56s9cn2': {
-      'it': 'Continua',
-      'en': 'Continues',
+    '8w7zl08e': {
+      'it': 'New',
+      'en': 'New',
+    },
+    '4mqcauas': {
+      'it': 'Elena Williams',
+      'en': 'Elena Williams',
+    },
+    'yjeglziu': {
+      'it': 'Head of Product & Innovation',
+      'en': 'Head of Product & Innovation',
+    },
+    'nlwp8wm0': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'n8jujrdq': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'cnw4hbei': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'tz2j2l6g': {
+      'it': 'Greg Brown',
+      'en': 'Greg Brown',
+    },
+    'qtuq4c1b': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    'vjbtompd': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'afofwglc': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'nls09lqu': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'e0dbbmch': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'vi3te6ez': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    'do49v52f': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'e1rvugb6': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'znlix64k': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'fgau3bk9': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'hcis3cgo': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    'tmjgui7n': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'jqgeagt3': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    '68j4k5j0': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    '6qxdqhnb': {
+      'it': 'New Calls',
+      'en': 'New Calls',
+    },
+    'm9x0wghn': {
+      'it': 'Name',
+      'en': 'Name',
+    },
+    '0ekvz00j': {
+      'it': 'Title',
+      'en': 'Title',
+    },
+    '4wjp9v3o': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'aqkj4n6a': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    '2qwpq9mb': {
+      'it': 'Status',
+      'en': 'Status',
+    },
+    'prrw37z3': {
+      'it': 'Randy Alcorn',
+      'en': 'Randy Alcorn',
+    },
+    'bwisztop': {
+      'it': 'Head of Procurement',
+      'en': 'Head of Procurement',
+    },
+    'lcbfalko': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'l20ttnt5': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'ylm557t5': {
+      'it': 'New',
+      'en': 'New',
+    },
+    'i44joobu': {
+      'it': 'Ignacious Rodriguez',
+      'en': 'Ignacious Rodriguez',
+    },
+    'bgfg1ndd': {
+      'it': 'Sales Manager',
+      'en': 'Sales Manager',
+    },
+    '7c8a8mpc': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '60pyoz59': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '7w5vel50': {
+      'it': 'New',
+      'en': 'New',
+    },
+    '9qmn1rl7': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'cu1l4jht': {
+      'it': 'Name',
+      'en': 'Name',
+    },
+    'xgh9jnfh': {
+      'it': 'Title',
+      'en': 'Title',
+    },
+    '03ejoi9r': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'dmq14q71': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'vif40veu': {
+      'it': 'Status',
+      'en': 'Status',
+    },
+    'lpk1427c': {
+      'it': 'James Wiseman',
+      'en': 'James Wiseman',
+    },
+    's5c35z72': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    'yn3bxz7c': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'qhehvzpc': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '1smlwc0v': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    '9b30ks1x': {
+      'it': 'Elena Williams',
+      'en': 'Elena Williams',
+    },
+    '6hnjyko5': {
+      'it': 'Head of Product & Innovation',
+      'en': 'Head of Product & Innovation',
+    },
+    'd9tsfrlo': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'ffdx599z': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'cyp3kvcl': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'pfj23key': {
+      'it': 'Greg Brown',
+      'en': 'Greg Brown',
+    },
+    '2xs97wf0': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    'gq37k1if': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '3wwamq0r': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '54xoiavx': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'tn6vtrpw': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'fxzaoik6': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    'e5hsacdw': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'lo0ns1c2': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'wk2pv76m': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    '6iozvfxn': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'w02goyxd': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    '2ek238eb': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'rjdx19pe': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'rprpu9tb': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'wtjeq9hy': {
+      'it': 'Customers',
+      'en': 'Customers',
+    },
+    '1fjr9cqp': {
+      'it': '__',
+      'en': '__',
     },
   },
-  // onboarding2_azienda
+  // Main_prenotazioni
   {
-    'xt3isypt': {
-      'it': 'Impostazioni',
-      'en': 'Configure Notifications',
+    'shn6pb1x': {
+      'it': 'Customers',
+      'en': 'Customers',
     },
-    'dl9vmk4k': {
-      'it': 'Configura funzionalità AI',
-      'en': 'Choose how you want to stay updated',
+    '5k9j3zi6': {
+      'it': 'Invite Users',
+      'en': 'Invite Users',
     },
-    'b8q51z41': {
-      'it': 'Configurazione ADA',
-      'en': 'Communication Preferences',
+    '7rao1fgd': {
+      'it': 'All',
+      'en': 'All',
     },
-    'xmo4v0i5': {
-      'it': 'WhatsApp',
-      'en': 'WhatsApp Notifications',
+    '52lmf42i': {
+      'it': 'Name',
+      'en': 'Name',
     },
-    'gvt16ame': {
-      'it':
-          'Attivando la funzionalità Whatsapp potrai permettere alla AI di rispondere direttamente sul numero di whatsapp fornito in Anagrafica, ricorda che il numero che fornirai non deve mai aver fatto un accesso su whatsapp, la registrazione verrà effettuata qui.\n',
-      'en':
-          'By activating the Whatsapp feature you will be able to allow the AI to respond directly to the whatsapp number provided in the Anagrafica, remember that the number you provide must never have logged in to whatsapp, the registration will be done here.',
+    'avgkp6pr': {
+      'it': 'Title',
+      'en': 'Title',
     },
-    'xxrivnb2': {
-      'it': 'Mobile',
-      'en': 'Mobile Notifications',
+    'uhjfjpj5': {
+      'it': 'Company',
+      'en': 'Company',
     },
-    'blsusfgf': {
-      'it':
-          'Attivando la funzionalità Mobile potrai permettere alla AI di rispondere direttamente sulla app mobile per Android e iOS',
-      'en':
-          'By activating the Mobile feature you can allow the AI to respond directly on the mobile app for Android and iOS',
+    's76u5bxz': {
+      'it': 'Company',
+      'en': 'Company',
     },
-    'o0uubp2h': {
-      'it': 'Salva',
-      'en': 'Save Preferences',
+    'w8dbpa25': {
+      'it': 'Status',
+      'en': 'Status',
+    },
+    '2ekn742h': {
+      'it': 'Randy Alcorn',
+      'en': 'Randy Alcorn',
+    },
+    'bhhjeh5q': {
+      'it': 'Head of Procurement',
+      'en': 'Head of Procurement',
+    },
+    'mkjycp1q': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'pxt1vqzh': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '17co091k': {
+      'it': 'New',
+      'en': 'New',
+    },
+    'x9tvjeq1': {
+      'it': 'James Wiseman',
+      'en': 'James Wiseman',
+    },
+    'bgtq93k3': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    'lr6fvy1z': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '94zmzx2i': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'j5qwclte': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'zcsb2qse': {
+      'it': 'Ignacious Rodriguez',
+      'en': 'Ignacious Rodriguez',
+    },
+    '7i4b5ktp': {
+      'it': 'Sales Manager',
+      'en': 'Sales Manager',
+    },
+    'jysj6leq': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '38g8rryu': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'uh4amvo6': {
+      'it': 'New',
+      'en': 'New',
+    },
+    '60obvyfv': {
+      'it': 'Elena Williams',
+      'en': 'Elena Williams',
+    },
+    'r4gh7x6e': {
+      'it': 'Head of Product & Innovation',
+      'en': 'Head of Product & Innovation',
+    },
+    '70bgpb7k': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '8370g9kj': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'yc8jbqfb': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'zabo7ptr': {
+      'it': 'Greg Brown',
+      'en': 'Greg Brown',
+    },
+    'y4yv5q31': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    '06d90kos': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'ub4l2e6a': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'c1nurbaq': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    '53tbp68o': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'luvtd3jh': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    '8el4ac6j': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    '9b8ta0fb': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'zs1km4n8': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    '75jtk8co': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'xr5ruijm': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    'ux39pr95': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    '2osox8f4': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'h077a7pt': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'adjti7s6': {
+      'it': 'New Calls',
+      'en': 'New Calls',
+    },
+    'tscqrj0v': {
+      'it': 'Name',
+      'en': 'Name',
+    },
+    'kx7urnri': {
+      'it': 'Title',
+      'en': 'Title',
+    },
+    'szh8xw12': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'tp4s3xw8': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'lh0bk9k7': {
+      'it': 'Status',
+      'en': 'Status',
+    },
+    'stjw04ze': {
+      'it': 'Randy Alcorn',
+      'en': 'Randy Alcorn',
+    },
+    '03r4n89s': {
+      'it': 'Head of Procurement',
+      'en': 'Head of Procurement',
+    },
+    't9p9732y': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '7tk1ro4z': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'uywjseaj': {
+      'it': 'New',
+      'en': 'New',
+    },
+    'apkjqbmj': {
+      'it': 'Ignacious Rodriguez',
+      'en': 'Ignacious Rodriguez',
+    },
+    'ixxvzmrv': {
+      'it': 'Sales Manager',
+      'en': 'Sales Manager',
+    },
+    'ku12qcxx': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'zze7ir6d': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '99tqhbs2': {
+      'it': 'New',
+      'en': 'New',
+    },
+    'xcy486he': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'cjdyw8ou': {
+      'it': 'Name',
+      'en': 'Name',
+    },
+    'h55ticb5': {
+      'it': 'Title',
+      'en': 'Title',
+    },
+    'bx00zpe3': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'ahc415jk': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'w1yntczl': {
+      'it': 'Status',
+      'en': 'Status',
+    },
+    '2stf1puo': {
+      'it': 'James Wiseman',
+      'en': 'James Wiseman',
+    },
+    'yhvweaez': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    '097mnrng': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'a40u1rmn': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'kq5zeia2': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    '6mvcb7vv': {
+      'it': 'Elena Williams',
+      'en': 'Elena Williams',
+    },
+    '5a5qf7fa': {
+      'it': 'Head of Product & Innovation',
+      'en': 'Head of Product & Innovation',
+    },
+    'zc2fhn44': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'o43sungs': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'wsz4xtq6': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'hocqh4ak': {
+      'it': 'Greg Brown',
+      'en': 'Greg Brown',
+    },
+    'lsuabbvy': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    'fu4ki6a9': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '5m1qg68p': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'lwv6azzw': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'l66uvcu4': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    '1unqd4re': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    'ssfrg1uy': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'y6yszv8m': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    '56kg9pc7': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'ky40sjmz': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'ix5z7q2t': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    '6lh7ovaf': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'xuqit2vt': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'euacwfqs': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'bw2oycx6': {
+      'it': 'Customers',
+      'en': 'Customers',
+    },
+    'mnl37khv': {
+      'it': '__',
+      'en': '__',
+    },
+  },
+  // Main_Calendar
+  {
+    '9p42skqf': {
+      'it': 'Contracts',
+      'en': 'Contracts',
+    },
+    'c3rdcsk2': {
+      'it': 'Contracts',
+      'en': 'Contracts',
+    },
+    'k6hqvqj8': {
+      'it': 'Projects',
+      'en': 'Projects',
+    },
+    'pjhp974a': {
+      'it': 'No-Code Platform Design',
+      'en': 'No-Code Platform Design',
+    },
+    'ki45u7yt': {
+      'it': 'Design Team Docs',
+      'en': 'Design Team Docs',
+    },
+    'dxyazl0m': {
+      'it': 'Contracts',
+      'en': 'Contracts',
+    },
+    'u6kpdofi': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '7oxu5rjm': {
+      'it': 'Contracts for New Opportunities',
+      'en': 'Contracts for New Opportunities',
+    },
+    '2x6mn41v': {
+      'it': 'Next Action',
+      'en': 'Next Action',
+    },
+    '7rt7cswr': {
+      'it': 'Tuesday, 10:00am',
+      'en': 'Tuesday, 10:00am',
+    },
+    's67qg1fr': {
+      'it': 'In Progress',
+      'en': 'In Progress',
+    },
+    'nxji1hce': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    '86balvhp': {
+      'it': 'Client Acquisition for Q3',
+      'en': 'Client Acquisition for Q3',
+    },
+    'zm9ya7q4': {
+      'it': 'Next Action',
+      'en': 'Next Action',
+    },
+    'cyrqi2ye': {
+      'it': 'Tuesday, 10:00am',
+      'en': 'Tuesday, 10:00am',
+    },
+    '9ja1a430': {
+      'it': 'In Progress',
+      'en': 'In Progress',
+    },
+    'zbkoy21q': {
+      'it': '__',
+      'en': '__',
+    },
+  },
+  // Main_Pagamenti
+  {
+    '8ofrkwtm': {
+      'it': 'Contracts',
+      'en': 'Contracts',
+    },
+    'd0uxbd7l': {
+      'it': 'Contracts',
+      'en': 'Contracts',
+    },
+    'qvdzesck': {
+      'it': 'Projects',
+      'en': 'Projects',
+    },
+    '60t9cn9s': {
+      'it': 'No-Code Platform Design',
+      'en': 'No-Code Platform Design',
+    },
+    '1dkobnqm': {
+      'it': 'Design Team Docs',
+      'en': 'Design Team Docs',
+    },
+    'q8pixc3q': {
+      'it': 'Contracts',
+      'en': 'Contracts',
+    },
+    'ypyxztn8': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '8vveifga': {
+      'it': 'Contracts for New Opportunities',
+      'en': 'Contracts for New Opportunities',
+    },
+    '2pdavu7l': {
+      'it': 'Next Action',
+      'en': 'Next Action',
+    },
+    'b1y29yq0': {
+      'it': 'Tuesday, 10:00am',
+      'en': 'Tuesday, 10:00am',
+    },
+    'nv38kri7': {
+      'it': 'In Progress',
+      'en': 'In Progress',
+    },
+    '3mdoksuv': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    '4bv5gwrs': {
+      'it': 'Client Acquisition for Q3',
+      'en': 'Client Acquisition for Q3',
+    },
+    'enr3ll87': {
+      'it': 'Next Action',
+      'en': 'Next Action',
+    },
+    '3booeo9m': {
+      'it': 'Tuesday, 10:00am',
+      'en': 'Tuesday, 10:00am',
+    },
+    'nz37201t': {
+      'it': 'In Progress',
+      'en': 'In Progress',
+    },
+    'hzzl8rgm': {
+      'it': '__',
+      'en': '__',
+    },
+  },
+  // prova
+  {
+    '7egs17at': {
+      'it': 'Tab 1',
+      'en': '',
+    },
+    'slr1z6b9': {
+      'it': 'Tab 2',
+      'en': '',
+    },
+    'iecyfqco': {
+      'it': 'Tab 3',
+      'en': '',
+    },
+    'ovj822fk': {
+      'it': 'Page Title',
+      'en': '',
+    },
+    '4tjvu4cp': {
+      'it': 'Home',
+      'en': '',
     },
   },
   // modal_success
@@ -1431,25 +2204,65 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // webNav
   {
-    'xai8ocja': {
-      'it': 'Search',
-      'en': 'Search',
-    },
     'yg07zi4c': {
       'it': 'Dashboard',
       'en': 'Dashboard',
     },
-    'lbojdpxg': {
-      'it': 'Customers',
-      'en': 'Customers',
+    'jm51rwdg': {
+      'it': 'Contenuti ADA',
+      'en': 'ADA Settings',
     },
-    '9pjba90p': {
-      'it': 'Contracts',
-      'en': 'Contracts',
+    '6panuiuu': {
+      'it': 'Aggiungi informazioni',
+      'en': 'Add information',
+    },
+    'v8ot9e0d': {
+      'it': 'Carica CSV',
+      'en': 'Upload CSV',
+    },
+    'lbojdpxg': {
+      'it': 'Calendario',
+      'en': 'Calendar',
+    },
+    'w4xseum2': {
+      'it': 'Prenotazioni',
+      'en': 'Reservations',
+    },
+    'k9mm5pw6': {
+      'it': 'Contatti',
+      'en': 'Clients',
+    },
+    'xpgs8ttt': {
+      'it': 'Pagamenti',
+      'en': 'Payments',
     },
     '5s0d776i': {
       'it': 'Messages',
       'en': 'Messages',
+    },
+    'zeq4whxn': {
+      'it': 'Impostazioni',
+      'en': 'ADA Settings',
+    },
+    'lyp0qh1n': {
+      'it': 'Anagrafica',
+      'en': 'Add information',
+    },
+    '0mu9p5bt': {
+      'it': 'Ruoli & Profili',
+      'en': 'Upload CSV',
+    },
+    'is84eyno': {
+      'it': 'Staff',
+      'en': 'Upload CSV',
+    },
+    '1ghjnuxt': {
+      'it': 'Customer',
+      'en': 'Customer',
+    },
+    '9pjba90p': {
+      'it': 'Contracts',
+      'en': 'Contracts',
     },
   },
   // commandPalette
@@ -2153,6 +2966,131 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gz2xhplu': {
       'it': 'Save Changes',
       'en': 'Save Changes',
+    },
+  },
+  // modal_onboarding_azienda
+  {
+    'dlnprk4r': {
+      'it': 'Informazioni Aziendali',
+      'en': 'Company Information',
+    },
+    'okaorfjk': {
+      'it': 'Ragione sociale',
+      'en': 'Company name',
+    },
+    'i63bc5zl': {
+      'it': 'Via',
+      'en': 'Go',
+    },
+    'pqlrhpbc': {
+      'it': 'Città',
+      'en': 'City',
+    },
+    'u8dvbp1o': {
+      'it': 'Provincia',
+      'en': 'Province',
+    },
+    'ab02vv18': {
+      'it': 'Numero  Whatsapp',
+      'en': 'Whatsapp number',
+    },
+    'f7z6x9xk': {
+      'it': 'Inserire numero mai attivato su Whatspp',
+      'en': 'Enter never activated number on Whatspp',
+    },
+    'vpvql7rp': {
+      'it': 'C. Fiscale/Partita Iva',
+      'en': 'C. Fiscal/VAT Number',
+    },
+    'ijuu7d6e': {
+      'it': 'Continua',
+      'en': 'Continues',
+    },
+  },
+  // modal_onboarding_dati_personali
+  {
+    'gvf5zf0u': {
+      'it': 'Informazioni Personali',
+      'en': 'Personal Information',
+    },
+    't269cdns': {
+      'it': 'Completa il tuo profilo',
+      'en': 'Complete your profile',
+    },
+    'vg8r72ac': {
+      'it': 'Cambia immagine profilo',
+      'en': 'Change profile picture',
+    },
+    '48w76puv': {
+      'it': 'Nome',
+      'en': 'Name',
+    },
+    'jw5gya04': {
+      'it': 'Cognome',
+      'en': 'Surname',
+    },
+    'wp99tp6s': {
+      'it': 'Data di nascita',
+      'en': 'Date of birth',
+    },
+    'xc5eg9s5': {
+      'it': 'Sesso',
+      'en': 'Sex',
+    },
+    'j51unvec': {
+      'it': 'Maschio',
+      'en': 'Male',
+    },
+    '5idi80o1': {
+      'it': 'Femmina',
+      'en': 'Female',
+    },
+    'l2c4i05o': {
+      'it': 'Seleziona valore...',
+      'en': 'Select value...',
+    },
+    'faxsfn8c': {
+      'it': 'Ricerca',
+      'en': 'Research',
+    },
+    'bzim82x4': {
+      'it': 'Luogo di nascita',
+      'en': 'Place of birth',
+    },
+    '22tr65pu': {
+      'it': 'Telefono',
+      'en': 'Telephone',
+    },
+  },
+  // modal_onboarding_configurazione_ADA
+  {
+    'psrsnh1q': {
+      'it': 'Configurazione ADA',
+      'en': 'ADA Configuration',
+    },
+    '09bheamx': {
+      'it': 'WhatsApp',
+      'en': 'WhatsApp',
+    },
+    'yavbir2d': {
+      'it':
+          'Attivando la funzionalità Whatsapp potrai permettere alla AI di rispondere direttamente sul numero di whatsapp fornito in Anagrafica, ricorda che il numero che fornirai non deve mai aver fatto un accesso su whatsapp, la registrazione verrà effettuata qui.\n',
+      'en':
+          'By activating the Whatsapp feature you will be able to allow the AI to respond directly to the whatsapp number provided in the Anagrafica, remember that the number you provide must never have logged in to whatsapp, the registration will be done here.',
+    },
+    '9b8pwva1': {
+      'it': 'Mobile',
+      'en': 'Mobile',
+    },
+    'rja1kpur': {
+      'it':
+          'Attivando la funzionalità Mobile potrai permettere alla AI di rispondere direttamente sulla app mobile per Android e iOS',
+      'en':
+          'By activating the Mobile feature you can allow the AI to respond directly on the mobile app for Android and iOS',
+    },
+    'ioaxqapl': {
+      'it': 'Continua',
+      'en': 'Continues',
     },
   },
   // Miscellaneous

@@ -41,6 +41,7 @@ dependencies:
   easy_debounce: 2.0.1
   emoji_flag_converter: 1.1.0
   equatable: 2.0.5
+  expandable: 5.0.1
   file_picker: 8.1.2
   firebase_analytics: 11.3.3
   firebase_analytics_platform_interface: 4.2.5
@@ -90,7 +91,7 @@ dependencies:
   path_provider_foundation: 2.4.0
   path_provider_linux: 2.2.1
   path_provider_platform_interface: 2.1.2
-  path_provider_windows: 2.2.1
+  path_provider_windows: 2.3.0
   percent_indicator: 4.2.2
   pin_code_fields: 8.0.1
   plugin_platform_interface: 2.1.8
