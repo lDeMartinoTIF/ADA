@@ -191,19 +191,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Create Account',
     },
     'kfm1khsu': {
-      'it': 'Field is required',
+      'it': 'Il campo è obbligatorio',
       'en': 'Field is required',
     },
     'p7rdh4r8': {
-      'it': 'Please choose an option from the dropdown',
+      'it': 'Scegli un\'opzione dal menu a discesa',
       'en': 'Please choose an option from the dropdown',
     },
     'ud7wd8di': {
-      'it': 'Field is required',
+      'it': 'Il campo è obbligatorio',
       'en': 'Field is required',
     },
     'bwbzfuju': {
-      'it': 'Please choose an option from the dropdown',
+      'it': 'Scegli un\'opzione dal menu a discesa',
       'en': 'Please choose an option from the dropdown',
     },
     'iha5socs': {
@@ -214,25 +214,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // forgotPassword
   {
     '3hcuc8v6': {
-      'it': 'Forgot Password',
+      'it': 'Password dimenticata?',
       'en': 'Forgot Password',
     },
     'sjjd1jb9': {
       'it':
-          'Don\'t remember your password? Enter the email associated with your account below and we will send you a new link.',
+          'Non ricordi la password? Inserisci l\'e-mail associata al tuo account qui sotto e ti invieremo un nuovo collegamento.',
       'en':
           'Don\'t remember your password? Enter the email associated with your account below and we will send you a new link.',
     },
     'tzm5opaa': {
-      'it': 'Email Address',
+      'it': 'Indirizzo Email',
       'en': 'Email Address',
     },
     'uvsotzng': {
-      'it': 'Please enter a valid email...',
+      'it': 'Per favore inserisci una email valida...',
       'en': 'Please enter a valid email...',
     },
     '3sdzjivm': {
-      'it': 'Send Reset Link',
+      'it': 'Invia link di reset',
       'en': 'Send Reset Link',
     },
     '8p6xd6cl': {
@@ -2054,29 +2054,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hzzl8rgm': {
       'it': '__',
       'en': '__',
-    },
-  },
-  // prova
-  {
-    '7egs17at': {
-      'it': 'Tab 1',
-      'en': '',
-    },
-    'slr1z6b9': {
-      'it': 'Tab 2',
-      'en': '',
-    },
-    'iecyfqco': {
-      'it': 'Tab 3',
-      'en': '',
-    },
-    'ovj822fk': {
-      'it': 'Page Title',
-      'en': '',
-    },
-    '4tjvu4cp': {
-      'it': 'Home',
-      'en': '',
     },
   },
   // modal_success

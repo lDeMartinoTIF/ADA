@@ -36,16 +36,20 @@ class ModalOnboardingDatiPersonaliModel
   // State field(s) for sesso widget.
   String? sessoValue;
   FormFieldController<String>? sessoValueController;
-  // State field(s) for TextField widget.
-  final textFieldKey = GlobalKey();
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController3;
-  String? textFieldSelectedOption;
-  String? Function(BuildContext, String?)? textController3Validator;
-  // State field(s) for yourName widget.
-  FocusNode? yourNameFocusNode;
-  TextEditingController? yourNameTextController;
-  String? Function(BuildContext, String?)? yourNameTextControllerValidator;
+  // State field(s) for luogo_nascita widget.
+  final luogoNascitaKey = GlobalKey();
+  FocusNode? luogoNascitaFocusNode;
+  TextEditingController? luogoNascitaTextController;
+  String? luogoNascitaSelectedOption;
+  String? Function(BuildContext, String?)? luogoNascitaTextControllerValidator;
+  // State field(s) for num_cell widget.
+  FocusNode? numCellFocusNode;
+  TextEditingController? numCellTextController;
+  String? Function(BuildContext, String?)? numCellTextControllerValidator;
+  // Stores action output result for [Backend Call - API (GetAll Anagrafica ByToken)] action in Button widget.
+  ApiCallResponse? responseGetAll;
+  // Stores action output result for [Backend Call - API (Insert Anagrafica)] action in Button widget.
+  ApiCallResponse? responseInsertAnagrafica;
 
   @override
   void initState(BuildContext context) {}
@@ -58,9 +62,9 @@ class ModalOnboardingDatiPersonaliModel
     cognomeFocusNode?.dispose();
     cognomeTextController?.dispose();
 
-    textFieldFocusNode?.dispose();
+    luogoNascitaFocusNode?.dispose();
 
-    yourNameFocusNode?.dispose();
-    yourNameTextController?.dispose();
+    numCellFocusNode?.dispose();
+    numCellTextController?.dispose();
   }
 }

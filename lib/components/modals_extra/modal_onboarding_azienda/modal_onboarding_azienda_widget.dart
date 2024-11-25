@@ -41,9 +41,9 @@ class _ModalOnboardingAziendaWidgetState
     super.initState();
     _model = createModel(context, () => ModalOnboardingAziendaModel());
 
-    _model.yourNameTextController ??= TextEditingController(
+    _model.nomeAziendaTextController ??= TextEditingController(
         text: valueOrDefault(currentUserDocument?.nomeAzienda, ''));
-    _model.yourNameFocusNode ??= FocusNode();
+    _model.nomeAziendaFocusNode ??= FocusNode();
 
     _model.cityTextController1 ??= TextEditingController(
         text: valueOrDefault(currentUserDocument?.viaAzienda, ''));
@@ -190,8 +190,8 @@ class _ModalOnboardingAziendaWidgetState
                                   24.0, 16.0, 24.0, 0.0),
                               child: AuthUserStreamWidget(
                                 builder: (context) => TextFormField(
-                                  controller: _model.yourNameTextController,
-                                  focusNode: _model.yourNameFocusNode,
+                                  controller: _model.nomeAziendaTextController,
+                                  focusNode: _model.nomeAziendaFocusNode,
                                   autofocus: true,
                                   obscureText: false,
                                   decoration: InputDecoration(
@@ -276,7 +276,7 @@ class _ModalOnboardingAziendaWidgetState
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primary,
                                   validator: _model
-                                      .yourNameTextControllerValidator
+                                      .nomeAziendaTextControllerValidator
                                       .asValidator(context),
                                 ),
                               ),
@@ -1053,9 +1053,8 @@ class _ModalOnboardingAziendaWidgetState
 
                                         await currentUserReference!
                                             .update(createUsersRecordData(
-                                          nomeAzienda: valueOrDefault(
-                                              currentUserDocument?.nomeAzienda,
-                                              ''),
+                                          nomeAzienda: _model
+                                              .nomeAziendaTextController.text,
                                           viaAzienda:
                                               _model.cityTextController1.text,
                                           cittaAzienda:
@@ -1067,9 +1066,72 @@ class _ModalOnboardingAziendaWidgetState
                                           codiceFiscale:
                                               _model.myBioTextController.text,
                                         ));
+                                        _model.responseUpdateAnagrafica =
+                                            await ADAapiGroup
+                                                .updateAnagraficaByTokenCall
+                                                .call(
+                                          token: currentUserUid,
+                                          nomeAzienda: _model
+                                              .nomeAziendaTextController.text,
+                                          cittaAzienda:
+                                              _model.textController3.text,
+                                          provinciaAzienda:
+                                              _model.textController4.text,
+                                          numTelWp:
+                                              _model.cityTextController2.text,
+                                          codiceFiscale:
+                                              _model.myBioTextController.text,
+                                          mail: currentUserEmail,
+                                          sesso: valueOrDefault(
+                                              currentUserDocument?.sesso, ''),
+                                          nome: valueOrDefault(
+                                              currentUserDocument?.nome, ''),
+                                          cognome: valueOrDefault(
+                                              currentUserDocument?.cognome, ''),
+                                          numTel: valueOrDefault(
+                                              currentUserDocument?.numCel, ''),
+                                          dataNascita: dateTimeFormat(
+                                            "yyyy-MM-dd",
+                                            currentUserDocument?.dataNascita,
+                                            locale: FFLocalizations.of(context)
+                                                .languageCode,
+                                          ),
+                                          luogoNascita: valueOrDefault(
+                                              currentUserDocument?.luogoNascita,
+                                              ''),
+                                          viaAzienda:
+                                              _model.cityTextController1.text,
+                                        );
 
-                                        context.pushNamed(
-                                            'onboarding_configurazione_ADA');
+                                        if ((_model.responseUpdateAnagrafica
+                                                ?.succeeded ??
+                                            true)) {
+                                          context.pushNamed(
+                                              'onboarding_configurazione_ADA');
+                                        } else {
+                                          await showDialog(
+                                            context: context,
+                                            builder: (alertDialogContext) {
+                                              return AlertDialog(
+                                                title: Text('Errore'),
+                                                content: Text((_model
+                                                        .responseUpdateAnagrafica
+                                                        ?.exceptionMessage ??
+                                                    '')),
+                                                actions: [
+                                                  TextButton(
+                                                    onPressed: () =>
+                                                        Navigator.pop(
+                                                            alertDialogContext),
+                                                    child: Text('Ok'),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        }
+
+                                        safeSetState(() {});
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'ijuu7d6e' /* Continua */,

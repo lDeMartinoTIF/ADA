@@ -7,30 +7,29 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'onboarding_azienda_copy_model.dart';
-export 'onboarding_azienda_copy_model.dart';
+import 'onboarding_azienda_model.dart';
+export 'onboarding_azienda_model.dart';
 
-class OnboardingAziendaCopyWidget extends StatefulWidget {
-  const OnboardingAziendaCopyWidget({super.key});
+class OnboardingAziendaWidget extends StatefulWidget {
+  const OnboardingAziendaWidget({super.key});
 
   @override
-  State<OnboardingAziendaCopyWidget> createState() =>
-      _OnboardingAziendaCopyWidgetState();
+  State<OnboardingAziendaWidget> createState() =>
+      _OnboardingAziendaWidgetState();
 }
 
-class _OnboardingAziendaCopyWidgetState
-    extends State<OnboardingAziendaCopyWidget> {
-  late OnboardingAziendaCopyModel _model;
+class _OnboardingAziendaWidgetState extends State<OnboardingAziendaWidget> {
+  late OnboardingAziendaModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => OnboardingAziendaCopyModel());
+    _model = createModel(context, () => OnboardingAziendaModel());
 
     logFirebaseEvent('screen_view',
-        parameters: {'screen_name': 'onboarding_aziendaCopy'});
+        parameters: {'screen_name': 'onboarding_azienda'});
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -65,7 +64,7 @@ class _OnboardingAziendaCopyWidgetState
             ),
           );
         }
-        final onboardingAziendaCopyComuniResponse = snapshot.data!;
+        final onboardingAziendaComuniResponse = snapshot.data!;
 
         return GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),

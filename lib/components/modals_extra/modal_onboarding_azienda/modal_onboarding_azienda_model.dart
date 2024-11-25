@@ -23,10 +23,10 @@ class ModalOnboardingAziendaModel
 
   ///  State fields for stateful widgets in this component.
 
-  // State field(s) for yourName widget.
-  FocusNode? yourNameFocusNode;
-  TextEditingController? yourNameTextController;
-  String? Function(BuildContext, String?)? yourNameTextControllerValidator;
+  // State field(s) for nomeAzienda widget.
+  FocusNode? nomeAziendaFocusNode;
+  TextEditingController? nomeAziendaTextController;
+  String? Function(BuildContext, String?)? nomeAziendaTextControllerValidator;
   // State field(s) for city widget.
   FocusNode? cityFocusNode1;
   TextEditingController? cityTextController1;
@@ -51,14 +51,16 @@ class ModalOnboardingAziendaModel
   FocusNode? myBioFocusNode;
   TextEditingController? myBioTextController;
   String? Function(BuildContext, String?)? myBioTextControllerValidator;
+  // Stores action output result for [Backend Call - API (Update Anagrafica ByToken)] action in Button widget.
+  ApiCallResponse? responseUpdateAnagrafica;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    yourNameFocusNode?.dispose();
-    yourNameTextController?.dispose();
+    nomeAziendaFocusNode?.dispose();
+    nomeAziendaTextController?.dispose();
 
     cityFocusNode1?.dispose();
     cityTextController1?.dispose();

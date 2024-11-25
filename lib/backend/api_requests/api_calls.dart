@@ -93,7 +93,7 @@ class ProvinceCall {
 /// Start ADAapi Group Code
 
 class ADAapiGroup {
-  static String getBaseUrl() => 'https://www.app.tecnolife.com/';
+  static String getBaseUrl() => 'https://www.app.tecnolife.com';
   static Map<String, String> headers = {};
   static CreateLingueLINGUECreatePostCall createLingueLINGUECreatePostCall =
       CreateLingueLINGUECreatePostCall();
@@ -105,9 +105,7 @@ class ADAapiGroup {
   static DeleteLinguaLINGUEDeleteLINGUADeleteCall
       deleteLinguaLINGUEDeleteLINGUADeleteCall =
       DeleteLinguaLINGUEDeleteLINGUADeleteCall();
-  static GetAllPSWSQLPSWSQLConversationTokenPostCall
-      getAllPSWSQLPSWSQLConversationTokenPostCall =
-      GetAllPSWSQLPSWSQLConversationTokenPostCall();
+  static PSWSQLInsertTokenCall pSWSQLInsertTokenCall = PSWSQLInsertTokenCall();
   static GetAllPswsqlPSWSQLGetAllPostCall getAllPswsqlPSWSQLGetAllPostCall =
       GetAllPswsqlPSWSQLGetAllPostCall();
   static GetPswsqlPSWSQLGetTokenGetCall getPswsqlPSWSQLGetTokenGetCall =
@@ -161,18 +159,13 @@ class ADAapiGroup {
   static GetBufferOrariCALENDARGetBufferOrariPostCall
       getBufferOrariCALENDARGetBufferOrariPostCall =
       GetBufferOrariCALENDARGetBufferOrariPostCall();
-  static InsertAnagraficaANAGRAFICAInsertPostCall
-      insertAnagraficaANAGRAFICAInsertPostCall =
-      InsertAnagraficaANAGRAFICAInsertPostCall();
-  static GetAllAnagraficaANAGRAFICAGetAllPostCall
-      getAllAnagraficaANAGRAFICAGetAllPostCall =
-      GetAllAnagraficaANAGRAFICAGetAllPostCall();
-  static GetAnagraficaANAGRAFICAGetTokenGetCall
-      getAnagraficaANAGRAFICAGetTokenGetCall =
-      GetAnagraficaANAGRAFICAGetTokenGetCall();
-  static UpdateAnagraficaANAGRAFICAUpdateTokenPutCall
-      updateAnagraficaANAGRAFICAUpdateTokenPutCall =
-      UpdateAnagraficaANAGRAFICAUpdateTokenPutCall();
+  static InsertAnagraficaCall insertAnagraficaCall = InsertAnagraficaCall();
+  static GetAllAnagraficaByTokenCall getAllAnagraficaByTokenCall =
+      GetAllAnagraficaByTokenCall();
+  static GetAnagraficaByTokenCall getAnagraficaByTokenCall =
+      GetAnagraficaByTokenCall();
+  static UpdateAnagraficaByTokenCall updateAnagraficaByTokenCall =
+      UpdateAnagraficaByTokenCall();
   static UpdateAnagraficaANAGRAFICAUpdateSelectTokenPutCall
       updateAnagraficaANAGRAFICAUpdateSelectTokenPutCall =
       UpdateAnagraficaANAGRAFICAUpdateSelectTokenPutCall();
@@ -413,16 +406,18 @@ class DeleteLinguaLINGUEDeleteLINGUADeleteCall {
   }
 }
 
-class GetAllPSWSQLPSWSQLConversationTokenPostCall {
-  Future<ApiCallResponse> call() async {
+class PSWSQLInsertTokenCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     final ffApiRequestBody = '''
 {
-  "token": ""
+  "token": "${escapeStringForJson(token)}"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'get_all_PSWSQL_PSWSQL_conversation_token_post',
+      callName: 'PSWSQL Insert Token',
       apiUrl: '${baseUrl}/PSWSQL/conversation_token',
       callType: ApiCallType.POST,
       headers: {},
@@ -973,28 +968,44 @@ class GetBufferOrariCALENDARGetBufferOrariPostCall {
   }
 }
 
-class InsertAnagraficaANAGRAFICAInsertPostCall {
-  Future<ApiCallResponse> call() async {
+class InsertAnagraficaCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    String? mail = '',
+    String? sesso = '',
+    String? nome = '',
+    String? cognome = '',
+    String? numTelWp = '',
+    String? numTel = '',
+    String? dataNascita = '',
+    String? luogoNascita = '',
+    String? nomeAzienda = '',
+    String? viaAzienda = '',
+    String? cittaAzienda = '',
+    String? provinciaAzienda = '',
+    String? codiceFiscale = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     final ffApiRequestBody = '''
 {
-  "TOKEN": "",
-  "MAIL": "",
-  "NOME": "",
-  "COGNOME": "",
-  "NUM_TEL_WP": "",
-  "NUM_TEL": "",
-  "DATA_NASCITA": "",
-  "LUOGO_NASCITA": "",
-  "NOME_AZIENDA": "",
-  "VIA_AZIENDA": "",
-  "CITTA_AZIENDA": "",
-  "PROVINCIA_AZIENDA": "",
-  "CODICE_FISCALE": ""
+  "TOKEN": "${escapeStringForJson(token)}",
+  "MAIL": "${escapeStringForJson(mail)}",
+  "NOME": "${escapeStringForJson(nome)}",
+  "SESSO": "${escapeStringForJson(sesso)}",
+  "COGNOME": "${escapeStringForJson(cognome)}",
+  "NUM_TEL_WP": "${escapeStringForJson(numTelWp)}",
+  "NUM_TEL": "${escapeStringForJson(numTel)}",
+  "DATA_NASCITA": "${escapeStringForJson(dataNascita)}",
+  "LUOGO_NASCITA": "${escapeStringForJson(luogoNascita)}",
+  "NOME_AZIENDA": "${escapeStringForJson(nomeAzienda)}",
+  "VIA_AZIENDA": "${escapeStringForJson(viaAzienda)}",
+  "CITTA_AZIENDA": "${escapeStringForJson(cittaAzienda)}",
+  "PROVINCIA_AZIENDA": "${escapeStringForJson(provinciaAzienda)}",
+  "CODICE_FISCALE": "${escapeStringForJson(codiceFiscale)}"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'insert_anagrafica_ANAGRAFICA_insert_post',
+      callName: 'Insert Anagrafica',
       apiUrl: '${baseUrl}/ANAGRAFICA/insert',
       callType: ApiCallType.POST,
       headers: {},
@@ -1011,16 +1022,18 @@ class InsertAnagraficaANAGRAFICAInsertPostCall {
   }
 }
 
-class GetAllAnagraficaANAGRAFICAGetAllPostCall {
-  Future<ApiCallResponse> call() async {
+class GetAllAnagraficaByTokenCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     final ffApiRequestBody = '''
 {
-  "token": ""
+  "token": "${escapeStringForJson(token)}"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'get_all_anagrafica_ANAGRAFICA_get_all_post',
+      callName: 'GetAll Anagrafica ByToken',
       apiUrl: '${baseUrl}/ANAGRAFICA/get_all',
       callType: ApiCallType.POST,
       headers: {},
@@ -1035,20 +1048,80 @@ class GetAllAnagraficaANAGRAFICAGetAllPostCall {
       alwaysAllowBody: false,
     );
   }
+
+  String? jspToken(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].TOKEN''',
+      ));
+  String? jspMail(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].MAIL''',
+      ));
+  String? jspSesso(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].SESSO''',
+      ));
+  String? jspNome(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].NOME''',
+      ));
+  String? jspCognome(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].COGNOME''',
+      ));
+  String? jspNumTelWP(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].NUM_TEL_WP''',
+      ));
+  String? jspNumTel(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].NUM_TEL''',
+      ));
+  String? jspDataNascita(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].DATA_NASCITA''',
+      ));
+  String? jspLuogoNascita(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].LUOGO_NASCITA''',
+      ));
+  String? jspNomeAzienda(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].NOME_AZIENDA''',
+      ));
+  String? jspViaAzienda(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].VIA_AZIENDA''',
+      ));
+  String? jspCittaAzienda(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].CITTA_AZIENDA''',
+      ));
+  String? jspProvinciaAzienda(dynamic response) =>
+      castToType<String>(getJsonField(
+        response,
+        r'''$[:].PROVINCIA_AZIENDA''',
+      ));
+  String? jspCodiceFiscale(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].CODICE_FISCALE''',
+      ));
 }
 
-class GetAnagraficaANAGRAFICAGetTokenGetCall {
+class GetAnagraficaByTokenCall {
   Future<ApiCallResponse> call({
     String? token = '',
   }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     return ApiManager.instance.makeApiCall(
-      callName: 'get_anagrafica_ANAGRAFICA_get__token__get',
+      callName: 'Get Anagrafica ByToken',
       apiUrl: '${baseUrl}/ANAGRAFICA/get/${token}',
       callType: ApiCallType.GET,
       headers: {},
-      params: {},
+      params: {
+        'token': token,
+      },
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
@@ -1059,30 +1132,44 @@ class GetAnagraficaANAGRAFICAGetTokenGetCall {
   }
 }
 
-class UpdateAnagraficaANAGRAFICAUpdateTokenPutCall {
+class UpdateAnagraficaByTokenCall {
   Future<ApiCallResponse> call({
     String? token = '',
+    String? mail = '',
+    String? sesso = '',
+    String? nome = '',
+    String? cognome = '',
+    String? numTelWp = '',
+    String? numTel = '',
+    String? dataNascita = '',
+    String? luogoNascita = '',
+    String? nomeAzienda = '',
+    String? viaAzienda = '',
+    String? cittaAzienda = '',
+    String? provinciaAzienda = '',
+    String? codiceFiscale = '',
   }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     final ffApiRequestBody = '''
 {
-  "TOKEN": "",
-  "MAIL": "",
-  "NOME": "",
-  "COGNOME": "",
-  "NUM_TEL_WP": "",
-  "NUM_TEL": "",
-  "DATA_NASCITA": "",
-  "LUOGO_NASCITA": "",
-  "NOME_AZIENDA": "",
-  "VIA_AZIENDA": "",
-  "CITTA_AZIENDA": "",
-  "PROVINCIA_AZIENDA": "",
-  "CODICE_FISCALE": ""
+  "TOKEN": "${escapeStringForJson(token)}",
+  "SESSO": "${escapeStringForJson(sesso)}",
+  "MAIL": "${escapeStringForJson(mail)}",
+  "NOME": "${escapeStringForJson(nome)}",
+  "COGNOME": "${escapeStringForJson(cognome)}",
+  "NUM_TEL_WP": "${escapeStringForJson(numTelWp)}",
+  "NUM_TEL": "${escapeStringForJson(numTel)}",
+  "DATA_NASCITA": "${escapeStringForJson(dataNascita)}",
+  "LUOGO_NASCITA": "${escapeStringForJson(luogoNascita)}",
+  "NOME_AZIENDA": "${escapeStringForJson(nomeAzienda)}",
+  "VIA_AZIENDA": "${escapeStringForJson(viaAzienda)}",
+  "CITTA_AZIENDA": "${escapeStringForJson(cittaAzienda)}",
+  "PROVINCIA_AZIENDA": "${escapeStringForJson(provinciaAzienda)}",
+  "CODICE_FISCALE": "${escapeStringForJson(codiceFiscale)}"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'update_anagrafica_ANAGRAFICA_update__token__put',
+      callName: 'Update Anagrafica ByToken',
       apiUrl: '${baseUrl}/ANAGRAFICA/update/${token}',
       callType: ApiCallType.PUT,
       headers: {},

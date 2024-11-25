@@ -24,8 +24,8 @@ export '/pages/project_details/project_details_widget.dart'
 export '/pages/search_page/search_page_widget.dart' show SearchPageWidget;
 export '/pages/messages_details/messages_details_widget.dart'
     show MessagesDetailsWidget;
-export '/pages/onboarding_page/onboarding_azienda_copy/onboarding_azienda_copy_widget.dart'
-    show OnboardingAziendaCopyWidget;
+export '/pages/onboarding_page/onboarding_azienda/onboarding_azienda_widget.dart'
+    show OnboardingAziendaWidget;
 export '/pages/onboarding_page/onboarding_dati_personali/onboarding_dati_personali_widget.dart'
     show OnboardingDatiPersonaliWidget;
 export '/pages/onboarding_page/onboarding_configurazione_a_d_a/onboarding_configurazione_a_d_a_widget.dart'
@@ -38,4 +38,3 @@ export '/pages/main_pages/main_calendar/main_calendar_widget.dart'
     show MainCalendarWidget;
 export '/pages/main_pages/main_pagamenti/main_pagamenti_widget.dart'
     show MainPagamentiWidget;
-export '/pages/main_pages/prova/prova_widget.dart' show ProvaWidget;

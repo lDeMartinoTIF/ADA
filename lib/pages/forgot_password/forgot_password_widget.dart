@@ -141,7 +141,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
         ),
         title: Text(
           FFLocalizations.of(context).getText(
-            '3hcuc8v6' /* Forgot Password */,
+            '3hcuc8v6' /* Password dimenticata? */,
           ),
           style: FlutterFlowTheme.of(context).titleLarge.override(
                 fontFamily: FlutterFlowTheme.of(context).titleLargeFamily,
@@ -170,7 +170,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'sjjd1jb9' /* Don't remember your password? ... */,
+                    'sjjd1jb9' /* Non ricordi la password? Inser... */,
                   ),
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily:
@@ -190,7 +190,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: FFLocalizations.of(context).getText(
-                      'tzm5opaa' /* Email Address */,
+                      'tzm5opaa' /* Indirizzo Email */,
                     ),
                     labelStyle: FlutterFlowTheme.of(context)
                         .labelMedium
@@ -202,7 +202,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                               FlutterFlowTheme.of(context).labelMediumFamily),
                         ),
                     hintText: FFLocalizations.of(context).getText(
-                      'uvsotzng' /* Please enter a valid email... */,
+                      'uvsotzng' /* Per favore inserisci una email... */,
                     ),
                     hintStyle: FlutterFlowTheme.of(context)
                         .labelMedium
@@ -281,7 +281,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                     );
                   },
                   text: FFLocalizations.of(context).getText(
-                    '3sdzjivm' /* Send Reset Link */,
+                    '3sdzjivm' /* Invia link di reset */,
                   ),
                   options: FFButtonOptions(
                     width: 230.0,

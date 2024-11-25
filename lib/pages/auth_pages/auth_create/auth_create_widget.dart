@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/main_logo_small/main_logo_small_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -796,26 +797,59 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                       .doc(user.uid)
                                       .update(createUsersRecordData(
                                         role: 'azienda',
+                                        email: _model
+                                            .emailAddressTextController.text,
                                       ));
 
-                                  await Future.delayed(
-                                      const Duration(milliseconds: 500));
+                                  _model.responsePSWSQLinsert =
+                                      await ADAapiGroup.pSWSQLInsertTokenCall
+                                          .call(
+                                    token: currentUserUid,
+                                  );
 
-                                  await currentUserReference!
-                                      .update(createUsersRecordData(
-                                    status: 'onboarding',
-                                    role: 'azienda',
-                                  ));
-                                  if (valueOrDefault(
-                                          currentUserDocument?.status, '') ==
-                                      'onboarding') {
-                                    context.pushNamedAuth(
-                                        'onboarding_dati_personali',
-                                        context.mounted);
+                                  if ((_model.responsePSWSQLinsert?.succeeded ??
+                                      true)) {
+                                    await Future.delayed(
+                                        const Duration(milliseconds: 500));
+
+                                    await currentUserReference!
+                                        .update(createUsersRecordData(
+                                      status: 'onboarding',
+                                      role: 'azienda',
+                                    ));
+                                    if (valueOrDefault(
+                                            currentUserDocument?.status, '') ==
+                                        'onboarding') {
+                                      context.pushNamedAuth(
+                                          'onboarding_dati_personali',
+                                          context.mounted);
+                                    } else {
+                                      context.pushNamedAuth(
+                                          'Main_Home', context.mounted);
+                                    }
                                   } else {
-                                    context.pushNamedAuth(
-                                        'Main_Home', context.mounted);
+                                    await showDialog(
+                                      context: context,
+                                      builder: (alertDialogContext) {
+                                        return AlertDialog(
+                                          title: Text('Errore'),
+                                          content: Text((_model
+                                                  .responsePSWSQLinsert
+                                                  ?.exceptionMessage ??
+                                              '')),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () => Navigator.pop(
+                                                  alertDialogContext),
+                                              child: Text('Ok'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
                                   }
+
+                                  safeSetState(() {});
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   '29ut49wi' /* Account Azienda */,
@@ -888,6 +922,8 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                       .doc(user.uid)
                                       .update(createUsersRecordData(
                                         role: 'azienda',
+                                        email: _model
+                                            .emailAddressTextController.text,
                                       ));
 
                                   await Future.delayed(

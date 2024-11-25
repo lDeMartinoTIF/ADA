@@ -178,10 +178,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => MessagesDetailsWidget(),
             ),
             FFRoute(
-              name: 'onboarding_aziendaCopy',
-              path: 'onboardingAziendaCopy',
+              name: 'onboarding_azienda',
+              path: 'onboardingAzienda',
               requireAuth: true,
-              builder: (context, params) => OnboardingAziendaCopyWidget(),
+              builder: (context, params) => OnboardingAziendaWidget(),
             ),
             FFRoute(
               name: 'onboarding_dati_personali',
@@ -226,11 +226,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_Pagamenti')
                   : MainPagamentiWidget(),
-            ),
-            FFRoute(
-              name: 'prova',
-              path: 'prova',
-              builder: (context, params) => ProvaWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

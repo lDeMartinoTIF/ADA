@@ -39,7 +39,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       logFirebaseEvent('MAIN_HOME_PAGE_Main_Home_ON_INIT_STATE');
       if (valueOrDefault(currentUserDocument?.status, '') == 'onboarding') {
-        context.pushNamed('onboarding_dati_personali');
+        context.goNamed('onboarding_dati_personali');
       }
     });
 

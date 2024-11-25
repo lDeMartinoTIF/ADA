@@ -59,12 +59,12 @@ class _ModalOnboardingDatiPersonaliWidgetState
         text: valueOrDefault(currentUserDocument?.cognome, ''));
     _model.cognomeFocusNode ??= FocusNode();
 
-    _model.textController3 ??= TextEditingController(
+    _model.luogoNascitaTextController ??= TextEditingController(
         text: valueOrDefault(currentUserDocument?.luogoNascita, ''));
 
-    _model.yourNameTextController ??= TextEditingController(
+    _model.numCellTextController ??= TextEditingController(
         text: valueOrDefault(currentUserDocument?.numCel, ''));
-    _model.yourNameFocusNode ??= FocusNode();
+    _model.numCellFocusNode ??= FocusNode();
 
     animationsMap.addAll({
       'containerOnPageLoadAnimation': AnimationInfo(
@@ -182,93 +182,127 @@ class _ModalOnboardingDatiPersonaliWidgetState
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              16.0, 12.0, 16.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: 100.0,
-                                height: 100.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).accent1,
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    width: 2.0,
-                                  ),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.all(2.0),
-                                  child: Container(
-                                    width: 90.0,
-                                    height: 90.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: CachedNetworkImage(
-                                      fadeInDuration:
-                                          Duration(milliseconds: 500),
-                                      fadeOutDuration:
-                                          Duration(milliseconds: 500),
-                                      imageUrl:
-                                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/adaptive-assistant-gy0yz9/assets/9120vce4jvqv/blank-user.jpg',
-                                      fit: BoxFit.fitWidth,
-                                    ),
-                                  ),
-                                ),
+                        if (false)
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 12.0, 16.0, 0.0),
+                            child: FutureBuilder<ApiCallResponse>(
+                              future: ADAapiGroup.getAnagraficaByTokenCall.call(
+                                token: currentUserUid,
                               ),
-                              FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  'vg8r72ac' /* Cambia immagine profilo */,
-                                ),
-                                options: FFButtonOptions(
-                                  height: 44.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .labelMediumFamily,
-                                        letterSpacing: 0.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMediumFamily),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          FlutterFlowTheme.of(context).primary,
+                                        ),
                                       ),
-                                  elevation: 0.0,
-                                  borderSide: BorderSide(
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate,
-                                    width: 2.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  hoverColor:
-                                      FlutterFlowTheme.of(context).alternate,
-                                  hoverBorderSide: BorderSide(
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate,
-                                    width: 2.0,
-                                  ),
-                                  hoverTextColor:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  hoverElevation: 3.0,
-                                ),
-                              ),
-                            ].divide(SizedBox(width: 16.0)),
+                                    ),
+                                  );
+                                }
+                                final rowGetAnagraficaByTokenResponse =
+                                    snapshot.data!;
+
+                                return Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      width: 100.0,
+                                      height: 100.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .accent1,
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          width: 2.0,
+                                        ),
+                                      ),
+                                      child: Padding(
+                                        padding: EdgeInsets.all(2.0),
+                                        child: Container(
+                                          width: 90.0,
+                                          height: 90.0,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: CachedNetworkImage(
+                                            fadeInDuration:
+                                                Duration(milliseconds: 500),
+                                            fadeOutDuration:
+                                                Duration(milliseconds: 500),
+                                            imageUrl:
+                                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/adaptive-assistant-gy0yz9/assets/9120vce4jvqv/blank-user.jpg',
+                                            fit: BoxFit.fitWidth,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FFButtonWidget(
+                                      onPressed: () {
+                                        print('Button pressed ...');
+                                      },
+                                      text: FFLocalizations.of(context).getText(
+                                        'vg8r72ac' /* Cambia immagine profilo */,
+                                      ),
+                                      options: FFButtonOptions(
+                                        height: 44.0,
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            24.0, 0.0, 24.0, 0.0),
+                                        iconPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily),
+                                            ),
+                                        elevation: 0.0,
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .alternate,
+                                          width: 2.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(12.0),
+                                        hoverColor: FlutterFlowTheme.of(context)
+                                            .alternate,
+                                        hoverBorderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .alternate,
+                                          width: 2.0,
+                                        ),
+                                        hoverTextColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                        hoverElevation: 3.0,
+                                      ),
+                                    ),
+                                  ].divide(SizedBox(width: 16.0)),
+                                );
+                              },
+                            ),
                           ),
-                        ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
@@ -786,7 +820,8 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                     ),
                                   );
                                 }
-                                final textFieldComuniResponse = snapshot.data!;
+                                final luogoNascitaComuniResponse =
+                                    snapshot.data!;
 
                                 return Autocomplete<String>(
                                   initialValue: TextEditingValue(
@@ -799,7 +834,7 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                     }
                                     return ComuniITAGroup.comuniCall
                                         .jpNome(
-                                      textFieldComuniResponse.jsonBody,
+                                      luogoNascitaComuniResponse.jsonBody,
                                     )!
                                         .where((option) {
                                       final lowercaseOption =
@@ -811,8 +846,9 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                   optionsViewBuilder:
                                       (context, onSelected, options) {
                                     return AutocompleteOptionsList(
-                                      textFieldKey: _model.textFieldKey,
-                                      textController: _model.textController3!,
+                                      textFieldKey: _model.luogoNascitaKey,
+                                      textController:
+                                          _model.luogoNascitaTextController!,
                                       options: options.toList(),
                                       onSelected: onSelected,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -839,8 +875,9 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                     );
                                   },
                                   onSelected: (String selection) {
-                                    safeSetState(() => _model
-                                        .textFieldSelectedOption = selection);
+                                    safeSetState(() =>
+                                        _model.luogoNascitaSelectedOption =
+                                            selection);
                                     FocusScope.of(context).unfocus();
                                   },
                                   fieldViewBuilder: (
@@ -849,12 +886,12 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                     focusNode,
                                     onEditingComplete,
                                   ) {
-                                    _model.textFieldFocusNode = focusNode;
+                                    _model.luogoNascitaFocusNode = focusNode;
 
-                                    _model.textController3 =
+                                    _model.luogoNascitaTextController =
                                         textEditingController;
                                     return TextFormField(
-                                      key: _model.textFieldKey,
+                                      key: _model.luogoNascitaKey,
                                       controller: textEditingController,
                                       focusNode: focusNode,
                                       onEditingComplete: onEditingComplete,
@@ -947,7 +984,8 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                           ),
                                       minLines: 1,
                                       keyboardType: TextInputType.phone,
-                                      validator: _model.textController3Validator
+                                      validator: _model
+                                          .luogoNascitaTextControllerValidator
                                           .asValidator(context),
                                     );
                                   },
@@ -961,8 +999,8 @@ class _ModalOnboardingDatiPersonaliWidgetState
                               16.0, 16.0, 16.0, 20.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => TextFormField(
-                              controller: _model.yourNameTextController,
-                              focusNode: _model.yourNameFocusNode,
+                              controller: _model.numCellTextController,
+                              focusNode: _model.numCellFocusNode,
                               autofocus: false,
                               obscureText: false,
                               decoration: InputDecoration(
@@ -1039,7 +1077,7 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                   ),
                               minLines: 1,
                               cursorColor: FlutterFlowTheme.of(context).primary,
-                              validator: _model.yourNameTextControllerValidator
+                              validator: _model.numCellTextControllerValidator
                                   .asValidator(context),
                             ),
                           ),
@@ -1067,10 +1105,10 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                   nome: _model.nomeTextController.text,
                                   cognome: _model.cognomeTextController.text,
                                   dataNascita: _model.datePicked,
-                                  luogoNascita: _model.textController3.text,
+                                  luogoNascita:
+                                      _model.luogoNascitaTextController.text,
                                   sesso: _model.sessoValue,
-                                  email: '',
-                                  numCel: _model.yourNameTextController.text,
+                                  numCel: _model.numCellTextController.text,
                                 ));
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
@@ -1095,13 +1133,75 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                         FlutterFlowTheme.of(context).secondary,
                                   ),
                                 );
-                                if (valueOrDefault(
-                                        currentUserDocument?.role, '') ==
-                                    'azienda') {
-                                  context.pushNamed('onboarding_aziendaCopy');
+                                _model.responseGetAll = await ADAapiGroup
+                                    .getAllAnagraficaByTokenCall
+                                    .call(
+                                  token: currentUserUid,
+                                );
+
+                                if ((_model.responseGetAll?.succeeded ??
+                                    true)) {
+                                  if (valueOrDefault(
+                                          currentUserDocument?.role, '') ==
+                                      'azienda') {
+                                    context.pushNamed('onboarding_azienda');
+                                  } else {
+                                    context.pushNamed('Main_Home');
+                                  }
                                 } else {
-                                  context.pushNamed('Main_Home');
+                                  _model.responseInsertAnagrafica =
+                                      await ADAapiGroup.insertAnagraficaCall
+                                          .call(
+                                    token: currentUserUid,
+                                    nome: _model.nomeTextController.text,
+                                    cognome: _model.cognomeTextController.text,
+                                    sesso: _model.sessoValue,
+                                    dataNascita: dateTimeFormat(
+                                      "yyyy-MM-dd",
+                                      _model.datePicked,
+                                      locale: FFLocalizations.of(context)
+                                          .languageCode,
+                                    ),
+                                    luogoNascita:
+                                        _model.luogoNascitaTextController.text,
+                                    mail: currentUserEmail,
+                                    numTel: _model.numCellTextController.text,
+                                  );
+
+                                  if ((_model.responseInsertAnagrafica
+                                          ?.succeeded ??
+                                      true)) {
+                                    if (valueOrDefault(
+                                            currentUserDocument?.role, '') ==
+                                        'azienda') {
+                                      context.pushNamed('onboarding_azienda');
+                                    } else {
+                                      context.pushNamed('Main_Home');
+                                    }
+                                  } else {
+                                    await showDialog(
+                                      context: context,
+                                      builder: (alertDialogContext) {
+                                        return AlertDialog(
+                                          title: Text('Errore'),
+                                          content: Text((_model
+                                                  .responseInsertAnagrafica
+                                                  ?.exceptionMessage ??
+                                              '')),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () => Navigator.pop(
+                                                  alertDialogContext),
+                                              child: Text('Ok'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  }
                                 }
+
+                                safeSetState(() {});
                               },
                               text: () {
                                 if (valueOrDefault(
