@@ -39,6 +39,8 @@ class AuthCreateModel extends FlutterFlowModel<AuthCreateWidget> {
       passwordConfirmTextControllerValidator;
   // Stores action output result for [Backend Call - API (PSWSQL Insert Token)] action in Button-Login widget.
   ApiCallResponse? responsePSWSQLinsert;
+  // Stores action output result for [Backend Call - API (PSWSQL Insert Token)] action in Button-Login widget.
+  ApiCallResponse? responsePSWSQLinsertUser;
 
   @override
   void initState(BuildContext context) {

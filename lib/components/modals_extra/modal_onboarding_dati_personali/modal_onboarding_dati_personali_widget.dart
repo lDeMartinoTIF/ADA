@@ -1110,42 +1110,63 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                   sesso: _model.sessoValue,
                                   numCel: _model.numCellTextController.text,
                                 ));
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      'You successfully updated your profile information!',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily,
-                                            color: Colors.white,
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily),
-                                          ),
-                                    ),
-                                    duration: Duration(milliseconds: 4000),
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context).secondary,
-                                  ),
-                                );
                                 _model.responseGetAll = await ADAapiGroup
                                     .getAllAnagraficaByTokenCall
                                     .call(
                                   token: currentUserUid,
                                 );
 
-                                if ((_model.responseGetAll?.succeeded ??
-                                    true)) {
+                                if (ADAapiGroup.getAllAnagraficaByTokenCall
+                                            .jspNome(
+                                          (_model.responseGetAll?.jsonBody ??
+                                              ''),
+                                        ) !=
+                                        null &&
+                                    ADAapiGroup.getAllAnagraficaByTokenCall
+                                            .jspNome(
+                                          (_model.responseGetAll?.jsonBody ??
+                                              ''),
+                                        ) !=
+                                        '') {
+                                  _model.responseUpdateAnagrafica =
+                                      await ADAapiGroup
+                                          .updateAnagraficaByTokenCall
+                                          .call(
+                                    token: currentUserUid,
+                                    nomeAzienda: null,
+                                    cittaAzienda: null,
+                                    provinciaAzienda: null,
+                                    numTelWp: null,
+                                    codiceFiscale: null,
+                                    mail: currentUserEmail,
+                                    sesso: valueOrDefault(
+                                        currentUserDocument?.sesso, ''),
+                                    nome: valueOrDefault(
+                                        currentUserDocument?.nome, ''),
+                                    cognome: valueOrDefault(
+                                        currentUserDocument?.cognome, ''),
+                                    numTel: valueOrDefault(
+                                        currentUserDocument?.numCel, ''),
+                                    dataNascita: dateTimeFormat(
+                                      "yyyy-MM-dd",
+                                      currentUserDocument?.dataNascita,
+                                      locale: FFLocalizations.of(context)
+                                          .languageCode,
+                                    ),
+                                    luogoNascita: '',
+                                    viaAzienda: '',
+                                  );
+
                                   if (valueOrDefault(
                                           currentUserDocument?.role, '') ==
                                       'azienda') {
                                     context.pushNamed('onboarding_azienda');
                                   } else {
+                                    await currentUserReference!
+                                        .update(createUsersRecordData(
+                                      status: 'ready',
+                                    ));
+
                                     context.pushNamed('Main_Home');
                                   }
                                 } else {
@@ -1166,6 +1187,12 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                         _model.luogoNascitaTextController.text,
                                     mail: currentUserEmail,
                                     numTel: _model.numCellTextController.text,
+                                    numTelWp: '',
+                                    nomeAzienda: '',
+                                    viaAzienda: '',
+                                    cittaAzienda: '',
+                                    provinciaAzienda: '',
+                                    codiceFiscale: '',
                                   );
 
                                   if ((_model.responseInsertAnagrafica
@@ -1176,6 +1203,11 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                         'azienda') {
                                       context.pushNamed('onboarding_azienda');
                                     } else {
+                                      await currentUserReference!
+                                          .update(createUsersRecordData(
+                                        status: 'ready',
+                                      ));
+
                                       context.pushNamed('Main_Home');
                                     }
                                   } else {

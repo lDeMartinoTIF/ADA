@@ -796,7 +796,7 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                   await UsersRecord.collection
                                       .doc(user.uid)
                                       .update(createUsersRecordData(
-                                        role: 'azienda',
+                                        role: 'user',
                                         email: _model
                                             .emailAddressTextController.text,
                                       ));
@@ -921,29 +921,60 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                   await UsersRecord.collection
                                       .doc(user.uid)
                                       .update(createUsersRecordData(
-                                        role: 'azienda',
+                                        role: 'user',
                                         email: _model
                                             .emailAddressTextController.text,
                                       ));
 
-                                  await Future.delayed(
-                                      const Duration(milliseconds: 500));
+                                  _model.responsePSWSQLinsertUser =
+                                      await ADAapiGroup.pSWSQLInsertTokenCall
+                                          .call(
+                                    token: currentUserUid,
+                                  );
 
-                                  await currentUserReference!
-                                      .update(createUsersRecordData(
-                                    status: 'onboarding',
-                                    role: 'user',
-                                  ));
-                                  if (valueOrDefault(
-                                          currentUserDocument?.status, '') ==
-                                      'onboarding') {
-                                    context.pushNamedAuth(
-                                        'onboarding_dati_personali',
-                                        context.mounted);
+                                  if ((_model.responsePSWSQLinsert?.succeeded ??
+                                      true)) {
+                                    await Future.delayed(
+                                        const Duration(milliseconds: 500));
+
+                                    await currentUserReference!
+                                        .update(createUsersRecordData(
+                                      status: 'onboarding',
+                                      role: 'user',
+                                    ));
+                                    if (valueOrDefault(
+                                            currentUserDocument?.status, '') ==
+                                        'onboarding') {
+                                      context.pushNamedAuth(
+                                          'onboarding_dati_personali',
+                                          context.mounted);
+                                    } else {
+                                      context.pushNamedAuth(
+                                          'Main_Home', context.mounted);
+                                    }
                                   } else {
-                                    context.pushNamedAuth(
-                                        'Main_Home', context.mounted);
+                                    await showDialog(
+                                      context: context,
+                                      builder: (alertDialogContext) {
+                                        return AlertDialog(
+                                          title: Text('Errore'),
+                                          content: Text((_model
+                                                  .responsePSWSQLinsert
+                                                  ?.exceptionMessage ??
+                                              '')),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () => Navigator.pop(
+                                                  alertDialogContext),
+                                              child: Text('Ok'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
                                   }
+
+                                  safeSetState(() {});
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   '8m9q66qo' /* Account Utente */,

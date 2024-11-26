@@ -48,6 +48,8 @@ class ModalOnboardingDatiPersonaliModel
   String? Function(BuildContext, String?)? numCellTextControllerValidator;
   // Stores action output result for [Backend Call - API (GetAll Anagrafica ByToken)] action in Button widget.
   ApiCallResponse? responseGetAll;
+  // Stores action output result for [Backend Call - API (Update Anagrafica ByToken)] action in Button widget.
+  ApiCallResponse? responseUpdateAnagrafica;
   // Stores action output result for [Backend Call - API (Insert Anagrafica)] action in Button widget.
   ApiCallResponse? responseInsertAnagrafica;
 

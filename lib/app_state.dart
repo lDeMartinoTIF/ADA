@@ -25,6 +25,12 @@ class FFAppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  String _Debug = '';
+  String get Debug => _Debug;
+  set Debug(String value) {
+    _Debug = value;
+  }
+
   final _provinceManager = FutureRequestManager<ApiCallResponse>();
   Future<ApiCallResponse> province({
     String? uniqueQueryKey,
