@@ -156,6 +156,8 @@ class _NavBarPageState extends State<NavBarPage> {
       'Main_prenotazioni': MainPrenotazioniWidget(),
       'Main_Calendar': MainCalendarWidget(),
       'Main_Pagamenti': MainPagamentiWidget(),
+      'Main_Aggiungi_Informazioni': MainAggiungiInformazioniWidget(),
+      'Main_Carica_CSV': MainCaricaCSVWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -303,6 +305,34 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'hzzl8rgm' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_work_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.home_work_rounded,
+                size: 32.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'gxfw4er3' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_work_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.home_work_rounded,
+                size: 32.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'hif10f5r' /* __ */,
               ),
               tooltip: '',
             )

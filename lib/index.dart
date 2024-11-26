@@ -38,3 +38,7 @@ export '/pages/main_pages/main_calendar/main_calendar_widget.dart'
     show MainCalendarWidget;
 export '/pages/main_pages/main_pagamenti/main_pagamenti_widget.dart'
     show MainPagamentiWidget;
+export '/pages/main_pages/main_aggiungi_informazioni/main_aggiungi_informazioni_widget.dart'
+    show MainAggiungiInformazioniWidget;
+export '/pages/main_pages/main_carica_c_s_v/main_carica_c_s_v_widget.dart'
+    show MainCaricaCSVWidget;

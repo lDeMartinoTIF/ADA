@@ -226,6 +226,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_Pagamenti')
                   : MainPagamentiWidget(),
+            ),
+            FFRoute(
+              name: 'Main_Aggiungi_Informazioni',
+              path: 'mainAggiungiInformazioni',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_Aggiungi_Informazioni')
+                  : MainAggiungiInformazioniWidget(),
+            ),
+            FFRoute(
+              name: 'Main_Carica_CSV',
+              path: 'mainCaricaCSV',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_Carica_CSV')
+                  : MainCaricaCSVWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

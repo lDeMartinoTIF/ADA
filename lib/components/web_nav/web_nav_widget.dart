@@ -330,8 +330,10 @@ class _WebNavWidgetState extends State<WebNavWidget>
                             children: [
                               FaIcon(
                                 FontAwesomeIcons.atom,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
+                                color: widget!.selectedNav == 2
+                                    ? FlutterFlowTheme.of(context).primary
+                                    : FlutterFlowTheme.of(context)
+                                        .secondaryText,
                                 size: 28.0,
                               ),
                               if (_model.compactView == false)
@@ -381,37 +383,61 @@ class _WebNavWidgetState extends State<WebNavWidget>
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     12.0, 4.0, 12.0, 4.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    if (_model.compactView == false)
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            40.0, 8.0, 0.0, 8.0),
-                                        child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '6panuiuu' /* Aggiungi informazioni */,
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleSmall
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmallFamily,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .titleSmallFamily),
-                                              ),
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    logFirebaseEvent(
+                                        'WEB_NAV_COMP_Row_1gik9luh_ON_TAP');
+
+                                    context.pushNamed(
+                                      'Main_Aggiungi_Informazioni',
+                                      extra: <String, dynamic>{
+                                        kTransitionInfoKey: TransitionInfo(
+                                          hasTransition: true,
+                                          transitionType:
+                                              PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 0),
                                         ),
-                                      ),
-                                  ],
+                                      },
+                                    );
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      if (_model.compactView == false)
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  40.0, 8.0, 0.0, 8.0),
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              '6panuiuu' /* Aggiungi informazioni */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .titleSmall
+                                                .override(
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmallFamily,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallFamily),
+                                                ),
+                                          ),
+                                        ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -424,27 +450,41 @@ class _WebNavWidgetState extends State<WebNavWidget>
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             40.0, 8.0, 0.0, 8.0),
-                                        child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'v8ot9e0d' /* Carica CSV */,
+                                        child: InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            logFirebaseEvent(
+                                                'WEB_NAV_COMP_Text_ue3f7tee_ON_TAP');
+
+                                            context
+                                                .pushNamed('Main_Carica_CSV');
+                                          },
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'v8ot9e0d' /* Carica CSV */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .titleSmall
+                                                .override(
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmallFamily,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallFamily),
+                                                ),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleSmall
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmallFamily,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                letterSpacing: 0.0,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .titleSmallFamily),
-                                              ),
                                         ),
                                       ),
                                   ],
@@ -506,7 +546,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                         children: [
                           Icon(
                             Icons.calendar_month,
-                            color: widget!.selectedNav == 2
+                            color: widget!.selectedNav == 3
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -580,7 +620,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                         children: [
                           Icon(
                             Icons.meeting_room,
-                            color: widget!.selectedNav == 2
+                            color: widget!.selectedNav == 4
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -593,6 +633,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                                 FFLocalizations.of(context).getText(
                                   'w4xseum2' /* Prenotazioni */,
                                 ),
+                                textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
@@ -654,7 +695,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                         children: [
                           Icon(
                             Icons.business,
-                            color: widget!.selectedNav == 2
+                            color: widget!.selectedNav == 5
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -728,7 +769,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                         children: [
                           Icon(
                             Icons.euro,
-                            color: widget!.selectedNav == 2
+                            color: widget!.selectedNav == 6
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 28.0,
@@ -746,7 +787,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .labelLargeFamily,
-                                      color: widget!.selectedNav == 2
+                                      color: widget!.selectedNav == 6
                                           ? FlutterFlowTheme.of(context)
                                               .primaryText
                                           : FlutterFlowTheme.of(context)

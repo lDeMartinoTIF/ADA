@@ -2056,6 +2056,152 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '__',
     },
   },
+  // Main_Aggiungi_Informazioni
+  {
+    'ks1dfl8b': {
+      'it': 'Contracts',
+      'en': 'Contracts',
+    },
+    'slnbqqj4': {
+      'it': 'Aggiungi Informazioni',
+      'en': 'Contracts',
+    },
+    'gz2vura5': {
+      'it': 'Tipo Servizio',
+      'en': '',
+    },
+    'p6jqwq87': {
+      'it': 'Option 1',
+      'en': '',
+    },
+    'rwakt6sw': {
+      'it': 'Option 2',
+      'en': '',
+    },
+    'jm8nul82': {
+      'it': 'Option 3',
+      'en': '',
+    },
+    'w68g8hb1': {
+      'it': 'Seleziona un valore..',
+      'en': '',
+    },
+    'putvkxrl': {
+      'it': 'Search...',
+      'en': '',
+    },
+    'lxbgmluw': {
+      'it': 'Titolo',
+      'en': 'Whatsapp number',
+    },
+    'lenl57o4': {
+      'it': 'Contenuto',
+      'en': 'Go',
+    },
+    'a1o0310o': {
+      'it': 'Prezzo',
+      'en': 'Whatsapp number',
+    },
+    '9xonf4he': {
+      'it': 'Tempo Servizio',
+      'en': 'Go',
+    },
+    'r6bw4h20': {
+      'it': 'Calendario',
+      'en': '',
+    },
+    'wvg994bj': {
+      'it': 'Option 1',
+      'en': '',
+    },
+    'o5sba5wi': {
+      'it': 'Option 2',
+      'en': '',
+    },
+    '2yc8pqmu': {
+      'it': 'Option 3',
+      'en': '',
+    },
+    'g4syywll': {
+      'it': 'Seleziona un valore..',
+      'en': '',
+    },
+    'pq628ffu': {
+      'it': 'Search...',
+      'en': '',
+    },
+    'm7w409rk': {
+      'it': 'Preavviso annullamento',
+      'en': 'Whatsapp number',
+    },
+    'pzj337of': {
+      'it': 'Scadenza',
+      'en': 'Go',
+    },
+    'a4xy9xcf': {
+      'it': 'Indirizzo',
+      'en': 'Whatsapp number',
+    },
+    'civ0rbld': {
+      'it': 'Mail aggiuntiva',
+      'en': 'Go',
+    },
+    'bka05afk': {
+      'it': 'File',
+      'en': 'C. Fiscal/VAT Number',
+    },
+    's1ag04rx': {
+      'it': 'Continua',
+      'en': 'Continues',
+    },
+    'gxfw4er3': {
+      'it': '__',
+      'en': '__',
+    },
+  },
+  // Main_Carica_CSV
+  {
+    'egu1hmpr': {
+      'it': 'Contracts',
+      'en': 'Contracts',
+    },
+    'pyb5hqao': {
+      'it': 'Aggiungi Informazioni',
+      'en': 'Contracts',
+    },
+    '4k82dd16': {
+      'it': 'Tipo Servizio',
+      'en': '',
+    },
+    'ofrfjf07': {
+      'it': 'Option 1',
+      'en': '',
+    },
+    '43i3bap1': {
+      'it': 'Option 2',
+      'en': '',
+    },
+    'fldco7su': {
+      'it': 'Option 3',
+      'en': '',
+    },
+    '2r7yim4p': {
+      'it': 'Seleziona un valore..',
+      'en': '',
+    },
+    '2grbn3ok': {
+      'it': 'Search...',
+      'en': '',
+    },
+    '9wq0myqh': {
+      'it': 'Continua',
+      'en': 'Continues',
+    },
+    'hif10f5r': {
+      'it': '__',
+      'en': '__',
+    },
+  },
   // modal_success
   {
     'kred63vb': {
