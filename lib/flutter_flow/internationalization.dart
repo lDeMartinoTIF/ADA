@@ -1914,77 +1914,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '__',
     },
   },
-  // Main_Calendar
-  {
-    '9p42skqf': {
-      'it': 'Contracts',
-      'en': 'Contracts',
-    },
-    'c3rdcsk2': {
-      'it': 'Contracts',
-      'en': 'Contracts',
-    },
-    'k6hqvqj8': {
-      'it': 'Projects',
-      'en': 'Projects',
-    },
-    'pjhp974a': {
-      'it': 'No-Code Platform Design',
-      'en': 'No-Code Platform Design',
-    },
-    'ki45u7yt': {
-      'it': 'Design Team Docs',
-      'en': 'Design Team Docs',
-    },
-    'dxyazl0m': {
-      'it': 'Contracts',
-      'en': 'Contracts',
-    },
-    'u6kpdofi': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '7oxu5rjm': {
-      'it': 'Contracts for New Opportunities',
-      'en': 'Contracts for New Opportunities',
-    },
-    '2x6mn41v': {
-      'it': 'Next Action',
-      'en': 'Next Action',
-    },
-    '7rt7cswr': {
-      'it': 'Tuesday, 10:00am',
-      'en': 'Tuesday, 10:00am',
-    },
-    's67qg1fr': {
-      'it': 'In Progress',
-      'en': 'In Progress',
-    },
-    'nxji1hce': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    '86balvhp': {
-      'it': 'Client Acquisition for Q3',
-      'en': 'Client Acquisition for Q3',
-    },
-    'zm9ya7q4': {
-      'it': 'Next Action',
-      'en': 'Next Action',
-    },
-    'cyrqi2ye': {
-      'it': 'Tuesday, 10:00am',
-      'en': 'Tuesday, 10:00am',
-    },
-    '9ja1a430': {
-      'it': 'In Progress',
-      'en': 'In Progress',
-    },
-    'zbkoy21q': {
-      'it': '__',
-      'en': '__',
-    },
-  },
   // Main_Pagamenti
   {
     '8ofrkwtm': {
@@ -2056,150 +1985,452 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '__',
     },
   },
-  // Main_Aggiungi_Informazioni
+  // Main_Calendar_List
   {
-    'ks1dfl8b': {
-      'it': 'Contracts',
-      'en': 'Contracts',
-    },
-    'slnbqqj4': {
-      'it': 'Aggiungi Informazioni',
-      'en': 'Contracts',
-    },
-    'gz2vura5': {
-      'it': 'Tipo Servizio',
-      'en': '',
-    },
-    'p6jqwq87': {
-      'it': 'Option 1',
-      'en': '',
-    },
-    'rwakt6sw': {
-      'it': 'Option 2',
-      'en': '',
-    },
-    'jm8nul82': {
-      'it': 'Option 3',
-      'en': '',
-    },
-    'w68g8hb1': {
-      'it': 'Seleziona un valore..',
-      'en': '',
-    },
-    'putvkxrl': {
-      'it': 'Search...',
-      'en': '',
-    },
-    'lxbgmluw': {
-      'it': 'Titolo',
-      'en': 'Whatsapp number',
-    },
-    'lenl57o4': {
-      'it': 'Contenuto',
-      'en': 'Go',
-    },
-    'a1o0310o': {
-      'it': 'Prezzo',
-      'en': 'Whatsapp number',
-    },
-    '9xonf4he': {
-      'it': 'Tempo Servizio',
-      'en': 'Go',
-    },
-    'r6bw4h20': {
+    'hacn4p0m': {
       'it': 'Calendario',
-      'en': '',
+      'en': 'Customers',
     },
-    'wvg994bj': {
-      'it': 'Option 1',
-      'en': '',
+    'wnjuqr5s': {
+      'it': 'Crea Calendario',
+      'en': 'Invite Users',
     },
-    'o5sba5wi': {
-      'it': 'Option 2',
-      'en': '',
+    'xsbqns1l': {
+      'it': 'Nome Calendario',
+      'en': 'Name',
     },
-    '2yc8pqmu': {
-      'it': 'Option 3',
-      'en': '',
+    '2ivmk6yb': {
+      'it': 'Creato da',
+      'en': 'Title',
     },
-    'g4syywll': {
-      'it': 'Seleziona un valore..',
-      'en': '',
+    'p0nwtkeu': {
+      'it': 'Progressivo',
+      'en': 'Company',
     },
-    'pq628ffu': {
-      'it': 'Search...',
-      'en': '',
+    's5hvn7hj': {
+      'it': 'Buffer',
+      'en': 'Company',
     },
-    'm7w409rk': {
-      'it': 'Preavviso annullamento',
-      'en': 'Whatsapp number',
+    '8z0xvpw4': {
+      'it': 'Stato',
+      'en': 'Status',
     },
-    'pzj337of': {
-      'it': 'Scadenza',
-      'en': 'Go',
+    '3nhcf803': {
+      'it': 'Randy Alcorn',
+      'en': 'Randy Alcorn',
     },
-    'a4xy9xcf': {
-      'it': 'Indirizzo',
-      'en': 'Whatsapp number',
+    'lorlzaup': {
+      'it': 'Head of Procurement',
+      'en': 'Head of Procurement',
     },
-    'civ0rbld': {
-      'it': 'Mail aggiuntiva',
-      'en': 'Go',
+    '8qirwn1d': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
     },
-    'bka05afk': {
-      'it': 'File',
-      'en': 'C. Fiscal/VAT Number',
+    '7xursehb': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
     },
-    's1ag04rx': {
-      'it': 'Continua',
-      'en': 'Continues',
+    'n7zx14cz': {
+      'it': 'New',
+      'en': 'New',
     },
-    'gxfw4er3': {
+    'f8pastn7': {
+      'it': 'James Wiseman',
+      'en': 'James Wiseman',
+    },
+    'mqim50h7': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    '4tckrbea': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '93ess62k': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '19uy6jsj': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'w0uc17s1': {
+      'it': 'Ignacious Rodriguez',
+      'en': 'Ignacious Rodriguez',
+    },
+    'csjhdvur': {
+      'it': 'Sales Manager',
+      'en': 'Sales Manager',
+    },
+    'gaedguex': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'ux3yg820': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'opup20ah': {
+      'it': 'New',
+      'en': 'New',
+    },
+    'f9wqsvsn': {
+      'it': 'Greg Brown',
+      'en': 'Greg Brown',
+    },
+    'u24zq5ud': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    '47agn870': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'zjkb9m16': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '2jf5gch6': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'w0p3b4i7': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    '22gd1iys': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    '9mh0m2rw': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    '6x83hl5u': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'gvty2ow6': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'jkrq3qa0': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'rlx8x67r': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    'j4q0nke9': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'eu8uwmn4': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'f1rhkslz': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'q0ly31p8': {
+      'it': 'Customers',
+      'en': 'Customers',
+    },
+    '24rmxyvc': {
       'it': '__',
       'en': '__',
     },
   },
-  // Main_Carica_CSV
+  // Main_Contenuti_ADA
   {
-    'egu1hmpr': {
-      'it': 'Contracts',
-      'en': 'Contracts',
+    'hfxga8xn': {
+      'it': 'Contenuti ADA',
+      'en': 'Customers',
     },
-    'pyb5hqao': {
+    'bbwunnvo': {
       'it': 'Aggiungi Informazioni',
-      'en': 'Contracts',
+      'en': 'Invite Users',
     },
-    '4k82dd16': {
+    'd1sgirfs': {
+      'it': 'Carica CSV',
+      'en': 'Invite Users',
+    },
+    'iyutblp1': {
+      'it': 'Titolo Servizio',
+      'en': 'Name',
+    },
+    'lcrvgqre': {
       'it': 'Tipo Servizio',
-      'en': '',
+      'en': 'Title',
     },
-    'ofrfjf07': {
-      'it': 'Option 1',
-      'en': '',
+    'oj7eeut3': {
+      'it': 'Prezzo',
+      'en': 'Company',
     },
-    '43i3bap1': {
-      'it': 'Option 2',
-      'en': '',
+    '1ydh6vrp': {
+      'it': 'Scadenza',
+      'en': 'Company',
     },
-    'fldco7su': {
-      'it': 'Option 3',
-      'en': '',
+    '01yaeqeb': {
+      'it': 'Status',
+      'en': 'Status',
     },
-    '2r7yim4p': {
-      'it': 'Seleziona un valore..',
-      'en': '',
+    'avn4wdct': {
+      'it': 'Randy Alcorn',
+      'en': 'Randy Alcorn',
     },
-    '2grbn3ok': {
-      'it': 'Search...',
-      'en': '',
+    '6y3xtl5r': {
+      'it': 'Head of Procurement',
+      'en': 'Head of Procurement',
     },
-    '9wq0myqh': {
-      'it': 'Continua',
-      'en': 'Continues',
+    'oscldloq': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
     },
-    'hif10f5r': {
+    '4h19v61r': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'afke27mu': {
+      'it': 'New',
+      'en': 'New',
+    },
+    'x16zpnnk': {
+      'it': 'James Wiseman',
+      'en': 'James Wiseman',
+    },
+    'f2ripvk9': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    'pmx4b7p0': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    '1key7npv': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'amm3nhvb': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    '3nwk3t45': {
+      'it': 'Ignacious Rodriguez',
+      'en': 'Ignacious Rodriguez',
+    },
+    '47b9scpe': {
+      'it': 'Sales Manager',
+      'en': 'Sales Manager',
+    },
+    'wqs1bb8k': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'fd1cd4t9': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    '7d6y3xrf': {
+      'it': 'New',
+      'en': 'New',
+    },
+    'w139gyp7': {
+      'it': 'Elena Williams',
+      'en': 'Elena Williams',
+    },
+    'jmyiemed': {
+      'it': 'Head of Product & Innovation',
+      'en': 'Head of Product & Innovation',
+    },
+    'a7x722rl': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'dbm6nqs7': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'dt2agmvd': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'e76t8nw6': {
+      'it': 'Greg Brown',
+      'en': 'Greg Brown',
+    },
+    'ye4fcx5a': {
+      'it': 'Account Manager',
+      'en': 'Account Manager',
+    },
+    'va6zwhp0': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'igj20knh': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'xsrpwa43': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    '8o8cld8a': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    'ua07j04u': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    'yirlx6qy': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'egj3h0hd': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'g19yhbyl': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'd8e9hv1w': {
+      'it': 'June Williamson',
+      'en': 'June Williamson',
+    },
+    '8udhtqm9': {
+      'it': 'Sr. Account Manager',
+      'en': 'Mr. Account Manager',
+    },
+    'oisb3wm0': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'd3q33lp6': {
+      'it': 'HealthAi',
+      'en': 'HealthAi',
+    },
+    'aqxfcw5n': {
+      'it': 'Contacted',
+      'en': 'Contacted',
+    },
+    'r3nydw6k': {
+      'it': 'Customers',
+      'en': 'Customers',
+    },
+    'z9fobthl': {
       'it': '__',
       'en': '__',
+    },
+  },
+  // Main_configurazione_Servizi
+  {
+    'gzajzgtg': {
+      'it': 'Configurazione Servizi',
+      'en': 'Customers',
+    },
+    '3ktw4y8l': {
+      'it': 'Inserisci Tipo Servizio',
+      'en': 'Invite Users',
+    },
+    'luf5nha2': {
+      'it': 'Inserisci Tipi Servizio',
+      'en': 'Invite Users',
+    },
+    'qqeh6ajy': {
+      'it': 'Tipo Servizio',
+      'en': 'All',
+    },
+    'i61qrf3y': {
+      'it': 'Tipo Servizio',
+      'en': 'Name',
+    },
+    'm7363hal': {
+      'it': 'Descrizione',
+      'en': 'Title',
+    },
+    'a6rhw8f8': {
+      'it': 'Tipi Servizio',
+      'en': 'New Calls',
+    },
+    '5s9bg0hh': {
+      'it': 'Name',
+      'en': 'Name',
+    },
+    'ks5jl3j6': {
+      'it': 'Title',
+      'en': 'Title',
+    },
+    'lqm09c6v': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'ffcg60kr': {
+      'it': 'Company',
+      'en': 'Company',
+    },
+    'rcscmsl9': {
+      'it': 'Status',
+      'en': 'Status',
+    },
+    'n2vfw573': {
+      'it': 'Randy Alcorn',
+      'en': 'Randy Alcorn',
+    },
+    'lovvwxie': {
+      'it': 'Head of Procurement',
+      'en': 'Head of Procurement',
+    },
+    'gq6pegi5': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'yziz0gov': {
+      'it': 'ACME Co.',
+      'en': 'ACME Co.',
+    },
+    'zihp77bo': {
+      'it': 'New',
+      'en': 'New',
+    },
+    '32u4vlq2': {
+      'it': 'Ignacious Rodriguez',
+      'en': 'Ignacious Rodriguez',
+    },
+    'sc2oyapc': {
+      'it': 'Sales Manager',
+      'en': 'Sales Manager',
+    },
+    'n7ua4e8l': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'px5ocz5c': {
+      'it': 'Robin HQ',
+      'en': 'Robin HQ',
+    },
+    'lcpm857g': {
+      'it': 'New',
+      'en': 'New',
+    },
+    'cqpk6k1j': {
+      'it': 'Customers',
+      'en': 'Customers',
+    },
+    'y8839dbt': {
+      'it': '__',
+      'en': '__',
+    },
+  },
+  // TipoServizioDetails
+  {
+    'wrv7vgvu': {
+      'it': 'Home',
+      'en': 'Home',
     },
   },
   // modal_success
@@ -2331,17 +2562,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Dashboard',
       'en': 'Dashboard',
     },
-    'jm51rwdg': {
+    'vba1q7m8': {
       'it': 'Contenuti ADA',
-      'en': 'ADA Settings',
-    },
-    '6panuiuu': {
-      'it': 'Aggiungi informazioni',
-      'en': 'Add information',
-    },
-    'v8ot9e0d': {
-      'it': 'Carica CSV',
-      'en': 'Upload CSV',
+      'en': 'Dashboard',
     },
     'lbojdpxg': {
       'it': 'Calendario',
@@ -2368,6 +2591,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'ADA Settings',
     },
     'lyp0qh1n': {
+      'it': 'Configurazione Servizi',
+      'en': 'Add information',
+    },
+    't8giu5c9': {
       'it': 'Anagrafica',
       'en': 'Add information',
     },
@@ -3214,6 +3441,471 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ioaxqapl': {
       'it': 'Continua',
       'en': 'Continues',
+    },
+  },
+  // modal_create_Calendar
+  {
+    'qffwo94a': {
+      'it': 'Crea Calendario',
+      'en': 'Share your project',
+    },
+    'bq7097xw': {
+      'it': 'Crea un nuovo calendario',
+      'en': 'Your project has been created, now invite your team to continue.',
+    },
+    'ak59g8d9': {
+      'it': 'Nome Calendario',
+      'en': 'Whatsapp number',
+    },
+    'xm7wyd7b': {
+      'it': 'Buffer',
+      'en': 'Go',
+    },
+    '3y8y8zbw': {
+      'it': 'Lunedì',
+      'en': 'All',
+    },
+    'ktx0o8vh': {
+      'it': 'Lunedì',
+      'en': '',
+    },
+    '8o0bbs8o': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    '02aqbrph': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    '3t10u5df': {
+      'it': 'Pausa',
+      'en': '',
+    },
+    'oh37kx91': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    '5hgk07r3': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    '3e5irvwl': {
+      'it': 'Martedì',
+      'en': 'New Calls',
+    },
+    'tsb8xzbc': {
+      'it': 'Martedì',
+      'en': '',
+    },
+    'gt2msntv': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    'wx3n4cpf': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'lraokw7r': {
+      'it': 'Pausa',
+      'en': '',
+    },
+    '68zr6pow': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    '73cflft6': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'y3fyt8kh': {
+      'it': 'Mercoledì',
+      'en': 'Contacted',
+    },
+    'u3l37zyp': {
+      'it': 'Mercoledì',
+      'en': '',
+    },
+    'g74n3dtz': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    't178yfdw': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'ynypdiz7': {
+      'it': 'Pausa',
+      'en': '',
+    },
+    'zla18xx7': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    'skgt665b': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'ent0z9oc': {
+      'it': 'Giovedì',
+      'en': '',
+    },
+    'tjdze6a4': {
+      'it': 'Giovedì',
+      'en': '',
+    },
+    'jncvmhp7': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    '9avmip2p': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'ojkvxbmi': {
+      'it': 'Pausa',
+      'en': '',
+    },
+    'tu3s946i': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    '08m9mict': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'vahrzqpe': {
+      'it': 'Venerdì',
+      'en': '',
+    },
+    'ujtu40a7': {
+      'it': 'Venerdì',
+      'en': '',
+    },
+    '1r7m1b3r': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    'az2xf6lz': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'ohvyaguq': {
+      'it': 'Pausa',
+      'en': '',
+    },
+    'wgdjoc7d': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    'e457umzo': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    '9sttxviu': {
+      'it': 'Sabato',
+      'en': '',
+    },
+    'yfb5zee5': {
+      'it': 'Sabato',
+      'en': '',
+    },
+    'gqo595uq': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    'ej6d5t6d': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'qktp801a': {
+      'it': 'Pausa',
+      'en': '',
+    },
+    '4qa7fuiu': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    'fgs1xtct': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    '3yidpdql': {
+      'it': 'Domenica',
+      'en': '',
+    },
+    'ohf8yrvn': {
+      'it': 'Domenica',
+      'en': '',
+    },
+    '81mkb4cd': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    '8cd2kznm': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'n64au0wt': {
+      'it': 'Pausa',
+      'en': '',
+    },
+    'umw5n5m9': {
+      'it': 'Da',
+      'en': 'Whatsapp number',
+    },
+    'dsc2ayzb': {
+      'it': 'a',
+      'en': 'Whatsapp number',
+    },
+    'l1k82gy1': {
+      'it': 'Cancel',
+      'en': 'Cancel',
+    },
+    'rje05k4s': {
+      'it': 'Continua',
+      'en': 'Continues',
+    },
+  },
+  // modal_create_Info_AI
+  {
+    'nxk47p6z': {
+      'it': 'Crea Calendario',
+      'en': 'Share your project',
+    },
+    'tq56gdpd': {
+      'it': 'Crea un nuovo calendario',
+      'en': 'Your project has been created, now invite your team to continue.',
+    },
+    'qnexrpqq': {
+      'it': 'Tipo Servizio',
+      'en': '',
+    },
+    'jhk1qysq': {
+      'it': 'Option 1',
+      'en': '',
+    },
+    'agp4yxui': {
+      'it': 'Option 2',
+      'en': '',
+    },
+    'cdug7k0e': {
+      'it': 'Option 3',
+      'en': '',
+    },
+    'ap296eiz': {
+      'it': 'Seleziona un valore..',
+      'en': '',
+    },
+    '6o5qe75m': {
+      'it': 'Search...',
+      'en': '',
+    },
+    'ubm8eq0t': {
+      'it': 'Titolo',
+      'en': 'Whatsapp number',
+    },
+    'u95z3qxb': {
+      'it': 'Contenuto',
+      'en': 'Go',
+    },
+    '3ue5axer': {
+      'it': 'Prezzo',
+      'en': 'Whatsapp number',
+    },
+    '95i6tfau': {
+      'it': 'Tempo Servizio',
+      'en': 'Go',
+    },
+    'pezfhqpf': {
+      'it': 'Calendario',
+      'en': '',
+    },
+    'ngds7vkm': {
+      'it': 'Option 1',
+      'en': '',
+    },
+    'wl8ijyb4': {
+      'it': 'Option 2',
+      'en': '',
+    },
+    'iddgv4m0': {
+      'it': 'Option 3',
+      'en': '',
+    },
+    'ze7a1pzl': {
+      'it': 'Seleziona un valore..',
+      'en': '',
+    },
+    '27pr7fyr': {
+      'it': 'Search...',
+      'en': '',
+    },
+    '7630utlr': {
+      'it': 'Preavviso annullamento',
+      'en': 'Whatsapp number',
+    },
+    'ul6sz1s5': {
+      'it': 'Scadenza',
+      'en': 'Go',
+    },
+    '9bwijexm': {
+      'it': 'Indirizzo',
+      'en': 'Whatsapp number',
+    },
+    'nq41opu1': {
+      'it': 'Mail aggiuntiva',
+      'en': 'Go',
+    },
+    'v8fx1i5d': {
+      'it': 'File',
+      'en': 'C. Fiscal/VAT Number',
+    },
+    'jtqqgu8e': {
+      'it': 'Cancel',
+      'en': 'Cancel',
+    },
+    'ggiwf0y4': {
+      'it': 'Continua',
+      'en': 'Continues',
+    },
+  },
+  // modal_upload_file
+  {
+    'tgippmxd': {
+      'it': 'Carica CSV',
+      'en': 'Share your project',
+    },
+    'p51dgrhd': {
+      'it': 'Carica un file CSV',
+      'en': 'Your project has been created, now invite your team to continue.',
+    },
+    'a9dc85rc': {
+      'it': 'Tipo Servizio',
+      'en': '',
+    },
+    '3pj9kj47': {
+      'it': 'Option 1',
+      'en': '',
+    },
+    'c8i79tnv': {
+      'it': 'Option 2',
+      'en': '',
+    },
+    '012bw61f': {
+      'it': 'Option 3',
+      'en': '',
+    },
+    'w0e4qq57': {
+      'it': 'Seleziona un valore..',
+      'en': '',
+    },
+    'f5v2l8vj': {
+      'it': 'Search...',
+      'en': '',
+    },
+    'n9bshb0e': {
+      'it': 'Upload CSV File',
+      'en': '',
+    },
+    'a0thfgge': {
+      'it': 'Click to upload CSV',
+      'en': '',
+    },
+    'q0taan6e': {
+      'it': 'Cancel',
+      'en': 'Cancel',
+    },
+    'qk5w0466': {
+      'it': 'Continua',
+      'en': 'Continues',
+    },
+  },
+  // Modal_create_Tipo_Servizio
+  {
+    '1h94gryq': {
+      'it': 'Tipo Servizio',
+      'en': 'Invite your Team',
+    },
+    'yn35noot': {
+      'it': 'Crea un nuovo Tipo Servizio',
+      'en': 'Your project has been created, now invite your team to continue.',
+    },
+    '7fsvjb4i': {
+      'it': 'Titolo',
+      'en': 'Go',
+    },
+    '8kycb6wb': {
+      'it': 'Descrizione',
+      'en': 'Go',
+    },
+    'rj8rxqgg': {
+      'it': 'Cancel',
+      'en': 'Cancel',
+    },
+    '0nhjmer8': {
+      'it': 'Salva',
+      'en': 'Send Invites',
+    },
+  },
+  // Modal_create_Tipi_Servizio
+  {
+    'uzqgy0h8': {
+      'it': 'Tipo Servizio',
+      'en': 'Invite your Team',
+    },
+    '39ykriue': {
+      'it': 'Crea un nuovo Tipo Servizio',
+      'en': 'Your project has been created, now invite your team to continue.',
+    },
+    '7gxk17jk': {
+      'it': 'Titolo',
+      'en': 'Go',
+    },
+    'h1ct5b5s': {
+      'it': 'Descrizione',
+      'en': 'Go',
+    },
+    'r6p0v9wu': {
+      'it': 'Cancel',
+      'en': 'Cancel',
+    },
+    'owii4oct': {
+      'it': 'Salva',
+      'en': 'Send Invites',
+    },
+  },
+  // dropdown_Edit_Delete
+  {
+    'jfqddt0i': {
+      'it': 'Opzioni',
+      'en': 'Options',
+    },
+    '14itoluk': {
+      'it': 'Modifica',
+      'en': 'Edit',
+    },
+    'n9g95f5p': {
+      'it': 'Elimina',
+      'en': 'Delete',
+    },
+  },
+  // TipoServizio_Details_main
+  {
+    'd51ppt1z': {
+      'it': 'Titolo',
+      'en': 'Go',
+    },
+    'qsd45ef0': {
+      'it': 'Descrizione',
+      'en': 'Go',
+    },
+    'bbrsntgn': {
+      'it': 'Elimina',
+      'en': 'Generate Quote',
+    },
+    'utbonmaf': {
+      'it': 'Salva',
+      'en': 'View Company',
     },
   },
   // Miscellaneous

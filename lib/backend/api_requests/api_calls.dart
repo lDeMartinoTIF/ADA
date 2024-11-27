@@ -9,15 +9,6 @@ export 'api_manager.dart' show ApiCallResponse;
 
 const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
-/// Start Test APIs Group Code
-
-class TestAPIsGroup {
-  static String getBaseUrl() => 'https://google.com';
-  static Map<String, String> headers = {};
-}
-
-/// End Test APIs Group Code
-
 /// Start ComuniITA Group Code
 
 class ComuniITAGroup {
@@ -304,6 +295,13 @@ class ADAapiGroup {
       getFreeSlotCALCOLATOREGetFreeSlotsPostCall =
       GetFreeSlotCALCOLATOREGetFreeSlotsPostCall();
   static ReadRootGetCall readRootGetCall = ReadRootGetCall();
+  static InsertTipoServizioCall insertTipoServizioCall =
+      InsertTipoServizioCall();
+  static GetTipoServizioCall getTipoServizioCall = GetTipoServizioCall();
+  static DeleteTipoServizioCall deleteTipoServizioCall =
+      DeleteTipoServizioCall();
+  static UpdateTipoServizioCall updateTipoServizioCall =
+      UpdateTipoServizioCall();
 }
 
 class CreateLingueLINGUECreatePostCall {
@@ -1170,7 +1168,7 @@ class UpdateAnagraficaByTokenCall {
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Update Anagrafica ByToken',
-      apiUrl: '${baseUrl}/ANAGRAFICA/update/${token}',
+      apiUrl: '${baseUrl}/ANAGRAFICA/update',
       callType: ApiCallType.PUT,
       headers: {},
       params: {},
@@ -2462,6 +2460,143 @@ class ReadRootGetCall {
       callType: ApiCallType.GET,
       headers: {},
       params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class InsertTipoServizioCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    String? tipoServizio = '',
+    String? tipoServizioDescr = '',
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "Token": "${escapeStringForJson(token)}",
+  "TIPO_SERVIZIO": "${escapeStringForJson(tipoServizio)}",
+  "TIPO_SERVIZIO_DESCR": "${escapeStringForJson(tipoServizioDescr)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Insert Tipo Servizio',
+      apiUrl: '${baseUrl}/TIPO_SERVIZIO/insert',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class GetTipoServizioCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "Token": "${escapeStringForJson(token)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Get Tipo Servizio',
+      apiUrl: '${baseUrl}/TIPO_SERVIZIO/get_all',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? jspTipoServizioPRG(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].TIPO_SERVIZIO_PRG''',
+      ));
+  String? jspTipoServizioDescr(dynamic response) =>
+      castToType<String>(getJsonField(
+        response,
+        r'''$[:].TIPO_SERVIZIO_DESCR''',
+      ));
+  String? jspTipoServizioTitolo(dynamic response) =>
+      castToType<String>(getJsonField(
+        response,
+        r'''$[:].TIPO_SERVIZIO''',
+      ));
+}
+
+class DeleteTipoServizioCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    int? tipoServizioPrg,
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "Token": "${escapeStringForJson(token)}",
+  "TIPO_SERVIZIO_PRG": ${tipoServizioPrg}
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Delete Tipo Servizio',
+      apiUrl: '${baseUrl}/TIPO_SERVIZIO/delete',
+      callType: ApiCallType.DELETE,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: true,
+    );
+  }
+}
+
+class UpdateTipoServizioCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    String? tipoServizio = '',
+    String? tipoServizioDescr = '',
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "Token": "${escapeStringForJson(token)}",
+  "TIPO_SERVIZIO": "${escapeStringForJson(tipoServizio)}",
+  "TIPO_SERVIZIO_DESCR": "${escapeStringForJson(tipoServizioDescr)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Update Tipo Servizio',
+      apiUrl: '${baseUrl}/TIPO_SERVIZIO/update',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,

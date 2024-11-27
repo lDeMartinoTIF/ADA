@@ -47,9 +47,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
     super.initState();
     _model = createModel(context, () => WebNavModel());
 
-    _model.expandableExpandableController1 =
-        ExpandableController(initialExpanded: false);
-    _model.expandableExpandableController2 =
+    _model.expandableExpandableController =
         ExpandableController(initialExpanded: false);
     animationsMap.addAll({
       'iconButtonOnActionTriggerAnimation1': AnimationInfo(
@@ -308,202 +306,73 @@ class _WebNavWidgetState extends State<WebNavWidget>
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: widget!.selectedNav == 2
-                        ? FlutterFlowTheme.of(context).alternate
-                        : FlutterFlowTheme.of(context).secondaryBackground,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
+
+                    context.pushNamed(
+                      'Main_Contenuti_ADA',
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 0),
+                        ),
+                      },
+                    );
+                  },
                   child: Container(
                     width: double.infinity,
-                    color: Color(0x00000000),
-                    child: ExpandableNotifier(
-                      controller: _model.expandableExpandableController1,
-                      child: ExpandablePanel(
-                        header: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 12.0, 8.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              FaIcon(
-                                FontAwesomeIcons.atom,
-                                color: widget!.selectedNav == 2
-                                    ? FlutterFlowTheme.of(context).primary
-                                    : FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                size: 28.0,
-                              ),
-                              if (_model.compactView == false)
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 0.0, 0.0, 0.0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'jm51rwdg' /* Contenuti ADA */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .override(
-                                          fontFamily:
+                    decoration: BoxDecoration(
+                      color: widget!.selectedNav == 2
+                          ? FlutterFlowTheme.of(context).alternate
+                          : FlutterFlowTheme.of(context).secondaryBackground,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          FaIcon(
+                            FontAwesomeIcons.atom,
+                            color: widget!.selectedNav == 2
+                                ? FlutterFlowTheme.of(context).primary
+                                : FlutterFlowTheme.of(context).secondaryText,
+                            size: 28.0,
+                          ),
+                          if (_model.compactView == false)
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  12.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'vba1q7m8' /* Contenuti ADA */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelLargeFamily,
+                                      color: widget!.selectedNav == 2
+                                          ? FlutterFlowTheme.of(context)
+                                              .primaryText
+                                          : FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .labelLargeFamily,
-                                          color: widget!.selectedNav == 2
-                                              ? FlutterFlowTheme.of(context)
-                                                  .primaryText
-                                              : FlutterFlowTheme.of(context)
-                                                  .secondaryText,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelLargeFamily),
-                                        ),
-                                  ),
-                                ),
-                            ],
-                          ),
-                        ),
-                        collapsed: Container(
-                          width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 0.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                          ),
-                        ),
-                        expanded: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 8.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    12.0, 4.0, 12.0, 4.0),
-                                child: InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    logFirebaseEvent(
-                                        'WEB_NAV_COMP_Row_1gik9luh_ON_TAP');
-
-                                    context.pushNamed(
-                                      'Main_Aggiungi_Informazioni',
-                                      extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
-                                          hasTransition: true,
-                                          transitionType:
-                                              PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 0),
-                                        ),
-                                      },
-                                    );
-                                  },
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      if (_model.compactView == false)
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  40.0, 8.0, 0.0, 8.0),
-                                          child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              '6panuiuu' /* Aggiungi informazioni */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleSmall
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleSmallFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryText,
-                                                  letterSpacing: 0.0,
-                                                  useGoogleFonts: GoogleFonts
-                                                          .asMap()
-                                                      .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmallFamily),
-                                                ),
-                                          ),
-                                        ),
-                                    ],
-                                  ),
-                                ),
+                                                  .labelLargeFamily),
+                                    ),
                               ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    12.0, 4.0, 12.0, 4.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    if (_model.compactView == false)
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            40.0, 8.0, 0.0, 8.0),
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            logFirebaseEvent(
-                                                'WEB_NAV_COMP_Text_ue3f7tee_ON_TAP');
-
-                                            context
-                                                .pushNamed('Main_Carica_CSV');
-                                          },
-                                          child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'v8ot9e0d' /* Carica CSV */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleSmall
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleSmallFamily,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryText,
-                                                  letterSpacing: 0.0,
-                                                  useGoogleFonts: GoogleFonts
-                                                          .asMap()
-                                                      .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmallFamily),
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        theme: ExpandableThemeData(
-                          tapHeaderToExpand: true,
-                          tapBodyToExpand: false,
-                          tapBodyToCollapse: false,
-                          headerAlignment:
-                              ExpandablePanelHeaderAlignment.center,
-                          hasIcon: true,
-                          expandIcon: Icons.chevron_right_rounded,
-                          collapseIcon: Icons.keyboard_arrow_down_rounded,
-                          iconColor: FlutterFlowTheme.of(context).secondaryText,
-                        ),
+                            ),
+                        ],
                       ),
                     ),
                   ),
@@ -520,7 +389,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                     logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
 
                     context.pushNamed(
-                      'Main_Calendar',
+                      'Main_Calendar_List',
                       extra: <String, dynamic>{
                         kTransitionInfoKey: TransitionInfo(
                           hasTransition: true,
@@ -895,7 +764,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                     width: double.infinity,
                     color: Color(0x00000000),
                     child: ExpandableNotifier(
-                      controller: _model.expandableExpandableController2,
+                      controller: _model.expandableExpandableController,
                       child: ExpandablePanel(
                         header: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -956,6 +825,66 @@ class _WebNavWidgetState extends State<WebNavWidget>
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     12.0, 4.0, 12.0, 4.0),
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    logFirebaseEvent(
+                                        'WEB_NAV_COMP_Row_nvdg4xnf_ON_TAP');
+
+                                    context.pushNamed(
+                                      'Main_configurazione_Servizi',
+                                      extra: <String, dynamic>{
+                                        kTransitionInfoKey: TransitionInfo(
+                                          hasTransition: true,
+                                          transitionType:
+                                              PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 0),
+                                        ),
+                                      },
+                                    );
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      if (_model.compactView == false)
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  40.0, 8.0, 0.0, 8.0),
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'lyp0qh1n' /* Configurazione Servizi */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .titleSmall
+                                                .override(
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmallFamily,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallFamily),
+                                                ),
+                                          ),
+                                        ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 4.0, 12.0, 4.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -965,7 +894,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                                             40.0, 8.0, 0.0, 8.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'lyp0qh1n' /* Anagrafica */,
+                                            't8giu5c9' /* Anagrafica */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .titleSmall
@@ -1318,7 +1247,16 @@ class _WebNavWidgetState extends State<WebNavWidget>
                             logFirebaseEvent(
                                 'WEB_NAV_COMP_Row_fqtl9ien_ON_TAP');
 
-                            context.pushNamed('Main_profilePage');
+                            context.pushNamed(
+                              'Main_profilePage',
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.fade,
+                                  duration: Duration(milliseconds: 0),
+                                ),
+                              },
+                            );
                           },
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -1345,7 +1283,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                                             Duration(milliseconds: 500),
                                         imageUrl: valueOrDefault<String>(
                                           currentUserPhoto,
-                                          'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+                                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/adaptive-assistant-gy0yz9/assets/9120vce4jvqv/blank-user.jpg',
                                         ),
                                         width: 44.0,
                                         height: 44.0,
@@ -1367,10 +1305,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                                       children: [
                                         AuthUserStreamWidget(
                                           builder: (context) => Text(
-                                            valueOrDefault<String>(
-                                              currentUserDisplayName,
-                                              'Andrew D.',
-                                            ),
+                                            '${valueOrDefault(currentUserDocument?.nome, '')} ${valueOrDefault(currentUserDocument?.cognome, '')}',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
@@ -1393,10 +1328,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            valueOrDefault<String>(
-                                              currentUserEmail,
-                                              'ghost@casperventures.com',
-                                            ),
+                                            currentUserEmail,
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall
                                                 .override(

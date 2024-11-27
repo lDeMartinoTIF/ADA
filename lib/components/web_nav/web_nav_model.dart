@@ -29,10 +29,7 @@ class WebNavModel extends FlutterFlowModel<WebNavWidget> {
   // Model for main_Logo_Small component.
   late MainLogoSmallModel mainLogoSmallModel;
   // State field(s) for Expandable widget.
-  late ExpandableController expandableExpandableController1;
-
-  // State field(s) for Expandable widget.
-  late ExpandableController expandableExpandableController2;
+  late ExpandableController expandableExpandableController;
 
   @override
   void initState(BuildContext context) {
@@ -44,7 +41,6 @@ class WebNavModel extends FlutterFlowModel<WebNavWidget> {
   void dispose() {
     mainLogoCompactModel.dispose();
     mainLogoSmallModel.dispose();
-    expandableExpandableController1.dispose();
-    expandableExpandableController2.dispose();
+    expandableExpandableController.dispose();
   }
 }

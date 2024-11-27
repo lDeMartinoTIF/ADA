@@ -212,14 +212,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : MainPrenotazioniWidget(),
             ),
             FFRoute(
-              name: 'Main_Calendar',
-              path: 'mainCalendar',
-              requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Main_Calendar')
-                  : MainCalendarWidget(),
-            ),
-            FFRoute(
               name: 'Main_Pagamenti',
               path: 'mainPagamenti',
               requireAuth: true,
@@ -228,20 +220,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : MainPagamentiWidget(),
             ),
             FFRoute(
-              name: 'Main_Aggiungi_Informazioni',
-              path: 'mainAggiungiInformazioni',
+              name: 'Main_Calendar_List',
+              path: 'mainCalendarList',
               requireAuth: true,
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Main_Aggiungi_Informazioni')
-                  : MainAggiungiInformazioniWidget(),
+                  ? NavBarPage(initialPage: 'Main_Calendar_List')
+                  : MainCalendarListWidget(),
             ),
             FFRoute(
-              name: 'Main_Carica_CSV',
-              path: 'mainCaricaCSV',
+              name: 'Main_Contenuti_ADA',
+              path: 'mainContenutiADA',
               requireAuth: true,
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Main_Carica_CSV')
-                  : MainCaricaCSVWidget(),
+                  ? NavBarPage(initialPage: 'Main_Contenuti_ADA')
+                  : MainContenutiADAWidget(),
+            ),
+            FFRoute(
+              name: 'Main_configurazione_Servizi',
+              path: 'mainConfigurazioneServizi',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_configurazione_Servizi')
+                  : MainConfigurazioneServiziWidget(),
+            ),
+            FFRoute(
+              name: 'TipoServizioDetails',
+              path: 'tipoServizioDetails',
+              builder: (context, params) => TipoServizioDetailsWidget(
+                showBack: params.getParam(
+                  'showBack',
+                  ParamType.bool,
+                ),
+                jspTipoServizio: params.getParam(
+                  'jspTipoServizio',
+                  ParamType.JSON,
+                ),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

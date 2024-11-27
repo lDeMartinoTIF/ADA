@@ -154,10 +154,10 @@ class _NavBarPageState extends State<NavBarPage> {
       'Main_profilePage': MainProfilePageWidget(),
       'Main_contatti': MainContattiWidget(),
       'Main_prenotazioni': MainPrenotazioniWidget(),
-      'Main_Calendar': MainCalendarWidget(),
       'Main_Pagamenti': MainPagamentiWidget(),
-      'Main_Aggiungi_Informazioni': MainAggiungiInformazioniWidget(),
-      'Main_Carica_CSV': MainCaricaCSVWidget(),
+      'Main_Calendar_List': MainCalendarListWidget(),
+      'Main_Contenuti_ADA': MainContenutiADAWidget(),
+      'Main_configurazione_Servizi': MainConfigurazioneServiziWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -290,49 +290,49 @@ class _NavBarPageState extends State<NavBarPage> {
                 size: 32.0,
               ),
               label: FFLocalizations.of(context).getText(
-                'zbkoy21q' /* __ */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home_work_outlined,
-                size: 24.0,
-              ),
-              activeIcon: Icon(
-                Icons.home_work_rounded,
-                size: 32.0,
-              ),
-              label: FFLocalizations.of(context).getText(
                 'hzzl8rgm' /* __ */,
               ),
               tooltip: '',
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.home_work_outlined,
+                Icons.supervised_user_circle_outlined,
                 size: 24.0,
               ),
               activeIcon: Icon(
-                Icons.home_work_rounded,
+                Icons.supervised_user_circle_sharp,
                 size: 32.0,
               ),
               label: FFLocalizations.of(context).getText(
-                'gxfw4er3' /* __ */,
+                '24rmxyvc' /* __ */,
               ),
               tooltip: '',
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.home_work_outlined,
+                Icons.supervised_user_circle_outlined,
                 size: 24.0,
               ),
               activeIcon: Icon(
-                Icons.home_work_rounded,
+                Icons.supervised_user_circle_sharp,
                 size: 32.0,
               ),
               label: FFLocalizations.of(context).getText(
-                'hif10f5r' /* __ */,
+                'z9fobthl' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.supervised_user_circle_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.supervised_user_circle_sharp,
+                size: 32.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'y8839dbt' /* __ */,
               ),
               tooltip: '',
             )

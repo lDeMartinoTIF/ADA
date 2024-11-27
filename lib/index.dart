@@ -34,11 +34,13 @@ export '/pages/main_pages/main_contatti/main_contatti_widget.dart'
     show MainContattiWidget;
 export '/pages/main_pages/main_prenotazioni/main_prenotazioni_widget.dart'
     show MainPrenotazioniWidget;
-export '/pages/main_pages/main_calendar/main_calendar_widget.dart'
-    show MainCalendarWidget;
 export '/pages/main_pages/main_pagamenti/main_pagamenti_widget.dart'
     show MainPagamentiWidget;
-export '/pages/main_pages/main_aggiungi_informazioni/main_aggiungi_informazioni_widget.dart'
-    show MainAggiungiInformazioniWidget;
-export '/pages/main_pages/main_carica_c_s_v/main_carica_c_s_v_widget.dart'
-    show MainCaricaCSVWidget;
+export '/pages/main_pages/main_calendar_list/main_calendar_list_widget.dart'
+    show MainCalendarListWidget;
+export '/pages/main_pages/main_contenuti_a_d_a/main_contenuti_a_d_a_widget.dart'
+    show MainContenutiADAWidget;
+export '/pages/main_pages/main_configurazione_servizi/main_configurazione_servizi_widget.dart'
+    show MainConfigurazioneServiziWidget;
+export '/pages/tipo_servizio_details/tipo_servizio_details_widget.dart'
+    show TipoServizioDetailsWidget;
