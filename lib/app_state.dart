@@ -25,16 +25,16 @@ class FFAppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  String _Debug = '';
-  String get Debug => _Debug;
-  set Debug(String value) {
-    _Debug = value;
-  }
-
   bool _isNewChat = true;
   bool get isNewChat => _isNewChat;
   set isNewChat(bool value) {
     _isNewChat = value;
+  }
+
+  String _emptyStringAPP = '';
+  String get emptyStringAPP => _emptyStringAPP;
+  set emptyStringAPP(String value) {
+    _emptyStringAPP = value;
   }
 
   final _provinceManager = FutureRequestManager<ApiCallResponse>();

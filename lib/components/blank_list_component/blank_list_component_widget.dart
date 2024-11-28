@@ -91,7 +91,7 @@ class _BlankListComponentWidgetState extends State<BlankListComponentWidget> {
                       AuthUserStreamWidget(
                         builder: (context) => SelectionArea(
                             child: AutoSizeText(
-                          'Ciao,${currentUserDisplayName}',
+                          'Ciao,${valueOrDefault(currentUserDocument?.nome, '')}',
                           style: FlutterFlowTheme.of(context)
                               .titleMedium
                               .override(

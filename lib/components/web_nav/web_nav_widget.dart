@@ -1305,7 +1305,13 @@ class _WebNavWidgetState extends State<WebNavWidget>
                         logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
 
                         context.pushNamed(
-                          'Main_Contenuti_ADA',
+                          'Main_chat_ADA',
+                          queryParameters: {
+                            'firstMessage': serializeParam(
+                              '',
+                              ParamType.String,
+                            ),
+                          }.withoutNulls,
                           extra: <String, dynamic>{
                             kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,

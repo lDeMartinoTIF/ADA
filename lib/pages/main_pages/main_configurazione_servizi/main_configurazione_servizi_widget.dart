@@ -567,7 +567,7 @@ class _MainConfigurazioneServiziWidgetState
                                               future: ADAapiGroup
                                                   .getTipoServizioCall
                                                   .call(
-                                                token: currentUserUid,
+                                                token: '789',
                                               ),
                                               builder: (context, snapshot) {
                                                 // Customize what your widget looks like when it's loading.
@@ -881,7 +881,7 @@ class _MainConfigurazioneServiziWidgetState
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        0.0, 0.0, 36.0, 0.0),
+                                                        30.0, 0.0, 36.0, 0.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -933,7 +933,7 @@ class _MainConfigurazioneServiziWidgetState
                                                         child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  -1.0, 0.0),
+                                                                  0.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
@@ -967,13 +967,15 @@ class _MainConfigurazioneServiziWidgetState
                                                         child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  -1.0, 0.0),
+                                                                  0.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
                                                               '5g437pu0' /* Preavviso Annullamento */,
                                                             ),
+                                                            textAlign: TextAlign
+                                                                .center,
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium
@@ -1001,7 +1003,7 @@ class _MainConfigurazioneServiziWidgetState
                                                         child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  -1.0, 0.0),
+                                                                  0.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
@@ -1035,7 +1037,7 @@ class _MainConfigurazioneServiziWidgetState
                                                         child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  -1.0, 0.0),
+                                                                  0.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
@@ -1069,7 +1071,7 @@ class _MainConfigurazioneServiziWidgetState
                                                         child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  -1.0, 0.0),
+                                                                  0.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
@@ -1103,7 +1105,7 @@ class _MainConfigurazioneServiziWidgetState
                                                         child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  -1.0, 0.0),
+                                                                  0.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
@@ -1137,7 +1139,7 @@ class _MainConfigurazioneServiziWidgetState
                                                         child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
-                                                                  -1.0, 0.0),
+                                                                  0.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
@@ -1186,7 +1188,7 @@ class _MainConfigurazioneServiziWidgetState
                                               future: ADAapiGroup
                                                   .getAllTipiServizioCall
                                                   .call(
-                                                token: currentUserUid,
+                                                token: '789',
                                               ),
                                               builder: (context, snapshot) {
                                                 // Customize what your widget looks like when it's loading.
@@ -1333,6 +1335,193 @@ class _MainConfigurazioneServiziWidgetState
                                                                                       useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyLargeFamily),
                                                                                     ),
                                                                               ),
+                                                                            ),
+                                                                          ),
+                                                                          Expanded(
+                                                                            child:
+                                                                                FlutterFlowIconButton(
+                                                                              buttonSize: 40.0,
+                                                                              icon: Icon(
+                                                                                Icons.check_circle_rounded,
+                                                                                color: valueOrDefault<Color>(
+                                                                                  '${getJsonField(
+                                                                                            itemTipoServizioItem,
+                                                                                            r'''$.CALENDAR''',
+                                                                                          ).toString()}' ==
+                                                                                          ''
+                                                                                      ? FlutterFlowTheme.of(context).accent2
+                                                                                      : FlutterFlowTheme.of(context).primary,
+                                                                                  FlutterFlowTheme.of(context).accent2,
+                                                                                ),
+                                                                                size: 24.0,
+                                                                              ),
+                                                                              onPressed: true
+                                                                                  ? null
+                                                                                  : () {
+                                                                                      print('IconButton pressed ...');
+                                                                                    },
+                                                                            ),
+                                                                          ),
+                                                                          Expanded(
+                                                                            child:
+                                                                                FlutterFlowIconButton(
+                                                                              borderColor: Colors.transparent,
+                                                                              borderRadius: 30.0,
+                                                                              buttonSize: 40.0,
+                                                                              icon: Icon(
+                                                                                Icons.check_circle_rounded,
+                                                                                color: valueOrDefault<Color>(
+                                                                                  '${getJsonField(
+                                                                                            itemTipoServizioItem,
+                                                                                            r'''$.PREAVVISO_ANNULLAMENTO''',
+                                                                                          ).toString()}' ==
+                                                                                          ''
+                                                                                      ? FlutterFlowTheme.of(context).accent2
+                                                                                      : FlutterFlowTheme.of(context).primary,
+                                                                                  FlutterFlowTheme.of(context).accent2,
+                                                                                ),
+                                                                                size: 24.0,
+                                                                              ),
+                                                                              onPressed: true
+                                                                                  ? null
+                                                                                  : () {
+                                                                                      print('IconButton pressed ...');
+                                                                                    },
+                                                                            ),
+                                                                          ),
+                                                                          Expanded(
+                                                                            child:
+                                                                                FlutterFlowIconButton(
+                                                                              borderColor: Colors.transparent,
+                                                                              borderRadius: 30.0,
+                                                                              buttonSize: 40.0,
+                                                                              icon: Icon(
+                                                                                Icons.check_circle_rounded,
+                                                                                color: valueOrDefault<Color>(
+                                                                                  '${getJsonField(
+                                                                                            itemTipoServizioItem,
+                                                                                            r'''$.SCADENZA''',
+                                                                                          ).toString()}' ==
+                                                                                          ''
+                                                                                      ? FlutterFlowTheme.of(context).accent2
+                                                                                      : FlutterFlowTheme.of(context).primary,
+                                                                                  FlutterFlowTheme.of(context).accent2,
+                                                                                ),
+                                                                                size: 24.0,
+                                                                              ),
+                                                                              onPressed: true
+                                                                                  ? null
+                                                                                  : () {
+                                                                                      print('IconButton pressed ...');
+                                                                                    },
+                                                                            ),
+                                                                          ),
+                                                                          Expanded(
+                                                                            child:
+                                                                                FlutterFlowIconButton(
+                                                                              borderColor: Colors.transparent,
+                                                                              borderRadius: 30.0,
+                                                                              buttonSize: 40.0,
+                                                                              icon: Icon(
+                                                                                Icons.check_circle_rounded,
+                                                                                color: valueOrDefault<Color>(
+                                                                                  '${getJsonField(
+                                                                                            itemTipoServizioItem,
+                                                                                            r'''$.INDIRIZZO_SPECIFICO''',
+                                                                                          ).toString()}' ==
+                                                                                          ''
+                                                                                      ? FlutterFlowTheme.of(context).accent2
+                                                                                      : FlutterFlowTheme.of(context).primary,
+                                                                                  FlutterFlowTheme.of(context).accent2,
+                                                                                ),
+                                                                                size: 24.0,
+                                                                              ),
+                                                                              onPressed: true
+                                                                                  ? null
+                                                                                  : () {
+                                                                                      print('IconButton pressed ...');
+                                                                                    },
+                                                                            ),
+                                                                          ),
+                                                                          Expanded(
+                                                                            child:
+                                                                                FlutterFlowIconButton(
+                                                                              borderColor: Colors.transparent,
+                                                                              borderRadius: 30.0,
+                                                                              buttonSize: 40.0,
+                                                                              icon: Icon(
+                                                                                Icons.check_circle_rounded,
+                                                                                color: valueOrDefault<Color>(
+                                                                                  '${getJsonField(
+                                                                                            itemTipoServizioItem,
+                                                                                            r'''$.FILE''',
+                                                                                          ).toString()}' ==
+                                                                                          ''
+                                                                                      ? FlutterFlowTheme.of(context).accent2
+                                                                                      : FlutterFlowTheme.of(context).primary,
+                                                                                  FlutterFlowTheme.of(context).accent2,
+                                                                                ),
+                                                                                size: 24.0,
+                                                                              ),
+                                                                              onPressed: true
+                                                                                  ? null
+                                                                                  : () {
+                                                                                      print('IconButton pressed ...');
+                                                                                    },
+                                                                            ),
+                                                                          ),
+                                                                          Expanded(
+                                                                            child:
+                                                                                FlutterFlowIconButton(
+                                                                              borderColor: Colors.transparent,
+                                                                              borderRadius: 30.0,
+                                                                              buttonSize: 40.0,
+                                                                              icon: Icon(
+                                                                                Icons.check_circle_rounded,
+                                                                                color: valueOrDefault<Color>(
+                                                                                  '${getJsonField(
+                                                                                            itemTipoServizioItem,
+                                                                                            r'''$.MAIL''',
+                                                                                          ).toString()}' ==
+                                                                                          ''
+                                                                                      ? FlutterFlowTheme.of(context).accent2
+                                                                                      : FlutterFlowTheme.of(context).primary,
+                                                                                  FlutterFlowTheme.of(context).accent2,
+                                                                                ),
+                                                                                size: 24.0,
+                                                                              ),
+                                                                              onPressed: true
+                                                                                  ? null
+                                                                                  : () {
+                                                                                      print('IconButton pressed ...');
+                                                                                    },
+                                                                            ),
+                                                                          ),
+                                                                          Expanded(
+                                                                            child:
+                                                                                FlutterFlowIconButton(
+                                                                              borderColor: Colors.transparent,
+                                                                              borderRadius: 30.0,
+                                                                              buttonSize: 40.0,
+                                                                              icon: Icon(
+                                                                                Icons.check_circle_rounded,
+                                                                                color: valueOrDefault<Color>(
+                                                                                  '${getJsonField(
+                                                                                            itemTipoServizioItem,
+                                                                                            r'''$.LINK''',
+                                                                                          ).toString()}' ==
+                                                                                          ''
+                                                                                      ? FlutterFlowTheme.of(context).accent2
+                                                                                      : FlutterFlowTheme.of(context).primary,
+                                                                                  FlutterFlowTheme.of(context).accent2,
+                                                                                ),
+                                                                                size: 24.0,
+                                                                              ),
+                                                                              onPressed: true
+                                                                                  ? null
+                                                                                  : () {
+                                                                                      print('IconButton pressed ...');
+                                                                                    },
                                                                             ),
                                                                           ),
                                                                         ],

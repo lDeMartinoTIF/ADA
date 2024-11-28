@@ -249,9 +249,8 @@ class _MainChatADAWidgetState extends State<MainChatADAWidget>
                                                                     .circular(
                                                                         12.0),
                                                             border: Border.all(
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .lineColor,
+                                                              color: Colors
+                                                                  .transparent,
                                                               width: 1.0,
                                                             ),
                                                           ),
@@ -477,7 +476,7 @@ class _MainChatADAWidgetState extends State<MainChatADAWidget>
                                                                                                   },
                                                                                                   child: FaIcon(
                                                                                                     FontAwesomeIcons.solidThumbsUp,
-                                                                                                    color: FlutterFlowTheme.of(context).secondary600,
+                                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                     size: 10.0,
                                                                                                   ),
                                                                                                 ),
@@ -494,7 +493,7 @@ class _MainChatADAWidgetState extends State<MainChatADAWidget>
                                                                                                   },
                                                                                                   child: Icon(
                                                                                                     Icons.thumb_down,
-                                                                                                    color: FlutterFlowTheme.of(context).secondary600,
+                                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                     size: 10.0,
                                                                                                   ),
                                                                                                 ),
