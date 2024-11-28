@@ -1,9 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'dart:math';
 import 'modal_create_tipi_servizio_widget.dart'
     show ModalCreateTipiServizioWidget;
@@ -17,17 +19,13 @@ class ModalCreateTipiServizioModel
     extends FlutterFlowModel<ModalCreateTipiServizioWidget> {
   ///  State fields for stateful widgets in this component.
 
+  // State field(s) for DropDown widget.
+  String? dropDownValue;
+  FormFieldController<String>? dropDownValueController;
   // State field(s) for Tiposervizio widget.
   FocusNode? tiposervizioFocusNode;
   TextEditingController? tiposervizioTextController;
   String? Function(BuildContext, String?)? tiposervizioTextControllerValidator;
-  // State field(s) for Tiposerviziodescri widget.
-  FocusNode? tiposerviziodescriFocusNode;
-  TextEditingController? tiposerviziodescriTextController;
-  String? Function(BuildContext, String?)?
-      tiposerviziodescriTextControllerValidator;
-  // Stores action output result for [Backend Call - API (Insert Tipo Servizio)] action in Button widget.
-  ApiCallResponse? resultInsertTipoServizio;
 
   @override
   void initState(BuildContext context) {}
@@ -36,8 +34,5 @@ class ModalCreateTipiServizioModel
   void dispose() {
     tiposervizioFocusNode?.dispose();
     tiposervizioTextController?.dispose();
-
-    tiposerviziodescriFocusNode?.dispose();
-    tiposerviziodescriTextController?.dispose();
   }
 }

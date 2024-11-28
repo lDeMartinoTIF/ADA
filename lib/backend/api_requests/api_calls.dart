@@ -302,6 +302,9 @@ class ADAapiGroup {
       DeleteTipoServizioCall();
   static UpdateTipoServizioCall updateTipoServizioCall =
       UpdateTipoServizioCall();
+  static GetAllTipiServizioCall getAllTipiServizioCall =
+      GetAllTipiServizioCall();
+  static InsertTipiServiziCall insertTipiServiziCall = InsertTipiServiziCall();
 }
 
 class CreateLingueLINGUECreatePostCall {
@@ -2543,6 +2546,11 @@ class GetTipoServizioCall {
         response,
         r'''$[:].TIPO_SERVIZIO''',
       ));
+  List? allData(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
 }
 
 class DeleteTipoServizioCall {
@@ -2580,18 +2588,119 @@ class UpdateTipoServizioCall {
     String? token = '',
     String? tipoServizio = '',
     String? tipoServizioDescr = '',
+    int? tipoServizioPrg,
   }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     final ffApiRequestBody = '''
 {
   "Token": "${escapeStringForJson(token)}",
+  "TIPO_SERVIZIO_PRG": ${tipoServizioPrg},
   "TIPO_SERVIZIO": "${escapeStringForJson(tipoServizio)}",
   "TIPO_SERVIZIO_DESCR": "${escapeStringForJson(tipoServizioDescr)}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Update Tipo Servizio',
       apiUrl: '${baseUrl}/TIPO_SERVIZIO/update',
+      callType: ApiCallType.PUT,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class GetAllTipiServizioCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "Token": "${token}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Get All Tipi Servizio',
+      apiUrl: '${baseUrl}/TIPI_SERVIZIO/get_all',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  String? jspScadenza(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].SCADENZA''',
+      ));
+  String? jspTipoServizio(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].TIPO_SERVIZIO''',
+      ));
+  String? jspCalendar(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].CALENDAR''',
+      ));
+  String? jspFile(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].FILE''',
+      ));
+  String? jspLink(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].LINK''',
+      ));
+  int? jspTipoServizioPRG(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].TIPO_SERVIZIO_PRG''',
+      ));
+  String? jspMailRef(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].MAIL_REF''',
+      ));
+  dynamic jspAllData(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+      );
+}
+
+class InsertTipiServiziCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    String? tipoServizio = '',
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "TOKEN": "string",
+  "TIPO_SERVIZIO_PRG": 0,
+  "TIPO_SERVIZIO": "string",
+  "CALENDAR": "string",
+  "PREAVVISO_ANNULLAMENTO": "2024-11-28",
+  "SCADENZA": "2024-11-28",
+  "INDIRIZZO_SPECIFICO": "string",
+  "FILE": "string",
+  "MAIL_REF": "string",
+  "LINK": "string"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Insert Tipi Servizi',
+      apiUrl: '${baseUrl}TIPI_SERVIZIO/insert',
       callType: ApiCallType.POST,
       headers: {},
       params: {},

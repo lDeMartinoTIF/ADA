@@ -1,10 +1,9 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/components/dropdown_edit_delete/dropdown_edit_delete_widget.dart';
-import '/components/dropdown_user_edit/dropdown_user_edit_widget.dart';
 import '/components/modals/command_palette/command_palette_widget.dart';
+import '/components/modals_extra/modal_create_tipi_servizio/modal_create_tipi_servizio_widget.dart';
 import '/components/modals_extra/modal_create_tipo_servizio/modal_create_tipo_servizio_widget.dart';
-import '/components/modals_extra/modal_share_project/modal_share_project_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
@@ -90,26 +89,6 @@ class _MainConfigurazioneServiziWidgetState
             delay: 0.0.ms,
             duration: 300.0.ms,
             begin: Offset(0.0, 20.0),
-            end: Offset(0.0, 0.0),
-          ),
-        ],
-      ),
-      'containerOnPageLoadAnimation3': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          VisibilityEffect(duration: 1.ms),
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 300.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 300.0.ms,
-            begin: Offset(0.0, 40.0),
             end: Offset(0.0, 0.0),
           ),
         ],
@@ -306,7 +285,7 @@ class _MainConfigurazioneServiziWidgetState
                                         onTap: () =>
                                             FocusScope.of(dialogContext)
                                                 .unfocus(),
-                                        child: ModalShareProjectWidget(),
+                                        child: ModalCreateTipiServizioWidget(),
                                       ),
                                     );
                                   },
@@ -616,11 +595,14 @@ class _MainConfigurazioneServiziWidgetState
                                                 return Builder(
                                                   builder: (context) {
                                                     final itemTipoServizio =
-                                                        getJsonField(
-                                                      listViewGetTipoServizioResponse
-                                                          .jsonBody,
-                                                      r'''$[:]''',
-                                                    ).toList();
+                                                        ADAapiGroup
+                                                                .getTipoServizioCall
+                                                                .allData(
+                                                                  listViewGetTipoServizioResponse
+                                                                      .jsonBody,
+                                                                )
+                                                                ?.toList() ??
+                                                            [];
 
                                                     return ListView.builder(
                                                       padding:
@@ -927,7 +909,7 @@ class _MainConfigurazioneServiziWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '5s9bg0hh' /* Name */,
+                                                              '5s9bg0hh' /* Tipo Servizio */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -958,140 +940,11 @@ class _MainConfigurazioneServiziWidgetState
                                                           alignment:
                                                               AlignmentDirectional(
                                                                   -1.0, 0.0),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        16.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'ks5jl3j6' /* Title */,
-                                                              ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .labelMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .labelMediumFamily,
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                    useGoogleFonts: GoogleFonts
-                                                                            .asMap()
-                                                                        .containsKey(
-                                                                            FlutterFlowTheme.of(context).labelMediumFamily),
-                                                                  ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (responsiveVisibility(
-                                                      context: context,
-                                                      phone: false,
-                                                      tablet: false,
-                                                    ))
-                                                      Expanded(
-                                                        child: Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  -1.0, 0.0),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        16.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'lqm09c6v' /* Company */,
-                                                              ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .labelMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .labelMediumFamily,
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                    useGoogleFonts: GoogleFonts
-                                                                            .asMap()
-                                                                        .containsKey(
-                                                                            FlutterFlowTheme.of(context).labelMediumFamily),
-                                                                  ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (responsiveVisibility(
-                                                      context: context,
-                                                      phone: false,
-                                                      tablet: false,
-                                                    ))
-                                                      Expanded(
-                                                        child: Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  -1.0, 0.0),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        16.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'ffcg60kr' /* Company */,
-                                                              ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .labelMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .labelMediumFamily,
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                    useGoogleFonts: GoogleFonts
-                                                                            .asMap()
-                                                                        .containsKey(
-                                                                            FlutterFlowTheme.of(context).labelMediumFamily),
-                                                                  ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    Expanded(
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                1.0, 0.0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      8.0,
-                                                                      0.0,
-                                                                      0.0,
-                                                                      0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'rcscmsl9' /* Status */,
+                                                              'lqm09c6v' /* Preavviso Annullamento */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1111,7 +964,6 @@ class _MainConfigurazioneServiziWidgetState
                                                           ),
                                                         ),
                                                       ),
-                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
@@ -1131,249 +983,174 @@ class _MainConfigurazioneServiziWidgetState
                                                 ),
                                               ),
                                             ),
-                                            content: ListView(
-                                              padding: EdgeInsets.fromLTRB(
-                                                0,
-                                                0,
-                                                0,
-                                                70.0,
+                                            content:
+                                                FutureBuilder<ApiCallResponse>(
+                                              future: ADAapiGroup
+                                                  .getAllTipiServizioCall
+                                                  .call(
+                                                token: currentUserUid,
                                               ),
-                                              primary: false,
-                                              shrinkWrap: true,
-                                              scrollDirection: Axis.vertical,
-                                              children: [
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          16.0, 8.0, 16.0, 0.0),
-                                                  child: InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      logFirebaseEvent(
-                                                          'MAIN_CONFIGURAZIONE_SERVIZI_Container_tq');
-                                                      await action_blocks
-                                                          .openUserDetails(
-                                                              context);
-                                                    },
-                                                    child: Container(
-                                                      width: double.infinity,
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            blurRadius: 3.0,
-                                                            color: Color(
-                                                                0x20000000),
-                                                            offset: Offset(
-                                                              0.0,
-                                                              1.0,
-                                                            ),
-                                                          )
-                                                        ],
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12.0),
+                                              builder: (context, snapshot) {
+                                                // Customize what your widget looks like when it's loading.
+                                                if (!snapshot.hasData) {
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 50.0,
+                                                      height: 50.0,
+                                                      child:
+                                                          CircularProgressIndicator(
+                                                        valueColor:
+                                                            AlwaysStoppedAnimation<
+                                                                Color>(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                        ),
                                                       ),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    8.0,
-                                                                    8.0,
-                                                                    12.0,
-                                                                    8.0),
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            ClipRRect(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          8.0),
-                                                              child:
-                                                                  Image.network(
-                                                                'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
-                                                                width: 70.0,
-                                                                height: 70.0,
-                                                                fit: BoxFit
-                                                                    .cover,
+                                                    ),
+                                                  );
+                                                }
+                                                final listViewGetAllTipiServizioResponse =
+                                                    snapshot.data!;
+
+                                                return Builder(
+                                                  builder: (context) {
+                                                    final itemTipoServizio =
+                                                        ADAapiGroup
+                                                            .getAllTipiServizioCall
+                                                            .jspAllData(
+                                                              listViewGetAllTipiServizioResponse
+                                                                  .jsonBody,
+                                                            )
+                                                            .toList();
+
+                                                    return ListView.builder(
+                                                      padding:
+                                                          EdgeInsets.fromLTRB(
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        70.0,
+                                                      ),
+                                                      primary: false,
+                                                      shrinkWrap: true,
+                                                      scrollDirection:
+                                                          Axis.vertical,
+                                                      itemCount:
+                                                          itemTipoServizio
+                                                              .length,
+                                                      itemBuilder: (context,
+                                                          itemTipoServizioIndex) {
+                                                        final itemTipoServizioItem =
+                                                            itemTipoServizio[
+                                                                itemTipoServizioIndex];
+                                                        return Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      16.0,
+                                                                      8.0,
+                                                                      16.0,
+                                                                      0.0),
+                                                          child: InkWell(
+                                                            splashColor: Colors
+                                                                .transparent,
+                                                            focusColor: Colors
+                                                                .transparent,
+                                                            hoverColor: Colors
+                                                                .transparent,
+                                                            highlightColor:
+                                                                Colors
+                                                                    .transparent,
+                                                            onTap: () async {
+                                                              logFirebaseEvent(
+                                                                  'MAIN_CONFIGURAZIONE_SERVIZI_Container_t7');
+                                                              await action_blocks
+                                                                  .openDetailTipoServizio(
+                                                                context,
+                                                                jsonTipoServizio:
+                                                                    itemTipoServizioItem,
+                                                              );
+                                                            },
+                                                            child: Container(
+                                                              width: double
+                                                                  .infinity,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryBackground,
+                                                                boxShadow: [
+                                                                  BoxShadow(
+                                                                    blurRadius:
+                                                                        3.0,
+                                                                    color: Color(
+                                                                        0x20000000),
+                                                                    offset:
+                                                                        Offset(
+                                                                      0.0,
+                                                                      1.0,
+                                                                    ),
+                                                                  )
+                                                                ],
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            12.0),
                                                               ),
-                                                            ),
-                                                            Expanded(
-                                                              child: Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Expanded(
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          16.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                      child:
-                                                                          Text(
-                                                                        FFLocalizations.of(context)
-                                                                            .getText(
-                                                                          'n2vfw573' /* Randy Alcorn */,
-                                                                        ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyLarge
-                                                                            .override(
-                                                                              fontFamily: FlutterFlowTheme.of(context).bodyLargeFamily,
-                                                                              letterSpacing: 0.0,
-                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyLargeFamily),
-                                                                            ),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  if (responsiveVisibility(
-                                                                    context:
-                                                                        context,
-                                                                    phone:
-                                                                        false,
-                                                                    tablet:
-                                                                        false,
-                                                                  ))
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            8.0,
+                                                                            8.0,
+                                                                            12.0,
+                                                                            8.0),
+                                                                child: Row(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .center,
+                                                                  children: [
                                                                     Expanded(
                                                                       child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            16.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            'lovvwxie' /* Head of Procurement */,
-                                                                          ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                letterSpacing: 0.0,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  if (responsiveVisibility(
-                                                                    context:
-                                                                        context,
-                                                                    phone:
-                                                                        false,
-                                                                    tablet:
-                                                                        false,
-                                                                  ))
-                                                                    Expanded(
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            16.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            'gq6pegi5' /* ACME Co. */,
-                                                                          ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                fontSize: 14.0,
-                                                                                letterSpacing: 0.0,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  if (responsiveVisibility(
-                                                                    context:
-                                                                        context,
-                                                                    phone:
-                                                                        false,
-                                                                    tablet:
-                                                                        false,
-                                                                  ))
-                                                                    Expanded(
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            16.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            'yziz0gov' /* ACME Co. */,
-                                                                          ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                fontSize: 14.0,
-                                                                                letterSpacing: 0.0,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  Expanded(
-                                                                    child: Row(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      mainAxisAlignment:
-                                                                          MainAxisAlignment
-                                                                              .end,
-                                                                      children: [
-                                                                        Container(
-                                                                          height:
-                                                                              32.0,
-                                                                          decoration:
-                                                                              BoxDecoration(
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).accent2,
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            border:
-                                                                                Border.all(
-                                                                              color: FlutterFlowTheme.of(context).secondary,
-                                                                            ),
-                                                                          ),
-                                                                          child:
-                                                                              Align(
-                                                                            alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                          Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        children: [
+                                                                          Expanded(
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                                                                               child: Text(
-                                                                                FFLocalizations.of(context).getText(
-                                                                                  'zihp77bo' /* New */,
-                                                                                ),
+                                                                                getJsonField(
+                                                                                  itemTipoServizioItem,
+                                                                                  r'''$.TIPO_SERVIZIO''',
+                                                                                ).toString(),
+                                                                                style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                                      fontFamily: FlutterFlowTheme.of(context).bodyLargeFamily,
+                                                                                      letterSpacing: 0.0,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyLargeFamily),
+                                                                                    ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          if (responsiveVisibility(
+                                                                            context:
+                                                                                context,
+                                                                            phone:
+                                                                                false,
+                                                                            tablet:
+                                                                                false,
+                                                                          ))
+                                                                            Expanded(
+                                                                              child: Text(
+                                                                                getJsonField(
+                                                                                  itemTipoServizioItem,
+                                                                                  r'''$.PREAVVISO_ANNULLAMENTO''',
+                                                                                ).toString(),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                                       letterSpacing: 0.0,
@@ -1381,424 +1158,119 @@ class _MainConfigurazioneServiziWidgetState
                                                                                     ),
                                                                               ),
                                                                             ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
+                                                                        ],
+                                                                      ),
                                                                     ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                            Builder(
-                                                              builder:
-                                                                  (context) =>
-                                                                      Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
+                                                                    Builder(
+                                                                      builder:
+                                                                          (context) =>
+                                                                              Padding(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                child: InkWell(
-                                                                  splashColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  focusColor: Colors
-                                                                      .transparent,
-                                                                  hoverColor: Colors
-                                                                      .transparent,
-                                                                  highlightColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  onTap:
-                                                                      () async {
-                                                                    logFirebaseEvent(
-                                                                        'MAIN_CONFIGURAZIONE_SERVIZI_Icon_adhejkd');
-                                                                    await showAlignedDialog(
-                                                                      barrierColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      context:
-                                                                          context,
-                                                                      isGlobal:
-                                                                          false,
-                                                                      avoidOverflow:
-                                                                          true,
-                                                                      targetAnchor: AlignmentDirectional(
-                                                                              1.0,
-                                                                              -1.0)
-                                                                          .resolve(
-                                                                              Directionality.of(context)),
-                                                                      followerAnchor: AlignmentDirectional(
-                                                                              -1.0,
-                                                                              1.0)
-                                                                          .resolve(
-                                                                              Directionality.of(context)),
-                                                                      builder:
-                                                                          (dialogContext) {
-                                                                        return Material(
-                                                                          color:
+                                                                        child:
+                                                                            InkWell(
+                                                                          splashColor:
                                                                               Colors.transparent,
-                                                                          child:
-                                                                              GestureDetector(
-                                                                            onTap: () =>
-                                                                                FocusScope.of(dialogContext).unfocus(),
-                                                                            child:
-                                                                                DropdownUserEditWidget(),
-                                                                          ),
-                                                                        );
-                                                                      },
-                                                                    );
-                                                                  },
-                                                                  child: Icon(
-                                                                    Icons
-                                                                        .more_vert,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryText,
-                                                                    size: 24.0,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ).animateOnPageLoad(animationsMap[
-                                                      'containerOnPageLoadAnimation2']!),
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          16.0, 8.0, 16.0, 0.0),
-                                                  child: InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      logFirebaseEvent(
-                                                          'MAIN_CONFIGURAZIONE_SERVIZI_Container_t1');
-                                                      await action_blocks
-                                                          .openUserDetails(
-                                                              context);
-                                                    },
-                                                    child: Container(
-                                                      width: double.infinity,
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            blurRadius: 3.0,
-                                                            color: Color(
-                                                                0x20000000),
-                                                            offset: Offset(
-                                                              0.0,
-                                                              1.0,
-                                                            ),
-                                                          )
-                                                        ],
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12.0),
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    8.0,
-                                                                    8.0,
-                                                                    12.0,
-                                                                    8.0),
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            ClipRRect(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          8.0),
-                                                              child:
-                                                                  Image.network(
-                                                                'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
-                                                                width: 70.0,
-                                                                height: 70.0,
-                                                                fit: BoxFit
-                                                                    .cover,
-                                                              ),
-                                                            ),
-                                                            Expanded(
-                                                              child: Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Expanded(
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          16.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                      child:
-                                                                          Text(
-                                                                        FFLocalizations.of(context)
-                                                                            .getText(
-                                                                          '32u4vlq2' /* Ignacious Rodriguez */,
-                                                                        ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyLarge
-                                                                            .override(
-                                                                              fontFamily: FlutterFlowTheme.of(context).bodyLargeFamily,
-                                                                              letterSpacing: 0.0,
-                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyLargeFamily),
-                                                                            ),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  if (responsiveVisibility(
-                                                                    context:
-                                                                        context,
-                                                                    phone:
-                                                                        false,
-                                                                    tablet:
-                                                                        false,
-                                                                  ))
-                                                                    Expanded(
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            16.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            'sc2oyapc' /* Sales Manager */,
-                                                                          ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                letterSpacing: 0.0,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  if (responsiveVisibility(
-                                                                    context:
-                                                                        context,
-                                                                    phone:
-                                                                        false,
-                                                                    tablet:
-                                                                        false,
-                                                                  ))
-                                                                    Expanded(
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            16.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            'n7ua4e8l' /* Robin HQ */,
-                                                                          ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                color: FlutterFlowTheme.of(context).primaryText,
-                                                                                fontSize: 14.0,
-                                                                                letterSpacing: 0.0,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  if (responsiveVisibility(
-                                                                    context:
-                                                                        context,
-                                                                    phone:
-                                                                        false,
-                                                                    tablet:
-                                                                        false,
-                                                                  ))
-                                                                    Expanded(
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            16.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            'px5ocz5c' /* Robin HQ */,
-                                                                          ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                color: FlutterFlowTheme.of(context).primaryText,
-                                                                                fontSize: 14.0,
-                                                                                letterSpacing: 0.0,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  Expanded(
-                                                                    child: Row(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      mainAxisAlignment:
-                                                                          MainAxisAlignment
-                                                                              .end,
-                                                                      children: [
-                                                                        Container(
-                                                                          height:
-                                                                              32.0,
-                                                                          decoration:
-                                                                              BoxDecoration(
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).accent2,
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            border:
-                                                                                Border.all(
-                                                                              color: FlutterFlowTheme.of(context).secondary,
-                                                                            ),
-                                                                          ),
-                                                                          child:
-                                                                              Align(
-                                                                            alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
-                                                                            child:
-                                                                                Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                                                                              child: Text(
-                                                                                FFLocalizations.of(context).getText(
-                                                                                  'lcpm857g' /* New */,
-                                                                                ),
-                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                      letterSpacing: 0.0,
-                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                          focusColor:
+                                                                              Colors.transparent,
+                                                                          hoverColor:
+                                                                              Colors.transparent,
+                                                                          highlightColor:
+                                                                              Colors.transparent,
+                                                                          onTap:
+                                                                              () async {
+                                                                            logFirebaseEvent('MAIN_CONFIGURAZIONE_SERVIZI_Icon_5p78u36');
+                                                                            await showAlignedDialog(
+                                                                              barrierColor: Colors.transparent,
+                                                                              context: context,
+                                                                              isGlobal: false,
+                                                                              avoidOverflow: true,
+                                                                              targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                              followerAnchor: AlignmentDirectional(1.0, -1.0).resolve(Directionality.of(context)),
+                                                                              builder: (dialogContext) {
+                                                                                return Material(
+                                                                                  color: Colors.transparent,
+                                                                                  child: GestureDetector(
+                                                                                    onTap: () => FocusScope.of(dialogContext).unfocus(),
+                                                                                    child: DropdownEditDeleteWidget(
+                                                                                      actionEdit: () async {
+                                                                                        // Actio_tipiservizio
+                                                                                        await action_blocks.openDetailTipiServizio(
+                                                                                          context,
+                                                                                          jsonTipiServizio: itemTipoServizioItem,
+                                                                                        );
+                                                                                      },
+                                                                                      actionDelete: () async {
+                                                                                        // Action Tipiservizio
+                                                                                        var confirmDialogResponse = await showDialog<bool>(
+                                                                                              context: context,
+                                                                                              builder: (alertDialogContext) {
+                                                                                                return AlertDialog(
+                                                                                                  title: Text('Info'),
+                                                                                                  content: Text('Confermare eliminazione?'),
+                                                                                                  actions: [
+                                                                                                    TextButton(
+                                                                                                      onPressed: () => Navigator.pop(alertDialogContext, false),
+                                                                                                      child: Text('Cancel'),
+                                                                                                    ),
+                                                                                                    TextButton(
+                                                                                                      onPressed: () => Navigator.pop(alertDialogContext, true),
+                                                                                                      child: Text('Confirm'),
+                                                                                                    ),
+                                                                                                  ],
+                                                                                                );
+                                                                                              },
+                                                                                            ) ??
+                                                                                            false;
+                                                                                        if (confirmDialogResponse) {
+                                                                                          _model.resultDeleteTipiServizio = await ADAapiGroup.deleteTipoServizioCall.call(
+                                                                                            token: currentUserUid,
+                                                                                            tipoServizioPrg: getJsonField(
+                                                                                              itemTipoServizioItem,
+                                                                                              r'''$.TIPO_SERVIZIO_PRG''',
+                                                                                            ),
+                                                                                          );
+
+                                                                                          if ((_model.resultDeleteTipiServizio?.succeeded ?? true)) {
+                                                                                            Navigator.pop(context);
+                                                                                          }
+                                                                                        }
+                                                                                      },
                                                                                     ),
-                                                                              ),
-                                                                            ),
+                                                                                  ),
+                                                                                );
+                                                                              },
+                                                                            );
+
+                                                                            safeSetState(() {});
+                                                                          },
+                                                                          child:
+                                                                              Icon(
+                                                                            Icons.more_vert,
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).secondaryText,
+                                                                            size:
+                                                                                24.0,
                                                                           ),
                                                                         ),
-                                                                      ],
+                                                                      ),
                                                                     ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                            Builder(
-                                                              builder:
-                                                                  (context) =>
-                                                                      Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            12.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                child: InkWell(
-                                                                  splashColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  focusColor: Colors
-                                                                      .transparent,
-                                                                  hoverColor: Colors
-                                                                      .transparent,
-                                                                  highlightColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  onTap:
-                                                                      () async {
-                                                                    logFirebaseEvent(
-                                                                        'MAIN_CONFIGURAZIONE_SERVIZI_Icon_ngw4zjz');
-                                                                    await showAlignedDialog(
-                                                                      barrierColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      context:
-                                                                          context,
-                                                                      isGlobal:
-                                                                          false,
-                                                                      avoidOverflow:
-                                                                          true,
-                                                                      targetAnchor: AlignmentDirectional(
-                                                                              1.0,
-                                                                              -1.0)
-                                                                          .resolve(
-                                                                              Directionality.of(context)),
-                                                                      followerAnchor: AlignmentDirectional(
-                                                                              -1.0,
-                                                                              1.0)
-                                                                          .resolve(
-                                                                              Directionality.of(context)),
-                                                                      builder:
-                                                                          (dialogContext) {
-                                                                        return Material(
-                                                                          color:
-                                                                              Colors.transparent,
-                                                                          child:
-                                                                              GestureDetector(
-                                                                            onTap: () =>
-                                                                                FocusScope.of(dialogContext).unfocus(),
-                                                                            child:
-                                                                                DropdownUserEditWidget(),
-                                                                          ),
-                                                                        );
-                                                                      },
-                                                                    );
-                                                                  },
-                                                                  child: Icon(
-                                                                    Icons
-                                                                        .more_vert,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryText,
-                                                                    size: 24.0,
-                                                                  ),
+                                                                  ],
                                                                 ),
                                                               ),
                                                             ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ).animateOnPageLoad(animationsMap[
-                                                      'containerOnPageLoadAnimation3']!),
-                                                ),
-                                              ],
+                                                          ).animateOnPageLoad(
+                                                              animationsMap[
+                                                                  'containerOnPageLoadAnimation2']!),
+                                                        );
+                                                      },
+                                                    );
+                                                  },
+                                                );
+                                              },
                                             ),
                                           ),
                                         ],

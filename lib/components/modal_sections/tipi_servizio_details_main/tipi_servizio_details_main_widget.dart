@@ -1,20 +1,22 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'tipo_servizio_details_main_model.dart';
-export 'tipo_servizio_details_main_model.dart';
+import 'tipi_servizio_details_main_model.dart';
+export 'tipi_servizio_details_main_model.dart';
 
-class TipoServizioDetailsMainWidget extends StatefulWidget {
-  const TipoServizioDetailsMainWidget({
+class TipiServizioDetailsMainWidget extends StatefulWidget {
+  const TipiServizioDetailsMainWidget({
     super.key,
     required this.showBack,
     required this.jsonTipoServizio,
@@ -24,13 +26,13 @@ class TipoServizioDetailsMainWidget extends StatefulWidget {
   final dynamic jsonTipoServizio;
 
   @override
-  State<TipoServizioDetailsMainWidget> createState() =>
-      _TipoServizioDetailsMainWidgetState();
+  State<TipiServizioDetailsMainWidget> createState() =>
+      _TipiServizioDetailsMainWidgetState();
 }
 
-class _TipoServizioDetailsMainWidgetState
-    extends State<TipoServizioDetailsMainWidget> with TickerProviderStateMixin {
-  late TipoServizioDetailsMainModel _model;
+class _TipiServizioDetailsMainWidgetState
+    extends State<TipiServizioDetailsMainWidget> with TickerProviderStateMixin {
+  late TipiServizioDetailsMainModel _model;
 
   final animationsMap = <String, AnimationInfo>{};
 
@@ -43,14 +45,7 @@ class _TipoServizioDetailsMainWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TipoServizioDetailsMainModel());
-
-    _model.tiposervizioTextController ??= TextEditingController(
-        text: getJsonField(
-      widget!.jsonTipoServizio,
-      r'''$.TIPO_SERVIZIO''',
-    ).toString().toString());
-    _model.tiposervizioFocusNode ??= FocusNode();
+    _model = createModel(context, () => TipiServizioDetailsMainModel());
 
     _model.tiposerviziodescriTextController ??= TextEditingController(
         text: getJsonField(
@@ -58,6 +53,13 @@ class _TipoServizioDetailsMainWidgetState
       r'''$.TIPO_SERVIZIO_DESCR''',
     ).toString().toString());
     _model.tiposerviziodescriFocusNode ??= FocusNode();
+
+    _model.tiposervizioTextController ??= TextEditingController(
+        text: getJsonField(
+      widget!.jsonTipoServizio,
+      r'''$.TIPO_SERVIZIO''',
+    ).toString().toString());
+    _model.tiposervizioFocusNode ??= FocusNode();
 
     animationsMap.addAll({
       'cardOnPageLoadAnimation': AnimationInfo(
@@ -154,7 +156,7 @@ class _TipoServizioDetailsMainWidgetState
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 logFirebaseEvent(
-                                    'TIPO_SERVIZIO_DETAILS_MAIN_Card_u9b6u0ew');
+                                    'TIPI_SERVIZIO_DETAILS_MAIN_Card_8p0jmo6d');
                                 context.safePop();
                               },
                               child: Card(
@@ -185,113 +187,76 @@ class _TipoServizioDetailsMainWidgetState
                       children: [
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 10.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      24.0, 16.0, 24.0, 0.0),
-                                  child: TextFormField(
-                                    controller:
-                                        _model.tiposervizioTextController,
-                                    focusNode: _model.tiposervizioFocusNode,
-                                    autofocus: true,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      labelText:
-                                          FFLocalizations.of(context).getText(
-                                        'd51ppt1z' /* Titolo */,
-                                      ),
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMediumFamily,
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily),
-                                          ),
-                                      hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMediumFamily,
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily),
-                                          ),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      filled: true,
-                                      fillColor: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              20.0, 24.0, 20.0, 24.0),
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMediumFamily),
-                                        ),
-                                    cursorColor:
+                              24.0, 16.0, 24.0, 0.0),
+                          child: FutureBuilder<ApiCallResponse>(
+                            future: ADAapiGroup.getTipoServizioCall.call(
+                              token: currentUserUid,
+                            ),
+                            builder: (context, snapshot) {
+                              // Customize what your widget looks like when it's loading.
+                              if (!snapshot.hasData) {
+                                return Center(
+                                  child: SizedBox(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    child: CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(
                                         FlutterFlowTheme.of(context).primary,
-                                    validator: _model
-                                        .tiposervizioTextControllerValidator
-                                        .asValidator(context),
+                                      ),
+                                    ),
                                   ),
+                                );
+                              }
+                              final dropDownGetTipoServizioResponse =
+                                  snapshot.data!;
+
+                              return FlutterFlowDropDown<String>(
+                                controller: _model.dropDownValueController ??=
+                                    FormFieldController<String>(null),
+                                options: ADAapiGroup.getTipoServizioCall
+                                    .allData(
+                                      dropDownGetTipoServizioResponse.jsonBody,
+                                    )!
+                                    .map((e) => e.toString())
+                                    .toList(),
+                                onChanged: (val) => safeSetState(
+                                    () => _model.dropDownValue = val),
+                                width: double.infinity,
+                                height: 58.0,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily),
+                                    ),
+                                hintText: FFLocalizations.of(context).getText(
+                                  'oldxiom0' /* Please select... */,
                                 ),
-                              ),
-                            ],
+                                icon: Icon(
+                                  Icons.keyboard_arrow_down_rounded,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  size: 24.0,
+                                ),
+                                fillColor: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                elevation: 2.0,
+                                borderColor:
+                                    FlutterFlowTheme.of(context).alternate,
+                                borderWidth: 2.0,
+                                borderRadius: 12.0,
+                                margin: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 4.0, 16.0, 4.0),
+                                hidesUnderline: true,
+                                isSearchable: false,
+                                isMultiSelect: false,
+                              );
+                            },
                           ),
                         ),
                         Row(
@@ -310,7 +275,7 @@ class _TipoServizioDetailsMainWidgetState
                                   decoration: InputDecoration(
                                     labelText:
                                         FFLocalizations.of(context).getText(
-                                      'qsd45ef0' /* Descrizione */,
+                                      'kaealhmv' /* Descrizione */,
                                     ),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
@@ -396,6 +361,107 @@ class _TipoServizioDetailsMainWidgetState
                             ),
                           ],
                         ),
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    24.0, 16.0, 24.0, 0.0),
+                                child: TextFormField(
+                                  controller: _model.tiposervizioTextController,
+                                  focusNode: _model.tiposervizioFocusNode,
+                                  autofocus: true,
+                                  obscureText: false,
+                                  decoration: InputDecoration(
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      'fxcnfz1p' /* Titolo */,
+                                    ),
+                                    labelStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily),
+                                        ),
+                                    hintStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily),
+                                        ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    errorBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    focusedErrorBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    filled: true,
+                                    fillColor: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    contentPadding:
+                                        EdgeInsetsDirectional.fromSTEB(
+                                            20.0, 24.0, 20.0, 24.0),
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodyMediumFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily),
+                                      ),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  validator: _model
+                                      .tiposervizioTextControllerValidator
+                                      .asValidator(context),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ],
@@ -439,7 +505,7 @@ class _TipoServizioDetailsMainWidgetState
                   child: FFButtonWidget(
                     onPressed: () async {
                       logFirebaseEvent(
-                          'TIPO_SERVIZIO_DETAILS_MAIN_ELIMINA_BTN_O');
+                          'TIPI_SERVIZIO_DETAILS_MAIN_ELIMINA_BTN_O');
                       _model.apiResultno4 =
                           await ADAapiGroup.deleteTipoServizioCall.call(
                         token: currentUserUid,
@@ -456,7 +522,7 @@ class _TipoServizioDetailsMainWidgetState
                       safeSetState(() {});
                     },
                     text: FFLocalizations.of(context).getText(
-                      'bbrsntgn' /* Elimina */,
+                      'popk1pyh' /* Elimina */,
                     ),
                     options: FFButtonOptions(
                       height: 44.0,
@@ -494,7 +560,7 @@ class _TipoServizioDetailsMainWidgetState
                   child: FFButtonWidget(
                     onPressed: () async {
                       logFirebaseEvent(
-                          'TIPO_SERVIZIO_DETAILS_MAIN_SALVA_BTN_ON_');
+                          'TIPI_SERVIZIO_DETAILS_MAIN_SALVA_BTN_ON_');
                       _model.apiResultj70 =
                           await ADAapiGroup.updateTipoServizioCall.call(
                         token: currentUserUid,
@@ -514,7 +580,7 @@ class _TipoServizioDetailsMainWidgetState
                       safeSetState(() {});
                     },
                     text: FFLocalizations.of(context).getText(
-                      'utbonmaf' /* Salva */,
+                      'z2msh32q' /* Salva */,
                     ),
                     options: FFButtonOptions(
                       height: 44.0,

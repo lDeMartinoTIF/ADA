@@ -44,3 +44,5 @@ export '/pages/main_pages/main_configurazione_servizi/main_configurazione_serviz
     show MainConfigurazioneServiziWidget;
 export '/pages/tipo_servizio_details/tipo_servizio_details_widget.dart'
     show TipoServizioDetailsWidget;
+export '/pages/tipi_servizio_details/tipi_servizio_details_widget.dart'
+    show TipiServizioDetailsWidget;

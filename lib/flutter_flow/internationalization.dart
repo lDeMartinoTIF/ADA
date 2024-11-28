@@ -2004,16 +2004,32 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Title',
     },
     'p0nwtkeu': {
-      'it': 'Progressivo',
+      'it': 'L',
       'en': 'Company',
     },
     's5hvn7hj': {
-      'it': 'Buffer',
+      'it': 'M',
       'en': 'Company',
     },
-    '8z0xvpw4': {
-      'it': 'Stato',
-      'en': 'Status',
+    'mbqor0xi': {
+      'it': 'M',
+      'en': 'Company',
+    },
+    'h9fz36nc': {
+      'it': 'G',
+      'en': 'Company',
+    },
+    'draajwx4': {
+      'it': 'V',
+      'en': 'Company',
+    },
+    '91081ge0': {
+      'it': 'S',
+      'en': 'Company',
+    },
+    '1ef2gpza': {
+      'it': 'D',
+      'en': 'Company',
     },
     '3nhcf803': {
       'it': 'Randy Alcorn',
@@ -2358,64 +2374,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'New Calls',
     },
     '5s9bg0hh': {
-      'it': 'Name',
+      'it': 'Tipo Servizio',
       'en': 'Name',
     },
-    'ks5jl3j6': {
-      'it': 'Title',
-      'en': 'Title',
-    },
     'lqm09c6v': {
-      'it': 'Company',
+      'it': 'Preavviso Annullamento',
       'en': 'Company',
-    },
-    'ffcg60kr': {
-      'it': 'Company',
-      'en': 'Company',
-    },
-    'rcscmsl9': {
-      'it': 'Status',
-      'en': 'Status',
-    },
-    'n2vfw573': {
-      'it': 'Randy Alcorn',
-      'en': 'Randy Alcorn',
-    },
-    'lovvwxie': {
-      'it': 'Head of Procurement',
-      'en': 'Head of Procurement',
-    },
-    'gq6pegi5': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'yziz0gov': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'zihp77bo': {
-      'it': 'New',
-      'en': 'New',
-    },
-    '32u4vlq2': {
-      'it': 'Ignacious Rodriguez',
-      'en': 'Ignacious Rodriguez',
-    },
-    'sc2oyapc': {
-      'it': 'Sales Manager',
-      'en': 'Sales Manager',
-    },
-    'n7ua4e8l': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'px5ocz5c': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'lcpm857g': {
-      'it': 'New',
-      'en': 'New',
     },
     'cqpk6k1j': {
       'it': 'Customers',
@@ -2429,6 +2393,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // TipoServizioDetails
   {
     'wrv7vgvu': {
+      'it': 'Home',
+      'en': 'Home',
+    },
+  },
+  // TipiServizioDetails
+  {
+    'xkahn2fm': {
       'it': 'Home',
       'en': 'Home',
     },
@@ -3850,19 +3821,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Modal_create_Tipi_Servizio
   {
     'uzqgy0h8': {
-      'it': 'Tipo Servizio',
+      'it': 'Tipi Servizio',
       'en': 'Invite your Team',
     },
     '39ykriue': {
-      'it': 'Crea un nuovo Tipo Servizio',
+      'it': 'Crea un nuovo Tipi Servizio',
       'en': 'Your project has been created, now invite your team to continue.',
+    },
+    'rynayygf': {
+      'it': 'Admin',
+      'en': 'Admin',
+    },
+    '1x3ywrs0': {
+      'it': 'Manager',
+      'en': 'Manager',
+    },
+    '9l36sbd3': {
+      'it': 'Editor',
+      'en': 'Editor',
+    },
+    'we3horll': {
+      'it': 'Viewer',
+      'en': 'Viewer',
+    },
+    'mf0qxpg0': {
+      'it': 'Please select...',
+      'en': 'Please select...',
+    },
+    'wzzgscm8': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
     },
     '7gxk17jk': {
       'it': 'Titolo',
-      'en': 'Go',
-    },
-    'h1ct5b5s': {
-      'it': 'Descrizione',
       'en': 'Go',
     },
     'r6p0v9wu': {
@@ -3904,6 +3895,60 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Generate Quote',
     },
     'utbonmaf': {
+      'it': 'Salva',
+      'en': 'View Company',
+    },
+  },
+  // component_empty
+  {
+    '4ro0nxl3': {
+      'it': 'Nessun Elemento',
+      'en': '',
+    },
+    '5jgiv6nh': {
+      'it': 'It seems that you don\'t have any recent activity.',
+      'en': '',
+    },
+  },
+  // TipiServizio_Details_main
+  {
+    'y2wasifg': {
+      'it': 'Admin',
+      'en': 'Admin',
+    },
+    'baxtgril': {
+      'it': 'Manager',
+      'en': 'Manager',
+    },
+    'qad7m11h': {
+      'it': 'Editor',
+      'en': 'Editor',
+    },
+    'k23fjikm': {
+      'it': 'Viewer',
+      'en': 'Viewer',
+    },
+    'oldxiom0': {
+      'it': 'Please select...',
+      'en': 'Please select...',
+    },
+    '0ec64x11': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
+    'kaealhmv': {
+      'it': 'Descrizione',
+      'en': 'Go',
+    },
+    'fxcnfz1p': {
+      'it': 'Titolo',
+      'en': 'Go',
+    },
+    'popk1pyh': {
+      'it': 'Elimina',
+      'en': 'Generate Quote',
+    },
+    'z2msh32q': {
       'it': 'Salva',
       'en': 'View Company',
     },

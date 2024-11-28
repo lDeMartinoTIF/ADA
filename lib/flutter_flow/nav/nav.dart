@@ -256,6 +256,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   ParamType.JSON,
                 ),
               ),
+            ),
+            FFRoute(
+              name: 'TipiServizioDetails',
+              path: 'tipiServizioDetails',
+              builder: (context, params) => TipiServizioDetailsWidget(
+                showBack: params.getParam(
+                  'showBack',
+                  ParamType.bool,
+                ),
+                jspTipoServizio: params.getParam(
+                  'jspTipoServizio',
+                  ParamType.JSON,
+                ),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
