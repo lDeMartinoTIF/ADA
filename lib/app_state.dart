@@ -31,6 +31,12 @@ class FFAppState extends ChangeNotifier {
     _Debug = value;
   }
 
+  bool _isNewChat = true;
+  bool get isNewChat => _isNewChat;
+  set isNewChat(bool value) {
+    _isNewChat = value;
+  }
+
   final _provinceManager = FutureRequestManager<ApiCallResponse>();
   Future<ApiCallResponse> province({
     String? uniqueQueryKey,

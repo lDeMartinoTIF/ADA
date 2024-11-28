@@ -204,14 +204,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : MainContattiWidget(),
             ),
             FFRoute(
-              name: 'Main_prenotazioni',
-              path: 'mainPrenotazioni',
-              requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Main_prenotazioni')
-                  : MainPrenotazioniWidget(),
-            ),
-            FFRoute(
               name: 'Main_Pagamenti',
               path: 'mainPagamenti',
               requireAuth: true,
@@ -270,6 +262,27 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   ParamType.JSON,
                 ),
               ),
+            ),
+            FFRoute(
+              name: 'Main_Prenotazioni',
+              path: 'mainPrenotazioni',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_Prenotazioni')
+                  : MainPrenotazioniWidget(),
+            ),
+            FFRoute(
+              name: 'Main_chat_ADA',
+              path: 'mainChatADA',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_chat_ADA')
+                  : MainChatADAWidget(
+                      firstMessage: params.getParam(
+                        'firstMessage',
+                        ParamType.String,
+                      ),
+                    ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

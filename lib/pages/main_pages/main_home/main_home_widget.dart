@@ -40,6 +40,10 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
       logFirebaseEvent('MAIN_HOME_PAGE_Main_Home_ON_INIT_STATE');
       if (valueOrDefault(currentUserDocument?.status, '') == 'onboarding') {
         context.goNamed('onboarding_dati_personali');
+      } else {
+        if (valueOrDefault(currentUserDocument?.role, '') == 'user') {
+          context.pushNamed('Main_chat_ADA');
+        }
       }
     });
 

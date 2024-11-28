@@ -153,11 +153,12 @@ class _NavBarPageState extends State<NavBarPage> {
       'Main_messages': MainMessagesWidget(),
       'Main_profilePage': MainProfilePageWidget(),
       'Main_contatti': MainContattiWidget(),
-      'Main_prenotazioni': MainPrenotazioniWidget(),
       'Main_Pagamenti': MainPagamentiWidget(),
       'Main_Calendar_List': MainCalendarListWidget(),
       'Main_Contenuti_ADA': MainContenutiADAWidget(),
       'Main_configurazione_Servizi': MainConfigurazioneServiziWidget(),
+      'Main_Prenotazioni': MainPrenotazioniWidget(),
+      'Main_chat_ADA': MainChatADAWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -268,20 +269,6 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.supervised_user_circle_outlined,
-                size: 24.0,
-              ),
-              activeIcon: Icon(
-                Icons.supervised_user_circle_sharp,
-                size: 32.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                'mnl37khv' /* __ */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
                 Icons.home_work_outlined,
                 size: 24.0,
               ),
@@ -333,6 +320,34 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'y8839dbt' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.supervised_user_circle_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.supervised_user_circle_sharp,
+                size: 32.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                '7vus4e73' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.forum_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.forum_rounded,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'nv48drv6' /* __ */,
               ),
               tooltip: '',
             )

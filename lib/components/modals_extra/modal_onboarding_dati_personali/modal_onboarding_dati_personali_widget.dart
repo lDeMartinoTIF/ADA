@@ -1128,40 +1128,51 @@ class _ModalOnboardingDatiPersonaliWidgetState
                                               ''),
                                         ) !=
                                         '') {
-                                  _model.responseUpdateAnagrafica =
-                                      await ADAapiGroup
-                                          .updateAnagraficaByTokenCall
-                                          .call(
-                                    token: currentUserUid,
-                                    nomeAzienda: null,
-                                    cittaAzienda: null,
-                                    provinciaAzienda: null,
-                                    numTelWp: null,
-                                    codiceFiscale: null,
-                                    mail: currentUserEmail,
-                                    sesso: valueOrDefault(
-                                        currentUserDocument?.sesso, ''),
-                                    nome: valueOrDefault(
-                                        currentUserDocument?.nome, ''),
-                                    cognome: valueOrDefault(
-                                        currentUserDocument?.cognome, ''),
-                                    numTel: valueOrDefault(
-                                        currentUserDocument?.numCel, ''),
-                                    dataNascita: dateTimeFormat(
-                                      "yyyy-MM-dd",
-                                      currentUserDocument?.dataNascita,
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
-                                    ),
-                                    luogoNascita: '',
-                                    viaAzienda: '',
-                                  );
-
                                   if (valueOrDefault(
                                           currentUserDocument?.role, '') ==
                                       'azienda') {
+                                    _model.responseUpdateAnagrafica =
+                                        await ADAapiGroup
+                                            .updateAnagraficaByTokenCall
+                                            .call(
+                                      token: currentUserUid,
+                                      nomeAzienda: null,
+                                      cittaAzienda: null,
+                                      provinciaAzienda: null,
+                                      numTelWp: null,
+                                      codiceFiscale: null,
+                                      mail: currentUserEmail,
+                                      sesso: valueOrDefault(
+                                          currentUserDocument?.sesso, ''),
+                                      nome: valueOrDefault(
+                                          currentUserDocument?.nome, ''),
+                                      cognome: valueOrDefault(
+                                          currentUserDocument?.cognome, ''),
+                                      numTel: valueOrDefault(
+                                          currentUserDocument?.numCel, ''),
+                                      dataNascita: dateTimeFormat(
+                                        "yyyy-MM-dd",
+                                        currentUserDocument?.dataNascita,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ),
+                                      luogoNascita: '',
+                                      viaAzienda: '',
+                                    );
+
                                     context.pushNamed('onboarding_azienda');
                                   } else {
+                                    await ADAapiGroup.insertClientiCall.call(
+                                      token: currentUserUid,
+                                      tipoRuolo: 'USER',
+                                      nome: _model.nomeTextController.text,
+                                      cognome:
+                                          _model.cognomeTextController.text,
+                                      mail: currentUserEmail,
+                                      telefono:
+                                          _model.numCellTextController.text,
+                                    );
+
                                     await currentUserReference!
                                         .update(createUsersRecordData(
                                       status: 'ready',

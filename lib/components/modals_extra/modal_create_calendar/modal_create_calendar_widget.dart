@@ -1,3 +1,5 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -40,11 +42,11 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
     super.initState();
     _model = createModel(context, () => ModalCreateCalendarModel());
 
-    _model.titoloTextController ??= TextEditingController();
-    _model.titoloFocusNode ??= FocusNode();
+    _model.nomeCalendarioTextController ??= TextEditingController();
+    _model.nomeCalendarioFocusNode ??= FocusNode();
 
-    _model.contenutoTextController ??= TextEditingController();
-    _model.contenutoFocusNode ??= FocusNode();
+    _model.bufferTextController ??= TextEditingController();
+    _model.bufferFocusNode ??= FocusNode();
 
     _model.tabBarController = TabController(
       vsync: this,
@@ -60,80 +62,80 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
     _model.lunediPausaDaTextController ??= TextEditingController();
     _model.lunediPausaDaFocusNode ??= FocusNode();
 
-    _model.lunediPausaAlTextController ??= TextEditingController();
-    _model.lunediPausaAlFocusNode ??= FocusNode();
+    _model.lunediPausaATextController ??= TextEditingController();
+    _model.lunediPausaAFocusNode ??= FocusNode();
 
-    _model.cityTextController1 ??= TextEditingController();
-    _model.cityFocusNode1 ??= FocusNode();
+    _model.martediDaTextController ??= TextEditingController();
+    _model.martediDaFocusNode ??= FocusNode();
 
-    _model.cityTextController2 ??= TextEditingController();
-    _model.cityFocusNode2 ??= FocusNode();
+    _model.martediATextController ??= TextEditingController();
+    _model.martediAFocusNode ??= FocusNode();
 
-    _model.cityTextController3 ??= TextEditingController();
-    _model.cityFocusNode3 ??= FocusNode();
+    _model.martediPausaDaTextController ??= TextEditingController();
+    _model.martediPausaDaFocusNode ??= FocusNode();
 
-    _model.cityTextController4 ??= TextEditingController();
-    _model.cityFocusNode4 ??= FocusNode();
+    _model.martediPausaATextController1 ??= TextEditingController();
+    _model.martediPausaAFocusNode1 ??= FocusNode();
 
-    _model.cityTextController5 ??= TextEditingController();
-    _model.cityFocusNode5 ??= FocusNode();
+    _model.mercolediDaTextController ??= TextEditingController();
+    _model.mercolediDaFocusNode ??= FocusNode();
 
-    _model.cityTextController6 ??= TextEditingController();
-    _model.cityFocusNode6 ??= FocusNode();
+    _model.mercolediATextController ??= TextEditingController();
+    _model.mercolediAFocusNode ??= FocusNode();
 
-    _model.cityTextController7 ??= TextEditingController();
-    _model.cityFocusNode7 ??= FocusNode();
+    _model.mercolediPausaDaTextController ??= TextEditingController();
+    _model.mercolediPausaDaFocusNode ??= FocusNode();
 
-    _model.cityTextController8 ??= TextEditingController();
-    _model.cityFocusNode8 ??= FocusNode();
+    _model.martediPausaATextController2 ??= TextEditingController();
+    _model.martediPausaAFocusNode2 ??= FocusNode();
 
-    _model.cityTextController9 ??= TextEditingController();
-    _model.cityFocusNode9 ??= FocusNode();
+    _model.giovediDaTextController ??= TextEditingController();
+    _model.giovediDaFocusNode ??= FocusNode();
 
-    _model.cityTextController10 ??= TextEditingController();
-    _model.cityFocusNode10 ??= FocusNode();
+    _model.giovediATextController1 ??= TextEditingController();
+    _model.giovediAFocusNode1 ??= FocusNode();
 
-    _model.cityTextController11 ??= TextEditingController();
-    _model.cityFocusNode11 ??= FocusNode();
+    _model.giovediPausaDaTextController ??= TextEditingController();
+    _model.giovediPausaDaFocusNode ??= FocusNode();
 
-    _model.cityTextController12 ??= TextEditingController();
-    _model.cityFocusNode12 ??= FocusNode();
+    _model.giovediPausaATextController ??= TextEditingController();
+    _model.giovediPausaAFocusNode ??= FocusNode();
 
-    _model.cityTextController13 ??= TextEditingController();
-    _model.cityFocusNode13 ??= FocusNode();
+    _model.venerdiDaTextController ??= TextEditingController();
+    _model.venerdiDaFocusNode ??= FocusNode();
 
-    _model.cityTextController14 ??= TextEditingController();
-    _model.cityFocusNode14 ??= FocusNode();
+    _model.giovediATextController2 ??= TextEditingController();
+    _model.giovediAFocusNode2 ??= FocusNode();
 
-    _model.cityTextController15 ??= TextEditingController();
-    _model.cityFocusNode15 ??= FocusNode();
+    _model.venerdiPausaDaTextController ??= TextEditingController();
+    _model.venerdiPausaDaFocusNode ??= FocusNode();
 
-    _model.cityTextController16 ??= TextEditingController();
-    _model.cityFocusNode16 ??= FocusNode();
+    _model.venerdiPausaATextController ??= TextEditingController();
+    _model.venerdiPausaAFocusNode ??= FocusNode();
 
-    _model.cityTextController17 ??= TextEditingController();
-    _model.cityFocusNode17 ??= FocusNode();
+    _model.sabatoDaTextController1 ??= TextEditingController();
+    _model.sabatoDaFocusNode1 ??= FocusNode();
 
-    _model.cityTextController18 ??= TextEditingController();
-    _model.cityFocusNode18 ??= FocusNode();
+    _model.sabatoATextController1 ??= TextEditingController();
+    _model.sabatoAFocusNode1 ??= FocusNode();
 
-    _model.cityTextController19 ??= TextEditingController();
-    _model.cityFocusNode19 ??= FocusNode();
+    _model.sabatoDaTextController2 ??= TextEditingController();
+    _model.sabatoDaFocusNode2 ??= FocusNode();
 
-    _model.cityTextController20 ??= TextEditingController();
-    _model.cityFocusNode20 ??= FocusNode();
+    _model.sabatoATextController2 ??= TextEditingController();
+    _model.sabatoAFocusNode2 ??= FocusNode();
 
-    _model.cityTextController21 ??= TextEditingController();
-    _model.cityFocusNode21 ??= FocusNode();
+    _model.domenicaDaTextController ??= TextEditingController();
+    _model.domenicaDaFocusNode ??= FocusNode();
 
-    _model.cityTextController22 ??= TextEditingController();
-    _model.cityFocusNode22 ??= FocusNode();
+    _model.domenicaATextController ??= TextEditingController();
+    _model.domenicaAFocusNode ??= FocusNode();
 
-    _model.cityTextController23 ??= TextEditingController();
-    _model.cityFocusNode23 ??= FocusNode();
+    _model.domenicaPausaDaTextController ??= TextEditingController();
+    _model.domenicaPausaDaFocusNode ??= FocusNode();
 
-    _model.cityTextController24 ??= TextEditingController();
-    _model.cityFocusNode24 ??= FocusNode();
+    _model.domenicaPausaATextController ??= TextEditingController();
+    _model.domenicaPausaAFocusNode ??= FocusNode();
 
     animationsMap.addAll({
       'containerOnPageLoadAnimation': AnimationInfo(
@@ -180,127 +182,127 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
             _model.datePicked3,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.lunediPausaAlTextController?.text = dateTimeFormat(
+          _model.lunediPausaATextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked4,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController1?.text = dateTimeFormat(
+          _model.martediDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked5,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController2?.text = dateTimeFormat(
+          _model.martediATextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked6,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController3?.text = dateTimeFormat(
+          _model.martediPausaDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked7,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController4?.text = dateTimeFormat(
+          _model.martediPausaATextController1?.text = dateTimeFormat(
             "Hm",
             _model.datePicked8,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController5?.text = dateTimeFormat(
+          _model.mercolediDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked9,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController6?.text = dateTimeFormat(
+          _model.mercolediATextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked10,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController7?.text = dateTimeFormat(
+          _model.mercolediPausaDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked11,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController8?.text = dateTimeFormat(
+          _model.martediPausaATextController2?.text = dateTimeFormat(
             "Hm",
             _model.datePicked12,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController9?.text = dateTimeFormat(
+          _model.giovediDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked13,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController10?.text = dateTimeFormat(
+          _model.giovediATextController1?.text = dateTimeFormat(
             "Hm",
             _model.datePicked14,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController11?.text = dateTimeFormat(
+          _model.giovediPausaDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked15,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController12?.text = dateTimeFormat(
+          _model.giovediPausaATextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked16,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController13?.text = dateTimeFormat(
+          _model.venerdiDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked17,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController14?.text = dateTimeFormat(
+          _model.giovediATextController2?.text = dateTimeFormat(
             "Hm",
             _model.datePicked18,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController15?.text = dateTimeFormat(
+          _model.venerdiPausaDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked19,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController16?.text = dateTimeFormat(
+          _model.venerdiPausaATextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked20,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController17?.text = dateTimeFormat(
+          _model.sabatoDaTextController1?.text = dateTimeFormat(
             "Hm",
             _model.datePicked21,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController18?.text = dateTimeFormat(
+          _model.sabatoATextController1?.text = dateTimeFormat(
             "Hm",
             _model.datePicked22,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController19?.text = dateTimeFormat(
+          _model.sabatoDaTextController2?.text = dateTimeFormat(
             "Hm",
             _model.datePicked23,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController20?.text = dateTimeFormat(
+          _model.sabatoATextController2?.text = dateTimeFormat(
             "Hm",
             _model.datePicked24,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController21?.text = dateTimeFormat(
+          _model.domenicaDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked25,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController22?.text = dateTimeFormat(
+          _model.domenicaATextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked26,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController23?.text = dateTimeFormat(
+          _model.domenicaPausaDaTextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked27,
             locale: FFLocalizations.of(context).languageCode,
           );
-          _model.cityTextController24?.text = dateTimeFormat(
+          _model.domenicaPausaATextController?.text = dateTimeFormat(
             "Hm",
             _model.datePicked28,
             locale: FFLocalizations.of(context).languageCode,
@@ -406,8 +408,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                 Expanded(
                                   child: Container(
                                     child: TextFormField(
-                                      controller: _model.titoloTextController,
-                                      focusNode: _model.titoloFocusNode,
+                                      controller:
+                                          _model.nomeCalendarioTextController,
+                                      focusNode: _model.nomeCalendarioFocusNode,
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
@@ -501,7 +504,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                       cursorColor:
                                           FlutterFlowTheme.of(context).primary,
                                       validator: _model
-                                          .titoloTextControllerValidator
+                                          .nomeCalendarioTextControllerValidator
                                           .asValidator(context),
                                     ),
                                   ),
@@ -509,9 +512,8 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                 Expanded(
                                   child: Container(
                                     child: TextFormField(
-                                      controller:
-                                          _model.contenutoTextController,
-                                      focusNode: _model.contenutoFocusNode,
+                                      controller: _model.bufferTextController,
+                                      focusNode: _model.bufferFocusNode,
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
@@ -605,7 +607,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                       cursorColor:
                                           FlutterFlowTheme.of(context).primary,
                                       validator: _model
-                                          .contenutoTextControllerValidator
+                                          .bufferTextControllerValidator
                                           .asValidator(context),
                                     ),
                                   ),
@@ -1592,9 +1594,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .lunediPausaAlTextController,
+                                                                      .lunediPausaATextController,
                                                                   focusNode: _model
-                                                                      .lunediPausaAlFocusNode,
+                                                                      .lunediPausaAFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -1708,7 +1710,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .lunediPausaAlTextControllerValidator
+                                                                      .lunediPausaATextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -1904,9 +1906,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController1,
+                                                                      .martediDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode1,
+                                                                      .martediDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -2020,7 +2022,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController1Validator
+                                                                      .martediDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -2154,9 +2156,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController2,
+                                                                      .martediATextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode2,
+                                                                      .martediAFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -2270,7 +2272,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController2Validator
+                                                                      .martediATextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -2446,9 +2448,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController3,
+                                                                      .martediPausaDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode3,
+                                                                      .martediPausaDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -2562,7 +2564,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController3Validator
+                                                                      .martediPausaDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -2693,9 +2695,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController4,
+                                                                      .martediPausaATextController1,
                                                                   focusNode: _model
-                                                                      .cityFocusNode4,
+                                                                      .martediPausaAFocusNode1,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -2809,7 +2811,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController4Validator
+                                                                      .martediPausaATextController1Validator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -2996,9 +2998,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController5,
+                                                                      .mercolediDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode5,
+                                                                      .mercolediDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -3112,7 +3114,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController5Validator
+                                                                      .mercolediDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -3246,9 +3248,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController6,
+                                                                      .mercolediATextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode6,
+                                                                      .mercolediAFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -3362,7 +3364,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController6Validator
+                                                                      .mercolediATextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -3538,9 +3540,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController7,
+                                                                      .mercolediPausaDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode7,
+                                                                      .mercolediPausaDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -3654,7 +3656,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController7Validator
+                                                                      .mercolediPausaDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -3785,9 +3787,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController8,
+                                                                      .martediPausaATextController2,
                                                                   focusNode: _model
-                                                                      .cityFocusNode8,
+                                                                      .martediPausaAFocusNode2,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -3901,7 +3903,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController8Validator
+                                                                      .martediPausaATextController2Validator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -4097,9 +4099,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController9,
+                                                                      .giovediDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode9,
+                                                                      .giovediDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -4213,7 +4215,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController9Validator
+                                                                      .giovediDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -4347,9 +4349,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController10,
+                                                                      .giovediATextController1,
                                                                   focusNode: _model
-                                                                      .cityFocusNode10,
+                                                                      .giovediAFocusNode1,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -4463,7 +4465,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController10Validator
+                                                                      .giovediATextController1Validator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -4639,9 +4641,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController11,
+                                                                      .giovediPausaDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode11,
+                                                                      .giovediPausaDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -4755,7 +4757,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController11Validator
+                                                                      .giovediPausaDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -4886,9 +4888,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController12,
+                                                                      .giovediPausaATextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode12,
+                                                                      .giovediPausaAFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -5002,7 +5004,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController12Validator
+                                                                      .giovediPausaATextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -5198,9 +5200,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController13,
+                                                                      .venerdiDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode13,
+                                                                      .venerdiDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -5314,7 +5316,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController13Validator
+                                                                      .venerdiDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -5448,9 +5450,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController14,
+                                                                      .giovediATextController2,
                                                                   focusNode: _model
-                                                                      .cityFocusNode14,
+                                                                      .giovediAFocusNode2,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -5564,7 +5566,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController14Validator
+                                                                      .giovediATextController2Validator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -5740,9 +5742,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController15,
+                                                                      .venerdiPausaDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode15,
+                                                                      .venerdiPausaDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -5856,7 +5858,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController15Validator
+                                                                      .venerdiPausaDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -5987,9 +5989,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController16,
+                                                                      .venerdiPausaATextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode16,
+                                                                      .venerdiPausaAFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -6103,7 +6105,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController16Validator
+                                                                      .venerdiPausaATextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -6299,9 +6301,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController17,
+                                                                      .sabatoDaTextController1,
                                                                   focusNode: _model
-                                                                      .cityFocusNode17,
+                                                                      .sabatoDaFocusNode1,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -6415,7 +6417,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController17Validator
+                                                                      .sabatoDaTextController1Validator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -6549,9 +6551,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController18,
+                                                                      .sabatoATextController1,
                                                                   focusNode: _model
-                                                                      .cityFocusNode18,
+                                                                      .sabatoAFocusNode1,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -6665,7 +6667,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController18Validator
+                                                                      .sabatoATextController1Validator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -6841,9 +6843,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController19,
+                                                                      .sabatoDaTextController2,
                                                                   focusNode: _model
-                                                                      .cityFocusNode19,
+                                                                      .sabatoDaFocusNode2,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -6957,7 +6959,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController19Validator
+                                                                      .sabatoDaTextController2Validator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -7088,9 +7090,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController20,
+                                                                      .sabatoATextController2,
                                                                   focusNode: _model
-                                                                      .cityFocusNode20,
+                                                                      .sabatoAFocusNode2,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -7204,7 +7206,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController20Validator
+                                                                      .sabatoATextController2Validator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -7391,9 +7393,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController21,
+                                                                      .domenicaDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode21,
+                                                                      .domenicaDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -7507,7 +7509,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController21Validator
+                                                                      .domenicaDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -7641,9 +7643,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController22,
+                                                                      .domenicaATextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode22,
+                                                                      .domenicaAFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -7757,7 +7759,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController22Validator
+                                                                      .domenicaATextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -7933,9 +7935,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController23,
+                                                                      .domenicaPausaDaTextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode23,
+                                                                      .domenicaPausaDaFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -8049,7 +8051,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController23Validator
+                                                                      .domenicaPausaDaTextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -8180,9 +8182,9 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                 child:
                                                                     TextFormField(
                                                                   controller: _model
-                                                                      .cityTextController24,
+                                                                      .domenicaPausaATextController,
                                                                   focusNode: _model
-                                                                      .cityFocusNode24,
+                                                                      .domenicaPausaAFocusNode,
                                                                   autofocus:
                                                                       true,
                                                                   obscureText:
@@ -8296,7 +8298,7 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                                                                               context)
                                                                           .primary,
                                                                   validator: _model
-                                                                      .cityTextController24Validator
+                                                                      .domenicaPausaATextControllerValidator
                                                                       .asValidator(
                                                                           context),
                                                                 ),
@@ -8479,8 +8481,52 @@ class _ModalCreateCalendarWidgetState extends State<ModalCreateCalendarWidget>
                         Align(
                           alignment: AlignmentDirectional(0.0, 0.05),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              logFirebaseEvent(
+                                  'MODAL_CREATE_CALENDAR_CONTINUA_BTN_ON_TA');
+                              _model.apiResultmqf =
+                                  await ADAapiGroup.insertCalendarCall.call(
+                                token: currentUserUid,
+                                mail: currentUserEmail,
+                                nomeCalendario:
+                                    _model.nomeCalendarioTextController.text,
+                                buffer: _model.bufferTextController.text,
+                                lunediX:
+                                    _model.lunediDaTextController.text == ''
+                                        ? 'on'
+                                        : 'off',
+                                lunediDa: _model.lunediDaTextController.text,
+                                lunediA: _model.lunediATextController.text,
+                                lunediPausaDa:
+                                    _model.lunediPausaDaTextController.text,
+                                lunediPausaA:
+                                    _model.lunediPausaATextController.text,
+                              );
+
+                              if ((_model.apiResultmqf?.succeeded ?? true)) {
+                                Navigator.pop(context);
+                              } else {
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: Text('Error'),
+                                      content: Text((_model
+                                              .apiResultmqf?.exceptionMessage ??
+                                          '')),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: Text('Ok'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              }
+
+                              safeSetState(() {});
                             },
                             text: FFLocalizations.of(context).getText(
                               'rje05k4s' /* Continua */,

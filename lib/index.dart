@@ -32,8 +32,6 @@ export '/pages/onboarding_page/onboarding_configurazione_a_d_a/onboarding_config
     show OnboardingConfigurazioneADAWidget;
 export '/pages/main_pages/main_contatti/main_contatti_widget.dart'
     show MainContattiWidget;
-export '/pages/main_pages/main_prenotazioni/main_prenotazioni_widget.dart'
-    show MainPrenotazioniWidget;
 export '/pages/main_pages/main_pagamenti/main_pagamenti_widget.dart'
     show MainPagamentiWidget;
 export '/pages/main_pages/main_calendar_list/main_calendar_list_widget.dart'
@@ -46,3 +44,7 @@ export '/pages/tipo_servizio_details/tipo_servizio_details_widget.dart'
     show TipoServizioDetailsWidget;
 export '/pages/tipi_servizio_details/tipi_servizio_details_widget.dart'
     show TipiServizioDetailsWidget;
+export '/pages/main_pages/main_prenotazioni/main_prenotazioni_widget.dart'
+    show MainPrenotazioniWidget;
+export '/pages/main_pages/main_chat_a_d_a/main_chat_a_d_a_widget.dart'
+    show MainChatADAWidget;

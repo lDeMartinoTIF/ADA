@@ -131,12 +131,8 @@ class ADAapiGroup {
   static ReadCsvCUSTOMBOTCSVReadCsvTokenFilenameGetCall
       readCsvCUSTOMBOTCSVReadCsvTokenFilenameGetCall =
       ReadCsvCUSTOMBOTCSVReadCsvTokenFilenameGetCall();
-  static InsertCalendarCALENDARInsertPostCall
-      insertCalendarCALENDARInsertPostCall =
-      InsertCalendarCALENDARInsertPostCall();
-  static GetAllCalendarCALENDARGetAllGetCall
-      getAllCalendarCALENDARGetAllGetCall =
-      GetAllCalendarCALENDARGetAllGetCall();
+  static InsertCalendarCall insertCalendarCall = InsertCalendarCall();
+  static GetAllCalendarCall getAllCalendarCall = GetAllCalendarCall();
   static GetCalendarCALENDARGetTokenGetCall getCalendarCALENDARGetTokenGetCall =
       GetCalendarCALENDARGetTokenGetCall();
   static GetCalendarCALENDARGetOneIdGetCall getCalendarCALENDARGetOneIdGetCall =
@@ -198,8 +194,7 @@ class ADAapiGroup {
   static GetAppoitmentPRENOTAZIONIGetOneDataGetCall
       getAppoitmentPRENOTAZIONIGetOneDataGetCall =
       GetAppoitmentPRENOTAZIONIGetOneDataGetCall();
-  static InsertClientiCLIENTIInsertPostCall insertClientiCLIENTIInsertPostCall =
-      InsertClientiCLIENTIInsertPostCall();
+  static InsertClientiCall insertClientiCall = InsertClientiCall();
   static InsertSelectClientiCLIENTIInsertSelectPostCall
       insertSelectClientiCLIENTIInsertSelectPostCall =
       InsertSelectClientiCLIENTIInsertSelectPostCall();
@@ -739,50 +734,84 @@ class ReadCsvCUSTOMBOTCSVReadCsvTokenFilenameGetCall {
   }
 }
 
-class InsertCalendarCALENDARInsertPostCall {
-  Future<ApiCallResponse> call() async {
+class InsertCalendarCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    String? mail = '',
+    String? nomeCalendario = '',
+    String? buffer = '',
+    String? lunediX = '',
+    String? lunediDa = '',
+    String? lunediA = '',
+    String? lunediPausaDa = '',
+    String? lunediPausaA = '',
+    String? martediX = '',
+    String? martediDa = '',
+    String? martediA = '',
+    String? martediPausaDa = '',
+    String? martediPausaA = '',
+    String? mercolediX = '',
+    String? mercolediDa = '',
+    String? mercolediA = '',
+    String? mercolediPausaDa = '',
+    String? mercolediPausaA = '',
+    String? giovediX = '',
+    String? giovediDa = '',
+    String? giovediA = '',
+    String? giovediPausaDa = '',
+    String? giovediPausaA = '',
+    String? venerdiX = '',
+    String? venerdiDa = '',
+    String? venerdiA = '',
+    String? venerdiPausaDa = '',
+    String? venerdiPausaA = '',
+    String? sabatoX = '',
+    String? sabatoDa = '',
+    String? sabatoA = '',
+    String? sabatoPausaDa = '',
+    String? sabatoPausaA = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     final ffApiRequestBody = '''
 {
-  "TOKEN": "",
-  "MAIL": "",
-  "CALENDARIO_PRG": "",
-  "NOME_CALENDARIO": "",
-  "BUFFER": "",
-  "LUNEDI_X": "",
-  "LUNEDI_DA": "",
-  "LUNEDI_A": "",
-  "LUNEDI_PAUSA_DA": "",
-  "LUNEDI_PAUSA_A": "",
-  "MARTEDI_X": "",
-  "MARTEDI_DA": "",
-  "MARTEDI_A": "",
-  "MARTEDI_PAUSA_DA": "",
-  "MARTEDI_PAUSA_A": "",
-  "MERCOLEDI_X": "",
-  "MERCOLEDI_DA": "",
-  "MERCOLEDI_A": "",
-  "MERCOLEDI_PAUSA_DA": "",
-  "MERCOLEDI_PAUSA_A": "",
-  "GIOVEDI_X": "",
-  "GIOVEDI_DA": "",
-  "GIOVEDI_A": "",
-  "GIOVEDI_PAUSA_DA": "",
-  "GIOVEDI_PAUSA_A": "",
-  "VENERDI_X": "",
-  "VENERDI_DA": "",
-  "VENERDI_A": "",
-  "VENERDI_PAUSA_DA": "",
-  "VENERDI_PAUSA_A": "",
-  "SABATO_X": "",
-  "SABATO_DA": "",
-  "SABATO_A": "",
-  "SABATO_PAUSA_DA": "",
-  "SABATO_PAUSA_A": ""
+  "TOKEN": "${escapeStringForJson(token)}",
+  "MAIL": "${escapeStringForJson(mail)}",
+  "NOME_CALENDARIO": "${escapeStringForJson(nomeCalendario)}",
+  "BUFFER": "${escapeStringForJson(buffer)}",
+  "LUNEDI_X": "${escapeStringForJson(lunediX)}",
+  "LUNEDI_DA": "${escapeStringForJson(lunediDa)}",
+  "LUNEDI_A": "${escapeStringForJson(lunediA)}",
+  "LUNEDI_PAUSA_DA": "${escapeStringForJson(lunediPausaDa)}",
+  "LUNEDI_PAUSA_A": "${escapeStringForJson(lunediPausaA)}",
+  "MARTEDI_X": "${escapeStringForJson(martediX)}",
+  "MARTEDI_DA": "${escapeStringForJson(martediDa)}",
+  "MARTEDI_A": "${escapeStringForJson(martediA)}",
+  "MARTEDI_PAUSA_DA": "${escapeStringForJson(martediPausaDa)}",
+  "MARTEDI_PAUSA_A": "${escapeStringForJson(martediPausaA)}",
+  "MERCOLEDI_X": "${escapeStringForJson(mercolediX)}",
+  "MERCOLEDI_DA": "${escapeStringForJson(mercolediDa)}",
+  "MERCOLEDI_A": "${escapeStringForJson(mercolediA)}",
+  "MERCOLEDI_PAUSA_DA": "${escapeStringForJson(mercolediPausaDa)}",
+  "MERCOLEDI_PAUSA_A": "${escapeStringForJson(mercolediPausaA)}",
+  "GIOVEDI_X": "${escapeStringForJson(giovediX)}",
+  "GIOVEDI_DA": "${escapeStringForJson(giovediDa)}",
+  "GIOVEDI_A": "${escapeStringForJson(giovediA)}",
+  "GIOVEDI_PAUSA_DA": "${escapeStringForJson(giovediPausaDa)}",
+  "GIOVEDI_PAUSA_A": "${escapeStringForJson(giovediPausaA)}",
+  "VENERDI_X": "${escapeStringForJson(venerdiX)}",
+  "VENERDI_DA": "${escapeStringForJson(venerdiDa)}",
+  "VENERDI_A": "${escapeStringForJson(venerdiA)}",
+  "VENERDI_PAUSA_DA": "${escapeStringForJson(venerdiPausaDa)}",
+  "VENERDI_PAUSA_A": "${escapeStringForJson(venerdiPausaA)}",
+  "SABATO_X": "${escapeStringForJson(sabatoX)}",
+  "SABATO_DA": "${escapeStringForJson(sabatoDa)}",
+  "SABATO_A": "${escapeStringForJson(sabatoA)}",
+  "SABATO_PAUSA_DA": "${escapeStringForJson(sabatoPausaDa)}",
+  "SABATO_PAUSA_A": "${escapeStringForJson(sabatoPausaA)}"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'insert_calendar_CALENDAR_insert_post',
+      callName: 'Insert Calendar',
       apiUrl: '${baseUrl}/CALENDAR/insert',
       callType: ApiCallType.POST,
       headers: {},
@@ -799,16 +828,24 @@ class InsertCalendarCALENDARInsertPostCall {
   }
 }
 
-class GetAllCalendarCALENDARGetAllGetCall {
-  Future<ApiCallResponse> call() async {
+class GetAllCalendarCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
+    final ffApiRequestBody = '''
+{
+  "token": "${escapeStringForJson(token)}"
+}''';
     return ApiManager.instance.makeApiCall(
-      callName: 'get_all_calendar_CALENDAR_get_all_get',
+      callName: 'Get All Calendar',
       apiUrl: '${baseUrl}/CALENDAR/get_all',
-      callType: ApiCallType.GET,
+      callType: ApiCallType.POST,
       headers: {},
       params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
@@ -1560,23 +1597,30 @@ class GetAppoitmentPRENOTAZIONIGetOneDataGetCall {
   }
 }
 
-class InsertClientiCLIENTIInsertPostCall {
-  Future<ApiCallResponse> call() async {
+class InsertClientiCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    String? tipoRuolo = 'user',
+    String? nome = '',
+    String? cognome = '',
+    String? mail = '',
+    String? telefono = '',
+    String? img = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     final ffApiRequestBody = '''
 {
-  "CLIENTE_PRG": "",
-  "TOKEN": "",
-  "TIPO_RUOLO": "",
-  "NOME": "",
-  "COGNOME": "",
-  "MAIL": "",
-  "TELEFONO": "",
-  "IMG": ""
+  "TOKEN": "${escapeStringForJson(token)}",
+  "TIPO_RUOLO": "${escapeStringForJson(tipoRuolo)}",
+  "NOME": "${escapeStringForJson(nome)}",
+  "COGNOME": "${escapeStringForJson(cognome)}",
+  "MAIL": "${escapeStringForJson(mail)}",
+  "TELEFONO": "${escapeStringForJson(telefono)}",
+  "IMG": "${escapeStringForJson(img)}"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'insert_clienti_CLIENTI_insert_post',
+      callName: 'Insert Clienti',
       apiUrl: '${baseUrl}/CLIENTI/insert',
       callType: ApiCallType.POST,
       headers: {},

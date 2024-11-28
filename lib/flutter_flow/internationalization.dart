@@ -1543,377 +1543,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '__',
     },
   },
-  // Main_prenotazioni
-  {
-    'shn6pb1x': {
-      'it': 'Customers',
-      'en': 'Customers',
-    },
-    '5k9j3zi6': {
-      'it': 'Invite Users',
-      'en': 'Invite Users',
-    },
-    '7rao1fgd': {
-      'it': 'All',
-      'en': 'All',
-    },
-    '52lmf42i': {
-      'it': 'Name',
-      'en': 'Name',
-    },
-    'avgkp6pr': {
-      'it': 'Title',
-      'en': 'Title',
-    },
-    'uhjfjpj5': {
-      'it': 'Company',
-      'en': 'Company',
-    },
-    's76u5bxz': {
-      'it': 'Company',
-      'en': 'Company',
-    },
-    'w8dbpa25': {
-      'it': 'Status',
-      'en': 'Status',
-    },
-    '2ekn742h': {
-      'it': 'Randy Alcorn',
-      'en': 'Randy Alcorn',
-    },
-    'bhhjeh5q': {
-      'it': 'Head of Procurement',
-      'en': 'Head of Procurement',
-    },
-    'mkjycp1q': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'pxt1vqzh': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '17co091k': {
-      'it': 'New',
-      'en': 'New',
-    },
-    'x9tvjeq1': {
-      'it': 'James Wiseman',
-      'en': 'James Wiseman',
-    },
-    'bgtq93k3': {
-      'it': 'Account Manager',
-      'en': 'Account Manager',
-    },
-    'lr6fvy1z': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '94zmzx2i': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'j5qwclte': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'zcsb2qse': {
-      'it': 'Ignacious Rodriguez',
-      'en': 'Ignacious Rodriguez',
-    },
-    '7i4b5ktp': {
-      'it': 'Sales Manager',
-      'en': 'Sales Manager',
-    },
-    'jysj6leq': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    '38g8rryu': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'uh4amvo6': {
-      'it': 'New',
-      'en': 'New',
-    },
-    '60obvyfv': {
-      'it': 'Elena Williams',
-      'en': 'Elena Williams',
-    },
-    'r4gh7x6e': {
-      'it': 'Head of Product & Innovation',
-      'en': 'Head of Product & Innovation',
-    },
-    '70bgpb7k': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    '8370g9kj': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'yc8jbqfb': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'zabo7ptr': {
-      'it': 'Greg Brown',
-      'en': 'Greg Brown',
-    },
-    'y4yv5q31': {
-      'it': 'Account Manager',
-      'en': 'Account Manager',
-    },
-    '06d90kos': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'ub4l2e6a': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'c1nurbaq': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    '53tbp68o': {
-      'it': 'June Williamson',
-      'en': 'June Williamson',
-    },
-    'luvtd3jh': {
-      'it': 'Sr. Account Manager',
-      'en': 'Mr. Account Manager',
-    },
-    '8el4ac6j': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    '9b8ta0fb': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'zs1km4n8': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    '75jtk8co': {
-      'it': 'June Williamson',
-      'en': 'June Williamson',
-    },
-    'xr5ruijm': {
-      'it': 'Sr. Account Manager',
-      'en': 'Mr. Account Manager',
-    },
-    'ux39pr95': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    '2osox8f4': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'h077a7pt': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'adjti7s6': {
-      'it': 'New Calls',
-      'en': 'New Calls',
-    },
-    'tscqrj0v': {
-      'it': 'Name',
-      'en': 'Name',
-    },
-    'kx7urnri': {
-      'it': 'Title',
-      'en': 'Title',
-    },
-    'szh8xw12': {
-      'it': 'Company',
-      'en': 'Company',
-    },
-    'tp4s3xw8': {
-      'it': 'Company',
-      'en': 'Company',
-    },
-    'lh0bk9k7': {
-      'it': 'Status',
-      'en': 'Status',
-    },
-    'stjw04ze': {
-      'it': 'Randy Alcorn',
-      'en': 'Randy Alcorn',
-    },
-    '03r4n89s': {
-      'it': 'Head of Procurement',
-      'en': 'Head of Procurement',
-    },
-    't9p9732y': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '7tk1ro4z': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'uywjseaj': {
-      'it': 'New',
-      'en': 'New',
-    },
-    'apkjqbmj': {
-      'it': 'Ignacious Rodriguez',
-      'en': 'Ignacious Rodriguez',
-    },
-    'ixxvzmrv': {
-      'it': 'Sales Manager',
-      'en': 'Sales Manager',
-    },
-    'ku12qcxx': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'zze7ir6d': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    '99tqhbs2': {
-      'it': 'New',
-      'en': 'New',
-    },
-    'xcy486he': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'cjdyw8ou': {
-      'it': 'Name',
-      'en': 'Name',
-    },
-    'h55ticb5': {
-      'it': 'Title',
-      'en': 'Title',
-    },
-    'bx00zpe3': {
-      'it': 'Company',
-      'en': 'Company',
-    },
-    'ahc415jk': {
-      'it': 'Company',
-      'en': 'Company',
-    },
-    'w1yntczl': {
-      'it': 'Status',
-      'en': 'Status',
-    },
-    '2stf1puo': {
-      'it': 'James Wiseman',
-      'en': 'James Wiseman',
-    },
-    'yhvweaez': {
-      'it': 'Account Manager',
-      'en': 'Account Manager',
-    },
-    '097mnrng': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'a40u1rmn': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'kq5zeia2': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    '6mvcb7vv': {
-      'it': 'Elena Williams',
-      'en': 'Elena Williams',
-    },
-    '5a5qf7fa': {
-      'it': 'Head of Product & Innovation',
-      'en': 'Head of Product & Innovation',
-    },
-    'zc2fhn44': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'o43sungs': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'wsz4xtq6': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'hocqh4ak': {
-      'it': 'Greg Brown',
-      'en': 'Greg Brown',
-    },
-    'lsuabbvy': {
-      'it': 'Account Manager',
-      'en': 'Account Manager',
-    },
-    'fu4ki6a9': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    '5m1qg68p': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'lwv6azzw': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'l66uvcu4': {
-      'it': 'June Williamson',
-      'en': 'June Williamson',
-    },
-    '1unqd4re': {
-      'it': 'Sr. Account Manager',
-      'en': 'Mr. Account Manager',
-    },
-    'ssfrg1uy': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'y6yszv8m': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    '56kg9pc7': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'ky40sjmz': {
-      'it': 'June Williamson',
-      'en': 'June Williamson',
-    },
-    'ix5z7q2t': {
-      'it': 'Sr. Account Manager',
-      'en': 'Mr. Account Manager',
-    },
-    '6lh7ovaf': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'xuqit2vt': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'euacwfqs': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'bw2oycx6': {
-      'it': 'Customers',
-      'en': 'Customers',
-    },
-    'mnl37khv': {
-      'it': '__',
-      'en': '__',
-    },
-  },
   // Main_Pagamenti
   {
     '8ofrkwtm': {
@@ -2004,31 +1633,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Title',
     },
     'p0nwtkeu': {
-      'it': 'L',
+      'it': 'Lun',
       'en': 'Company',
     },
     's5hvn7hj': {
-      'it': 'M',
+      'it': 'Mar',
       'en': 'Company',
     },
     'mbqor0xi': {
-      'it': 'M',
+      'it': 'Mer',
       'en': 'Company',
     },
     'h9fz36nc': {
-      'it': 'G',
+      'it': 'Gio',
       'en': 'Company',
     },
     'draajwx4': {
-      'it': 'V',
+      'it': 'Ven',
       'en': 'Company',
     },
     '91081ge0': {
-      'it': 'S',
+      'it': 'Sab',
       'en': 'Company',
     },
     '1ef2gpza': {
-      'it': 'D',
+      'it': 'Dom',
       'en': 'Company',
     },
     '3nhcf803': {
@@ -2378,7 +2007,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Name',
     },
     'lqm09c6v': {
+      'it': 'Calendario',
+      'en': 'Company',
+    },
+    '5g437pu0': {
       'it': 'Preavviso Annullamento',
+      'en': 'Company',
+    },
+    'qfv126ss': {
+      'it': 'Scadenza',
+      'en': 'Company',
+    },
+    'bo3wqpds': {
+      'it': 'Indirizzo Specifico',
+      'en': 'Company',
+    },
+    'f447fbna': {
+      'it': 'File',
+      'en': 'Company',
+    },
+    '5xhi69yt': {
+      'it': 'Mail',
+      'en': 'Company',
+    },
+    '2sroqm2l': {
+      'it': 'Link',
       'en': 'Company',
     },
     'cqpk6k1j': {
@@ -2402,6 +2055,56 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xkahn2fm': {
       'it': 'Home',
       'en': 'Home',
+    },
+  },
+  // Main_Prenotazioni
+  {
+    '0q490zvp': {
+      'it': 'Prenotazioni',
+      'en': 'Customers',
+    },
+    '8cb8yc4v': {
+      'it': 'Nuova Prenotazione',
+      'en': 'Invite Users',
+    },
+    '5rfs2mbx': {
+      'it': 'Titolo Servizio',
+      'en': 'Name',
+    },
+    '4uiw3n0l': {
+      'it': 'Data',
+      'en': 'Title',
+    },
+    'cprtfc53': {
+      'it': 'Orario',
+      'en': 'Title',
+    },
+    'y0nil3rg': {
+      'it': 'Nominativo',
+      'en': 'Title',
+    },
+    '4exdrqtg': {
+      'it': 'Customers',
+      'en': 'Customers',
+    },
+    '7vus4e73': {
+      'it': '__',
+      'en': '__',
+    },
+  },
+  // Main_chat_ADA
+  {
+    'nu3dssrc': {
+      'it': 'Scrivi un messaggio a ADA',
+      'en': '',
+    },
+    'z3vobc1m': {
+      'it': 'Dashboard',
+      'en': 'Dashboard',
+    },
+    'nv48drv6': {
+      'it': '__',
+      'en': '__',
     },
   },
   // modal_success
@@ -2557,6 +2260,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Messages',
       'en': 'Messages',
     },
+    '4vg26sp8': {
+      'it': 'Messages',
+      'en': 'Messages',
+    },
     'zeq4whxn': {
       'it': 'Impostazioni',
       'en': 'ADA Settings',
@@ -2584,6 +2291,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9pjba90p': {
       'it': 'Contracts',
       'en': 'Contracts',
+    },
+    'c3dy0sel': {
+      'it': 'ADA',
+      'en': 'Payments',
     },
   },
   // commandPalette
@@ -3827,22 +3538,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '39ykriue': {
       'it': 'Crea un nuovo Tipi Servizio',
       'en': 'Your project has been created, now invite your team to continue.',
-    },
-    'rynayygf': {
-      'it': 'Admin',
-      'en': 'Admin',
-    },
-    '1x3ywrs0': {
-      'it': 'Manager',
-      'en': 'Manager',
-    },
-    '9l36sbd3': {
-      'it': 'Editor',
-      'en': 'Editor',
-    },
-    'we3horll': {
-      'it': 'Viewer',
-      'en': 'Viewer',
     },
     'mf0qxpg0': {
       'it': 'Please select...',
