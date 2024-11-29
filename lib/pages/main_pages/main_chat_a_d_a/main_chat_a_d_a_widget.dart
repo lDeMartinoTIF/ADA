@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/blank_list_component/blank_list_component_widget.dart';
@@ -93,8 +94,6 @@ class _MainChatADAWidgetState extends State<MainChatADAWidget>
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -778,9 +777,86 @@ class _MainChatADAWidgetState extends State<MainChatADAWidget>
                                                         functions.saveChatHistory(
                                                             _model.chatHistory,
                                                             functions.convertToJSON(
-                                                                widget!
-                                                                    .firstMessage!));
+                                                                _model
+                                                                    .textController
+                                                                    .text));
                                                     safeSetState(() {});
+                                                    _model.aDAresponse =
+                                                        await ADAapiGroup
+                                                            .aDAchatbotCall
+                                                            .call(
+                                                      query: _model
+                                                          .textController.text,
+                                                      token: '789',
+                                                      email: currentUserEmail,
+                                                      telephone:
+                                                          columnUsersRecord
+                                                              ?.numCel,
+                                                      idsession: currentUserUid,
+                                                    );
+
+                                                    if ((_model.aDAresponse
+                                                            ?.succeeded ??
+                                                        true)) {
+                                                      // Get responsse from API call and update the chat history.
+                                                      // UpdateChatHistory
+                                                      _model.chatHistory = functions
+                                                          .saveChatHistory(
+                                                              _model
+                                                                  .chatHistory,
+                                                              functions
+                                                                  .convertToJSONCopy(
+                                                                      getJsonField(
+                                                                (_model.aDAresponse
+                                                                        ?.jsonBody ??
+                                                                    ''),
+                                                                r'''$.Resp''',
+                                                              ).toString()));
+                                                      safeSetState(() {});
+                                                      FFAppState().isNewChat =
+                                                          false;
+                                                      safeSetState(() {});
+                                                      safeSetState(() {
+                                                        _model.textController
+                                                            ?.clear();
+                                                      });
+                                                    } else {
+                                                      // Get responsse from API call and update the chat history.
+                                                      // UpdateChatHistory
+                                                      _model.chatHistory =
+                                                          functions.saveChatHistory(
+                                                              _model
+                                                                  .chatHistory,
+                                                              functions
+                                                                  .convertToJSONCopy(
+                                                                      'ADA è ofline, riprova tra qualche minuto'));
+                                                      safeSetState(() {});
+                                                      await showDialog(
+                                                        context: context,
+                                                        builder:
+                                                            (alertDialogContext) {
+                                                          return AlertDialog(
+                                                            title:
+                                                                Text('Errore'),
+                                                            content: Text((_model
+                                                                        .aDAresponse
+                                                                        ?.jsonBody ??
+                                                                    '')
+                                                                .toString()),
+                                                            actions: [
+                                                              TextButton(
+                                                                onPressed: () =>
+                                                                    Navigator.pop(
+                                                                        alertDialogContext),
+                                                                child:
+                                                                    Text('Ok'),
+                                                              ),
+                                                            ],
+                                                          );
+                                                        },
+                                                      );
+                                                    }
+
                                                     await Future.delayed(
                                                         const Duration(
                                                             milliseconds: 800));
@@ -795,6 +871,8 @@ class _MainChatADAWidgetState extends State<MainChatADAWidget>
                                                           milliseconds: 100),
                                                       curve: Curves.ease,
                                                     );
+
+                                                    safeSetState(() {});
                                                   },
                                                 ),
                                               ],

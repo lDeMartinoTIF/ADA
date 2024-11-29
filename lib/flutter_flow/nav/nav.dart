@@ -196,14 +196,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => OnboardingConfigurazioneADAWidget(),
             ),
             FFRoute(
-              name: 'Main_contatti',
-              path: 'mainContatti',
-              requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Main_contatti')
-                  : MainContattiWidget(),
-            ),
-            FFRoute(
               name: 'Main_Pagamenti',
               path: 'mainPagamenti',
               requireAuth: true,
@@ -291,6 +283,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Main_contenuti_ADA')
                   : MainContenutiADAWidget(),
+            ),
+            FFRoute(
+              name: 'Main_Contatti',
+              path: 'mainContatti',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_Contatti')
+                  : MainContattiWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

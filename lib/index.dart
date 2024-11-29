@@ -30,8 +30,6 @@ export '/pages/onboarding_page/onboarding_dati_personali/onboarding_dati_persona
     show OnboardingDatiPersonaliWidget;
 export '/pages/onboarding_page/onboarding_configurazione_a_d_a/onboarding_configurazione_a_d_a_widget.dart'
     show OnboardingConfigurazioneADAWidget;
-export '/pages/main_pages/main_contatti/main_contatti_widget.dart'
-    show MainContattiWidget;
 export '/pages/main_pages/main_pagamenti/main_pagamenti_widget.dart'
     show MainPagamentiWidget;
 export '/pages/main_pages/main_contenuti_a_d_a_o_l_d/main_contenuti_a_d_a_o_l_d_widget.dart'
@@ -50,3 +48,5 @@ export '/pages/main_pages/main_calendar_list/main_calendar_list_widget.dart'
     show MainCalendarListWidget;
 export '/pages/main_pages/main_contenuti_a_d_a/main_contenuti_a_d_a_widget.dart'
     show MainContenutiADAWidget;
+export '/pages/main_pages/main_contatti/main_contatti_widget.dart'
+    show MainContattiWidget;

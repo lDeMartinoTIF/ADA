@@ -201,8 +201,7 @@ class ADAapiGroup {
   static InsertSelectClientiCLIENTIInsertSelectTelefonoPostCall
       insertSelectClientiCLIENTIInsertSelectTelefonoPostCall =
       InsertSelectClientiCLIENTIInsertSelectTelefonoPostCall();
-  static GetAllClientiCLIENTIGetAllPostCall getAllClientiCLIENTIGetAllPostCall =
-      GetAllClientiCLIENTIGetAllPostCall();
+  static GetAllClientiCall getAllClientiCall = GetAllClientiCall();
   static GetClientiCLIENTIGetTokenGetCall getClientiCLIENTIGetTokenGetCall =
       GetClientiCLIENTIGetTokenGetCall();
   static GetClientiByMailCLIENTIGetByDataMailPostCall
@@ -298,6 +297,7 @@ class ADAapiGroup {
   static GetAllTipiServizioCall getAllTipiServizioCall =
       GetAllTipiServizioCall();
   static InsertTipiServiziCall insertTipiServiziCall = InsertTipiServiziCall();
+  static ADAchatbotCall aDAchatbotCall = ADAchatbotCall();
 }
 
 class CreateLingueLINGUECreatePostCall {
@@ -1735,16 +1735,18 @@ class InsertSelectClientiCLIENTIInsertSelectTelefonoPostCall {
   }
 }
 
-class GetAllClientiCLIENTIGetAllPostCall {
-  Future<ApiCallResponse> call() async {
+class GetAllClientiCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
     final ffApiRequestBody = '''
 {
-  "token": ""
+  "token": "${escapeStringForJson(token)}"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'get_all_clienti_CLIENTI_get_all_post',
+      callName: 'Get All Clienti',
       apiUrl: '${baseUrl}/CLIENTI/get_all',
       callType: ApiCallType.POST,
       headers: {},
@@ -1759,6 +1761,12 @@ class GetAllClientiCLIENTIGetAllPostCall {
       alwaysAllowBody: false,
     );
   }
+
+  List? jspAllData(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
 }
 
 class GetClientiCLIENTIGetTokenGetCall {
@@ -2392,17 +2400,18 @@ class GetAllCustomBotCall {
       bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
-      decodeUtf8: false,
+      decodeUtf8: true,
       cache: false,
       isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
 
-  dynamic jspAllData(dynamic response) => getJsonField(
+  List? jspAllData(dynamic response) => getJsonField(
         response,
         r'''$''',
-      );
+        true,
+      ) as List?;
 }
 
 class GetAllCustomBotIdCUSTOMBOTGetAllIdGetCall {
@@ -2803,6 +2812,55 @@ class InsertTipiServiziCall {
       alwaysAllowBody: false,
     );
   }
+}
+
+class ADAchatbotCall {
+  Future<ApiCallResponse> call({
+    String? idsession = '258',
+    String? query = '',
+    String? token = '258',
+    String? email = '',
+    String? telephone = '',
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "idsession": "${escapeStringForJson(idsession)}",
+  "query": "${escapeStringForJson(query)}",
+  "token": "${escapeStringForJson(token)}",
+  "email": "${escapeStringForJson(email)}",
+  "telephone": "${escapeStringForJson(telephone)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'ADAchatbot',
+      apiUrl: '${baseUrl}/Chatbot',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: true,
+      decodeUtf8: true,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  String? content(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$.Resp''',
+      ));
+  String? idSession(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$.IdSession''',
+      ));
+  String? error(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$.error''',
+      ));
 }
 
 /// End ADAapi Group Code

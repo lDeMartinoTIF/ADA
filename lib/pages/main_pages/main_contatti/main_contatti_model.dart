@@ -1,9 +1,10 @@
-import '/components/dropdown_user_edit/dropdown_user_edit_widget.dart';
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
+import '/components/dropdown_edit_delete/dropdown_edit_delete_widget.dart';
 import '/components/modals/command_palette/command_palette_widget.dart';
-import '/components/modals_extra/modal_share_project/modal_share_project_widget.dart';
+import '/components/modals_extra/modal_create_info_a_i/modal_create_info_a_i_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -24,10 +25,8 @@ class MainContattiModel extends FlutterFlowModel<MainContattiWidget> {
 
   // Model for webNav component.
   late WebNavModel webNavModel;
-  // State field(s) for TabBar widget.
-  TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
+  // Stores action output result for [Backend Call - API (Delete Tipo Servizio)] action in Icon widget.
+  ApiCallResponse? resultDeleteTipiServizio;
 
   @override
   void initState(BuildContext context) {
@@ -37,6 +36,5 @@ class MainContattiModel extends FlutterFlowModel<MainContattiWidget> {
   @override
   void dispose() {
     webNavModel.dispose();
-    tabBarController?.dispose();
   }
 }

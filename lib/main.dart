@@ -152,7 +152,6 @@ class _NavBarPageState extends State<NavBarPage> {
       'Main_Contracts': MainContractsWidget(),
       'Main_messages': MainMessagesWidget(),
       'Main_profilePage': MainProfilePageWidget(),
-      'Main_contatti': MainContattiWidget(),
       'Main_Pagamenti': MainPagamentiWidget(),
       'Main_Contenuti_ADA_OLD': MainContenutiADAOLDWidget(),
       'Main_configurazione_Servizi': MainConfigurazioneServiziWidget(),
@@ -160,6 +159,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'Main_chat_ADA': MainChatADAWidget(),
       'Main_calendar_list': MainCalendarListWidget(),
       'Main_contenuti_ADA': MainContenutiADAWidget(),
+      'Main_Contatti': MainContattiWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -251,20 +251,6 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'o3dp9tss' /* __ */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.supervised_user_circle_outlined,
-                size: 24.0,
-              ),
-              activeIcon: Icon(
-                Icons.supervised_user_circle_sharp,
-                size: 32.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                '1fjr9cqp' /* __ */,
               ),
               tooltip: '',
             ),
@@ -363,6 +349,20 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'fg98t8rg' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.supervised_user_circle_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.supervised_user_circle_sharp,
+                size: 32.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'hjrgtcj2' /* __ */,
               ),
               tooltip: '',
             )

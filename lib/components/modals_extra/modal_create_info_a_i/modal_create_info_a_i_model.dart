@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -15,17 +16,17 @@ import 'package:provider/provider.dart';
 class ModalCreateInfoAIModel extends FlutterFlowModel<ModalCreateInfoAIWidget> {
   ///  State fields for stateful widgets in this component.
 
+  // State field(s) for titolo widget.
+  FocusNode? titoloFocusNode1;
+  TextEditingController? titoloTextController1;
+  String? Function(BuildContext, String?)? titoloTextController1Validator;
   // State field(s) for DropDown widget.
   String? dropDownValue1;
   FormFieldController<String>? dropDownValueController1;
   // State field(s) for titolo widget.
-  FocusNode? titoloFocusNode;
-  TextEditingController? titoloTextController;
-  String? Function(BuildContext, String?)? titoloTextControllerValidator;
-  // State field(s) for Contenuto widget.
-  FocusNode? contenutoFocusNode;
-  TextEditingController? contenutoTextController;
-  String? Function(BuildContext, String?)? contenutoTextControllerValidator;
+  FocusNode? titoloFocusNode2;
+  TextEditingController? titoloTextController2;
+  String? Function(BuildContext, String?)? titoloTextController2Validator;
   // State field(s) for city widget.
   FocusNode? cityFocusNode1;
   TextEditingController? cityTextController1;
@@ -63,11 +64,11 @@ class ModalCreateInfoAIModel extends FlutterFlowModel<ModalCreateInfoAIWidget> {
 
   @override
   void dispose() {
-    titoloFocusNode?.dispose();
-    titoloTextController?.dispose();
+    titoloFocusNode1?.dispose();
+    titoloTextController1?.dispose();
 
-    contenutoFocusNode?.dispose();
-    contenutoTextController?.dispose();
+    titoloFocusNode2?.dispose();
+    titoloTextController2?.dispose();
 
     cityFocusNode1?.dispose();
     cityTextController1?.dispose();

@@ -12,9 +12,9 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import '/actions/actions.dart' as action_blocks;
+import 'package:aligned_tooltip/aligned_tooltip.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -124,7 +124,7 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                 model: _model.webNavModel,
                 updateCallback: () => safeSetState(() {}),
                 child: WebNavWidget(
-                  selectedNav: 3,
+                  selectedNav: 2,
                 ),
               ),
             Expanded(
@@ -446,7 +446,7 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                             Expanded(
                                               child: Align(
                                                 alignment: AlignmentDirectional(
-                                                    -1.0, 0.0),
+                                                    0.0, 0.0),
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -548,11 +548,12 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                         builder: (context) {
                                           final recordCustomBot =
                                               ADAapiGroup.getAllCustomBotCall
-                                                  .jspAllData(
-                                                    listViewGetAllCustomBotResponse
-                                                        .jsonBody,
-                                                  )
-                                                  .toList();
+                                                      .jspAllData(
+                                                        listViewGetAllCustomBotResponse
+                                                            .jsonBody,
+                                                      )
+                                                      ?.toList() ??
+                                                  [];
 
                                           return ListView.builder(
                                             padding: EdgeInsets.fromLTRB(
@@ -691,42 +692,82 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                Expanded(
-                                                                  child:
-                                                                      RichText(
-                                                                    textScaler:
-                                                                        MediaQuery.of(context)
-                                                                            .textScaler,
-                                                                    text:
-                                                                        TextSpan(
-                                                                      children: [
-                                                                        TextSpan(
-                                                                          text:
-                                                                              getJsonField(
-                                                                            listViewGetAllCustomBotResponse.jsonBody,
-                                                                            r'''$.CONTENUTO''',
-                                                                          ).toString(),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                letterSpacing: 0.0,
-                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                              ),
-                                                                        )
-                                                                      ],
+                                                                AlignedTooltip(
+                                                                  content:
+                                                                      Padding(
+                                                                    padding:
+                                                                        EdgeInsets.all(
+                                                                            4.0),
+                                                                    child: Text(
+                                                                      getJsonField(
+                                                                        recordCustomBotItem,
+                                                                        r'''$.CONTENUTO''',
+                                                                      ).toString(),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .bodyMedium
+                                                                          .bodyLarge
                                                                           .override(
                                                                             fontFamily:
-                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                                FlutterFlowTheme.of(context).bodyLargeFamily,
                                                                             letterSpacing:
                                                                                 0.0,
                                                                             useGoogleFonts:
-                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyLargeFamily),
                                                                           ),
                                                                     ),
+                                                                  ),
+                                                                  offset: 4.0,
+                                                                  preferredDirection:
+                                                                      AxisDirection
+                                                                          .right,
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                  backgroundColor:
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryBackground,
+                                                                  elevation:
+                                                                      4.0,
+                                                                  tailBaseWidth:
+                                                                      24.0,
+                                                                  tailLength:
+                                                                      12.0,
+                                                                  waitDuration:
+                                                                      Duration(
+                                                                          milliseconds:
+                                                                              100),
+                                                                  showDuration:
+                                                                      Duration(
+                                                                          milliseconds:
+                                                                              1000),
+                                                                  triggerMode:
+                                                                      TooltipTriggerMode
+                                                                          .tap,
+                                                                  child:
+                                                                      FlutterFlowIconButton(
+                                                                    borderColor:
+                                                                        Colors
+                                                                            .transparent,
+                                                                    borderRadius:
+                                                                        30.0,
+                                                                    buttonSize:
+                                                                        40.0,
+                                                                    icon: Icon(
+                                                                      Icons
+                                                                          .description_outlined,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary,
+                                                                      size:
+                                                                          24.0,
+                                                                    ),
+                                                                    onPressed: true
+                                                                        ? null
+                                                                        : () {
+                                                                            print('IconButton pressed ...');
+                                                                          },
                                                                   ),
                                                                 ),
                                                                 Expanded(

@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/blank_list_component/blank_list_component_widget.dart';
@@ -44,6 +45,8 @@ class MainChatADAModel extends FlutterFlowModel<MainChatADAWidget> {
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // Stores action output result for [Backend Call - API (ADAchatbot)] action in IconButton widget.
+  ApiCallResponse? aDAresponse;
 
   @override
   void initState(BuildContext context) {

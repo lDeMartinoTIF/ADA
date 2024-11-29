@@ -39,10 +39,28 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       logFirebaseEvent('MAIN_HOME_PAGE_Main_Home_ON_INIT_STATE');
       if (valueOrDefault(currentUserDocument?.status, '') == 'onboarding') {
-        context.goNamed('onboarding_dati_personali');
+        context.goNamed(
+          'onboarding_dati_personali',
+          extra: <String, dynamic>{
+            kTransitionInfoKey: TransitionInfo(
+              hasTransition: true,
+              transitionType: PageTransitionType.fade,
+              duration: Duration(milliseconds: 0),
+            ),
+          },
+        );
       } else {
         if (valueOrDefault(currentUserDocument?.role, '') == 'user') {
-          context.pushNamed('Main_chat_ADA');
+          context.pushNamed(
+            'Main_chat_ADA',
+            extra: <String, dynamic>{
+              kTransitionInfoKey: TransitionInfo(
+                hasTransition: true,
+                transitionType: PageTransitionType.fade,
+                duration: Duration(milliseconds: 0),
+              ),
+            },
+          );
         }
       }
     });

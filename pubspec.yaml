@@ -28,6 +28,7 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   aligned_dialog: 0.0.6
+  aligned_tooltip: 0.0.1
   auto_size_text: 3.0.0
   cached_network_image: 3.4.1
   cached_network_image_platform_interface: 4.1.1
