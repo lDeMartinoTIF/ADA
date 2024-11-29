@@ -82,7 +82,7 @@ Future openDetailTipiServizio(
     context.pushNamed(
       'TipiServizioDetails',
       queryParameters: {
-        'jspTipoServizio': serializeParam(
+        'jspTipIServizio': serializeParam(
           jsonTipiServizio,
           ParamType.JSON,
         ),

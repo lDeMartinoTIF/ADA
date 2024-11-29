@@ -306,43 +306,43 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Dashboard',
     },
     'nnv46x35': {
-      'it': 'Below is a summary of your teams activity.',
+      'it': '',
       'en': 'Below is a summary of your teams activity.',
     },
     'jqevo63s': {
-      'it': 'New Customers',
+      'it': 'Prenotazioni',
       'en': 'New Customers',
     },
     'd0r4w3cc': {
-      'it': '24',
+      'it': '5',
       'en': '24',
     },
     '8vot9bzj': {
-      'it': 'New Contracts',
+      'it': 'Appuntamenti Odierni',
       'en': 'New Contracts',
     },
     '463rfkem': {
-      'it': '3,200',
+      'it': '2',
       'en': '3,200',
     },
     'saxskj92': {
-      'it': 'Expired Contracts',
+      'it': 'Nuovi Contatti',
       'en': 'Expired Contracts',
     },
     '2wlrr5lg': {
-      'it': '4300',
+      'it': '10',
       'en': '4300',
     },
     'kphqz3hi': {
-      'it': 'Projects',
+      'it': 'Attività ADA',
       'en': 'Projects',
     },
     'xlzf8qqx': {
-      'it': 'UI Design Team',
+      'it': '',
       'en': 'UI Design Team',
     },
     'zt3s5l2s': {
-      'it': '4 Members',
+      'it': '',
       'en': '4 Members',
     },
     'puy8obok': {
@@ -1178,66 +1178,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Contracts',
       'en': 'Contracts',
     },
-    'd0uxbd7l': {
-      'it': 'Contracts',
-      'en': 'Contracts',
-    },
-    'qvdzesck': {
-      'it': 'Projects',
-      'en': 'Projects',
-    },
-    '60t9cn9s': {
-      'it': 'No-Code Platform Design',
-      'en': 'No-Code Platform Design',
-    },
-    '1dkobnqm': {
-      'it': 'Design Team Docs',
-      'en': 'Design Team Docs',
-    },
-    'q8pixc3q': {
-      'it': 'Contracts',
-      'en': 'Contracts',
-    },
-    'ypyxztn8': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '8vveifga': {
-      'it': 'Contracts for New Opportunities',
-      'en': 'Contracts for New Opportunities',
-    },
-    '2pdavu7l': {
-      'it': 'Next Action',
-      'en': 'Next Action',
-    },
-    'b1y29yq0': {
-      'it': 'Tuesday, 10:00am',
-      'en': 'Tuesday, 10:00am',
-    },
-    'nv38kri7': {
-      'it': 'In Progress',
-      'en': 'In Progress',
-    },
-    '3mdoksuv': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    '4bv5gwrs': {
-      'it': 'Client Acquisition for Q3',
-      'en': 'Client Acquisition for Q3',
-    },
-    'enr3ll87': {
-      'it': 'Next Action',
-      'en': 'Next Action',
-    },
-    '3booeo9m': {
-      'it': 'Tuesday, 10:00am',
-      'en': 'Tuesday, 10:00am',
-    },
-    'nz37201t': {
-      'it': 'In Progress',
-      'en': 'In Progress',
-    },
     'hzzl8rgm': {
       'it': '__',
       'en': '__',
@@ -1522,7 +1462,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Invite Users',
     },
     '5rfs2mbx': {
-      'it': 'Titolo Servizio',
+      'it': 'Servizio',
       'en': 'Name',
     },
     '4uiw3n0l': {
@@ -3174,6 +3114,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // TipiServizio_Details_main
   {
+    'hduyn3xw': {
+      'it': 'Tipo Servizio',
+      'en': '',
+    },
     'y2wasifg': {
       'it': 'Admin',
       'en': 'Admin',
@@ -3198,13 +3142,33 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Search for an item...',
       'en': 'Search for an item...',
     },
-    'kaealhmv': {
-      'it': 'Descrizione',
-      'en': 'Go',
+    'skk2e715': {
+      'it': 'Calendario',
+      'en': '',
     },
-    'fxcnfz1p': {
-      'it': 'Titolo',
-      'en': 'Go',
+    '64qlruhw': {
+      'it': 'Preavviso Annullamento',
+      'en': '',
+    },
+    'eoo83lpc': {
+      'it': 'Scadenza',
+      'en': '',
+    },
+    'ntnbwqu7': {
+      'it': 'Indirizzo Specifico',
+      'en': '',
+    },
+    'mfqjksz2': {
+      'it': 'File',
+      'en': '',
+    },
+    'p83a1kny': {
+      'it': 'Mail',
+      'en': '',
+    },
+    'o3x59zwz': {
+      'it': 'Link',
+      'en': '',
     },
     'popk1pyh': {
       'it': 'Elimina',

@@ -1,4 +1,4 @@
-import '/components/modal_sections/tipo_servizio_details_main/tipo_servizio_details_main_widget.dart';
+import '/components/modal_sections/tipi_servizio_details_main/tipi_servizio_details_main_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -191,11 +191,11 @@ class _ModalTipiServizioWidgetState extends State<ModalTipiServizioWidget>
                     borderRadius: BorderRadius.circular(12.0),
                   ),
                   child: wrapWithModel(
-                    model: _model.tipoServizioDetailsMainModel,
+                    model: _model.tipiServizioDetailsMainModel,
                     updateCallback: () => safeSetState(() {}),
-                    child: TipoServizioDetailsMainWidget(
-                      showBack: false,
-                      jsonTipoServizio: widget!.jsonTipiServizio!,
+                    child: TipiServizioDetailsMainWidget(
+                      showBack: true,
+                      jsonTipiServizio: widget!.jsonTipiServizio!,
                     ),
                   ),
                 ),

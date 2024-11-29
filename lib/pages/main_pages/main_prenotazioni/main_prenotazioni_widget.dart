@@ -307,7 +307,7 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  '5rfs2mbx' /* Titolo Servizio */,
+                                                  '5rfs2mbx' /* Servizio */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -458,8 +458,9 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                   ),
                                 ),
                                 content: FutureBuilder<ApiCallResponse>(
-                                  future: ADAapiGroup.getTipoServizioCall.call(
-                                    token: currentUserUid,
+                                  future:
+                                      ADAapiGroup.getAllPrenotazioniCall.call(
+                                    token: '789',
                                   ),
                                   builder: (context, snapshot) {
                                     // Customize what your widget looks like when it's loading.
@@ -478,19 +479,18 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                         ),
                                       );
                                     }
-                                    final listViewGetTipoServizioResponse =
+                                    final listViewGetAllPrenotazioniResponse =
                                         snapshot.data!;
 
                                     return Builder(
                                       builder: (context) {
-                                        final itemTipoServizio =
-                                            ADAapiGroup.getTipoServizioCall
-                                                    .allData(
-                                                      listViewGetTipoServizioResponse
-                                                          .jsonBody,
-                                                    )
-                                                    ?.toList() ??
-                                                [];
+                                        final itemPrenotazioni =
+                                            ADAapiGroup.getAllPrenotazioniCall
+                                                .jspAllData(
+                                                  listViewGetAllPrenotazioniResponse
+                                                      .jsonBody,
+                                                )
+                                                .toList();
 
                                         return ListView.builder(
                                           padding: EdgeInsets.fromLTRB(
@@ -502,12 +502,12 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                           primary: false,
                                           shrinkWrap: true,
                                           scrollDirection: Axis.vertical,
-                                          itemCount: itemTipoServizio.length,
+                                          itemCount: itemPrenotazioni.length,
                                           itemBuilder:
-                                              (context, itemTipoServizioIndex) {
-                                            final itemTipoServizioItem =
-                                                itemTipoServizio[
-                                                    itemTipoServizioIndex];
+                                              (context, itemPrenotazioniIndex) {
+                                            final itemPrenotazioniItem =
+                                                itemPrenotazioni[
+                                                    itemPrenotazioniIndex];
                                             return Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
@@ -525,7 +525,7 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                                       .openDetailTipoServizio(
                                                     context,
                                                     jsonTipoServizio:
-                                                        itemTipoServizioItem,
+                                                        itemPrenotazioniItem,
                                                   );
                                                 },
                                                 child: Container(
@@ -577,9 +577,66 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                                                           0.0),
                                                                   child: Text(
                                                                     getJsonField(
-                                                                      itemTipoServizioItem,
-                                                                      r'''$.TIPO_SERVIZIO''',
+                                                                      itemPrenotazioniItem,
+                                                                      r'''$.TITOLO_SERVIZIO''',
                                                                     ).toString(),
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              FlutterFlowTheme.of(context).bodyLargeFamily,
+                                                                          letterSpacing:
+                                                                              0.0,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyLargeFamily),
+                                                                        ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Expanded(
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          16.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child: Text(
+                                                                    getJsonField(
+                                                                      itemPrenotazioniItem,
+                                                                      r'''$.DATA''',
+                                                                    ).toString(),
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              FlutterFlowTheme.of(context).bodyLargeFamily,
+                                                                          letterSpacing:
+                                                                              0.0,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyLargeFamily),
+                                                                        ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Expanded(
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          16.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child: Text(
+                                                                    '${getJsonField(
+                                                                      itemPrenotazioniItem,
+                                                                      r'''$.ORA_DA''',
+                                                                    ).toString()}/${getJsonField(
+                                                                      itemPrenotazioniItem,
+                                                                      r'''$.ORA_A''',
+                                                                    ).toString()}',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyLarge
@@ -602,10 +659,13 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                                               ))
                                                                 Expanded(
                                                                   child: Text(
-                                                                    getJsonField(
-                                                                      itemTipoServizioItem,
-                                                                      r'''$.TIPO_SERVIZIO_DESCR''',
-                                                                    ).toString(),
+                                                                    '${getJsonField(
+                                                                      itemPrenotazioniItem,
+                                                                      r'''$.COGNOME''',
+                                                                    ).toString()} ${getJsonField(
+                                                                      itemPrenotazioniItem,
+                                                                      r'''$.NOME''',
+                                                                    ).toString()}',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -682,7 +742,7 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                                                               () async {
                                                                             await action_blocks.openDetailTipoServizio(
                                                                               context,
-                                                                              jsonTipoServizio: itemTipoServizioItem,
+                                                                              jsonTipoServizio: itemPrenotazioniItem,
                                                                             );
                                                                           },
                                                                           actionDelete:
@@ -711,7 +771,7 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                                                               _model.resultDeleteTipoServizio = await ADAapiGroup.deleteTipoServizioCall.call(
                                                                                 token: currentUserUid,
                                                                                 tipoServizioPrg: getJsonField(
-                                                                                  itemTipoServizioItem,
+                                                                                  itemPrenotazioniItem,
                                                                                   r'''$.TIPO_SERVIZIO_PRG''',
                                                                                 ),
                                                                               );

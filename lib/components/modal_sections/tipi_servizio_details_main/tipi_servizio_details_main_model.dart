@@ -22,29 +22,26 @@ class TipiServizioDetailsMainModel
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
-  // State field(s) for Tiposerviziodescri widget.
-  FocusNode? tiposerviziodescriFocusNode;
-  TextEditingController? tiposerviziodescriTextController;
-  String? Function(BuildContext, String?)?
-      tiposerviziodescriTextControllerValidator;
-  // State field(s) for Tiposervizio widget.
-  FocusNode? tiposervizioFocusNode;
-  TextEditingController? tiposervizioTextController;
-  String? Function(BuildContext, String?)? tiposervizioTextControllerValidator;
+  // State field(s) for Switch widget.
+  bool? switchValue1;
+  // State field(s) for Switch widget.
+  bool? switchValue2;
+  // State field(s) for Switch widget.
+  bool? switchValue3;
+  // State field(s) for Switch widget.
+  bool? switchValue4;
+  // State field(s) for Switch widget.
+  bool? switchValue5;
+  // State field(s) for Switch widget.
+  bool? switchValue6;
+  // State field(s) for Switch widget.
+  bool? switchValue7;
   // Stores action output result for [Backend Call - API (Delete Tipo Servizio)] action in Button widget.
   ApiCallResponse? apiResultno4;
-  // Stores action output result for [Backend Call - API (Update Tipo Servizio)] action in Button widget.
-  ApiCallResponse? apiResultj70;
 
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    tiposerviziodescriFocusNode?.dispose();
-    tiposerviziodescriTextController?.dispose();
-
-    tiposervizioFocusNode?.dispose();
-    tiposervizioTextController?.dispose();
-  }
+  void dispose() {}
 }

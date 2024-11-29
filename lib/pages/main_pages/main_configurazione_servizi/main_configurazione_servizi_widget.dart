@@ -1215,7 +1215,7 @@ class _MainConfigurazioneServiziWidgetState
 
                                                 return Builder(
                                                   builder: (context) {
-                                                    final itemTipoServizio =
+                                                    final itemTipIServizio =
                                                         ADAapiGroup
                                                             .getAllTipiServizioCall
                                                             .jspAllData(
@@ -1237,13 +1237,13 @@ class _MainConfigurazioneServiziWidgetState
                                                       scrollDirection:
                                                           Axis.vertical,
                                                       itemCount:
-                                                          itemTipoServizio
+                                                          itemTipIServizio
                                                               .length,
                                                       itemBuilder: (context,
-                                                          itemTipoServizioIndex) {
-                                                        final itemTipoServizioItem =
-                                                            itemTipoServizio[
-                                                                itemTipoServizioIndex];
+                                                          itemTipIServizioIndex) {
+                                                        final itemTipIServizioItem =
+                                                            itemTipIServizio[
+                                                                itemTipIServizioIndex];
                                                         return Padding(
                                                           padding:
                                                               EdgeInsetsDirectional
@@ -1266,10 +1266,10 @@ class _MainConfigurazioneServiziWidgetState
                                                               logFirebaseEvent(
                                                                   'MAIN_CONFIGURAZIONE_SERVIZI_Container_t7');
                                                               await action_blocks
-                                                                  .openDetailTipoServizio(
+                                                                  .openDetailTipiServizio(
                                                                 context,
-                                                                jsonTipoServizio:
-                                                                    itemTipoServizioItem,
+                                                                jsonTipiServizio:
+                                                                    itemTipIServizioItem,
                                                               );
                                                             },
                                                             child: Container(
@@ -1326,7 +1326,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                               padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 getJsonField(
-                                                                                  itemTipoServizioItem,
+                                                                                  itemTipIServizioItem,
                                                                                   r'''$.TIPO_SERVIZIO''',
                                                                                 ).toString(),
                                                                                 style: FlutterFlowTheme.of(context).bodyLarge.override(
@@ -1345,7 +1345,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                 Icons.check_circle_rounded,
                                                                                 color: valueOrDefault<Color>(
                                                                                   '${getJsonField(
-                                                                                            itemTipoServizioItem,
+                                                                                            itemTipIServizioItem,
                                                                                             r'''$.CALENDAR''',
                                                                                           ).toString()}' ==
                                                                                           ''
@@ -1372,7 +1372,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                 Icons.check_circle_rounded,
                                                                                 color: valueOrDefault<Color>(
                                                                                   '${getJsonField(
-                                                                                            itemTipoServizioItem,
+                                                                                            itemTipIServizioItem,
                                                                                             r'''$.PREAVVISO_ANNULLAMENTO''',
                                                                                           ).toString()}' ==
                                                                                           ''
@@ -1399,7 +1399,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                 Icons.check_circle_rounded,
                                                                                 color: valueOrDefault<Color>(
                                                                                   '${getJsonField(
-                                                                                            itemTipoServizioItem,
+                                                                                            itemTipIServizioItem,
                                                                                             r'''$.SCADENZA''',
                                                                                           ).toString()}' ==
                                                                                           ''
@@ -1426,7 +1426,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                 Icons.check_circle_rounded,
                                                                                 color: valueOrDefault<Color>(
                                                                                   '${getJsonField(
-                                                                                            itemTipoServizioItem,
+                                                                                            itemTipIServizioItem,
                                                                                             r'''$.INDIRIZZO_SPECIFICO''',
                                                                                           ).toString()}' ==
                                                                                           ''
@@ -1453,7 +1453,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                 Icons.check_circle_rounded,
                                                                                 color: valueOrDefault<Color>(
                                                                                   '${getJsonField(
-                                                                                            itemTipoServizioItem,
+                                                                                            itemTipIServizioItem,
                                                                                             r'''$.FILE''',
                                                                                           ).toString()}' ==
                                                                                           ''
@@ -1480,7 +1480,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                 Icons.check_circle_rounded,
                                                                                 color: valueOrDefault<Color>(
                                                                                   '${getJsonField(
-                                                                                            itemTipoServizioItem,
+                                                                                            itemTipIServizioItem,
                                                                                             r'''$.MAIL''',
                                                                                           ).toString()}' ==
                                                                                           ''
@@ -1507,7 +1507,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                 Icons.check_circle_rounded,
                                                                                 color: valueOrDefault<Color>(
                                                                                   '${getJsonField(
-                                                                                            itemTipoServizioItem,
+                                                                                            itemTipIServizioItem,
                                                                                             r'''$.LINK''',
                                                                                           ).toString()}' ==
                                                                                           ''
@@ -1566,7 +1566,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                         // Actio_tipiservizio
                                                                                         await action_blocks.openDetailTipiServizio(
                                                                                           context,
-                                                                                          jsonTipiServizio: itemTipoServizioItem,
+                                                                                          jsonTipiServizio: itemTipIServizioItem,
                                                                                         );
                                                                                       },
                                                                                       actionDelete: () async {
@@ -1595,7 +1595,7 @@ class _MainConfigurazioneServiziWidgetState
                                                                                           _model.resultDeleteTipiServizio = await ADAapiGroup.deleteTipoServizioCall.call(
                                                                                             token: currentUserUid,
                                                                                             tipoServizioPrg: getJsonField(
-                                                                                              itemTipoServizioItem,
+                                                                                              itemTipIServizioItem,
                                                                                               r'''$.TIPO_SERVIZIO_PRG''',
                                                                                             ),
                                                                                           );

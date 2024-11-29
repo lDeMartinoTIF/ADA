@@ -12,11 +12,11 @@ class TipiServizioDetailsWidget extends StatefulWidget {
   const TipiServizioDetailsWidget({
     super.key,
     bool? showBack,
-    required this.jspTipoServizio,
+    required this.jspTipIServizio,
   }) : this.showBack = showBack ?? true;
 
   final bool showBack;
-  final dynamic jspTipoServizio;
+  final dynamic jspTipIServizio;
 
   @override
   State<TipiServizioDetailsWidget> createState() =>
@@ -57,7 +57,7 @@ class _TipiServizioDetailsWidgetState extends State<TipiServizioDetailsWidget> {
           updateCallback: () => safeSetState(() {}),
           child: TipoServizioDetailsMainWidget(
             showBack: true,
-            jsonTipoServizio: widget!.jspTipoServizio!,
+            jsonTipoServizio: widget!.jspTipIServizio!,
           ),
         ),
       ),

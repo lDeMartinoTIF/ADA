@@ -241,8 +241,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   'showBack',
                   ParamType.bool,
                 ),
-                jspTipoServizio: params.getParam(
-                  'jspTipoServizio',
+                jspTipIServizio: params.getParam(
+                  'jspTipIServizio',
                   ParamType.JSON,
                 ),
               ),

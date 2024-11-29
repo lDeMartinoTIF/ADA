@@ -8,6 +8,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
@@ -964,7 +965,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                   16.0, 0.0, 16.0, 16.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
-                                              'nnv46x35' /* Below is a summary of your tea... */,
+                                              'nnv46x35' /*  */,
                                             ),
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
@@ -1082,9 +1083,9 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                           padding:
                                                               EdgeInsets.all(
                                                                   12.0),
-                                                          child: Icon(
-                                                            Icons
-                                                                .group_outlined,
+                                                          child: FaIcon(
+                                                            FontAwesomeIcons
+                                                                .listAlt,
                                                             color: Colors.white,
                                                             size: 24.0,
                                                           ),
@@ -1110,7 +1111,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'jqevo63s' /* New Customers */,
+                                                              'jqevo63s' /* Prenotazioni */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1142,7 +1143,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'd0r4w3cc' /* 24 */,
+                                                                'd0r4w3cc' /* 5 */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -1244,9 +1245,9 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                           padding:
                                                               EdgeInsets.all(
                                                                   12.0),
-                                                          child: Icon(
-                                                            Icons
-                                                                .home_work_outlined,
+                                                          child: FaIcon(
+                                                            FontAwesomeIcons
+                                                                .doorOpen,
                                                             color: Colors.white,
                                                             size: 24.0,
                                                           ),
@@ -1272,7 +1273,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '8vot9bzj' /* New Contracts */,
+                                                              '8vot9bzj' /* Appuntamenti Odierni */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1304,7 +1305,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                '463rfkem' /* 3,200 */,
+                                                                '463rfkem' /* 2 */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -1408,7 +1409,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                                   12.0),
                                                           child: Icon(
                                                             Icons
-                                                                .account_tree_outlined,
+                                                                .person_add_outlined,
                                                             color: Colors.white,
                                                             size: 24.0,
                                                           ),
@@ -1434,7 +1435,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'saxskj92' /* Expired Contracts */,
+                                                              'saxskj92' /* Nuovi Contatti */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1466,7 +1467,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                '2wlrr5lg' /* 4300 */,
+                                                                '2wlrr5lg' /* 10 */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -1508,7 +1509,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                 16.0, 8.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'kphqz3hi' /* Projects */,
+                                'kphqz3hi' /* Attività ADA */,
                               ),
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context)
@@ -1602,7 +1603,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                           0.0, 0.0, 0.0, 8.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'xlzf8qqx' /* UI Design Team */,
+                                          'xlzf8qqx' /*  */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium
@@ -1624,7 +1625,7 @@ class _MainHomeWidgetState extends State<MainHomeWidget>
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'zt3s5l2s' /* 4 Members */,
+                                        'zt3s5l2s' /*  */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .titleSmall

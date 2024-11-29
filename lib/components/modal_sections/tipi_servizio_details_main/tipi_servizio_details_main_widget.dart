@@ -19,11 +19,11 @@ class TipiServizioDetailsMainWidget extends StatefulWidget {
   const TipiServizioDetailsMainWidget({
     super.key,
     required this.showBack,
-    required this.jsonTipoServizio,
+    required this.jsonTipiServizio,
   });
 
   final bool? showBack;
-  final dynamic jsonTipoServizio;
+  final dynamic jsonTipiServizio;
 
   @override
   State<TipiServizioDetailsMainWidget> createState() =>
@@ -47,20 +47,41 @@ class _TipiServizioDetailsMainWidgetState
     super.initState();
     _model = createModel(context, () => TipiServizioDetailsMainModel());
 
-    _model.tiposerviziodescriTextController ??= TextEditingController(
-        text: getJsonField(
-      widget!.jsonTipoServizio,
-      r'''$.TIPO_SERVIZIO_DESCR''',
-    ).toString().toString());
-    _model.tiposerviziodescriFocusNode ??= FocusNode();
-
-    _model.tiposervizioTextController ??= TextEditingController(
-        text: getJsonField(
-      widget!.jsonTipoServizio,
-      r'''$.TIPO_SERVIZIO''',
-    ).toString().toString());
-    _model.tiposervizioFocusNode ??= FocusNode();
-
+    _model.switchValue1 = '${getJsonField(
+          widget!.jsonTipiServizio,
+          r'''$.CALENDAR''',
+        ).toString().toString()}' !=
+        '';
+    _model.switchValue2 = '${getJsonField(
+          widget!.jsonTipiServizio,
+          r'''$.PREAVVISO_ANNULLAMENTO''',
+        ).toString().toString()}' !=
+        '';
+    _model.switchValue3 = '${getJsonField(
+          widget!.jsonTipiServizio,
+          r'''$.SCADENZA''',
+        ).toString().toString()}' !=
+        '';
+    _model.switchValue4 = '${getJsonField(
+          widget!.jsonTipiServizio,
+          r'''$.INDIRIZZO_SPECIFICO''',
+        ).toString().toString()}' !=
+        '';
+    _model.switchValue5 = '${getJsonField(
+          widget!.jsonTipiServizio,
+          r'''$.FILE''',
+        ).toString().toString()}' !=
+        '';
+    _model.switchValue6 = '${getJsonField(
+          widget!.jsonTipiServizio,
+          r'''$.MAIL''',
+        ).toString().toString()}' !=
+        '';
+    _model.switchValue7 = '${getJsonField(
+          widget!.jsonTipiServizio,
+          r'''$.LINK''',
+        ).toString().toString()}' !=
+        '';
     animationsMap.addAll({
       'cardOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
@@ -180,167 +201,80 @@ class _TipiServizioDetailsMainWidgetState
                           ),
                       ],
                     ),
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              24.0, 16.0, 24.0, 0.0),
-                          child: FutureBuilder<ApiCallResponse>(
-                            future: ADAapiGroup.getTipoServizioCall.call(
-                              token: currentUserUid,
-                            ),
-                            builder: (context, snapshot) {
-                              // Customize what your widget looks like when it's loading.
-                              if (!snapshot.hasData) {
-                                return Center(
-                                  child: SizedBox(
-                                    width: 50.0,
-                                    height: 50.0,
-                                    child: CircularProgressIndicator(
-                                      valueColor: AlwaysStoppedAnimation<Color>(
-                                        FlutterFlowTheme.of(context).primary,
-                                      ),
-                                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                26.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'hduyn3xw' /* Tipo Servizio */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .labelLarge
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .labelLargeFamily,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .labelLargeFamily),
                                   ),
-                                );
-                              }
-                              final dropDownGetTipoServizioResponse =
-                                  snapshot.data!;
-
-                              return FlutterFlowDropDown<String>(
-                                controller: _model.dropDownValueController ??=
-                                    FormFieldController<String>(null),
-                                options: ADAapiGroup.getTipoServizioCall
-                                    .allData(
-                                      dropDownGetTipoServizioResponse.jsonBody,
-                                    )!
-                                    .map((e) => e.toString())
-                                    .toList(),
-                                onChanged: (val) => safeSetState(
-                                    () => _model.dropDownValue = val),
-                                width: double.infinity,
-                                height: 58.0,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily,
-                                      letterSpacing: 0.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily),
-                                    ),
-                                hintText: FFLocalizations.of(context).getText(
-                                  'oldxiom0' /* Please select... */,
-                                ),
-                                icon: Icon(
-                                  Icons.keyboard_arrow_down_rounded,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  size: 24.0,
-                                ),
-                                fillColor: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                elevation: 2.0,
-                                borderColor:
-                                    FlutterFlowTheme.of(context).alternate,
-                                borderWidth: 2.0,
-                                borderRadius: 12.0,
-                                margin: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 4.0, 16.0, 4.0),
-                                hidesUnderline: true,
-                                isSearchable: false,
-                                isMultiSelect: false,
-                              );
-                            },
+                            ),
                           ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    24.0, 16.0, 24.0, 0.0),
-                                child: TextFormField(
-                                  controller:
-                                      _model.tiposerviziodescriTextController,
-                                  focusNode: _model.tiposerviziodescriFocusNode,
-                                  autofocus: true,
-                                  obscureText: false,
-                                  decoration: InputDecoration(
-                                    labelText:
-                                        FFLocalizations.of(context).getText(
-                                      'kaealhmv' /* Descrizione */,
-                                    ),
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMediumFamily),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 5.0, 24.0, 0.0),
+                            child: FutureBuilder<ApiCallResponse>(
+                              future: ADAapiGroup.getTipoServizioCall.call(
+                                token: '789',
+                              ),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          FlutterFlowTheme.of(context).primary,
                                         ),
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMediumFamily),
-                                        ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(12.0),
                                     ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    filled: true,
-                                    fillColor: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 24.0, 20.0, 24.0),
+                                  );
+                                }
+                                final dropDownGetTipoServizioResponse =
+                                    snapshot.data!;
+
+                                return FlutterFlowDropDown<String>(
+                                  controller: _model.dropDownValueController ??=
+                                      FormFieldController<String>(
+                                    _model.dropDownValue ??= getJsonField(
+                                      widget!.jsonTipiServizio,
+                                      r'''$.TIPO_SERVIZIO''',
+                                    ).toString(),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  options: (getJsonField(
+                                    dropDownGetTipoServizioResponse.jsonBody,
+                                    r'''$[:].TIPO_SERVIZIO''',
+                                    true,
+                                  ) as List)
+                                      .map<String>((s) => s.toString())
+                                      .toList()!,
+                                  onChanged: (val) => safeSetState(
+                                      () => _model.dropDownValue = val),
+                                  width: double.infinity,
+                                  height: 58.0,
+                                  textStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
@@ -351,118 +285,320 @@ class _TipiServizioDetailsMainWidgetState
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily),
                                       ),
-                                  cursorColor:
-                                      FlutterFlowTheme.of(context).primary,
-                                  validator: _model
-                                      .tiposerviziodescriTextControllerValidator
-                                      .asValidator(context),
-                                ),
-                              ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    'oldxiom0' /* Please select... */,
+                                  ),
+                                  icon: Icon(
+                                    Icons.keyboard_arrow_down_rounded,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    size: 24.0,
+                                  ),
+                                  fillColor: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  elevation: 2.0,
+                                  borderColor:
+                                      FlutterFlowTheme.of(context).alternate,
+                                  borderWidth: 2.0,
+                                  borderRadius: 12.0,
+                                  margin: EdgeInsetsDirectional.fromSTEB(
+                                      16.0, 4.0, 16.0, 4.0),
+                                  hidesUnderline: true,
+                                  isSearchable: false,
+                                  isMultiSelect: false,
+                                );
+                              },
                             ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    24.0, 16.0, 24.0, 0.0),
-                                child: TextFormField(
-                                  controller: _model.tiposervizioTextController,
-                                  focusNode: _model.tiposervizioFocusNode,
-                                  autofocus: true,
-                                  obscureText: false,
-                                  decoration: InputDecoration(
-                                    labelText:
-                                        FFLocalizations.of(context).getText(
-                                      'fxcnfz1p' /* Titolo */,
-                                    ),
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMediumFamily),
-                                        ),
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMediumFamily,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMediumFamily),
-                                        ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    filled: true,
-                                    fillColor: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 24.0, 20.0, 24.0),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 16.0, 24.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'skk2e715' /* Calendario */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
+                                      .labelLarge
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyMediumFamily,
+                                            .labelLargeFamily,
                                         letterSpacing: 0.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
+                                                    .labelLargeFamily),
                                       ),
-                                  cursorColor:
-                                      FlutterFlowTheme.of(context).primary,
-                                  validator: _model
-                                      .tiposervizioTextControllerValidator
-                                      .asValidator(context),
                                 ),
-                              ),
+                                Switch.adaptive(
+                                  value: _model.switchValue1!,
+                                  onChanged: (newValue) async {
+                                    safeSetState(
+                                        () => _model.switchValue1 = newValue!);
+                                  },
+                                  activeColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  activeTrackColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  inactiveTrackColor:
+                                      FlutterFlowTheme.of(context).accent2,
+                                  inactiveThumbColor:
+                                      FlutterFlowTheme.of(context).overlay,
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                      ],
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 16.0, 24.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    '64qlruhw' /* Preavviso Annullamento */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .labelLargeFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily),
+                                      ),
+                                ),
+                                Switch.adaptive(
+                                  value: _model.switchValue2!,
+                                  onChanged: (newValue) async {
+                                    safeSetState(
+                                        () => _model.switchValue2 = newValue!);
+                                  },
+                                  activeColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  activeTrackColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  inactiveTrackColor:
+                                      FlutterFlowTheme.of(context).accent2,
+                                  inactiveThumbColor:
+                                      FlutterFlowTheme.of(context).overlay,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 16.0, 24.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'eoo83lpc' /* Scadenza */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .labelLargeFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily),
+                                      ),
+                                ),
+                                Switch.adaptive(
+                                  value: _model.switchValue3!,
+                                  onChanged: (newValue) async {
+                                    safeSetState(
+                                        () => _model.switchValue3 = newValue!);
+                                  },
+                                  activeColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  activeTrackColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  inactiveTrackColor:
+                                      FlutterFlowTheme.of(context).accent2,
+                                  inactiveThumbColor:
+                                      FlutterFlowTheme.of(context).overlay,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 16.0, 24.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'ntnbwqu7' /* Indirizzo Specifico */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .labelLargeFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily),
+                                      ),
+                                ),
+                                Switch.adaptive(
+                                  value: _model.switchValue4!,
+                                  onChanged: (newValue) async {
+                                    safeSetState(
+                                        () => _model.switchValue4 = newValue!);
+                                  },
+                                  activeColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  activeTrackColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  inactiveTrackColor:
+                                      FlutterFlowTheme.of(context).accent2,
+                                  inactiveThumbColor:
+                                      FlutterFlowTheme.of(context).overlay,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 16.0, 24.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'mfqjksz2' /* File */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .labelLargeFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily),
+                                      ),
+                                ),
+                                Switch.adaptive(
+                                  value: _model.switchValue5!,
+                                  onChanged: (newValue) async {
+                                    safeSetState(
+                                        () => _model.switchValue5 = newValue!);
+                                  },
+                                  activeColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  activeTrackColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  inactiveTrackColor:
+                                      FlutterFlowTheme.of(context).accent2,
+                                  inactiveThumbColor:
+                                      FlutterFlowTheme.of(context).overlay,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 16.0, 24.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'p83a1kny' /* Mail */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .labelLargeFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily),
+                                      ),
+                                ),
+                                Switch.adaptive(
+                                  value: _model.switchValue6!,
+                                  onChanged: (newValue) async {
+                                    safeSetState(
+                                        () => _model.switchValue6 = newValue!);
+                                  },
+                                  activeColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  activeTrackColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  inactiveTrackColor:
+                                      FlutterFlowTheme.of(context).accent2,
+                                  inactiveThumbColor:
+                                      FlutterFlowTheme.of(context).overlay,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 16.0, 24.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'o3x59zwz' /* Link */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .labelLargeFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily),
+                                      ),
+                                ),
+                                Switch.adaptive(
+                                  value: _model.switchValue7!,
+                                  onChanged: (newValue) async {
+                                    safeSetState(
+                                        () => _model.switchValue7 = newValue!);
+                                  },
+                                  activeColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  activeTrackColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  inactiveTrackColor:
+                                      FlutterFlowTheme.of(context).accent2,
+                                  inactiveThumbColor:
+                                      FlutterFlowTheme.of(context).overlay,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -510,7 +646,7 @@ class _TipiServizioDetailsMainWidgetState
                           await ADAapiGroup.deleteTipoServizioCall.call(
                         token: currentUserUid,
                         tipoServizioPrg: getJsonField(
-                          widget!.jsonTipoServizio,
+                          widget!.jsonTipiServizio,
                           r'''$.TIPO_SERVIZIO_PRG''',
                         ),
                       );
@@ -561,23 +697,6 @@ class _TipiServizioDetailsMainWidgetState
                     onPressed: () async {
                       logFirebaseEvent(
                           'TIPI_SERVIZIO_DETAILS_MAIN_SALVA_BTN_ON_');
-                      _model.apiResultj70 =
-                          await ADAapiGroup.updateTipoServizioCall.call(
-                        token: currentUserUid,
-                        tipoServizio: _model.tiposervizioTextController.text,
-                        tipoServizioDescr:
-                            _model.tiposerviziodescriTextController.text,
-                        tipoServizioPrg: getJsonField(
-                          widget!.jsonTipoServizio,
-                          r'''$.TIPO_SERVIZIO_PRG''',
-                        ),
-                      );
-
-                      if ((_model.apiResultj70?.succeeded ?? true)) {
-                        Navigator.pop(context);
-                      }
-
-                      safeSetState(() {});
                     },
                     text: FFLocalizations.of(context).getText(
                       'z2msh32q' /* Salva */,

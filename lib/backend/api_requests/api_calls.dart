@@ -159,15 +159,13 @@ class ADAapiGroup {
   static DeleteAnagraficaANAGRAFICADeleteTokenDeleteCall
       deleteAnagraficaANAGRAFICADeleteTokenDeleteCall =
       DeleteAnagraficaANAGRAFICADeleteTokenDeleteCall();
-  static GetAllAppoitmentPRENOTAZIONIGetAllGetCall
-      getAllAppoitmentPRENOTAZIONIGetAllGetCall =
-      GetAllAppoitmentPRENOTAZIONIGetAllGetCall();
+  static GetAllPrenotazioniCall getAllPrenotazioniCall =
+      GetAllPrenotazioniCall();
   static InsertPrenotazionePRENOTAZIONIInsertPostCall
       insertPrenotazionePRENOTAZIONIInsertPostCall =
       InsertPrenotazionePRENOTAZIONIInsertPostCall();
-  static GetAppoitmentPRENOTAZIONIGetGetCall
-      getAppoitmentPRENOTAZIONIGetGetCall =
-      GetAppoitmentPRENOTAZIONIGetGetCall();
+  static GetAllPrenotazioniClienteCall getAllPrenotazioniClienteCall =
+      GetAllPrenotazioniClienteCall();
   static GetAppoitmentPRENOTAZIONIGetOneGetCall
       getAppoitmentPRENOTAZIONIGetOneGetCall =
       GetAppoitmentPRENOTAZIONIGetOneGetCall();
@@ -1318,16 +1316,24 @@ class DeleteAnagraficaANAGRAFICADeleteTokenDeleteCall {
   }
 }
 
-class GetAllAppoitmentPRENOTAZIONIGetAllGetCall {
-  Future<ApiCallResponse> call() async {
+class GetAllPrenotazioniCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
+    final ffApiRequestBody = '''
+{
+  "token": "${escapeStringForJson(token)}"
+}''';
     return ApiManager.instance.makeApiCall(
-      callName: 'get_all_appoitment_PRENOTAZIONI_get_all_get',
+      callName: 'Get All Prenotazioni',
       apiUrl: '${baseUrl}/PRENOTAZIONI/get_all',
-      callType: ApiCallType.GET,
+      callType: ApiCallType.POST,
       headers: {},
       params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
@@ -1336,6 +1342,11 @@ class GetAllAppoitmentPRENOTAZIONIGetAllGetCall {
       alwaysAllowBody: false,
     );
   }
+
+  dynamic jspAllData(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+      );
 }
 
 class InsertPrenotazionePRENOTAZIONIInsertPostCall {
@@ -1379,16 +1390,26 @@ class InsertPrenotazionePRENOTAZIONIInsertPostCall {
   }
 }
 
-class GetAppoitmentPRENOTAZIONIGetGetCall {
-  Future<ApiCallResponse> call() async {
+class GetAllPrenotazioniClienteCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    String? clienteAttuale = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
+    final ffApiRequestBody = '''
+{
+  "Token": "${escapeStringForJson(token)}",
+  "cliente_attuale": "${escapeStringForJson(clienteAttuale)}"
+}''';
     return ApiManager.instance.makeApiCall(
-      callName: 'get_appoitment_PRENOTAZIONI_get__get',
+      callName: 'Get All Prenotazioni cliente',
       apiUrl: '${baseUrl}/PRENOTAZIONI/get/',
-      callType: ApiCallType.GET,
+      callType: ApiCallType.POST,
       headers: {},
       params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
