@@ -212,20 +212,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : MainPagamentiWidget(),
             ),
             FFRoute(
-              name: 'Main_Calendar_List',
-              path: 'mainCalendarList',
+              name: 'Main_Contenuti_ADA_OLD',
+              path: 'mainContenutiADAOLD',
               requireAuth: true,
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Main_Calendar_List')
-                  : MainCalendarListWidget(),
-            ),
-            FFRoute(
-              name: 'Main_Contenuti_ADA',
-              path: 'mainContenutiADA',
-              requireAuth: true,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Main_Contenuti_ADA')
-                  : MainContenutiADAWidget(),
+                  ? NavBarPage(initialPage: 'Main_Contenuti_ADA_OLD')
+                  : MainContenutiADAOLDWidget(),
             ),
             FFRoute(
               name: 'Main_configurazione_Servizi',
@@ -283,6 +275,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                         ParamType.String,
                       ),
                     ),
+            ),
+            FFRoute(
+              name: 'Main_calendar_list',
+              path: 'mainCalendarList',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_calendar_list')
+                  : MainCalendarListWidget(),
+            ),
+            FFRoute(
+              name: 'Main_contenuti_ADA',
+              path: 'mainContenutiADA',
+              requireAuth: true,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Main_contenuti_ADA')
+                  : MainContenutiADAWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

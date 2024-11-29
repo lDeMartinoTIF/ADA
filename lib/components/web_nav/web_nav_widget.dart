@@ -323,7 +323,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                         logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
 
                         context.pushNamed(
-                          'Main_Contenuti_ADA',
+                          'Main_Contenuti_ADA_OLD',
                           extra: <String, dynamic>{
                             kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,
@@ -403,7 +403,7 @@ class _WebNavWidgetState extends State<WebNavWidget>
                         logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
 
                         context.pushNamed(
-                          'Main_Calendar_List',
+                          'Main_calendar_list',
                           extra: <String, dynamic>{
                             kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,

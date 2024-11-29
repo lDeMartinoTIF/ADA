@@ -34,10 +34,8 @@ export '/pages/main_pages/main_contatti/main_contatti_widget.dart'
     show MainContattiWidget;
 export '/pages/main_pages/main_pagamenti/main_pagamenti_widget.dart'
     show MainPagamentiWidget;
-export '/pages/main_pages/main_calendar_list/main_calendar_list_widget.dart'
-    show MainCalendarListWidget;
-export '/pages/main_pages/main_contenuti_a_d_a/main_contenuti_a_d_a_widget.dart'
-    show MainContenutiADAWidget;
+export '/pages/main_pages/main_contenuti_a_d_a_o_l_d/main_contenuti_a_d_a_o_l_d_widget.dart'
+    show MainContenutiADAOLDWidget;
 export '/pages/main_pages/main_configurazione_servizi/main_configurazione_servizi_widget.dart'
     show MainConfigurazioneServiziWidget;
 export '/pages/tipo_servizio_details/tipo_servizio_details_widget.dart'
@@ -48,3 +46,7 @@ export '/pages/main_pages/main_prenotazioni/main_prenotazioni_widget.dart'
     show MainPrenotazioniWidget;
 export '/pages/main_pages/main_chat_a_d_a/main_chat_a_d_a_widget.dart'
     show MainChatADAWidget;
+export '/pages/main_pages/main_calendar_list/main_calendar_list_widget.dart'
+    show MainCalendarListWidget;
+export '/pages/main_pages/main_contenuti_a_d_a/main_contenuti_a_d_a_widget.dart'
+    show MainContenutiADAWidget;

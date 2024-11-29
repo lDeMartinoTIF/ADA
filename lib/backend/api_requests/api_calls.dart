@@ -268,9 +268,7 @@ class ADAapiGroup {
   static InsertCustomBotCUSTOMBOTInsertPostCall
       insertCustomBotCUSTOMBOTInsertPostCall =
       InsertCustomBotCUSTOMBOTInsertPostCall();
-  static GetAllCustomBotCUSTOMBOTGetAllGetCall
-      getAllCustomBotCUSTOMBOTGetAllGetCall =
-      GetAllCustomBotCUSTOMBOTGetAllGetCall();
+  static GetAllCustomBotCall getAllCustomBotCall = GetAllCustomBotCall();
   static GetAllCustomBotIdCUSTOMBOTGetAllIdGetCall
       getAllCustomBotIdCUSTOMBOTGetAllIdGetCall =
       GetAllCustomBotIdCUSTOMBOTGetAllIdGetCall();
@@ -854,6 +852,40 @@ class GetAllCalendarCall {
       alwaysAllowBody: false,
     );
   }
+
+  dynamic? jspAllData(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+      );
+  String? jspNomeCalendario(dynamic response) =>
+      castToType<String>(getJsonField(
+        response,
+        r'''$[:].NOME_CALENDARIO''',
+      ));
+  String? jspLunediX(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].LUNEDI_X''',
+      ));
+  String? jspMartediX(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].MARTEDI_X''',
+      ));
+  String? jspMercolediX(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].MERCOLEDI_X''',
+      ));
+  String? jspGiovediX(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].GIOVEDI_X''',
+      ));
+  String? jspVenerdiX(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].VENERDI_X''',
+      ));
+  String? jspSabatoX(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].SABATO_X''',
+      ));
 }
 
 class GetCalendarCALENDARGetTokenGetCall {
@@ -2340,16 +2372,24 @@ class InsertCustomBotCUSTOMBOTInsertPostCall {
   }
 }
 
-class GetAllCustomBotCUSTOMBOTGetAllGetCall {
-  Future<ApiCallResponse> call() async {
+class GetAllCustomBotCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
+    final ffApiRequestBody = '''
+{
+  "token": "${escapeStringForJson(token)}"
+}''';
     return ApiManager.instance.makeApiCall(
-      callName: 'get_all_custom_bot_CUSTOM_BOT_get_all_get',
+      callName: 'Get All Custom Bot',
       apiUrl: '${baseUrl}/CUSTOM_BOT/get_all',
-      callType: ApiCallType.GET,
+      callType: ApiCallType.POST,
       headers: {},
       params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
@@ -2358,6 +2398,11 @@ class GetAllCustomBotCUSTOMBOTGetAllGetCall {
       alwaysAllowBody: false,
     );
   }
+
+  dynamic jspAllData(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+      );
 }
 
 class GetAllCustomBotIdCUSTOMBOTGetAllIdGetCall {
@@ -2716,7 +2761,7 @@ class GetAllTipiServizioCall {
         response,
         r'''$[:].MAIL_REF''',
       ));
-  dynamic jspAllData(dynamic response) => getJsonField(
+  dynamic? jspAllData(dynamic response) => getJsonField(
         response,
         r'''$''',
       );

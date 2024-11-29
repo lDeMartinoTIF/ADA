@@ -1614,185 +1614,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '__',
     },
   },
-  // Main_Calendar_List
-  {
-    'hacn4p0m': {
-      'it': 'Calendario',
-      'en': 'Customers',
-    },
-    'wnjuqr5s': {
-      'it': 'Crea Calendario',
-      'en': 'Invite Users',
-    },
-    'xsbqns1l': {
-      'it': 'Nome Calendario',
-      'en': 'Name',
-    },
-    '2ivmk6yb': {
-      'it': 'Creato da',
-      'en': 'Title',
-    },
-    'p0nwtkeu': {
-      'it': 'Lun',
-      'en': 'Company',
-    },
-    's5hvn7hj': {
-      'it': 'Mar',
-      'en': 'Company',
-    },
-    'mbqor0xi': {
-      'it': 'Mer',
-      'en': 'Company',
-    },
-    'h9fz36nc': {
-      'it': 'Gio',
-      'en': 'Company',
-    },
-    'draajwx4': {
-      'it': 'Ven',
-      'en': 'Company',
-    },
-    '91081ge0': {
-      'it': 'Sab',
-      'en': 'Company',
-    },
-    '1ef2gpza': {
-      'it': 'Dom',
-      'en': 'Company',
-    },
-    '3nhcf803': {
-      'it': 'Randy Alcorn',
-      'en': 'Randy Alcorn',
-    },
-    'lorlzaup': {
-      'it': 'Head of Procurement',
-      'en': 'Head of Procurement',
-    },
-    '8qirwn1d': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '7xursehb': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'n7zx14cz': {
-      'it': 'New',
-      'en': 'New',
-    },
-    'f8pastn7': {
-      'it': 'James Wiseman',
-      'en': 'James Wiseman',
-    },
-    'mqim50h7': {
-      'it': 'Account Manager',
-      'en': 'Account Manager',
-    },
-    '4tckrbea': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '93ess62k': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '19uy6jsj': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'w0uc17s1': {
-      'it': 'Ignacious Rodriguez',
-      'en': 'Ignacious Rodriguez',
-    },
-    'csjhdvur': {
-      'it': 'Sales Manager',
-      'en': 'Sales Manager',
-    },
-    'gaedguex': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'ux3yg820': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'opup20ah': {
-      'it': 'New',
-      'en': 'New',
-    },
-    'f9wqsvsn': {
-      'it': 'Greg Brown',
-      'en': 'Greg Brown',
-    },
-    'u24zq5ud': {
-      'it': 'Account Manager',
-      'en': 'Account Manager',
-    },
-    '47agn870': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'zjkb9m16': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    '2jf5gch6': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'w0p3b4i7': {
-      'it': 'June Williamson',
-      'en': 'June Williamson',
-    },
-    '22gd1iys': {
-      'it': 'Sr. Account Manager',
-      'en': 'Mr. Account Manager',
-    },
-    '9mh0m2rw': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    '6x83hl5u': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'gvty2ow6': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'jkrq3qa0': {
-      'it': 'June Williamson',
-      'en': 'June Williamson',
-    },
-    'rlx8x67r': {
-      'it': 'Sr. Account Manager',
-      'en': 'Mr. Account Manager',
-    },
-    'j4q0nke9': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'eu8uwmn4': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'f1rhkslz': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'q0ly31p8': {
-      'it': 'Customers',
-      'en': 'Customers',
-    },
-    '24rmxyvc': {
-      'it': '__',
-      'en': '__',
-    },
-  },
-  // Main_Contenuti_ADA
+  // Main_Contenuti_ADA_OLD
   {
     'hfxga8xn': {
-      'it': 'Contenuti ADA',
+      'it': 'Contenuti ADA_OLD',
       'en': 'Customers',
     },
     'bbwunnvo': {
@@ -2103,6 +1928,96 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Dashboard',
     },
     'nv48drv6': {
+      'it': '__',
+      'en': '__',
+    },
+  },
+  // Main_calendar_list
+  {
+    'igmlo5ek': {
+      'it': 'Calendario',
+      'en': 'Customers',
+    },
+    'jgiyfkw6': {
+      'it': 'Crea Calendario',
+      'en': 'Invite Users',
+    },
+    'xipw24xj': {
+      'it': 'Nome',
+      'en': 'Name',
+    },
+    'wkype0gc': {
+      'it': 'Mail',
+      'en': 'Company',
+    },
+    'jypj6iev': {
+      'it': 'Lun',
+      'en': 'Company',
+    },
+    'p80d31h0': {
+      'it': 'Mar',
+      'en': 'Company',
+    },
+    'xrdp31fw': {
+      'it': 'Mer',
+      'en': 'Company',
+    },
+    'a4aw6oen': {
+      'it': 'Gìo',
+      'en': 'Company',
+    },
+    'd3mqd1vt': {
+      'it': 'Ven',
+      'en': 'Company',
+    },
+    'b9mcrebk': {
+      'it': 'Sab',
+      'en': 'Company',
+    },
+    'jyu14kxw': {
+      'it': 'Customers',
+      'en': 'Customers',
+    },
+    'jxxnj9cq': {
+      'it': '__',
+      'en': '__',
+    },
+  },
+  // Main_contenuti_ADA
+  {
+    'ol2nbu3x': {
+      'it': 'Contenuti ADA',
+      'en': 'Customers',
+    },
+    'w8w6mm67': {
+      'it': 'Aggiungi Informazioni',
+      'en': 'Invite Users',
+    },
+    'ev6g2h5i': {
+      'it': 'Carica CSV',
+      'en': 'Invite Users',
+    },
+    'gy43rae2': {
+      'it': 'Tipo Servizio',
+      'en': 'Company',
+    },
+    'h92w2rh8': {
+      'it': 'Titolo Servizio',
+      'en': 'Name',
+    },
+    'qqm0s10b': {
+      'it': 'Contenuto',
+      'en': 'Company',
+    },
+    'mggfxm9p': {
+      'it': 'CSV',
+      'en': 'Company',
+    },
+    'ok2l2bfu': {
+      'it': 'Customers',
+      'en': 'Customers',
+    },
+    'fg98t8rg': {
       'it': '__',
       'en': '__',
     },
