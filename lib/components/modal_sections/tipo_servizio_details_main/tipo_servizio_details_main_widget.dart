@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -442,7 +441,7 @@ class _TipoServizioDetailsMainWidgetState
                           'TIPO_SERVIZIO_DETAILS_MAIN_ELIMINA_BTN_O');
                       _model.apiResultno4 =
                           await ADAapiGroup.deleteTipoServizioCall.call(
-                        token: currentUserUid,
+                        token: '789',
                         tipoServizioPrg: getJsonField(
                           widget!.jsonTipoServizio,
                           r'''$.TIPO_SERVIZIO_PRG''',
@@ -470,13 +469,14 @@ class _TipoServizioDetailsMainWidgetState
                           .override(
                             fontFamily:
                                 FlutterFlowTheme.of(context).bodyMediumFamily,
+                            color: FlutterFlowTheme.of(context).error,
                             letterSpacing: 0.0,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                       elevation: 0.0,
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).alternate,
+                        color: FlutterFlowTheme.of(context).error,
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(12.0),
@@ -497,7 +497,7 @@ class _TipoServizioDetailsMainWidgetState
                           'TIPO_SERVIZIO_DETAILS_MAIN_SALVA_BTN_ON_');
                       _model.apiResultj70 =
                           await ADAapiGroup.updateTipoServizioCall.call(
-                        token: currentUserUid,
+                        token: '789',
                         tipoServizio: _model.tiposervizioTextController.text,
                         tipoServizioDescr:
                             _model.tiposerviziodescriTextController.text,

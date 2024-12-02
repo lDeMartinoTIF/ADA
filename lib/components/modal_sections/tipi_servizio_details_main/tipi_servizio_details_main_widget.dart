@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
@@ -642,20 +641,6 @@ class _TipiServizioDetailsMainWidgetState
                     onPressed: () async {
                       logFirebaseEvent(
                           'TIPI_SERVIZIO_DETAILS_MAIN_ELIMINA_BTN_O');
-                      _model.apiResultno4 =
-                          await ADAapiGroup.deleteTipoServizioCall.call(
-                        token: currentUserUid,
-                        tipoServizioPrg: getJsonField(
-                          widget!.jsonTipiServizio,
-                          r'''$.TIPO_SERVIZIO_PRG''',
-                        ),
-                      );
-
-                      if ((_model.apiResultno4?.succeeded ?? true)) {
-                        Navigator.pop(context);
-                      }
-
-                      safeSetState(() {});
                     },
                     text: FFLocalizations.of(context).getText(
                       'popk1pyh' /* Elimina */,

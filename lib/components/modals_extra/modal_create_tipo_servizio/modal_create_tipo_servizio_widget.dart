@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -430,7 +429,7 @@ class _ModalCreateTipoServizioWidgetState
                                     _model.resultInsertTipoServizio =
                                         await ADAapiGroup.insertTipoServizioCall
                                             .call(
-                                      token: currentUserUid,
+                                      token: '789',
                                       tipoServizio: _model
                                           .tiposervizioTextController.text,
                                       tipoServizioDescr: _model
