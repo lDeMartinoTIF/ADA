@@ -646,12 +646,6 @@ class _MainCalendarListWidgetState extends State<MainCalendarListWidget>
                                                   onTap: () async {
                                                     logFirebaseEvent(
                                                         'MAIN_CALENDAR_LIST_Container_hxojd4ax_ON');
-                                                    await action_blocks
-                                                        .openDetailTipoServizio(
-                                                      context,
-                                                      jsonTipoServizio:
-                                                          recordCalendarItem,
-                                                    );
                                                   },
                                                   child: Container(
                                                     width: double.infinity,

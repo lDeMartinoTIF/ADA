@@ -515,12 +515,6 @@ class _MainContattiWidgetState extends State<MainContattiWidget>
                                                   onTap: () async {
                                                     logFirebaseEvent(
                                                         'MAIN_CONTATTI_Container_cvq4hhkr_ON_TAP');
-                                                    await action_blocks
-                                                        .openDetailTipoServizio(
-                                                      context,
-                                                      jsonTipoServizio:
-                                                          recordClientiItem,
-                                                    );
                                                   },
                                                   child: Container(
                                                     width: double.infinity,

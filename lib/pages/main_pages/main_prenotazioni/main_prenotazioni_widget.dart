@@ -521,12 +521,6 @@ class _MainPrenotazioniWidgetState extends State<MainPrenotazioniWidget>
                                                 onTap: () async {
                                                   logFirebaseEvent(
                                                       'MAIN_PRENOTAZIONI_Container_w23sgu10_ON_');
-                                                  await action_blocks
-                                                      .openDetailTipoServizio(
-                                                    context,
-                                                    jsonTipoServizio:
-                                                        itemPrenotazioniItem,
-                                                  );
                                                 },
                                                 child: Container(
                                                   width: double.infinity,
