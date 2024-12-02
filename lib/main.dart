@@ -153,7 +153,6 @@ class _NavBarPageState extends State<NavBarPage> {
       'Main_messages': MainMessagesWidget(),
       'Main_profilePage': MainProfilePageWidget(),
       'Main_Pagamenti': MainPagamentiWidget(),
-      'Main_Contenuti_ADA_OLD': MainContenutiADAOLDWidget(),
       'Main_configurazione_Servizi': MainConfigurazioneServiziWidget(),
       'Main_Prenotazioni': MainPrenotazioniWidget(),
       'Main_chat_ADA': MainChatADAWidget(),
@@ -265,20 +264,6 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'hzzl8rgm' /* __ */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.supervised_user_circle_outlined,
-                size: 24.0,
-              ),
-              activeIcon: Icon(
-                Icons.supervised_user_circle_sharp,
-                size: 32.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                'z9fobthl' /* __ */,
               ),
               tooltip: '',
             ),

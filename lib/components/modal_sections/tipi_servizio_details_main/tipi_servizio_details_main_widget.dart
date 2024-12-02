@@ -672,13 +672,14 @@ class _TipiServizioDetailsMainWidgetState
                           .override(
                             fontFamily:
                                 FlutterFlowTheme.of(context).bodyMediumFamily,
+                            color: FlutterFlowTheme.of(context).error,
                             letterSpacing: 0.0,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                       elevation: 0.0,
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).alternate,
+                        color: FlutterFlowTheme.of(context).error,
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(12.0),

@@ -1183,189 +1183,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '__',
     },
   },
-  // Main_Contenuti_ADA_OLD
-  {
-    'hfxga8xn': {
-      'it': 'Contenuti ADA_OLD',
-      'en': 'Customers',
-    },
-    'bbwunnvo': {
-      'it': 'Aggiungi Informazioni',
-      'en': 'Invite Users',
-    },
-    'd1sgirfs': {
-      'it': 'Carica CSV',
-      'en': 'Invite Users',
-    },
-    'iyutblp1': {
-      'it': 'Titolo Servizio',
-      'en': 'Name',
-    },
-    'lcrvgqre': {
-      'it': 'Tipo Servizio',
-      'en': 'Title',
-    },
-    'oj7eeut3': {
-      'it': 'Prezzo',
-      'en': 'Company',
-    },
-    '1ydh6vrp': {
-      'it': 'Scadenza',
-      'en': 'Company',
-    },
-    '01yaeqeb': {
-      'it': 'Status',
-      'en': 'Status',
-    },
-    'avn4wdct': {
-      'it': 'Randy Alcorn',
-      'en': 'Randy Alcorn',
-    },
-    '6y3xtl5r': {
-      'it': 'Head of Procurement',
-      'en': 'Head of Procurement',
-    },
-    'oscldloq': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '4h19v61r': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'afke27mu': {
-      'it': 'New',
-      'en': 'New',
-    },
-    'x16zpnnk': {
-      'it': 'James Wiseman',
-      'en': 'James Wiseman',
-    },
-    'f2ripvk9': {
-      'it': 'Account Manager',
-      'en': 'Account Manager',
-    },
-    'pmx4b7p0': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    '1key7npv': {
-      'it': 'ACME Co.',
-      'en': 'ACME Co.',
-    },
-    'amm3nhvb': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    '3nwk3t45': {
-      'it': 'Ignacious Rodriguez',
-      'en': 'Ignacious Rodriguez',
-    },
-    '47b9scpe': {
-      'it': 'Sales Manager',
-      'en': 'Sales Manager',
-    },
-    'wqs1bb8k': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'fd1cd4t9': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    '7d6y3xrf': {
-      'it': 'New',
-      'en': 'New',
-    },
-    'w139gyp7': {
-      'it': 'Elena Williams',
-      'en': 'Elena Williams',
-    },
-    'jmyiemed': {
-      'it': 'Head of Product & Innovation',
-      'en': 'Head of Product & Innovation',
-    },
-    'a7x722rl': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'dbm6nqs7': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'dt2agmvd': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'e76t8nw6': {
-      'it': 'Greg Brown',
-      'en': 'Greg Brown',
-    },
-    'ye4fcx5a': {
-      'it': 'Account Manager',
-      'en': 'Account Manager',
-    },
-    'va6zwhp0': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'igj20knh': {
-      'it': 'Robin HQ',
-      'en': 'Robin HQ',
-    },
-    'xsrpwa43': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    '8o8cld8a': {
-      'it': 'June Williamson',
-      'en': 'June Williamson',
-    },
-    'ua07j04u': {
-      'it': 'Sr. Account Manager',
-      'en': 'Mr. Account Manager',
-    },
-    'yirlx6qy': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'egj3h0hd': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'g19yhbyl': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'd8e9hv1w': {
-      'it': 'June Williamson',
-      'en': 'June Williamson',
-    },
-    '8udhtqm9': {
-      'it': 'Sr. Account Manager',
-      'en': 'Mr. Account Manager',
-    },
-    'oisb3wm0': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'd3q33lp6': {
-      'it': 'HealthAi',
-      'en': 'HealthAi',
-    },
-    'aqxfcw5n': {
-      'it': 'Contacted',
-      'en': 'Contacted',
-    },
-    'r3nydw6k': {
-      'it': 'Customers',
-      'en': 'Customers',
-    },
-    'z9fobthl': {
-      'it': '__',
-      'en': '__',
-    },
-  },
   // Main_configurazione_Servizi
   {
     'gzajzgtg': {
@@ -1566,13 +1383,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Carica CSV',
       'en': 'Invite Users',
     },
-    'gy43rae2': {
-      'it': 'Tipo Servizio',
-      'en': 'Company',
-    },
     'h92w2rh8': {
       'it': 'Titolo Servizio',
       'en': 'Name',
+    },
+    'gy43rae2': {
+      'it': 'Tipo Servizio',
+      'en': 'Company',
     },
     'qqm0s10b': {
       'it': 'Contenuto',
@@ -1624,6 +1441,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hjrgtcj2': {
       'it': '__',
       'en': '__',
+    },
+  },
+  // ContenutiADADetails
+  {
+    'knmrsd23': {
+      'it': 'Home',
+      'en': 'Home',
     },
   },
   // modal_success
@@ -2867,97 +2691,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Continues',
     },
   },
-  // modal_create_Info_AI
-  {
-    'nxk47p6z': {
-      'it': 'Aggiungi Informazioni',
-      'en': 'Share your project',
-    },
-    'tq56gdpd': {
-      'it': 'Aggiungi informazioni per ADA',
-      'en': 'Your project has been created, now invite your team to continue.',
-    },
-    'ubm8eq0t': {
-      'it': 'Titolo',
-      'en': 'Whatsapp number',
-    },
-    'qnexrpqq': {
-      'it': 'Tipo Servizio',
-      'en': '',
-    },
-    'ap296eiz': {
-      'it': 'Seleziona un valore..',
-      'en': '',
-    },
-    '6o5qe75m': {
-      'it': 'Search...',
-      'en': '',
-    },
-    'xr40iakg': {
-      'it': 'Titolo',
-      'en': 'Whatsapp number',
-    },
-    '3ue5axer': {
-      'it': 'Prezzo',
-      'en': 'Whatsapp number',
-    },
-    '95i6tfau': {
-      'it': 'Tempo Servizio',
-      'en': 'Go',
-    },
-    'pezfhqpf': {
-      'it': 'Calendario',
-      'en': '',
-    },
-    'ngds7vkm': {
-      'it': 'Option 1',
-      'en': '',
-    },
-    'wl8ijyb4': {
-      'it': 'Option 2',
-      'en': '',
-    },
-    'iddgv4m0': {
-      'it': 'Option 3',
-      'en': '',
-    },
-    'ze7a1pzl': {
-      'it': 'Seleziona un valore..',
-      'en': '',
-    },
-    '27pr7fyr': {
-      'it': 'Search...',
-      'en': '',
-    },
-    '7630utlr': {
-      'it': 'Preavviso annullamento',
-      'en': 'Whatsapp number',
-    },
-    'ul6sz1s5': {
-      'it': 'Scadenza',
-      'en': 'Go',
-    },
-    '9bwijexm': {
-      'it': 'Indirizzo',
-      'en': 'Whatsapp number',
-    },
-    'nq41opu1': {
-      'it': 'Mail aggiuntiva',
-      'en': 'Go',
-    },
-    'v8fx1i5d': {
-      'it': 'File',
-      'en': 'C. Fiscal/VAT Number',
-    },
-    'jtqqgu8e': {
-      'it': 'Cancel',
-      'en': 'Cancel',
-    },
-    'ggiwf0y4': {
-      'it': 'Continua',
-      'en': 'Continues',
-    },
-  },
   // modal_upload_file
   {
     'tgippmxd': {
@@ -2970,18 +2703,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'a9dc85rc': {
       'it': 'Tipo Servizio',
-      'en': '',
-    },
-    '3pj9kj47': {
-      'it': 'Option 1',
-      'en': '',
-    },
-    'c8i79tnv': {
-      'it': 'Option 2',
-      'en': '',
-    },
-    '012bw61f': {
-      'it': 'Option 3',
       'en': '',
     },
     'w0e4qq57': {
@@ -3177,6 +2898,236 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'z2msh32q': {
       'it': 'Salva',
       'en': 'View Company',
+    },
+  },
+  // ContenutiADA_Details_main
+  {
+    'jzp9izvo': {
+      'it': 'Titolo',
+      'en': 'Go',
+    },
+    'j3fuqfyt': {
+      'it': 'Tipo Servizio',
+      'en': '',
+    },
+    'h7xbv86r': {
+      'it': 'Admin',
+      'en': 'Admin',
+    },
+    'g2ykuqbv': {
+      'it': 'Manager',
+      'en': 'Manager',
+    },
+    'ifh9pbyi': {
+      'it': 'Editor',
+      'en': 'Editor',
+    },
+    '8lxqy0hm': {
+      'it': 'Viewer',
+      'en': 'Viewer',
+    },
+    '4go6nerv': {
+      'it': 'Seleziona un valore...',
+      'en': 'Please select...',
+    },
+    'ljm0js7z': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
+    '8w51x1yy': {
+      'it': 'Contenuto',
+      'en': 'Go',
+    },
+    '7u1056wy': {
+      'it': 'Calendario',
+      'en': '',
+    },
+    'a34sfetz': {
+      'it': 'Admin',
+      'en': 'Admin',
+    },
+    'acr4rceo': {
+      'it': 'Manager',
+      'en': 'Manager',
+    },
+    'ujh0koa3': {
+      'it': 'Editor',
+      'en': 'Editor',
+    },
+    'mf68ahqs': {
+      'it': 'Viewer',
+      'en': 'Viewer',
+    },
+    'usme7o0s': {
+      'it': 'Seleziona un valore...',
+      'en': 'Please select...',
+    },
+    '6tlmje6x': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
+    'hrspli9t': {
+      'it': 'Prezzo',
+      'en': 'Go',
+    },
+    '3z8gi9es': {
+      'it': 'Tempo Servizio',
+      'en': 'Go',
+    },
+    'eem0nhn6': {
+      'it': 'Scadenza',
+      'en': 'Go',
+    },
+    'fwj7e3k2': {
+      'it': 'Preavviso Annullamento',
+      'en': 'Go',
+    },
+    'y5trjnbr': {
+      'it': 'Indirizzo Specifico',
+      'en': 'Go',
+    },
+    'q3efnzsp': {
+      'it': 'Link',
+      'en': 'Go',
+    },
+    'scfps3cp': {
+      'it': 'Mail',
+      'en': 'Go',
+    },
+    'ck7xa4hl': {
+      'it': 'Telefono',
+      'en': 'Go',
+    },
+    '9qunpupa': {
+      'it': 'File',
+      'en': 'Go',
+    },
+    '1ew8oio8': {
+      'it': 'Elimina',
+      'en': 'Generate Quote',
+    },
+    'r44u9cfb': {
+      'it': 'Salva',
+      'en': 'View Company',
+    },
+  },
+  // modal_create_contenutiADA
+  {
+    '0k8pvq2o': {
+      'it': 'Crea Calendario',
+      'en': 'Share your project',
+    },
+    'm5m35am9': {
+      'it': 'Crea un nuovo calendario',
+      'en': 'Your project has been created, now invite your team to continue.',
+    },
+    'zn2sd98p': {
+      'it': 'Titolo',
+      'en': 'Go',
+    },
+    'pqpggicf': {
+      'it': 'Tipo Servizio',
+      'en': '',
+    },
+    'q61hk4p5': {
+      'it': 'Admin',
+      'en': 'Admin',
+    },
+    'cq0yptri': {
+      'it': 'Manager',
+      'en': 'Manager',
+    },
+    'crltt3al': {
+      'it': 'Editor',
+      'en': 'Editor',
+    },
+    'arwmpyel': {
+      'it': 'Viewer',
+      'en': 'Viewer',
+    },
+    'cqllth6h': {
+      'it': 'Seleziona un valore...',
+      'en': 'Please select...',
+    },
+    'g0t8f3ut': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
+    'mhx6f912': {
+      'it': 'Contenuto',
+      'en': 'Go',
+    },
+    'qow3uift': {
+      'it': 'Calendario',
+      'en': '',
+    },
+    'aalj5bvn': {
+      'it': 'Admin',
+      'en': 'Admin',
+    },
+    'rhlzzjhm': {
+      'it': 'Manager',
+      'en': 'Manager',
+    },
+    'wghros85': {
+      'it': 'Editor',
+      'en': 'Editor',
+    },
+    'nly3dpx8': {
+      'it': 'Viewer',
+      'en': 'Viewer',
+    },
+    'gt4t8v1s': {
+      'it': 'Seleziona un valore...',
+      'en': 'Please select...',
+    },
+    '0rkc20uh': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
+    'qd3rapu5': {
+      'it': 'Prezzo',
+      'en': 'Go',
+    },
+    'x5nnrrsn': {
+      'it': 'Tempo Servizio',
+      'en': 'Go',
+    },
+    'fwjt1a3v': {
+      'it': 'Scadenza',
+      'en': 'Go',
+    },
+    'c3c0byqh': {
+      'it': 'Preavviso Annullamento',
+      'en': 'Go',
+    },
+    'u8xiuu7x': {
+      'it': 'Indirizzo Specifico',
+      'en': 'Go',
+    },
+    'rrtxv3oq': {
+      'it': 'Link',
+      'en': 'Go',
+    },
+    'sek9sbyi': {
+      'it': 'Mail',
+      'en': 'Go',
+    },
+    '2rdqlcda': {
+      'it': 'Telefono',
+      'en': 'Go',
+    },
+    '6rnfo1sp': {
+      'it': 'File',
+      'en': 'Go',
+    },
+    '20peo5uh': {
+      'it': 'Cancel',
+      'en': 'Cancel',
+    },
+    'k6gssjba': {
+      'it': 'Continua',
+      'en': 'Continues',
     },
   },
   // Miscellaneous

@@ -1,40 +1,40 @@
-import '/components/modal_sections/tipi_servizio_details_main/tipi_servizio_details_main_widget.dart';
+import '/components/modal_sections/contenuti_a_d_a_details_main/contenuti_a_d_a_details_main_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'tipi_servizio_details_model.dart';
-export 'tipi_servizio_details_model.dart';
+import 'contenuti_a_d_a_details_model.dart';
+export 'contenuti_a_d_a_details_model.dart';
 
-class TipiServizioDetailsWidget extends StatefulWidget {
-  const TipiServizioDetailsWidget({
+class ContenutiADADetailsWidget extends StatefulWidget {
+  const ContenutiADADetailsWidget({
     super.key,
     bool? showBack,
-    required this.jspTipIServizio,
+    required this.jsonContenutiADA,
   }) : this.showBack = showBack ?? true;
 
   final bool showBack;
-  final dynamic jspTipIServizio;
+  final dynamic jsonContenutiADA;
 
   @override
-  State<TipiServizioDetailsWidget> createState() =>
-      _TipiServizioDetailsWidgetState();
+  State<ContenutiADADetailsWidget> createState() =>
+      _ContenutiADADetailsWidgetState();
 }
 
-class _TipiServizioDetailsWidgetState extends State<TipiServizioDetailsWidget> {
-  late TipiServizioDetailsModel _model;
+class _ContenutiADADetailsWidgetState extends State<ContenutiADADetailsWidget> {
+  late ContenutiADADetailsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TipiServizioDetailsModel());
+    _model = createModel(context, () => ContenutiADADetailsModel());
 
     logFirebaseEvent('screen_view',
-        parameters: {'screen_name': 'TipiServizioDetails'});
+        parameters: {'screen_name': 'ContenutiADADetails'});
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -51,11 +51,11 @@ class _TipiServizioDetailsWidgetState extends State<TipiServizioDetailsWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
       body: wrapWithModel(
-        model: _model.tipiServizioDetailsMainModel,
+        model: _model.contenutiADADetailsMainModel,
         updateCallback: () => safeSetState(() {}),
-        child: TipiServizioDetailsMainWidget(
+        child: ContenutiADADetailsMainWidget(
           showBack: true,
-          jsonTipiServizio: widget!.jspTipIServizio!,
+          jsonContenutiADA: widget!.jsonContenutiADA!,
         ),
       ),
     );

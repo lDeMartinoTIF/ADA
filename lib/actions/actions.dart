@@ -1,5 +1,6 @@
 import '/backend/api_requests/api_manager.dart';
 import '/backend/backend.dart';
+import '/components/modal_sections/modal_contenuti_a_d_a/modal_contenuti_a_d_a_widget.dart';
 import '/components/modal_sections/modal_tipi_servizio/modal_tipi_servizio_widget.dart';
 import '/components/modal_sections/modal_tipo_servizio/modal_tipo_servizio_widget.dart';
 import '/components/modal_sections/modal_user/modal_user_widget.dart';
@@ -101,6 +102,47 @@ Future openDetailTipiServizio(
               .resolve(Directionality.of(context)),
           child: ModalTipiServizioWidget(
             jsonTipiServizio: jsonTipiServizio!,
+          ),
+        );
+      },
+    );
+  }
+}
+
+Future openDetailContenutiADA(
+  BuildContext context, {
+  required dynamic jsonContenutiADA,
+}) async {
+  if (MediaQuery.sizeOf(context).width <= 991.0) {
+    context.pushNamed(
+      'ContenutiADADetails',
+      queryParameters: {
+        'jsonContenutiADA': serializeParam(
+          jsonContenutiADA,
+          ParamType.JSON,
+        ),
+      }.withoutNulls,
+      extra: <String, dynamic>{
+        kTransitionInfoKey: TransitionInfo(
+          hasTransition: true,
+          transitionType: PageTransitionType.fade,
+          duration: Duration(milliseconds: 0),
+        ),
+      },
+    );
+  } else {
+    await showDialog(
+      barrierColor: FlutterFlowTheme.of(context).accent4,
+      context: context,
+      builder: (dialogContext) {
+        return Dialog(
+          elevation: 0,
+          insetPadding: EdgeInsets.zero,
+          backgroundColor: Colors.transparent,
+          alignment: AlignmentDirectional(0.0, 0.0)
+              .resolve(Directionality.of(context)),
+          child: ModalContenutiADAWidget(
+            jsonContenutiADA: jsonContenutiADA!,
           ),
         );
       },

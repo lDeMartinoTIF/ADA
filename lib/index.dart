@@ -32,8 +32,6 @@ export '/pages/onboarding_page/onboarding_configurazione_a_d_a/onboarding_config
     show OnboardingConfigurazioneADAWidget;
 export '/pages/main_pages/main_pagamenti/main_pagamenti_widget.dart'
     show MainPagamentiWidget;
-export '/pages/main_pages/main_contenuti_a_d_a_o_l_d/main_contenuti_a_d_a_o_l_d_widget.dart'
-    show MainContenutiADAOLDWidget;
 export '/pages/main_pages/main_configurazione_servizi/main_configurazione_servizi_widget.dart'
     show MainConfigurazioneServiziWidget;
 export '/pages/tipo_servizio_details/tipo_servizio_details_widget.dart'
@@ -50,3 +48,5 @@ export '/pages/main_pages/main_contenuti_a_d_a/main_contenuti_a_d_a_widget.dart'
     show MainContenutiADAWidget;
 export '/pages/main_pages/main_contatti/main_contatti_widget.dart'
     show MainContattiWidget;
+export '/pages/contenuti_a_d_a_details/contenuti_a_d_a_details_widget.dart'
+    show ContenutiADADetailsWidget;

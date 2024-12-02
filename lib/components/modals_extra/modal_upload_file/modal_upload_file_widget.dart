@@ -1,6 +1,6 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_pdf_viewer.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -206,30 +206,56 @@ class _ModalUploadFileWidgetState extends State<ModalUploadFileWidget>
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 5.0, 0.0, 0.0),
-                                            child: FlutterFlowDropDown<String>(
-                                              controller: _model
-                                                      .dropDownValueController ??=
-                                                  FormFieldController<String>(
-                                                      null),
-                                              options: [
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '3pj9kj47' /* Option 1 */,
-                                                ),
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'c8i79tnv' /* Option 2 */,
-                                                ),
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '012bw61f' /* Option 3 */,
-                                                )
-                                              ],
-                                              onChanged: (val) => safeSetState(
-                                                  () => _model.dropDownValue =
-                                                      val),
-                                              textStyle:
-                                                  FlutterFlowTheme.of(context)
+                                            child:
+                                                FutureBuilder<ApiCallResponse>(
+                                              future: ADAapiGroup
+                                                  .getTipoServizioCall
+                                                  .call(
+                                                token: '789',
+                                              ),
+                                              builder: (context, snapshot) {
+                                                // Customize what your widget looks like when it's loading.
+                                                if (!snapshot.hasData) {
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 50.0,
+                                                      height: 50.0,
+                                                      child:
+                                                          CircularProgressIndicator(
+                                                        valueColor:
+                                                            AlwaysStoppedAnimation<
+                                                                Color>(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }
+                                                final dropDownGetTipoServizioResponse =
+                                                    snapshot.data!;
+
+                                                return FlutterFlowDropDown<
+                                                    String>(
+                                                  controller: _model
+                                                          .dropDownValueController ??=
+                                                      FormFieldController<
+                                                          String>(null),
+                                                  options: (getJsonField(
+                                                    dropDownGetTipoServizioResponse
+                                                        .jsonBody,
+                                                    r'''$[:].TIPO_SERVIZIO''',
+                                                    true,
+                                                  ) as List)
+                                                      .map<String>(
+                                                          (s) => s.toString())
+                                                      .toList()!,
+                                                  onChanged: (val) =>
+                                                      safeSetState(() => _model
+                                                          .dropDownValue = val),
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
@@ -248,35 +274,39 @@ class _ModalUploadFileWidgetState extends State<ModalUploadFileWidget>
                                                                         context)
                                                                     .bodyMediumFamily),
                                                       ),
-                                              hintText:
-                                                  FFLocalizations.of(context)
+                                                  hintText: FFLocalizations.of(
+                                                          context)
                                                       .getText(
-                                                'w0e4qq57' /* Seleziona un valore.. */,
-                                              ),
-                                              icon: Icon(
-                                                Icons
-                                                    .keyboard_arrow_down_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
+                                                    'w0e4qq57' /* Seleziona un valore.. */,
+                                                  ),
+                                                  icon: Icon(
+                                                    Icons
+                                                        .keyboard_arrow_down_rounded,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
                                                         .secondaryText,
-                                                size: 24.0,
-                                              ),
-                                              fillColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              elevation: 2.0,
-                                              borderColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              borderWidth: 2.0,
-                                              borderRadius: 8.0,
-                                              margin: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      20.0, 0.0, 20.0, 0.0),
-                                              hidesUnderline: true,
-                                              isOverButton: false,
-                                              isSearchable: false,
-                                              isMultiSelect: false,
+                                                    size: 24.0,
+                                                  ),
+                                                  fillColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .secondaryBackground,
+                                                  elevation: 2.0,
+                                                  borderColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .alternate,
+                                                  borderWidth: 2.0,
+                                                  borderRadius: 8.0,
+                                                  margin: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          20.0, 0.0, 20.0, 0.0),
+                                                  hidesUnderline: true,
+                                                  isOverButton: false,
+                                                  isSearchable: false,
+                                                  isMultiSelect: false,
+                                                );
+                                              },
                                             ),
                                           ),
                                         ],
@@ -457,12 +487,6 @@ class _ModalUploadFileWidgetState extends State<ModalUploadFileWidget>
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      FlutterFlowPdfViewer(
-                                        fileBytes:
-                                            _model.uploadedLocalFile.bytes,
-                                        height: 300.0,
-                                        horizontalScroll: false,
                                       ),
                                     ].divide(SizedBox(height: 16.0)),
                                   ),

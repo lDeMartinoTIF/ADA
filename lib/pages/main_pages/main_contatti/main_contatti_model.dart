@@ -2,7 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/components/dropdown_edit_delete/dropdown_edit_delete_widget.dart';
 import '/components/modals/command_palette/command_palette_widget.dart';
-import '/components/modals_extra/modal_create_info_a_i/modal_create_info_a_i_widget.dart';
+import '/components/modals_extra/modal_create_contenuti_a_d_a/modal_create_contenuti_a_d_a_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';

@@ -1,8 +1,7 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/components/dropdown_edit_delete/dropdown_edit_delete_widget.dart';
 import '/components/modals/command_palette/command_palette_widget.dart';
-import '/components/modals_extra/modal_create_info_a_i/modal_create_info_a_i_widget.dart';
+import '/components/modals_extra/modal_create_contenuti_a_d_a/modal_create_contenuti_a_d_a_widget.dart';
 import '/components/modals_extra/modal_upload_file/modal_upload_file_widget.dart';
 import '/components/web_nav/web_nav_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -187,7 +186,7 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                         onTap: () =>
                                             FocusScope.of(dialogContext)
                                                 .unfocus(),
-                                        child: ModalCreateInfoAIWidget(),
+                                        child: ModalCreateContenutiADAWidget(),
                                       ),
                                     );
                                   },
@@ -372,39 +371,6 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          if (responsiveVisibility(
-                                            context: context,
-                                            phone: false,
-                                            tablet: false,
-                                          ))
-                                            Expanded(
-                                              child: Align(
-                                                alignment: AlignmentDirectional(
-                                                    -1.0, 0.0),
-                                                child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'gy43rae2' /* Tipo Servizio */,
-                                                  ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMediumFamily,
-                                                        letterSpacing: 0.0,
-                                                        useGoogleFonts: GoogleFonts
-                                                                .asMap()
-                                                            .containsKey(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .labelMediumFamily),
-                                                      ),
-                                                ),
-                                              ),
-                                            ),
                                           Expanded(
                                             child: Align(
                                               alignment: AlignmentDirectional(
@@ -438,6 +404,39 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                               ),
                                             ),
                                           ),
+                                          if (responsiveVisibility(
+                                            context: context,
+                                            phone: false,
+                                            tablet: false,
+                                          ))
+                                            Expanded(
+                                              child: Align(
+                                                alignment: AlignmentDirectional(
+                                                    -1.0, 0.0),
+                                                child: Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'gy43rae2' /* Tipo Servizio */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily,
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMediumFamily),
+                                                      ),
+                                                ),
+                                              ),
+                                            ),
                                           if (responsiveVisibility(
                                             context: context,
                                             phone: false,
@@ -588,9 +587,9 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                                     logFirebaseEvent(
                                                         'MAIN_CONTENUTI_A_D_A_Container_9zfzbgga_');
                                                     await action_blocks
-                                                        .openDetailTipoServizio(
+                                                        .openDetailContenutiADA(
                                                       context,
-                                                      jsonTipoServizio:
+                                                      jsonContenutiADA:
                                                           recordCustomBotItem,
                                                     );
                                                   },
@@ -641,14 +640,14 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                            16.0,
+                                                                            5.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
                                                                       getJsonField(
                                                                         recordCustomBotItem,
-                                                                        r'''$.TIPO_SERVIZIO''',
+                                                                        r'''$.TITOLO_SERVIZIO''',
                                                                       ).toString(),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -669,14 +668,14 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                            5.0,
+                                                                            16.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
                                                                       getJsonField(
                                                                         recordCustomBotItem,
-                                                                        r'''$.TITOLO_SERVIZIO''',
+                                                                        r'''$.TIPO_SERVIZIO''',
                                                                       ).toString(),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
@@ -867,9 +866,9 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                                                             actionEdit:
                                                                                 () async {
                                                                               // Actio_tipiservizio
-                                                                              await action_blocks.openDetailTipiServizio(
+                                                                              await action_blocks.openDetailContenutiADA(
                                                                                 context,
-                                                                                jsonTipiServizio: recordCustomBotItem,
+                                                                                jsonContenutiADA: recordCustomBotItem,
                                                                               );
                                                                             },
                                                                             actionDelete:
@@ -896,15 +895,15 @@ class _MainContenutiADAWidgetState extends State<MainContenutiADAWidget>
                                                                                   ) ??
                                                                                   false;
                                                                               if (confirmDialogResponse) {
-                                                                                _model.resultDeleteTipiServizio = await ADAapiGroup.deleteTipoServizioCall.call(
-                                                                                  token: currentUserUid,
-                                                                                  tipoServizioPrg: getJsonField(
+                                                                                _model.resultDeleteCustomBOT = await ADAapiGroup.deleteCustomBotCall.call(
+                                                                                  token: '789',
+                                                                                  idprogressivo: getJsonField(
                                                                                     recordCustomBotItem,
-                                                                                    r'''$.TIPO_SERVIZIO_PRG''',
+                                                                                    r'''$.IDPROGRESSIVO''',
                                                                                   ),
                                                                                 );
 
-                                                                                if ((_model.resultDeleteTipiServizio?.succeeded ?? true)) {
+                                                                                if ((_model.resultDeleteCustomBOT?.succeeded ?? true)) {
                                                                                   Navigator.pop(context);
                                                                                 }
                                                                               }

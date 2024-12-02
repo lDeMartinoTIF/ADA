@@ -262,9 +262,7 @@ class ADAapiGroup {
   static ConfirmEmailLoginLoginVerifyCheckTokenGetCall
       confirmEmailLoginLoginVerifyCheckTokenGetCall =
       ConfirmEmailLoginLoginVerifyCheckTokenGetCall();
-  static InsertCustomBotCUSTOMBOTInsertPostCall
-      insertCustomBotCUSTOMBOTInsertPostCall =
-      InsertCustomBotCUSTOMBOTInsertPostCall();
+  static InserCustomBOTCall inserCustomBOTCall = InserCustomBOTCall();
   static GetAllCustomBotCall getAllCustomBotCall = GetAllCustomBotCall();
   static GetAllCustomBotIdCUSTOMBOTGetAllIdGetCall
       getAllCustomBotIdCUSTOMBOTGetAllIdGetCall =
@@ -296,6 +294,8 @@ class ADAapiGroup {
       GetAllTipiServizioCall();
   static InsertTipiServiziCall insertTipiServiziCall = InsertTipiServiziCall();
   static ADAchatbotCall aDAchatbotCall = ADAchatbotCall();
+  static DeleteCustomBotCall deleteCustomBotCall = DeleteCustomBotCall();
+  static UpdateCustomBotCall updateCustomBotCall = UpdateCustomBotCall();
 }
 
 class CreateLingueLINGUECreatePostCall {
@@ -2361,36 +2361,23 @@ class ConfirmEmailLoginLoginVerifyCheckTokenGetCall {
   }
 }
 
-class InsertCustomBotCUSTOMBOTInsertPostCall {
-  Future<ApiCallResponse> call() async {
+class InserCustomBOTCall {
+  Future<ApiCallResponse> call({
+    dynamic? dataJson,
+  }) async {
     final baseUrl = ADAapiGroup.getBaseUrl();
 
-    final ffApiRequestBody = '''
-{
-  "TOKEN": "",
-  "IDPROGRESSIVO": "",
-  "TITOLO_SERVIZIO": "",
-  "TIPO_SERVIZIO": "",
-  "CONTENUTO": "",
-  "PREZZO": "",
-  "TEMPO_SERVIZIO": "",
-  "CALENDAR": "",
-  "PREAVVISO_ANNULLAMENTO": "",
-  "SCADENZA": "",
-  "LINK": "",
-  "INDIRIZZO_SPECIFICO": "",
-  "FILE": "",
-  "MAIL_REF": "",
-  "CSV_PRG": ""
-}''';
+    final data = _serializeJson(dataJson);
+
     return ApiManager.instance.makeApiCall(
-      callName: 'insert_custom_bot_CUSTOM_BOT_insert_post',
+      callName: 'Inser CustomBOT',
       apiUrl: '${baseUrl}/CUSTOM_BOT/insert',
       callType: ApiCallType.POST,
       headers: {},
-      params: {},
-      body: ffApiRequestBody,
-      bodyType: BodyType.JSON,
+      params: {
+        'data': data,
+      },
+      bodyType: BodyType.MULTIPART,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
@@ -2882,6 +2869,90 @@ class ADAchatbotCall {
         response,
         r'''$.error''',
       ));
+}
+
+class DeleteCustomBotCall {
+  Future<ApiCallResponse> call({
+    int? idprogressivo,
+    String? token = '',
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "TOKEN": "${escapeStringForJson(token)}",
+  "IDPROGRESSIVO": ${idprogressivo}
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Delete Custom Bot',
+      apiUrl: '${baseUrl}/CUSTOM_BOT/delete/',
+      callType: ApiCallType.DELETE,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: true,
+    );
+  }
+}
+
+class UpdateCustomBotCall {
+  Future<ApiCallResponse> call({
+    String? token = '',
+    int? idprogressivo,
+    String? titoloServizio = '',
+    String? tipoServizio = '',
+    String? contenuto = '',
+    int? prezzo,
+    String? tempoServizio = '',
+    String? calendar = '',
+    String? preavvisoAnnullamento = '',
+    String? scadenza = '',
+    String? link = '',
+    String? indirizzoSpecifico = '',
+    String? mailRef = '',
+    String? telefonoRef = '',
+  }) async {
+    final baseUrl = ADAapiGroup.getBaseUrl();
+
+    final ffApiRequestBody = '''
+{
+  "TOKEN": "${escapeStringForJson(token)}",
+  "IDPROGRESSIVO": ${idprogressivo},
+  "TITOLO_SERVIZIO": "${escapeStringForJson(titoloServizio)}",
+  "TIPO_SERVIZIO": "${escapeStringForJson(tipoServizio)}",
+  "CONTENUTO": "${escapeStringForJson(contenuto)}",
+  "PREZZO": ${prezzo},
+  "TEMPO_SERVIZIO": "${escapeStringForJson(tempoServizio)}",
+  "CALENDAR": "${escapeStringForJson(calendar)}",
+  "PREAVVISO_ANNULLAMENTO": "${escapeStringForJson(preavvisoAnnullamento)}",
+  "SCADENZA": "${escapeStringForJson(scadenza)}",
+  "LINK": "${escapeStringForJson(link)}",
+  "INDIRIZZO_SPECIFICO": "${escapeStringForJson(indirizzoSpecifico)}",
+  "MAIL_REF": "${escapeStringForJson(mailRef)}",
+  "TELEFONO_REF": "${escapeStringForJson(telefonoRef)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'Update Custom Bot',
+      apiUrl: '${baseUrl}/CUSTOM_BOT/update',
+      callType: ApiCallType.PUT,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
 }
 
 /// End ADAapi Group Code

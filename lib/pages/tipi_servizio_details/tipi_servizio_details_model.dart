@@ -1,4 +1,4 @@
-import '/components/modal_sections/tipo_servizio_details_main/tipo_servizio_details_main_widget.dart';
+import '/components/modal_sections/tipi_servizio_details_main/tipi_servizio_details_main_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -11,17 +11,17 @@ class TipiServizioDetailsModel
     extends FlutterFlowModel<TipiServizioDetailsWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // Model for TipoServizio_Details_main component.
-  late TipoServizioDetailsMainModel tipoServizioDetailsMainModel;
+  // Model for TipiServizio_Details_main component.
+  late TipiServizioDetailsMainModel tipiServizioDetailsMainModel;
 
   @override
   void initState(BuildContext context) {
-    tipoServizioDetailsMainModel =
-        createModel(context, () => TipoServizioDetailsMainModel());
+    tipiServizioDetailsMainModel =
+        createModel(context, () => TipiServizioDetailsMainModel());
   }
 
   @override
   void dispose() {
-    tipoServizioDetailsMainModel.dispose();
+    tipiServizioDetailsMainModel.dispose();
   }
 }
