@@ -297,6 +297,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   ParamType.JSON,
                 ),
               ),
+            ),
+            FFRoute(
+              name: 'prova',
+              path: 'prova',
+              builder: (context, params) => ProvaWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

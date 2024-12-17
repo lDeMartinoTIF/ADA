@@ -69,7 +69,10 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
             snapshot.data!.where((u) => u.uid != currentUserUid).toList();
 
         return GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
+          onTap: () {
+            FocusScope.of(context).unfocus();
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,

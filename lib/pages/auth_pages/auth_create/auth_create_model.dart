@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/components/main_logo_small/main_logo_small_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -37,10 +36,6 @@ class AuthCreateModel extends FlutterFlowModel<AuthCreateWidget> {
   late bool passwordConfirmVisibility;
   String? Function(BuildContext, String?)?
       passwordConfirmTextControllerValidator;
-  // Stores action output result for [Backend Call - API (PSWSQL Insert Token)] action in Button-Login widget.
-  ApiCallResponse? responsePSWSQLinsert;
-  // Stores action output result for [Backend Call - API (PSWSQL Insert Token)] action in Button-Login widget.
-  ApiCallResponse? responsePSWSQLinsertUser;
 
   @override
   void initState(BuildContext context) {

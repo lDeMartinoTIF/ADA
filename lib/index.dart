@@ -50,3 +50,4 @@ export '/pages/main_pages/main_contatti/main_contatti_widget.dart'
     show MainContattiWidget;
 export '/pages/contenuti_a_d_a_details/contenuti_a_d_a_details_widget.dart'
     show ContenutiADADetailsWidget;
+export '/pages/main_pages/prova/prova_widget.dart' show ProvaWidget;

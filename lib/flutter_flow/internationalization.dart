@@ -1450,6 +1450,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
+  // prova
+  {
+    'g2yle4y8': {
+      'it': 'Page Title',
+      'en': '',
+    },
+    '4tjvu4cp': {
+      'it': 'Home',
+      'en': '',
+    },
+  },
   // modal_success
   {
     'kred63vb': {

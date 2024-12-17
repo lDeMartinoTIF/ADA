@@ -954,7 +954,7 @@ class _ModalOnboardingAziendaWidgetState
                                   decoration: InputDecoration(
                                     labelText:
                                         FFLocalizations.of(context).getText(
-                                      'vpvql7rp' /* C. FiscalePartita Iva */,
+                                      'vpvql7rp' /* C. Fiscale/Partita Iva */,
                                     ),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
