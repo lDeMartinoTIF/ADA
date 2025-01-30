@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:math';
+import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -1821,20 +1822,6 @@ class _ModalCreateContenutiADAWidgetState
                                                       true
                                                   ? 'File caricato'
                                                   : 'Errore caricamento File');
-                                              _model
-                                                  .fileInsertContenutiADAFocusNode
-                                                  ?.requestFocus();
-                                              WidgetsBinding.instance
-                                                  .addPostFrameCallback((_) {
-                                                _model.fileInsertContenutiADATextController
-                                                        ?.selection =
-                                                    TextSelection.collapsed(
-                                                  offset: _model
-                                                      .fileInsertContenutiADATextController!
-                                                      .text
-                                                      .length,
-                                                );
-                                              });
                                             });
                                           },
                                         ),

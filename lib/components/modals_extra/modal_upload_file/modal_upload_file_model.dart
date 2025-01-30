@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:math';
+import 'dart:ui';
 import 'modal_upload_file_widget.dart' show ModalUploadFileWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';

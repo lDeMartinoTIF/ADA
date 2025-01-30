@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
+import 'dart:ui';
 import 'tipo_servizio_details_main_widget.dart'
     show TipoServizioDetailsMainWidget;
 import 'package:flutter/material.dart';

@@ -38,6 +38,7 @@ dependencies:
   cloud_firestore_web: 4.3.4
   collection: 1.18.0
   csslib: 0.17.3
+  csv: 6.0.0
   dropdown_button2: 2.3.9
   easy_debounce: 2.0.1
   emoji_flag_converter: 1.1.0
@@ -63,6 +64,12 @@ dependencies:
   flutter_blurhash: 0.8.2
   flutter_cache_manager: 3.4.1
   flutter_plugin_android_lifecycle: 2.0.20
+  flutter_secure_storage: 9.2.2
+  flutter_secure_storage_linux: 1.2.1
+  flutter_secure_storage_macos: 3.1.2
+  flutter_secure_storage_platform_interface: 1.1.2
+  flutter_secure_storage_web: 1.2.1
+  flutter_secure_storage_windows: 3.1.2
   font_awesome_flutter: 10.7.0
   from_css_color: 2.0.0
   go_router: 12.1.3
@@ -113,6 +120,7 @@ dependencies:
   sticky_headers: 0.3.0+2
   stream_transform: 2.1.0
   substring_highlight: 1.0.33
+  synchronized: 3.2.0
   text_search: 1.0.1
   timeago: 3.6.1
   url_launcher: 6.3.0

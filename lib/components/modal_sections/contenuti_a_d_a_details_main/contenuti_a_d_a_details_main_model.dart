@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:math';
+import 'dart:ui';
 import 'contenuti_a_d_a_details_main_widget.dart'
     show ContenutiADADetailsMainWidget;
 import 'package:flutter/foundation.dart';

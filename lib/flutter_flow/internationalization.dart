@@ -2078,6 +2078,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Bio',
       'en': 'Bio',
     },
+    '80e9f7s1': {
+      'it': 'Please select...',
+      'en': 'Please select...',
+    },
+    'w5009bn4': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
     'e7x6h4pf': {
       'it': 'Admin',
       'en': 'Admin',
@@ -2093,14 +2101,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1nch99er': {
       'it': 'Viewer',
       'en': 'Viewer',
-    },
-    '80e9f7s1': {
-      'it': 'Please select...',
-      'en': 'Please select...',
-    },
-    'w5009bn4': {
-      'it': 'Search for an item...',
-      'en': 'Search for an item...',
     },
     'wl5lect6': {
       'it': 'Cancel',
@@ -2297,6 +2297,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Admin',
       'en': 'Admin',
     },
+    'r971lmjm': {
+      'it': 'Please select...',
+      'en': 'Please select...',
+    },
+    '1c8v9uhp': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
     'au9c3fpx': {
       'it': 'Admin',
       'en': 'Admin',
@@ -2312,14 +2320,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4ga29wxb': {
       'it': 'Viewer',
       'en': 'Viewer',
-    },
-    'r971lmjm': {
-      'it': 'Please select...',
-      'en': 'Please select...',
-    },
-    '1c8v9uhp': {
-      'it': 'Search for an item...',
-      'en': 'Search for an item...',
     },
     'p1lquhce': {
       'it': 'The email associated with this account is:',
@@ -2423,14 +2423,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Sesso',
       'en': 'Sex',
     },
-    'j51unvec': {
-      'it': 'Maschio',
-      'en': 'Male',
-    },
-    '5idi80o1': {
-      'it': 'Femmina',
-      'en': 'Female',
-    },
     'l2c4i05o': {
       'it': 'Seleziona valore...',
       'en': 'Select value...',
@@ -2438,6 +2430,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'faxsfn8c': {
       'it': 'Ricerca',
       'en': 'Research',
+    },
+    'j51unvec': {
+      'it': 'Maschio',
+      'en': 'Male',
+    },
+    '5idi80o1': {
+      'it': 'Femmina',
+      'en': 'Female',
     },
     'bzim82x4': {
       'it': 'Luogo di nascita',
@@ -2850,6 +2850,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Tipo Servizio',
       'en': '',
     },
+    'oldxiom0': {
+      'it': 'Please select...',
+      'en': 'Please select...',
+    },
+    '0ec64x11': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
     'y2wasifg': {
       'it': 'Admin',
       'en': 'Admin',
@@ -2865,14 +2873,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'k23fjikm': {
       'it': 'Viewer',
       'en': 'Viewer',
-    },
-    'oldxiom0': {
-      'it': 'Please select...',
-      'en': 'Please select...',
-    },
-    '0ec64x11': {
-      'it': 'Search for an item...',
-      'en': 'Search for an item...',
     },
     'skk2e715': {
       'it': 'Calendario',
@@ -2921,6 +2921,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Tipo Servizio',
       'en': '',
     },
+    '4go6nerv': {
+      'it': 'Seleziona un valore...',
+      'en': 'Please select...',
+    },
+    'ljm0js7z': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
     'h7xbv86r': {
       'it': 'Admin',
       'en': 'Admin',
@@ -2937,14 +2945,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Viewer',
       'en': 'Viewer',
     },
-    '4go6nerv': {
-      'it': 'Seleziona un valore...',
-      'en': 'Please select...',
-    },
-    'ljm0js7z': {
-      'it': 'Search for an item...',
-      'en': 'Search for an item...',
-    },
     '8w51x1yy': {
       'it': 'Contenuto',
       'en': 'Go',
@@ -2952,6 +2952,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '7u1056wy': {
       'it': 'Calendario',
       'en': '',
+    },
+    'usme7o0s': {
+      'it': 'Seleziona un valore...',
+      'en': 'Please select...',
+    },
+    '6tlmje6x': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
     },
     'a34sfetz': {
       'it': 'Admin',
@@ -2968,14 +2976,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'mf68ahqs': {
       'it': 'Viewer',
       'en': 'Viewer',
-    },
-    'usme7o0s': {
-      'it': 'Seleziona un valore...',
-      'en': 'Please select...',
-    },
-    '6tlmje6x': {
-      'it': 'Search for an item...',
-      'en': 'Search for an item...',
     },
     'hrspli9t': {
       'it': 'Prezzo',
@@ -3040,6 +3040,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Tipo Servizio',
       'en': '',
     },
+    'cqllth6h': {
+      'it': 'Seleziona un valore...',
+      'en': 'Please select...',
+    },
+    'g0t8f3ut': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
     'q61hk4p5': {
       'it': 'Admin',
       'en': 'Admin',
@@ -3056,14 +3064,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'it': 'Viewer',
       'en': 'Viewer',
     },
-    'cqllth6h': {
-      'it': 'Seleziona un valore...',
-      'en': 'Please select...',
-    },
-    'g0t8f3ut': {
-      'it': 'Search for an item...',
-      'en': 'Search for an item...',
-    },
     'mhx6f912': {
       'it': 'Contenuto',
       'en': 'Go',
@@ -3071,6 +3071,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'qow3uift': {
       'it': 'Calendario',
       'en': '',
+    },
+    'gt4t8v1s': {
+      'it': 'Seleziona un valore...',
+      'en': 'Please select...',
+    },
+    '0rkc20uh': {
+      'it': 'Search for an item...',
+      'en': 'Search for an item...',
     },
     'aalj5bvn': {
       'it': 'Admin',
@@ -3087,14 +3095,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nly3dpx8': {
       'it': 'Viewer',
       'en': 'Viewer',
-    },
-    'gt4t8v1s': {
-      'it': 'Seleziona un valore...',
-      'en': 'Please select...',
-    },
-    '0rkc20uh': {
-      'it': 'Search for an item...',
-      'en': 'Search for an item...',
     },
     'qd3rapu5': {
       'it': 'Prezzo',

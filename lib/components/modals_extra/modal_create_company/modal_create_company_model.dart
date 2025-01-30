@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:math';
+import 'dart:ui';
 import 'modal_create_company_widget.dart' show ModalCreateCompanyWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
